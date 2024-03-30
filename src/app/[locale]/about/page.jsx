@@ -46,7 +46,7 @@ export default function About() {
         <span className=" text-center  lg:text-2xl    container">
           <p>
             {t("aboutUsText.line1")}{" "}
-            <span className=" font-bold text-[#0149A6]">
+            <span className=" font-bold text-[#0149A6] ">
               {t("aboutUsText.line2")}
             </span>
             {t("aboutUsText.line3")}

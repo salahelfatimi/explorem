@@ -32,7 +32,7 @@ export default function Navbar({locale}) {
     <>
     
       {/* nav pc */}
-      <nav className=" hidden fixed bg-white right-0 left-0 lg:block z-50 ">
+      <nav className=" hidden fixed  bg-white right-0 left-0 lg:block z-50 ">
         <div className="  container  px-8  py-4 flex  flex-row justify-between items-center ">
           <div>
             <Image
