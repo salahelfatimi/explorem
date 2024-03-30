@@ -96,7 +96,7 @@ export default function Employers() {
             {services.map((ele, index) => (
               <div
                 key={index}
-                className="border-l-4 flex flex-col border-[#0149a6] bg-white p-2 pl-4  rounded-r-sm container"
+                className="border-l-4 flex flex-col border-[#c:\Users\salah\Downloads\favicon_io\favicon.ico] bg-white p-2 pl-4  rounded-r-sm container"
               >
                 <span className="text-md lg:text-lg  font-semibold mb-4 text-[#0149a6]">
                   {ele.title}

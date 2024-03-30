@@ -2,6 +2,7 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import "../globals.css";
+import Head from "next/head";
 
 export const metadata = {
   title: "Explorem",
@@ -12,7 +13,9 @@ export default function RootLayout({ children, params: { locale } }) {
   const messages = useMessages();
   return (
     <html lang={locale}>
+     
       <body>
+      
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar locale={locale} />
           <div className="pt-20 lg:pt-24 mb-auto bg-[#f5f5f5]">{children}</div>
