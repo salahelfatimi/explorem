@@ -19,7 +19,7 @@ const Blog = async () => {
           width={1920}
           height={1000}
           className="w-full object-cover brightness-50 rounded h-[30rem] bg-no-repeat "
-          src="/image/aboutUs/slideLeft/image2.png"
+          src="/image/aboutUS/slideLeft/image2.jpg"
         />
         <div className=" absolute bottom-5 gap-2 left-8 flex flex-col">
           <h2 className=" font-bold text-2xl text-white">
