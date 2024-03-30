@@ -34,7 +34,7 @@ export default function BlogAll() {
           </div>
           <div className="lg:w-1/2">
             <img
-              className="object-cover    rounded-t-xl  lg:rounded-xl  h-full   "
+              className="object-cover    rounded-t-xl  lg:rounded-xl     "
               src="/image/aboutUS/slideLeft/image2.jpg"
               alt=""
             />

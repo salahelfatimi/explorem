@@ -2,7 +2,7 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import "../globals.css";
-import Head from "next/head";
+
 
 export const metadata = {
   title: "Explorem",
