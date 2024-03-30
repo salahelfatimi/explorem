@@ -1,9 +1,12 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 import TestimonialsSlider from "@/components/testimonialsSlider";
-import Head from "next/head";
+import {createSharedPathnamesNavigation} from 'next-intl/navigation';
+
+const locales = ['en', 'de','ar'] ;
+const {Link} = createSharedPathnamesNavigation({locales});
 
 export default function Index() {
   const t = useTranslations("Index");
