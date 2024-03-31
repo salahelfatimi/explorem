@@ -1,4 +1,4 @@
-import "../../globals.css"
+import "../globals.css"
 import SideBar from "./components/sideBar";
 
 export default function DashboardLayout({
