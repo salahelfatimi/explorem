@@ -9,7 +9,7 @@ export default async function BlogAll() {
             All blog
           </h2>
       {blogs.map((blog, index) => (
-        <div >
+        <div  key={index}>
           
           <div className="flex flex-col  gap-8 justify-between items-center    container">
             <div className="   w-auto flex  flex-col-reverse  odd:lg:flex-row   even:lg:flex-row-reverse items-center gap-2 rounded-xl border-8 border-white  drop-shadow-2xl  bg-white ">
