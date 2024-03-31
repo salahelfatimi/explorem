@@ -25,6 +25,7 @@ export default function SideBar() {
             </div>
             {sideBar.map((ele, index) => (
               <Link
+              
                 key={index}
                 href={ele.href}
                 className={` ${
@@ -72,6 +73,9 @@ export default function SideBar() {
               <div className=" flex gap-8  items-center flex-col">
                 {sideBar.map((ele, index) => (
                   <Link
+                  onClick={() => {
+                    setOpen(!open);
+                  }}
                     key={index}
                     href={ele.href}
                     className={` ${
