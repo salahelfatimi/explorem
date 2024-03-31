@@ -8,7 +8,7 @@ const Blog = async () => {
  
   return (
     <main className="container flex flex-col gap-4  pb-28">
-      <header className=" py-16 sm:text-center ">
+      <header className=" py-16 text-center ">
         <h1 className=" mb-4 text-3xl sm:text-4xl tracking-tight text-[#134ba1] font-bold ">
           Our Blog
         </h1>
@@ -17,7 +17,7 @@ const Blog = async () => {
         </p>
       </header>
       <div className="flex flex-col gap-4">
-        <h2 className=" font-medium text-xl bg-[#134ba1] text-white w-fit py-2 px-3 ">
+        <h2 className=" font-bold  text-2xl bg-[#134ba1] text-white w-full text-center py-2 px-3 ">
           Latest blog
         </h2>
         <div className=" w-full gap-4 items-center flex flex-col lg:flex-row-reverse ">
@@ -53,7 +53,7 @@ const Blog = async () => {
         </div>
       </div>
       <div className=" flex flex-col gap-6">
-        <h2 className=" font-medium text-xl bg-[#134ba1] text-white w-fit text-center  py-2 px-6 ">
+        <h2 className=" font-bold text-xl border-[#134ba1] border-y-4 text-[#134ba1] w-full text-center  py-2 px-6 ">
           All blog
         </h2>
         <div>
