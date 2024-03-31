@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import BlogItem from "./components/BlogItem";
-import { fetchBlogs } from "@/app/api/data/actions";
+
 const prisma = new PrismaClient();
 const Dashboard = async () => {
   const blogs = await prisma.blog.findMany({})

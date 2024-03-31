@@ -51,12 +51,14 @@ const BlogItem = ({ blog }) => {
             </span>
           </div>
         </div>
-        <div className="flex flex-col  items-center gap-4">
-          <span className="font-semibold text-[#0149a6]">published</span>
+        <div className="flex flex-row lg:flex-col  items-center  gap-4">
+          <span className="font-semibold text-white p-2 bg-[#0149a6]">published</span>
           <button onClick={()=>handelePublished(id,true)} className={`${published?"bg-[#0149a6] text-white":"text-[#0149a6]"} font-bold p-2  rounded-full`}>Yes</button>
           <button onClick={()=>handelePublished(id,false)} className={`${!published?"bg-red-500 text-white":"text-red-500"} font-bold p-2  rounded-full`}>No</button>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-8">
+       
+        
           <Link href={`dashboard/updateBlog/${id}`}>
             <Edit className="min-w-4   stroke-2  stroke-blue-500" />
           </Link>
