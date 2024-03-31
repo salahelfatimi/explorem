@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 export default function SideBar() {
   const path=usePathname()
   return (
-    <div className=" flex flex-col py-6 justify-between bg-white h-full ">
+    
+    <div className="  flex flex-col py-6 justify-between bg-white h-full ">
       <div className="flex flex-col  items-center  gap-4">
         <div>
           <h1 className=" font-bold text-[#0149a6] text-xl">Explorem Admin</h1>

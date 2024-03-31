@@ -31,18 +31,18 @@ const BlogItem = ({ blog }) => {
   };
   return (
     <>
-      <div className="flex gap-4 justify-between items-center shadow-lg rounded bg-white p-4 ">
-        <div className="flex gap-4 items-center">
+      <div className="flex flex-col lg:flex-row gap-4 justify-between items-center shadow-lg rounded bg-white p-4 ">
+        <div className="flex flex-col lg:flex-row gap-4 items-center">
           <Image
             width={1920}
             height={1000}
-            className="object-cover rounded w-auto h-48     "
+            className="object-cover rounded lg:w-72 w-full lg:h-48  lg:max-w-64     "
             src={imageUrl}
             alt="explorem"
           />
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col text-center lg:text-left gap-4">
             <h2 className=" font-bold text-lg text-black ">{title}</h2>
-            <p className="line-clamp-2 text-[#646c78] font-medium">{description}</p>
+            <p className="line-clamp-4 text-[#646c78] font-medium">{description}</p>
             <span className="text-[#646c78] font-medium  ">
               {createAt.toLocaleDateString()}
             </span>
