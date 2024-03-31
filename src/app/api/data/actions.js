@@ -9,9 +9,32 @@ import { revalidatePath } from "next/cache";
 // const locales = ['en', 'de','ar'] ;
 // const {Link, usePathname, redirect} = createSharedPathnamesNavigation({locales});
 const prisma = new PrismaClient();
+
+export const Published = async (id, publish) => {
+  
+  try {
+    const updated_blog = await prisma.blog.update({
+      where: {
+        id: id,
+      },
+      data: {
+        published: publish,
+      },
+    });
+
+  } catch (error) {
+    throw new Error(`Error retrieving latest blog: ${error.message}`);
+  }
+  redirect("/auth/dashboard");
+};
+
 export const fetchBlogs = async () => {
   try {
-    const blogs = await prisma.blog.findMany({});
+    const blogs = await prisma.blog.findMany({
+      where: {
+        published: true,
+      },
+    });
     return blogs;
   } catch (error) {
     throw new Error(`Error retrieving latest blog: ${error.message}`);
@@ -128,6 +151,9 @@ export const fetchSingleBlog = async (id) => {
 export const getLatestBlog = async () => {
   try {
     const latestBlog = await prisma.blog.findFirst({
+      where: {
+        published: true,
+      },
       orderBy: {
         createAt: "desc",
       },
