@@ -53,7 +53,7 @@ const Blog = async () => {
         </div>
       </div>
       <div className=" flex flex-col gap-6">
-        <h2 className=" font-medium text-xl bg-[#134ba1] text-white w-full text-center rounded py-2 px-3 ">
+        <h2 className=" font-medium text-xl bg-[#134ba1] text-white w-fit text-center  py-2 px-6 ">
           All blog
         </h2>
         <div>

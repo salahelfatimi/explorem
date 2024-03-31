@@ -69,7 +69,7 @@ export default function About() {
         />
       </div>
       <div className="container flex flex-col gap-4 lg:flex-row w-full items-center justify-between text-center">
-        <span className=" bg-white lg:w-1/3 flex flex-col gap-3 p-4 rounded-xl">
+        <span className=" bg-white shadow lg:w-1/3 flex flex-col gap-3 p-4 rounded-xl">
           <p className=" font-bold text-xl uppercase lg:text-2xl text-[#0149a6]">
             {t("grid.grid1.title")}
           </p>
@@ -82,7 +82,7 @@ export default function About() {
           className="w-36"
           alt="Explorem"
         />
-        <span className=" bg-white lg:w-1/3 flex flex-col gap-3 p-4 rounded-xl">
+        <span className=" bg-white shadow lg:w-1/3 flex flex-col gap-3 p-4 rounded-xl">
           <p className=" font-bold text-xl uppercase lg:text-2xl text-[#0149a6]">
             {t("grid.grid2.title")}
           </p>
@@ -145,20 +145,20 @@ export default function About() {
           {t("whatWeHaveAchieved.title")}
         </p>
 
-        <ul className="  px-2 lg:text-lg flex flex-col gap-4 font-semibold list-outside leading-loose ">
-          <li className=" border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+        <ul className="  px-2 lg:text-lg flex flex-col gap-4 font-normal list-outside leading-loose ">
+          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
             {t("whatWeHaveAchieved.line1")}
           </li>
-          <li className=" border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
             {t("whatWeHaveAchieved.line2")}
           </li>
-          <li className=" border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
             {t("whatWeHaveAchieved.line3")}
           </li>
-          <li className=" border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
             {t("whatWeHaveAchieved.line4")}
           </li>
-          <li className=" border-l-4 border-[#0149a6]  bg-white p-2 pl-4 flex flex-col gap-2 rounded-r-sm">
+          <li className=" border-l-4 border-[#0149a6] shadow  bg-white p-2 pl-4 flex flex-col gap-2 rounded-r-sm">
             {t("whatWeHaveAchieved.line5")}
             <div className="flex gap-4 items-center ">
               <a
@@ -181,10 +181,10 @@ export default function About() {
               </a>
             </div>
           </li>
-          <li className=" border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
             {t("whatWeHaveAchieved.line6")}
           </li>
-          <li className=" border-l-4 border-[#0149a6]  bg-white p-2 pl-4 flex flex-col gap-2 rounded-r-sm">
+          <li className=" border-l-4 border-[#0149a6] shadow  bg-white p-2 pl-4 flex flex-col gap-2 rounded-r-sm">
             {t("whatWeHaveAchieved.line7")}
             <div className="flex gap-4 items-center ">
               <a
@@ -198,13 +198,13 @@ export default function About() {
               </a>
             </div>
           </li>
-          <li className=" border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
             {t("whatWeHaveAchieved.line8")}
           </li>
-          <li className=" border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
             {t("whatWeHaveAchieved.line9")}
           </li>
-          <li className=" border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
             {t("whatWeHaveAchieved.line10")}
           </li>
         </ul>
