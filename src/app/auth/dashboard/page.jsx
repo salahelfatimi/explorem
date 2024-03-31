@@ -1,8 +1,19 @@
-const Dashboard = () => {
+import BlogItem from "./components/BlogItem";
+import { fetchBlogs } from "@/app/api/data/actions";
+
+const Dashboard = async () => {
+  const blogs = await fetchBlogs();
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Welcome</p>
+    <div className="flex flex-col gap-6">
+      <div>
+        <h1 className=" font-bold text-2xl bg-[#0149a6] text-white p-4 rounded">
+          Blogs
+        </h1>
+      </div>
+      <div className="flex flex-col gap-6">
+        {blogs?.length > 0 &&
+          blogs.map((blog) => <BlogItem key={blog?.id} blog={blog} />)}
+      </div>
     </div>
   );
 };

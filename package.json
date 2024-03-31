@@ -20,6 +20,7 @@
     "react-feather": "^2.0.10",
     "react-hot-toast": "^2.4.1",
     "resend": "^3.2.0",
+    "sweetalert2": "^11.10.7",
     "swiper": "^11.1.0"
   },
   "devDependencies": {

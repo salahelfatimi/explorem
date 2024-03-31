@@ -29,10 +29,10 @@ export default function Navbar({locale}) {
   ];
 
   return (
-    <>
+    <nav>
     
       {/* nav pc */}
-      <nav className=" hidden fixed  bg-white right-0 left-0 lg:block z-50 ">
+      <div className=" hidden fixed  bg-white right-0 left-0 lg:block z-50 ">
         <div className="  container  px-8  py-4 flex  flex-row justify-between items-center ">
           <div>
             <Image
@@ -75,7 +75,7 @@ export default function Navbar({locale}) {
             </button> */}
           </div>
         </div>
-      </nav>
+      </div>
 
       {/* nav phone */}
       <div className=" block fixed bg-white right-0 left-0 lg:hidden z-50">
@@ -142,6 +142,6 @@ export default function Navbar({locale}) {
           </div>
         </div>
       </div>
-    </>
+    </nav>
   );
 }
