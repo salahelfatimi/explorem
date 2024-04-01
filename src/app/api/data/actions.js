@@ -25,7 +25,7 @@ export const Published = async (id, publish) => {
   } catch (error) {
     throw new Error(`Error retrieving latest blog: ${error.message}`);
   }
-  redirect("/auth/dashboard");
+  redirect("/admin/dashboard");
 };
 
 export const fetchBlogs = async () => {
@@ -70,7 +70,7 @@ export const addBlog = async (formData) => {
     throw new Error(`Error retrieving latest blog: ${error.message}`);
   }
   // revalidatePath('/blogs/add-blog')
-  redirect("/auth/dashboard");
+  redirect("/admin/dashboard");
 };
 
 export const deleteBlog = async (blogId) => {
@@ -89,7 +89,7 @@ export const deleteBlog = async (blogId) => {
   } catch (error) {
     throw new Error(`Error retrieving latest blog: ${error.message}`);
   }
-  redirect("/auth/dashboard");
+  redirect("/admin/dashboard");
 };
 
 export const updateBlog = async (id, formData) => {
@@ -131,8 +131,8 @@ export const updateBlog = async (id, formData) => {
   }
   // push the data into the DB
 
-  revalidatePath(`/auth/dashboard/updateBlog/${id}`);
-  redirect("/auth/dashboard");
+  revalidatePath(`/admin/dashboard/updateBlog/${id}`);
+  redirect("/admin/dashboard");
 };
 
 export const fetchSingleBlog = async (id) => {
