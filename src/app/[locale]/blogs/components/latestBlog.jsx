@@ -11,14 +11,14 @@ export default async function LatestBlog() {
   return (
     <>
       <div className="flex flex-col gap-4">
-        <h2 className=" font-bold  text-2xl bg-[#134ba1] text-white w-full text-center py-2 px-3 ">
+        {/* <h2 className=" font-bold  text-2xl bg-[#134ba1] text-white w-full text-center py-2 px-3 ">
         {t('LatestBlog')}
-        </h2>
+        </h2> */}
         <div className=" w-full gap-4 items-center flex flex-col lg:flex-row-reverse ">
           <Image
             width={1920}
             height={1000}
-            className="lg:w-1/2 object-cover  rounded brightness-75   lg:h-[30rem] bg-no-repeat "
+            className="lg:w-1/2 object-cover  rounded  shadow-2xl   lg:h-[30rem] bg-no-repeat "
             src={imageUrl}
             alt="explorem"
           />

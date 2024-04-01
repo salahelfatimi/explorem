@@ -7,7 +7,7 @@ export default async function BlogAll() {
   const blogs = await fetchBlogs();
   return (
     <div className=" flex flex-col gap-6">
-        <h2 className=" font-bold text-xl border-[#134ba1] border-y-4 text-[#134ba1] w-full text-center  py-2 px-6 ">
+        <h2 className=" font-bold  text-2xl bg-[#134ba1] text-white w-full text-center py-2 px-3 ">
         {t('AllBlog')}
           </h2>
       {blogs.map((blog, index) => (
