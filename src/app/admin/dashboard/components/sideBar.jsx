@@ -25,13 +25,10 @@ export default function SideBar() {
             </div>
             {sideBar.map((ele, index) => (
               <Link
-              
                 key={index}
                 href={ele.href}
                 className={` ${
-                  path == ele.href
-                    ? " bg-[#0149A6]  text-[#fff]"
-                    : ""
+                  path == ele.href ? " bg-[#0149A6]  text-[#fff]" : ""
                 } text-lg text-center font-semibold w-full py-4`}
               >
                 {ele.title}
@@ -73,9 +70,9 @@ export default function SideBar() {
               <div className=" flex gap-8  items-center flex-col">
                 {sideBar.map((ele, index) => (
                   <Link
-                  onClick={() => {
-                    setOpen(!open);
-                  }}
+                    onClick={() => {
+                      setOpen(!open);
+                    }}
                     key={index}
                     href={ele.href}
                     className={` ${
@@ -87,7 +84,16 @@ export default function SideBar() {
                     {ele.title}
                   </Link>
                 ))}
+                 <div className="flex w-full text-center ">
+                <Link
+                  href={"/"}
+                  className=" bg-red-600 rounded text-white font-bold w-full py-3  "
+                >
+                  logOut
+                </Link>
               </div>
+              </div>
+             
             </div>
           </div>
         </div>
