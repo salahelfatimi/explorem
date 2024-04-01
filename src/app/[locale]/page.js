@@ -71,7 +71,7 @@ export default function Index() {
                 <Image
                   width={500}
                   height={500}
-                  src={`image/index/icon/training.svg`}
+                  src={`/image/index/icon/training.svg`}
                   className="w-11 min-w-11 fill-white"
                   alt="explorem"
                 />
@@ -90,7 +90,7 @@ export default function Index() {
                 <Image
                   width={500}
                   height={500}
-                  src={`image/index/icon/search-job.svg`}
+                  src={`/image/index/icon/search-job.svg`}
                   className="w-11 min-w-11 fill-white"
                   alt="explorem"
                 />
@@ -109,7 +109,7 @@ export default function Index() {
                 <Image
                   width={500}
                   height={500}
-                  src={`image/index/icon/diploma.svg`}
+                  src={`/image/index/icon/diploma.svg`}
                   className="w-11 min-w-11 fill-white"
                   alt="explorem"
                 />
@@ -128,7 +128,7 @@ export default function Index() {
                 <Image
                   width={500}
                   height={500}
-                  src={`image/index/icon/diploma.svg`}
+                  src={`/image/index/icon/diploma.svg`}
                   className="w-11 min-w-11 fill-white"
                   alt="explorem"
                 />
@@ -147,7 +147,7 @@ export default function Index() {
                 <Image
                   width={500}
                   height={500}
-                  src={`image/index/icon/academy-cap.svg`}
+                  src={`/image/index/icon/academy-cap.svg`}
                   className="w-11 min-w-11 fill-white"
                   alt="explorem"
                 />
@@ -166,7 +166,7 @@ export default function Index() {
                 <Image
                   width={500}
                   height={500}
-                  src={`image/index/icon/passport.svg`}
+                  src={`/image/index/icon/passport.svg`}
                   className="w-11 min-w-11 fill-white"
                   alt="explorem"
                 />
