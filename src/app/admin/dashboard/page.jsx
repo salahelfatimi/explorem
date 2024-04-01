@@ -3,8 +3,12 @@ import BlogItem from "./components/BlogItem";
 
 const prisma = new PrismaClient();
 const Dashboard = async () => {
-  const blogs = await prisma.blog.findMany({})
-   
+  const blogs = await prisma.blog.findMany({
+    orderBy: {
+      createAt: "desc",
+    },
+  });
+
   return (
     <div className="flex flex-col gap-6">
       <div>

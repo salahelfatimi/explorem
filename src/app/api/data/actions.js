@@ -34,6 +34,9 @@ export const fetchBlogs = async () => {
       where: {
         published: true,
       },
+      orderBy: {
+        createAt: "desc",
+      },
     });
     return blogs;
   } catch (error) {
