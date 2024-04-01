@@ -4,16 +4,18 @@ import Image from "next/image";
 import { Clock } from "react-feather";
 import BlogAll from "./components/blogAll";
 import LatestBlog from "./components/latestBlog";
+import { useTranslations } from "next-intl";
 
 function Blog() {
+  const t = useTranslations("Blog");
   return (
     <div className="container flex flex-col gap-4  pb-28">
       <div className=" py-16 text-center ">
         <h1 className=" mb-4 text-3xl sm:text-4xl tracking-tight text-[#134ba1] font-bold ">
-          Our Blog
+          {t('title')}
         </h1>
         <p className="text-lg text-black font-medium">
-          All the latest Explorem news, straight from the team.
+        {t('description')}
         </p>
       </div>
       <div>

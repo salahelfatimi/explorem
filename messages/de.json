@@ -1,4 +1,12 @@
 {
+  "Blog": {
+    "title": "Unser Blog",
+    "description": "Alle aktuellen Neuigkeiten von Explorem, direkt vom Team.",
+    "LatestBlog": "Neuester Blog",
+    "new": "Neu",
+    "readMore": "Weiterlesen",
+    "AllBlog": "Alle Blogs"
+  },
   "Index": {
     "title": {
       "line1": "Wir machen einen ",
@@ -59,7 +67,7 @@
   "Navbar": {
     "home": "Startseite",
     "employers": "Arbeitgeber",
-    "blog":"Blog",
+    "blog": "Blog",
     "candidates": "Bewerber",
     "contact": "Kontakt",
     "about": "Über uns",
@@ -251,7 +259,7 @@
       "Submit": "Einreichen"
     }
   },
-  "Employers":{
+  "Employers": {
     "titleEmployers": "Unsere besten Dienstleistungen für Arbeitgeber",
     "descriptionEmployers": "Projektmanagement (im Zusammenhang mit Personalwesen, Rekrutierung, Pflegeausbildung, Sprachbildung/-training)",
     "Services": {
@@ -303,5 +311,4 @@
     },
     "getInTouch": "Kontaktieren Sie uns: Treten Sie noch heute mit uns in Kontakt"
   }
-
 }

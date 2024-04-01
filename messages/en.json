@@ -1,4 +1,13 @@
 {
+  "Blog":{
+    "title":"Our Blog",
+    "description":"All the latest Explorem news, straight from the team . ",
+    "LatestBlog":"Latest blog",
+    "new":"New",
+    "readMore":"Read More",
+    "AllBlog":"All Blog"
+    
+  },
   "Index": {
     "title": {
       "line1": "We Make A ",
