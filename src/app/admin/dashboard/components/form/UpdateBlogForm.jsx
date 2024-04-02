@@ -65,7 +65,7 @@ const UpdateBlogForm = ({ blog }) => {
           Updtae
         </button>
         <Link
-          href="/auth/dashboard/"
+          href="/admin/dashboard/"
           className="text-center px-12 py-4 w-full rounded font-bold border-4 duration-700 hover:bg-white hover:text-red-500 border-red-500 bg-red-500 text-white"
         >
           Cancel
