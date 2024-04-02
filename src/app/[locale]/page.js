@@ -109,7 +109,7 @@ export default function Index() {
                 <Image
                   width={500}
                   height={500}
-                  src={`/image/index/icon/diploma.svg`}
+                  src={`/image/index/icon/social-management.svg`}
                   className="w-11 min-w-11 fill-white"
                   alt="explorem"
                 />

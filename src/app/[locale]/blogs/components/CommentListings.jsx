@@ -14,7 +14,7 @@ export const CommentListings = async ({ blogId }) => {
         <div className=" flex flex-col gap-4">
           {comments.length > 0 ? (
             comments.map((comment, index) => (
-              <div className=" flex flex-col lg:flex-row items-center bg-white p-4 rounded gap-8">
+              <div key={index} className=" flex flex-col lg:flex-row items-center bg-white p-4 rounded gap-8">
                 <Image
                   className="rounded-full "
                   src="/image/avatar/man.png"
