@@ -44,7 +44,7 @@ export default async function BlogAll() {
                   </span>
                 </div>
               </div>
-              <div className="lg:w-1/2 ">
+              <div className="lg:w-1/2 flex items-center  ">
                 <img
                   blurDataURL={blog.imageUrl}
                   placeholder="blur"
