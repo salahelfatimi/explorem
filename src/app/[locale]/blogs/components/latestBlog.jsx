@@ -26,7 +26,7 @@ export default async function LatestBlog() {
             quality={100}
             width={1920}
             height={1000}
-            className="lg:w-1/2 object-cover  rounded  shadow-2xl   lg:h-[30rem] bg-no-repeat "
+            className="lg:w-1/2 object-cover  rounded  shadow-2xl    bg-no-repeat "
             src={imageUrl}
             alt="explorem"
           />
