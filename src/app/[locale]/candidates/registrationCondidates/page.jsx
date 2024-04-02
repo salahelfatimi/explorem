@@ -45,7 +45,7 @@ function InscriptionCondidates() {
         body: formDataToSend,
       });
 
-      if (response.status === 200) {
+      if (response) {
         setFormData({
           firstName: "",
           lastName: "",

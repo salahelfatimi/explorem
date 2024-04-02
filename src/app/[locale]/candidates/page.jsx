@@ -1,15 +1,12 @@
-"use client"
+"use client";
 import Image from "next/image";
-
-
 
 import { useTranslations } from "next-intl";
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 import InscriptionCondidates from "./registrationCondidates/page";
 
-
 export default function Candidates() {
-    const t = useTranslations("Candidates")
+  const t = useTranslations("Candidates");
   const Services = [
     {
       id: 1,
@@ -25,7 +22,6 @@ export default function Candidates() {
         t("services.Training/Formation.description.7"),
         t("services.Training/Formation.description.8"),
         t("services.Training/Formation.description.9"),
-        
       ],
     },
     {
@@ -100,6 +96,10 @@ export default function Candidates() {
         <div className="flex flex-col gap-10">
           <div className="relative">
             <Image
+              blurDataURL="/image/candidates/saction1.jpg"
+              placeholder="blur"
+              loading="lazy"
+              quality={100}
               src="/image/candidates/saction1.jpg"
               className="h-auto max-w-full w-full  "
               width={1920}
@@ -117,12 +117,11 @@ export default function Candidates() {
           </div>
           <div></div>
         </div>
-        
+
         <div className="container">
           <div className="px-2 grid grid-cols-1 lg:grid-cols-2   gap-4  list-outside ">
             {Services.map((ele, index) => (
               <div
-              
                 key={index}
                 className=" flex flex-col  bg-white shadow  rounded-lg "
               >

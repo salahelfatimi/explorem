@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export default function About() {
-    const t = useTranslations("AboutUS");
+  const t = useTranslations("AboutUS");
   const images1 = [
     { src: "/image/aboutUS/slideLeft/image1.jpg" },
     { src: "/image/aboutUS/slideLeft/image2.jpg" },
@@ -30,8 +30,10 @@ export default function About() {
             className="h-auto max-w-full w-full  "
             width={1920}
             height={1080}
-            
-
+            blurDataURL="/image/aboutUS/saction1.jpg"
+            placeholder="blur"
+            loading="lazy"
+            quality={100}
             alt="Explorem"
           />
 
@@ -61,6 +63,10 @@ export default function About() {
           <p>{t("slogen1.line2")}</p>
         </span>
         <Image
+          blurDataURL="/image/aboutUS/slogen1.jpg"
+          placeholder="blur"
+          loading="lazy"
+          quality={100}
           src="/image/aboutUS/slogen1.jpg"
           className="lg:w-1/3 rounded-xl"
           width={500}
@@ -232,6 +238,10 @@ export default function About() {
       <div className=" space-y-12">
         <span className="flex gap-4  items-center justify-center">
           <Image
+            blurDataURL="/image/aboutUS/logoHand.png"
+            placeholder="blur"
+            loading="lazy"
+            quality={100}
             width={500}
             height={500}
             src="/image/aboutUS/logoHand.png"
@@ -246,6 +256,10 @@ export default function About() {
           <div className="flex lg:flex-row flex-col items-center justify-center gap-4  container ">
             <div className=" flex  justify-center">
               <Image
+                blurDataURL="/image/aboutUS/team/Gracila.jpg"
+                placeholder="blur"
+                loading="lazy"
+                quality={100}
                 width={500}
                 height={500}
                 src="/image/aboutUS/team/Gracila.jpg"
@@ -285,6 +299,10 @@ export default function About() {
           <div className="flex lg:flex-row-reverse flex-col items-center justify-center gap-4  container ">
             <div className=" flex  justify-center">
               <Image
+                blurDataURL="/image/aboutUS/team/Abdessamad.png"
+                placeholder="blur"
+                loading="lazy"
+                quality={100}
                 width={500}
                 height={500}
                 src="/image/aboutUS/team/Abdessamad.png"

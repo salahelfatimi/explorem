@@ -1,8 +1,8 @@
 "use server";
 import { PrismaClient } from "@prisma/client";
 import { redirect } from "next/navigation";
-import { del, put } from "@vercel/blob";
 import { revalidatePath } from "next/cache";
+import { utapi } from "@/app/server/uploadthing";
 
 // import {createSharedPathnamesNavigation} from 'next-intl/navigation';
 
@@ -11,7 +11,6 @@ import { revalidatePath } from "next/cache";
 const prisma = new PrismaClient();
 
 export const Published = async (id, publish) => {
-  
   try {
     const updated_blog = await prisma.blog.update({
       where: {
@@ -21,7 +20,6 @@ export const Published = async (id, publish) => {
         published: publish,
       },
     });
-
   } catch (error) {
     throw new Error(`Error retrieving latest blog: ${error.message}`);
   }
@@ -49,23 +47,14 @@ export const addBlog = async (formData) => {
   const title = formData.get("title");
   const description = formData.get("description");
   try {
-    if (!image) {
-      return NextResponse.json(
-        { error: "No image received." },
-        { status: 400 }
-      );
-    }
-
-    const blob = await put(`${title}.png`, image, {
-      access: "public",
-    });
+    const response = await utapi.uploadFiles(image);
 
     // push the data into the DB
     const new_blog = await prisma.blog.create({
       data: {
-        imageUrl: blob.url ? blob.url : null,
+        imageUrl: response.data.url ? response.data.url : null,
         title: title,
-
+        imageKey:response.data.key,
         description: description,
       },
     });
@@ -76,14 +65,14 @@ export const addBlog = async (formData) => {
   redirect("/admin/dashboard");
 };
 
-export const deleteBlog = async (blogId) => {
+export const deleteBlog = async (blogId,imageKey) => {
   try {
     const blogs = await prisma.blog.findFirst({
       where: {
         id: blogId,
       },
     });
-    await del(blogs.imageUrl);
+    await utapi.deleteFiles(imageKey);
     await prisma.blog.delete({
       where: {
         id: blogId,
@@ -95,7 +84,7 @@ export const deleteBlog = async (blogId) => {
   redirect("/admin/dashboard");
 };
 
-export const updateBlog = async (id, formData) => {
+export const updateBlog = async (id, formData,imageKey) => {
   // collect info from form using formData
   const image = formData.get("image");
   const urlImage = formData.get("urlImage");
@@ -103,16 +92,15 @@ export const updateBlog = async (id, formData) => {
   const description = formData.get("description");
   try {
     if (image.size > 0) {
-      await del(urlImage);
-      const blob = await put(`${title}.png`, image, {
-        access: "public",
-      });
+      await utapi.deleteFiles(imageKey);
+      const response = await utapi.uploadFiles(image);
       const updated_blog = await prisma.blog.update({
         where: {
           id: id,
         },
         data: {
-          imageUrl: blob.url ? blob.url : null,
+          imageUrl: response.data.url ? response.data.url : null,
+          imageKey:response.data.key,
           title,
           description,
         },
@@ -124,6 +112,7 @@ export const updateBlog = async (id, formData) => {
         },
         data: {
           imageUrl: urlImage ? urlImage : null,
+          imageKey:imageKey,
           title,
           description,
         },
@@ -166,4 +155,39 @@ export const getLatestBlog = async () => {
   } catch (error) {
     throw new Error(`Error retrieving latest blog: ${error.message}`);
   }
+};
+
+// fetching all comments
+export const fetchComments = async (blogId) => {
+  //const skip = (page - 1) * pageSize
+
+  const comments = await prisma.comment.findMany({
+    where: {
+      blogId: blogId,
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+    take: 5, // pagination
+  });
+
+  return comments;
+};
+
+// add Comment to a blog
+export const addCommentToBlog = async (blogId, formData) => {
+  // collect info from form using formData
+  const text = formData.get("text");
+
+  // session
+
+  // push the data into the DB
+  const added_comment = await prisma.comment.create({
+    data: {
+      blogId: blogId,
+      text: text,
+    },
+  });
+  revalidatePath(`/blogs/${blogId}`);
+  redirect(`/blogs/${blogId}`);
 };

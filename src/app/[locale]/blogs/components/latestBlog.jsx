@@ -17,6 +17,10 @@ export default async function LatestBlog() {
         </h2> */}
         <div className=" w-full gap-4 items-center flex flex-col lg:flex-row-reverse ">
           <Image
+            blurDataURL={imageUrl}
+            placeholder="blur"
+            loading="lazy"
+            quality={100}
             width={1920}
             height={1000}
             className="lg:w-1/2 object-cover  rounded  shadow-2xl   lg:h-[30rem] bg-no-repeat "
@@ -37,7 +41,7 @@ export default async function LatestBlog() {
 
             <div className="flex justify-between w-full flex-row-reverse items-center">
               <span className="text-[#646c78]   font-semibold flex gap-2">
-                <Clock className="min-w-4" /> {createAt.toLocaleDateString()}
+                <Clock className="min-w-4" /> {createAt?.toLocaleDateString()}
               </span>
               <span className="font-bold">
                 By <span className="text-[#134ba1]">{author}</span>

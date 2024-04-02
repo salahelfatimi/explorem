@@ -1,7 +1,11 @@
 import { fetchBlogs } from "@/app/api/data/actions";
 import { useTranslations } from "next-intl";
-import { Clock, Link2 } from "react-feather";
 
+import { Clock, Link2 } from "react-feather";
+import { createSharedPathnamesNavigation } from "next-intl/navigation";
+
+const locales = ["en", "de", "ar"];
+const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
 export default async function BlogAll() {
   const t = useTranslations("Blog");
   const blogs = await fetchBlogs();
@@ -24,10 +28,12 @@ export default async function BlogAll() {
                   </span>
                 </div>
 
-                <button className="bg-[#134ba0]  font-bold w-full  justify-center  text-white rounded-md  py-2 px-4  capitalize flex gap-2 items-center ">
-                  {" "}
+                <Link
+                  href={`/blogs/${blog.id}`}
+                  className="bg-[#134ba0]  font-bold w-full  justify-center  text-white rounded-md  py-2 px-4  capitalize flex gap-2 items-center "
+                >
                   <span>{t("readMore")}</span> <Link2 size={25} />
-                </button>
+                </Link>
                 <div className="flex justify-between w-full flex-row-reverse items-center">
                   <span className="text-[#646c78]   font-semibold flex gap-2">
                     <Clock className="min-w-4" />{" "}
@@ -40,6 +46,12 @@ export default async function BlogAll() {
               </div>
               <div className="lg:w-1/2">
                 <img
+                  blurDataURL={blog.imageUrl}
+                  placeholder="blur"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                  quality={100}
                   className="object-cover    rounded-t-xl  lg:rounded-xl     "
                   src={blog.imageUrl}
                   alt="explorem"

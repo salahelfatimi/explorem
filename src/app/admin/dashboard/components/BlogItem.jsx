@@ -7,11 +7,11 @@ import React from "react";
 import { Edit, Trash } from "react-feather";
 
 const BlogItem = ({ blog }) => {
-  const { id, title, imageUrl, description, createAt,published } = blog || {};
+  const { id, title, imageUrl, description, createAt,published ,imageKey } = blog || {};
   const handelePublished = async (id,e)=>{
       await Published(id,e)
   }
-  const deleteBlogHandler = async (id) => {
+  const deleteBlogHandler = async (id,imageKey) => {
     Swal.fire({
       title: "Are you sure?",
       text: `You won't be able to revert this Blog with id: ${id}`,
@@ -28,7 +28,7 @@ const BlogItem = ({ blog }) => {
           icon: "success",
         });
         // Perform the delete action
-        await deleteBlog(id);
+        await deleteBlog(id,imageKey);
       }
     });
   };
@@ -62,7 +62,7 @@ const BlogItem = ({ blog }) => {
           <Link href={`dashboard/updateBlog/${id}`}>
             <Edit className="min-w-4   stroke-2  stroke-blue-500" />
           </Link>
-          <button onClick={() => deleteBlogHandler(id)}>
+          <button onClick={() => deleteBlogHandler(id,imageKey)}>
             <Trash className="min-w-4 stroke-2  stroke-red-500" />
           </button>
         </div>

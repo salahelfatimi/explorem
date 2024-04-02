@@ -6,8 +6,13 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
     
     images: {
-        domains: ['dufelyt7pqksg30d.public.blob.vercel-storage.com'],
-    },
+        remotePatterns: [
+          {
+            protocol: "https",
+            hostname: "utfs.io",
+          },
+        ],
+      },
 };
  
 export default withNextIntl(nextConfig);

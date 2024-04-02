@@ -7,10 +7,9 @@ import { useRef } from "react";
 const AddBlog = () => {
   const ref = useRef();
   const addBlogHandler = async (formData) => {
-    console.log(formData);
     await addBlog(formData);
-    //refresh the form
-    // ref?.current?.reset();
+    // refresh the form
+    ref?.current?.reset();
   };
   return (
     <>

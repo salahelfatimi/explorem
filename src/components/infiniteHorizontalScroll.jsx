@@ -9,12 +9,12 @@ const InfiniteHorizontalScroll = ({ images }) => {
         {images?.map((ele, index) => (
           <div key={index}>
             <Image
-            
-             quality={50}
+              blurDataURL={ele.src}
+              placeholder="blur"
+              loading="lazy"
+              quality={100}
               width={800}
-             
               height={550}
-              priority
               src={ele.src}
               className="max-w-none rounded-sm h-52 w-auto"
               alt="explorem"
@@ -26,11 +26,11 @@ const InfiniteHorizontalScroll = ({ images }) => {
         {images?.map((ele, index) => (
           <div key={index}>
             <Image
-            
-             quality={50}
+              blurDataURL={ele.src}
+              placeholder="blur"
+              loading="lazy"
+              quality={100}
               width={800}
-            
-              priority
               height={550}
               src={ele.src}
               className="max-w-none rounded-sm h-52 object-cover w-auto"

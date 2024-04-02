@@ -9,11 +9,11 @@ import { useRef } from "react";
 
 const UpdateBlogForm = ({ blog }) => {
   const ref = useRef();
-  const { id, title, imageUrl, description } = blog || {};
+  const { id, title, imageUrl, description ,imageKey} = blog || {};
 
   // handle update
   const handleUpdateBlog = async (formData) => {
-    await updateBlog(id, formData);
+    await updateBlog(id, formData,imageKey);
     ref?.current.reset();
   };
 

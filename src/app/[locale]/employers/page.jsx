@@ -5,11 +5,8 @@ import Image from "next/image";
 import Contact from "../contact/page";
 import { useTranslations } from "next-intl";
 
-
-
-
 export default function Employers() {
- const t = useTranslations("Employers");
+  const t = useTranslations("Employers");
 
   const services = [
     {
@@ -71,11 +68,14 @@ export default function Employers() {
           <div>
             <div className="relative">
               <Image
+                blurDataURL="/image/employers/saction1.jpg"
+                placeholder="blur"
+                loading="lazy"
+                quality={100}
                 src="/image/employers/saction1.jpg"
                 className="h-auto max-w-full w-full  "
                 width={6240}
                 height={2153}
-                quality={50}
                 alt="Explorem"
               />
 
