@@ -17,7 +17,7 @@ function InscriptionCondidates() {
 
   const fileInputRef = useRef(null);
 
-  const sendPdf = async (e) => {
+  const registrationCandidates = async (e) => {
     e.preventDefault();
     const formDataToSend = new FormData();
     formDataToSend.append("file", formData.pdf);
@@ -105,7 +105,7 @@ function InscriptionCondidates() {
           <FileText size={30} className=" stroke-[#0149a6] min-w-12"/> 
         </h2>
       </div>
-      <form className="container flex flex-col gap-4" onSubmit={sendPdf}>
+      <form  className="container flex flex-col gap-4" onSubmit={registrationCandidates}>
         <Toaster
           toastOptions={{
             className: "dark:bg-[#121212] dark:text-white bg-white text-black ",

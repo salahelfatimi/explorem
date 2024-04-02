@@ -166,7 +166,7 @@ export default function Contact() {
                   rows="16"
                   placeholder={t("GetInTouch.message")}
                 ></textarea>
-                <button className="  px-12 py-1 w-full rounded font-bold border-4 duration-700  hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white ">
+                <button type="submit" className="  px-12 py-1 w-full rounded font-bold border-4 duration-700  hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white ">
                   {t("GetInTouch.send")}
                 </button>
               </form>
