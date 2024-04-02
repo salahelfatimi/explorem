@@ -1,9 +1,12 @@
 import { getLatestBlog } from "@/app/api/data/actions";
 import { useTranslations } from "next-intl";
+import { createSharedPathnamesNavigation } from "next-intl/navigation";
 
 import Image from "next/image";
-import { Clock } from "react-feather";
 
+import { Clock } from "react-feather";
+const locales = ["en", "de", "ar"];
+const {  Link } = createSharedPathnamesNavigation({ locales });
 export default async function LatestBlog() {
   const t = useTranslations("Blog");
   const latestBlog = await getLatestBlog();
@@ -47,9 +50,12 @@ export default async function LatestBlog() {
                 By <span className="text-[#134ba1]">{author}</span>
               </span>
             </div>
-            <span className="border-2 border-[#134ba1] py-2 px-3 rounded font-bold text-[#134ba1] w-fit">
+            <Link
+              href={`/blogs/${id}`}
+              className="border-2 border-[#134ba1] py-2 px-3 rounded font-bold text-[#134ba1] w-fit"
+            >
               {t("readMore")}
-            </span>
+            </Link>
           </div>
         </div>
       </div>

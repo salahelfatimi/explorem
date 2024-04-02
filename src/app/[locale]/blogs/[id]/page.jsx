@@ -8,10 +8,11 @@ export default async function BlogDetail({ params }) {
   const id = params?.id;
 
   const blog = await fetchSingleBlog(id);
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   return (
     <>
       <div className="container items-center   flex flex-col gap-16 py-10">
-        <h3 className="font-bold italic uppercase text-wrap text-center text-2xl lg:text-4xl   ">
+        <h3 className="font-bold italic   border-b-4 text-[#134ba1] border-[#134ba1] uppercase text-wrap text-center text-2xl lg:text-4xl   ">
           {blog.title}
         </h3>
         <div className=" flex  flex-col lg:flex-row gap-4">
@@ -30,10 +31,10 @@ export default async function BlogDetail({ params }) {
           ) : null}
           <div className="flex justify-center lg:flex-col gap-4 items-center">
             <span className=" border-t-4 border-[#134ba1] items-center  h-fit p-2 flex-row lg:flex-col font-bold flex gap-2">
-              <p className="text-[#134ba1] font-extrabold text-xl">24</p>
+              <p className="text-[#134ba1] font-extrabold text-xl">{new Date(blog.createAt).getDate() }</p>
 
-              <p className="">January</p>
-              <p className=" bg-[#134ba1] text-white py-1 px-4">2024</p>
+              <p className="">{monthNames[new Date(blog.createAt).getMonth() + 1]}</p>
+              <p className=" bg-[#134ba1] text-white py-1 px-4">{new Date(blog.createAt).getFullYear()}</p>
             </span>
             <span className=" rounded-full border-[#134ba1]  border-2 w-fit h-fit p-2">
               <Facebook className=" stroke-[#134ba1] stroke-2" />

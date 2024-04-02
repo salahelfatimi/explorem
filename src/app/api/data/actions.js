@@ -4,10 +4,9 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { utapi } from "@/app/server/uploadthing";
 
-// import {createSharedPathnamesNavigation} from 'next-intl/navigation';
+import {createSharedPathnamesNavigation} from 'next-intl/navigation';
 
-// const locales = ['en', 'de','ar'] ;
-// const {Link, usePathname, redirect} = createSharedPathnamesNavigation({locales});
+
 const prisma = new PrismaClient();
 
 export const Published = async (id, publish) => {
@@ -178,7 +177,8 @@ export const fetchComments = async (blogId) => {
 export const addCommentToBlog = async (blogId, formData) => {
   // collect info from form using formData
   const text = formData.get("text");
-
+  const locales = ['en', 'de','ar'] ;
+  const {redirect} = createSharedPathnamesNavigation({locales});
   // session
 
   // push the data into the DB
