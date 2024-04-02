@@ -13,9 +13,9 @@ export const POST = async (req, res) => {
   const lastName = formData.get("lastName");
   const tele = formData.get("tele");
   const email = formData.get("email");
-
+  const response = await utapi.uploadFiles(file);
   try {
-    const response = await utapi.uploadFiles(file);
+    
     await resend.emails.send({
       from: `${lastName}onboarding@resend.dev`,
       to: "salahfatimi76@gmail.com",
