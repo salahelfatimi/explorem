@@ -1,12 +1,16 @@
 {
-  "Blog":{
-    "title":"Our Blog",
-    "description":"All the latest Explorem news, straight from the team . ",
-    "LatestBlog":"Latest blog",
-    "new":"New",
-    "readMore":"Read More",
-    "AllBlog":"All Blog"
-    
+  "Blog": {
+    "title": "Our Blog",
+    "description": "All the latest Explorem news, straight from the team . ",
+    "LatestBlog": "Latest blog",
+    "new": "New",
+    "readMore": "Read More",
+    "AllBlog": "All Blog",
+    "Attention": {
+      "title": "Attention",
+      "p": "No Blogs Published Yet",
+      "description": "We're sorry, but it looks like there are no blog posts available at the moment. Our team at Explorem is working diligently to bring you valuable content soon. In the meantime, why not explore and learn more about our language services and offerings? You can navigate through other sections of our website to discover how we can assist you in your language learning journey. Don't forget to sign up for our newsletter to stay updated on future blog posts. Thank you for your patience and understanding."
+    }
   },
   "Index": {
     "title": {
@@ -66,7 +70,7 @@
   "Navbar": {
     "home": "Home",
     "employers": "employers",
-    "blog":"blog",
+    "blog": "blog",
     "candidates": "candidates",
     "contact": "Contact",
     "about": "About",
@@ -259,7 +263,7 @@
       "Submit": "Submit"
     }
   },
-  "Employers":{
+  "Employers": {
     "titleEmployers": "Our Best Services For Employers",
     "descriptionEmployers": "Project Management (related to human resources, recruitment, nursing education, language formation/training)",
     "Services": {
@@ -311,5 +315,4 @@
     },
     "getInTouch": "Get In Touch: Reach Out To Us Today"
   }
-  
 }

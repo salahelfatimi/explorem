@@ -5,7 +5,13 @@
     "LatestBlog": "Neuester Blog",
     "new": "Neu",
     "readMore": "Weiterlesen",
-    "AllBlog": "Alle Blogs"
+    "AllBlog": "Alle Blogs",
+    "Attention": {
+      "title": "Achtung",
+      "p": "Noch keine Blogs veröffentlicht",
+      "description": "Wir entschuldigen uns, aber es scheint, dass im Moment keine Blogbeiträge verfügbar sind. Unser Team bei Explorem arbeitet fleißig daran, Ihnen bald wertvolle Inhalte zu liefern. In der Zwischenzeit, warum erkunden und erfahren Sie nicht mehr über unsere Sprachdienste und -angebote? Sie können durch andere Abschnitte unserer Website navigieren, um herauszufinden, wie wir Sie bei Ihrer Sprachlernreise unterstützen können. Vergessen Sie nicht, sich für unseren Newsletter anzumelden, um über zukünftige Blogbeiträge auf dem Laufenden zu bleiben. Vielen Dank für Ihre Geduld und Ihr Verständnis."
+    }
+    
   },
   "Index": {
     "title": {

@@ -29,20 +29,11 @@ async function Blog() {
         ) : (
           <div className=" flex items-center flex-col gap-6">
             <h2 className=" text-3xl font-bold sm:text-4xl tracking-tight text-[#134ba1] uppercase">
-              Attention
+              {t("Attention.title")}
             </h2>
-            <span className=" font-semibold text-xl ">
-              No Blogs Published Yet
-            </span>
+            <span className=" font-semibold text-xl ">{t("Attention.p")}</span>
             <p className=" font-medium text-lg text-center text-[#9DA4B2]">
-              We're sorry, but it looks like there are no blog posts available
-              at the moment. Our team at Explorem is working diligently to bring
-              you valuable content soon. In the meantime, why not explore and
-              learn more about our language services and offerings? You can
-              navigate through other sections of our website to discover how we
-              can assist you in your language learning journey. Don't forget to
-              sign up for our newsletter to stay updated on future blog posts.
-              Thank you for your patience and understanding.
+              {t("Attention.description")}
             </p>
           </div>
         )}
