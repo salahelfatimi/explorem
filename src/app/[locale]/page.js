@@ -8,9 +8,9 @@ import { createSharedPathnamesNavigation } from "next-intl/navigation";
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
 
-export default function Index() {
-  const t = useTranslations("Index");
-  const images = [
+export default   function Index() {
+  const t =  useTranslations("Index");
+  const  images =  [
     { src: "/image/aboutUS/slideLeft/image1.jpg" },
     { src: "/image/aboutUS/slideLeft/image2.jpg" },
     { src: "/image/aboutUS/slideLeft/image3.jpg" },
@@ -22,7 +22,7 @@ export default function Index() {
     { src: "/image/aboutUS/slideLeft/image9.jpg" },
   ];
 
-  return (
+  return  (
     <>
       <div className="bg-[#F5F5F5]  space-y-8 py-12">
         <div className=" flex flex-col items-center justify-center gap-4">

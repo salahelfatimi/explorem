@@ -1,5 +1,4 @@
 "use client";
-
 import { addBlog } from "@/app/api/data/actions";
 import Link from "next/link";
 import { useRef } from "react";

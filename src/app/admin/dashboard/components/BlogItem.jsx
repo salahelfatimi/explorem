@@ -4,7 +4,7 @@ import { Published, deleteBlog } from "@/app/api/data/actions";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Edit, Trash } from "react-feather";
+import { Edit, Eye, MessageSquare, Trash } from "react-feather";
 
 const BlogItem = ({ blog }) => {
   const { id, title, imageUrl, description, createAt, published, imageKey } =
@@ -55,6 +55,10 @@ const BlogItem = ({ blog }) => {
           </div>
         </div>
         <div className="flex flex-col items-center lg:flex-row gap-10">
+          <Link href={`dashboard/comments/${id}`} className="flex flex-row lg:flex-col  bg-[#0149a6] text-center  items-center rounded  gap-2 p-2">
+            <Eye className=" stroke-white"/>
+            <span className="  font-medium text-white  ">View Comments</span>
+          </Link>
           <div className="flex flex-row lg:flex-col  items-center  gap-4">
             <span className="font-semibold text-white p-2 bg-[#0149a6]">
               published

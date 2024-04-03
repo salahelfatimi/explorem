@@ -191,3 +191,17 @@ export const addCommentToBlog = async (blogId, formData) => {
   revalidatePath(`/blogs/${blogId}`);
   redirect(`/blogs/${blogId}`);
 };
+
+export const deleteComment = async (id,blogId) => {
+  try {
+    await prisma.comment.delete({
+      where: {
+        id:id,
+        blogId: blogId,
+      },
+    });
+  } catch (error) {
+    throw new Error(`Error retrieving latest blog: ${error.message}`);
+  }
+  redirect(`/admin/dashboard/comments/${blogId}`);
+};
