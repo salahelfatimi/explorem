@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import React, { useState, useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
-import {  FileText } from "react-feather";
+import { FileText } from "react-feather";
 import { useTranslations } from "next-intl";
 
 function InscriptionCondidates() {
@@ -40,39 +40,33 @@ function InscriptionCondidates() {
     }
 
     try {
-      const response = await fetch("/api/condidatesInscription", {
-        method: "POST",
-        body: formDataToSend,
-      });
-
-      if (response) {
-        setFormData({
-          firstName: "",
-          lastName: "",
-          tele: "",
-          email: "",
-          pdf: null,
-        });
-        toast.success(
-          `Hey ${formData.firstName}, your message was sent successfully! I will contact you soon! 👋`,
-          {
-            position: "bottom-right",
-            duration: 7000,
+      toast.promise(
+        (async () => {
+          const response = await fetch("/api/condidatesInscription", {
+            method: "POST",
+            body: formDataToSend,
+          });
+          if (response.ok) {
+            setFormData({
+              firstName: "",
+              lastName: "",
+              tele: "",
+              email: "",
+              pdf: null,
+            });
+            if (fileInputRef.current) {
+              fileInputRef.current.value = "";
+            }
+          } else {
+            throw new Error("Failed to send message");
           }
-        );
-
-        if (fileInputRef.current) {
-          fileInputRef.current.value = "";
+        })(),
+        {
+          loading: "Registering ...",
+          success: <b>Your registration was successful !</b>,
+          error: <b>Failed to register candidate.</b>,
         }
-      } else {
-        toast.error(
-          `Hello ${formData.firstName}, it appears that your previous message was not sent successfully. Please try sending it again later.`,
-          {
-            position: "bottom-right",
-            duration: 7000,
-          }
-        );
-      }
+      );
     } catch (error) {
       console.error(error);
     }
@@ -98,17 +92,19 @@ function InscriptionCondidates() {
     <div className="space-y-4">
       <div className=" flex justify-center ">
         <h2 className="flex gap-1 items-center">
-          
           <span className=" capitalize text-center font-bold text-md lg:text-2xl text-[#0149a6]">
             {t("inscriptionCondidates.title")}
           </span>
-          <FileText size={30} className=" stroke-[#0149a6] min-w-12"/> 
+          <FileText size={30} className=" stroke-[#0149a6] min-w-12" />
         </h2>
       </div>
-      <form  className="container flex flex-col gap-4" onSubmit={registrationCandidates}>
+      <form
+        className="container flex flex-col gap-4"
+        onSubmit={registrationCandidates}
+      >
         <Toaster
           toastOptions={{
-            className: "dark:bg-[#121212] dark:text-white bg-white text-black ",
+            className: "  bg-white text-black ",
           }}
         />
         <input
@@ -151,7 +147,7 @@ function InscriptionCondidates() {
           </label>
           <input
             id="pdf"
-            ref={fileInputRef} 
+            ref={fileInputRef}
             onChange={handleFileChange}
             type="file"
             name="pdf"
@@ -160,7 +156,10 @@ function InscriptionCondidates() {
           />
         </div>
 
-        <button type="submit" className="px-12 py-1 w-full rounded font-bold border-4 duration-700 hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white">
+        <button
+          type="submit"
+          className="px-12 py-1 w-full rounded font-bold border-4 duration-700 hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white"
+        >
           {t("inscriptionCondidates.Submit")}
         </button>
       </form>

@@ -12,7 +12,7 @@ export default function RootLayout({ children, params: { locale } }) {
   const messages = useMessages();
   return (
     <html lang={locale}>
-      <body className="bg-[#f5f5f5]">
+      <body className="bg-[#856161]">
         <NextIntlClientProvider
           
           locale={locale}
@@ -20,7 +20,7 @@ export default function RootLayout({ children, params: { locale } }) {
         >
           <div className="flex flex-col justify-between  h-screen">
             <Navbar locale={locale} />
-            <div className="  mb-auto bg-[#f5f5f5]">
+            <div className=" mb-auto bg-[#f5f5f5]">
               {children}
             </div>
             <Footer />

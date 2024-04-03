@@ -1,14 +1,12 @@
-"use client"
+"use client";
 import { Mail, MapPin, Phone } from "react-feather";
 import toast, { Toaster } from "react-hot-toast";
-
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 
-
 export default function Contact() {
-    const t = useTranslations("Contact");
+  const t = useTranslations("Contact");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -37,38 +35,32 @@ export default function Contact() {
     if (!formData.message) {
       return toast.error("Please enter a message");
     }
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    if (response.status === 200) {
-      setFormData({
-        firstName: "",
-        lastName: "",
-        tele: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-      toast.success(
-        `Hey ${formData.firstName}, your message was sent successfully! I Will Contact you soon! 👋`,
-        {
-          position: "bottom-right",
-          duration: 7000,
+    toast.promise(
+      (async () => {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+        if (response.status === 200) {
+          setFormData({
+            firstName: "",
+            lastName: "",
+            tele: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
         }
-      );
-    } else {
-      toast.error(
-        `Hello ${formData.firstName}, it appears that your previous message was not sent successfully. Please try sending it again later. `,
-        {
-          position: "bottom-right",
-          duration: 7000,
-        }
-      );
-    }
+      })(),
+      {
+        loading: "Sending...",
+        success: <b>Message was sent successfully ! </b>,
+        error: <b>Failed to send message . </b>,
+      }
+    );
   };
 
   const handleInputChange = (e) => {
@@ -166,7 +158,10 @@ export default function Contact() {
                   rows="16"
                   placeholder={t("GetInTouch.message")}
                 ></textarea>
-                <button type="submit" className="  px-12 py-1 w-full rounded font-bold border-4 duration-700  hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white ">
+                <button
+                  type="submit"
+                  className="  px-12 py-1 w-full rounded font-bold border-4 duration-700  hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white "
+                >
                   {t("GetInTouch.send")}
                 </button>
               </form>
@@ -205,7 +200,7 @@ export default function Contact() {
                     <div className="gap-2  border-l-8 pl-2 border-white flex flex-col ">
                       <div className="flex flex-col  gap-1 ">
                         <span className="  bg-[#0149a6] w-fit p-1 text-white ">
-                        {t('Information.mobile.formationCenter')}
+                          {t("Information.mobile.formationCenter")}
                         </span>
                         <div className="border-l-4 border-[#0149a6] p-1 ml-3 pl-2  flex flex-col gap-2">
                           <span className="flex gap-2  w-auto   ">
@@ -225,22 +220,30 @@ export default function Contact() {
                               className="flex flex-row gap-1 text-sm "
                             >
                               (+212) 8 09 89 12 97{" "}
-                              <span className="font-semibold ">{t("Information.mobile.landline")}</span>
+                              <span className="font-semibold ">
+                                {t("Information.mobile.landline")}
+                              </span>
                             </a>
                           </span>
                         </div>
                       </div>
                       <div className="flex flex-col  gap-1 ">
-                        <span className="  bg-[#0149a6] w-fit p-1 text-white  ">{t('Information.mobile.administration')}</span>
+                        <span className="  bg-[#0149a6] w-fit p-1 text-white  ">
+                          {t("Information.mobile.administration")}
+                        </span>
                         <div className="border-l-4 border-[#0149a6] p-1 ml-3 pl-2   flex flex-col gap-2">
                           <span className="flex gap-2  w-auto   ">
                             <a href="tel:+212650-656897" className="  text-sm ">
-                              (+212) 6 50 65 68 97 <span className="font-semibold ">(ABDESSAMAD)</span>
+                              (+212) 6 50 65 68 97{" "}
+                              <span className="font-semibold ">
+                                (ABDESSAMAD)
+                              </span>
                             </a>
                           </span>
                           <span className="flex gap-2  w-auto   ">
                             <a href="tel:+212608-789360" className="  text-sm ">
-                              (+212) 6 08 78 93 60 <span className="font-semibold ">(GRACILA)</span>
+                              (+212) 6 08 78 93 60{" "}
+                              <span className="font-semibold ">(GRACILA)</span>
                             </a>{" "}
                           </span>
                         </div>
