@@ -1,4 +1,5 @@
-import { fetchComments } from "@/app/api/data/actions";
+
+import { fetchComments } from "@/app/api/data/Comment/actions";
 import Image from "next/image";
 import { Star } from "react-feather";
 

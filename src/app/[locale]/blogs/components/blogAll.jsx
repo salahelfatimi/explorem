@@ -1,8 +1,9 @@
-import { fetchBlogs } from "@/app/api/data/actions";
+
 import { Clock, Link2 } from "react-feather";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import { fetchBlogs } from "@/app/api/data/blog/actions";
 
 const locales = ["en", "de", "ar"];
 const { Link, usePathname } = createSharedPathnamesNavigation({ locales });

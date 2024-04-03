@@ -1,9 +1,7 @@
-
-import { deleteComment, fetchComments } from "@/app/api/data/actions";
 import Image from "next/image";
 import { Star, Trash } from "react-feather";
-import Swal from "sweetalert2";
 import DeleteComment from "../../components/deleteComment";
+import { fetchComments } from "@/app/api/data/Comment/actions";
 
 export default async function CommentsBlog({ params }) {
   const idBlog = params.id;

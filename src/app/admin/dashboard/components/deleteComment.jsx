@@ -1,5 +1,6 @@
 "use client"
-import { deleteComment } from "@/app/api/data/actions";
+
+import { deleteComment } from "@/app/api/data/Comment/actions";
 import { Trash } from "react-feather";
 import Swal from "sweetalert2";
 
@@ -13,7 +14,7 @@ export default function DeleteComment({id, idBlog}) {
           confirmButtonColor: "#3085d6",
           cancelButtonColor: "#d33",
           confirmButtonText: "Yes, delete it!",
-          
+
         }).then(async (result) => {
           if (result.isConfirmed) {
             await Swal.fire({

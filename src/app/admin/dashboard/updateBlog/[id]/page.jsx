@@ -1,7 +1,5 @@
-
-import { fetchSingleBlog } from "@/app/api/data/actions";
+import { fetchSingleBlog } from "@/app/api/data/blog/actions";
 import UpdateBlogForm from "../../components/form/UpdateBlogForm";
-
 
 const UpdateBlogPage = async ({ params }) => {
   const id = params?.id;
@@ -12,7 +10,6 @@ const UpdateBlogPage = async ({ params }) => {
 
   return (
     <div>
-      
       <UpdateBlogForm blog={blog} />
     </div>
   );

@@ -1,7 +1,6 @@
 "use client";
 
-
-import { updateBlog } from "@/app/api/data/actions";
+import { updateBlog } from "@/app/api/data/blog/actions";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +8,11 @@ import { useRef } from "react";
 
 const UpdateBlogForm = ({ blog }) => {
   const ref = useRef();
-  const { id, title, imageUrl, description ,imageKey} = blog || {};
+  const { id, title, imageUrl, description, imageKey } = blog || {};
 
   // handle update
   const handleUpdateBlog = async (formData) => {
-    await updateBlog(id, formData,imageKey);
+    await updateBlog(id, formData, imageKey);
     ref?.current.reset();
   };
 
@@ -61,7 +60,10 @@ const UpdateBlogForm = ({ blog }) => {
           placeholder="Enter description"
         ></textarea>
 
-        <button type="submit"  className="px-12 py-4 w-full rounded font-bold border-4 duration-700 hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white">
+        <button
+          type="submit"
+          className="px-12 py-4 w-full rounded font-bold border-4 duration-700 hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white"
+        >
           Updtae
         </button>
         <Link

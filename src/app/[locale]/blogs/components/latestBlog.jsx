@@ -1,4 +1,5 @@
-import { getLatestBlog } from "@/app/api/data/actions";
+
+import { getLatestBlog } from "@/app/api/data/blog/actions";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";

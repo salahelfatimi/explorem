@@ -1,4 +1,5 @@
-import { fetchBlogs, getLatestBlog } from "@/app/api/data/actions";
+
+import { fetchBlogs } from "@/app/api/data/blog/actions";
 import BlogAll from "./components/blogAll";
 import LatestBlog from "./components/latestBlog";
 import { getTranslations } from "next-intl/server";
@@ -28,7 +29,7 @@ async function Blog() {
           </>
         ) : (
           <div className=" flex items-center flex-col gap-6">
-            <h2 className=" text-3xl font-bold sm:text-4xl tracking-tight text-[#134ba1] uppercase">
+            <h2 className=" text-3xl font-bold sm:text-4xl tracking-tight text-[#134ba1] ">
               {t("Attention.title")}
             </h2>
             <span className=" font-semibold text-xl ">{t("Attention.p")}</span>

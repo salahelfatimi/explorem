@@ -1,10 +1,11 @@
 "use client";
 import Swal from "sweetalert2";
-import { Published, deleteBlog } from "@/app/api/data/actions";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Edit, Eye, MessageSquare, Trash } from "react-feather";
+import { Published, deleteBlog } from "@/app/api/data/blog/actions";
 
 const BlogItem = ({ blog }) => {
   const { id, title, imageUrl, description, createAt, published, imageKey } =

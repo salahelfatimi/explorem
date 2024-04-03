@@ -1,32 +1,36 @@
 "use client";
 
-import { addCommentToBlog } from "@/app/api/data/actions";
+
+import { addCommentToBlog } from "@/app/api/data/Comment/actions";
 import Image from "next/image";
 import { useRef } from "react";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 const CommentAddForm = ({ blogId }) => {
   const ref = useRef();
 
   // add comment feature
   const addCommentHandler = async (formData) => {
-    await addCommentToBlog(blogId, formData);
-    ref?.current?.reset();
-
-    toast.success("New Comment Added", {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
+    toast.promise(
+      (async () => {
+        await addCommentToBlog(blogId, formData);
+        ref?.current?.reset();
+      })(),
+      {
+        loading: "Adding Comment ...",
+        success: <b>Comment Added !</b>,
+        error: <b>Failed to Add Comment .</b>,
+      }
+    );
   };
 
   return (
     <>
+      <Toaster
+        toastOptions={{
+          className: "  bg-white text-black ",
+        }}
+      />
       <h2 className="font-manrope font-bold text-xl  text-[#134ba1]  text-center ">
         Add Your Comment
       </h2>
@@ -51,7 +55,7 @@ const CommentAddForm = ({ blogId }) => {
         </div>
 
         <textarea
-        required
+          required
           name="text"
           id=""
           cols="30"

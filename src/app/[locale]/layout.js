@@ -12,7 +12,7 @@ export default function RootLayout({ children, params: { locale } }) {
   const messages = useMessages();
   return (
     <html lang={locale}>
-      <body className="bg-[#856161]">
+      <body className="bg-[#f5f5f5]">
         <NextIntlClientProvider
           
           locale={locale}
