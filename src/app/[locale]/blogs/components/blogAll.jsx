@@ -1,13 +1,13 @@
 import { fetchBlogs } from "@/app/api/data/actions";
-import { useTranslations } from "next-intl";
-
 import { Clock, Link2 } from "react-feather";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
+import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 const locales = ["en", "de", "ar"];
 const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
 export default async function BlogAll() {
-  const t = useTranslations("Blog");
+  const t = await  getTranslations("Blog");
   const blogs = await fetchBlogs();
   return (
     <div className=" flex flex-col gap-6">
@@ -45,7 +45,7 @@ export default async function BlogAll() {
                 </div>
               </div>
               <div className="lg:w-1/2 flex items-center  ">
-                <img
+                <Image
                   blurDataURL={blog.imageUrl}
                   placeholder="blur"
                   loading="lazy"

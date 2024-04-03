@@ -1,17 +1,16 @@
 import { getLatestBlog } from "@/app/api/data/actions";
-import { useTranslations } from "next-intl";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
-
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
 import { Clock } from "react-feather";
 const locales = ["en", "de", "ar"];
-const {  Link } = createSharedPathnamesNavigation({ locales });
+const { Link } = createSharedPathnamesNavigation({ locales });
 export default async function LatestBlog() {
-  const t = useTranslations("Blog");
+  const t = await  getTranslations("Blog");
   const latestBlog = await getLatestBlog();
-  const { id, title, imageUrl, description, author, createAt } =latestBlog || {};
-  console.log(latestBlog)
+  const { id, title, imageUrl, description, author, createAt } =
+    latestBlog || {};
   return (
     <>
       <div className="flex flex-col gap-4">
@@ -19,6 +18,7 @@ export default async function LatestBlog() {
         {t('LatestBlog')}
         </h2> */}
         <div className=" w-full gap-4 lg:items-center  flex flex-col lg:flex-row-reverse ">
+          
           <Image
             blurDataURL={imageUrl}
             placeholder="blur"
