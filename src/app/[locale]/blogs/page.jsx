@@ -1,15 +1,15 @@
-import { getLatestBlog } from "@/app/api/data/actions";
+import { fetchBlogs, getLatestBlog } from "@/app/api/data/actions";
 import BlogAll from "./components/blogAll";
 import LatestBlog from "./components/latestBlog";
 import { getTranslations } from "next-intl/server";
 
 async function Blog() {
   const t = await getTranslations("Blog");
-  const latestBlog = await getLatestBlog();
+  const latestBlog = await fetchBlogs();
   return (
     <>
       <div className="container flex flex-col gap-6 py-10 ">
-        {latestBlog ? (
+        {latestBlog.length ? (
           <>
             <div className="  text-center ">
               <h1 className=" mb-4 text-3xl sm:text-4xl tracking-tight text-[#134ba1] font-bold ">
