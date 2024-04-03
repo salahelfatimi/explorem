@@ -10,8 +10,8 @@ const {  Link } = createSharedPathnamesNavigation({ locales });
 export default async function LatestBlog() {
   const t = useTranslations("Blog");
   const latestBlog = await getLatestBlog();
-  const { id, title, imageUrl, description, author, createAt } =
-    latestBlog || {};
+  const { id, title, imageUrl, description, author, createAt } =latestBlog || {};
+  console.log(latestBlog)
   return (
     <>
       <div className="flex flex-col gap-4">

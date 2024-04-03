@@ -16,6 +16,8 @@ export const CommentListings = async ({ blogId }) => {
             comments.map((comment, index) => (
               <div key={index} className=" flex flex-col lg:flex-row items-center bg-white p-4 rounded gap-8">
                 <Image
+                  blurDataURL="/image/avatar/man.png"
+                  placeholder="blur"
                   className="rounded-full "
                   src="/image/avatar/man.png"
                   height={70}
