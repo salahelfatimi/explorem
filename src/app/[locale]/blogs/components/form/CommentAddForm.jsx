@@ -1,6 +1,4 @@
 "use client";
-
-
 import { addCommentToBlog } from "@/app/api/data/Comment/actions";
 import Image from "next/image";
 import { useRef } from "react";

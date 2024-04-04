@@ -9,7 +9,7 @@ import {  useTranslations } from "next-intl";
 import {createSharedPathnamesNavigation} from 'next-intl/navigation';
 
 const locales = ['en', 'de','ar'] ;
-const {Link, usePathname} = createSharedPathnamesNavigation({locales});
+const {Link, usePathname } = createSharedPathnamesNavigation({locales});
 
 
 
