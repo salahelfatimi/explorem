@@ -6,17 +6,31 @@ import Link from "next/link";
 import React from "react";
 import { Edit, Eye, MessageSquare, Trash } from "react-feather";
 import { Published, deleteBlog } from "@/app/api/data/blog/actions";
+import toast, { Toaster } from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const BlogItem = ({ blog }) => {
+  const router = useRouter();
   const { id, title, imageUrl, description, createAt, published, imageKey } =
     blog || {};
+
   const handelePublished = async (id, e) => {
-    await Published(id, e);
+    toast.promise(
+      (async () => {
+        await Published(id, e);
+      })(),
+      {
+        loading: "Published ...",
+        success: <b>{`Blog ${e ? "Published" : "not Published"} !`}</b>,
+        error: <b>Failed to Add Blog .</b>,
+      }
+    );
   };
+
   const deleteBlogHandler = async (id, imageKey) => {
     Swal.fire({
       title: "Are you sure?",
-      text: `You won't be able to revert this Blog with id: ${id}`,
+      text: `You won't be able to revert this Blog`,
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -24,18 +38,26 @@ const BlogItem = ({ blog }) => {
       confirmButtonText: "Yes, delete it!",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        await Swal.fire({
-          title: "Deleted!",
-          text: "Your file has been deleted.",
-          icon: "success",
-        });
-        // Perform the delete action
-        await deleteBlog(id, imageKey);
+        toast.promise(
+          (async () => {
+            await deleteBlog(id, imageKey);
+          })(),
+          {
+            loading: "Adding Blog ...",
+            success: <b>Blog Added !</b>,
+            error: <b>Failed to Add Blog .</b>,
+          }
+        );
       }
     });
   };
   return (
     <>
+      <Toaster
+        toastOptions={{
+          className: "  bg-white text-black ",
+        }}
+      />
       <div className="flex flex-col lg:flex-row gap-4 justify-between items-center shadow-lg rounded bg-white p-4 ">
         <div className="flex flex-col lg:flex-row gap-8 items-center">
           <Image
@@ -56,9 +78,12 @@ const BlogItem = ({ blog }) => {
           </div>
         </div>
         <div className="flex flex-col items-center lg:flex-row gap-10">
-          <Link href={`dashboard/comments/${id}`} className="flex flex-row lg:flex-col  bg-[#0149a6] text-center  items-center rounded  gap-2 p-2">
-            <Eye className=" stroke-white"/>
-            <span className="  font-medium text-white  ">View Comments</span>
+          <Link
+            href={`dashboard/comments/${id}`}
+            className="flex flex-row  bg-[#0149a6] text-center  items-center rounded  gap-2 p-2"
+          >
+            <Eye className=" stroke-white" />
+            <span className="  font-medium text-white  ">Comments</span>
           </Link>
           <div className="flex flex-row lg:flex-col  items-center  gap-4">
             <span className="font-semibold text-white p-2 bg-[#0149a6]">

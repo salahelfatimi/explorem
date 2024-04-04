@@ -5,22 +5,39 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useRef } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const UpdateBlogForm = ({ blog }) => {
   const ref = useRef();
   const { id, title, imageUrl, description, imageKey } = blog || {};
 
   // handle update
-  const handleUpdateBlog = async (formData) => {
-    await updateBlog(id, formData, imageKey);
-    ref?.current.reset();
+  const handleUpdateBlog = async (event) => {
+    const formData = new FormData(ref.current);
+    event.preventDefault();
+    toast.promise(
+      (async () => {
+        await updateBlog(id, formData, imageKey);
+        ref?.current.reset();
+      })(),
+      {
+        loading: "Updating Blog ...",
+        success: <b>Blog Updated !</b>,
+        error: <b>Failed to Updated Blog .</b>,
+      }
+    );
   };
 
   return (
     <>
+      <Toaster
+        toastOptions={{
+          className: "  bg-white text-black ",
+        }}
+      />
       <form
         ref={ref}
-        action={handleUpdateBlog}
+        onSubmit={handleUpdateBlog}
         className="container  gap-8 flex w-full  flex-col items-center justify-center"
       >
         <h2 className="capitalize text-center font-bold text-md lg:text-2xl text-[#0149a6]">

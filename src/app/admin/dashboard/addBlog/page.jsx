@@ -1,21 +1,40 @@
 "use client";
-
 import { addBlog } from "@/app/api/data/blog/actions";
 import Link from "next/link";
 import { useRef } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 const AddBlog = () => {
+ 
   const ref = useRef();
-  const addBlogHandler = async (formData) => {
-    await addBlog(formData);
-    // refresh the form
-    ref?.current?.reset();
+  const addBlogHandler = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(ref.current);
+    toast.promise(
+      (async () => {
+        await addBlog(formData);
+        ref.current.reset();
+      })(),
+      {
+        loading: "Adding Blog ...",
+        success: <b>Blog Added !</b>,
+
+        error: <b>Failed to Add Blog .</b>,
+      }
+    );
   };
+
   return (
     <>
+      <Toaster
+        toastOptions={{
+          className: "  bg-white text-black ",
+        }}
+      />
       <form
         ref={ref}
-        action={addBlogHandler}
+        onSubmit={addBlogHandler}
         className=" container   gap-8 flex  flex-col items-center justify-center"
       >
         <h2 className="capitalize text-center font-bold text-md lg:text-2xl text-[#0149a6]">
@@ -39,7 +58,7 @@ const AddBlog = () => {
         ></textarea>
         <div className="w-full  capitalize gap-2 flex flex-col text-center">
           <label htmlFor="pdf" className=" font-bold text-xl">
-            uplode Image Blog
+            upload Image Blog
           </label>
           <input
             id="image"
@@ -65,4 +84,5 @@ const AddBlog = () => {
     </>
   );
 };
+
 export default AddBlog;
