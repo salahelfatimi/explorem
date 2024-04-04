@@ -39,7 +39,7 @@ export default async function LatestBlog() {
             <h2 className=" font-bold text-xl lg:text-4xl text-black ">
               {title}
             </h2>
-            <p className="line-clamp-4 text-[#646c78] font-medium">
+            <p className="line-clamp-4 whitespace-pre-line text-[#646c78] font-medium">
               {description}
             </p>
 

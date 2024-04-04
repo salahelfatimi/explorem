@@ -3,14 +3,11 @@ import { PrismaClient } from "@prisma/client";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { utapi } from "@/app/server/uploadthing";
-
-import { createSharedPathnamesNavigation } from "next-intl/navigation";
-
 const prisma = new PrismaClient();
 
 export const Published = async (id, publish) => {
   try {
-    const updated_blog = await prisma.blog.update({
+    await prisma.blog.update({
       where: {
         id: id,
       },
@@ -18,10 +15,10 @@ export const Published = async (id, publish) => {
         published: publish,
       },
     });
+    revalidatePath(`/admin/dashboard`);
   } catch (error) {
     throw new Error(`Error retrieving latest blog: ${error.message}`);
   }
-  redirect("/admin/dashboard");
 };
 
 export const fetchBlogs = async () => {
@@ -34,6 +31,7 @@ export const fetchBlogs = async () => {
         createAt: "desc",
       },
     });
+    revalidatePath(`/admin/dashboard`);
     return blogs;
   } catch (error) {
     throw new Error(`Error retrieving latest blog: ${error.message}`);
@@ -44,20 +42,17 @@ export const addBlog = async (formData) => {
   const image = formData.get("image");
   const title = formData.get("title");
   const description = formData.get("description");
-  try {
-    const response = await utapi.uploadFiles(image);
-    await prisma.blog.create({
-      data: {
-        imageUrl: response.data.url ? response.data.url : null,
-        title: title,
-        imageKey: response.data.key,
-        description: description,
-      },
-    });
-  } catch (error) {
-    throw new Error(`Error retrieving latest blog: ${error.message}`);
-  }
-  // revalidatePath('/blogs/add-blog')
+
+  const response = await utapi.uploadFiles(image);
+  await prisma.blog.create({
+    data: {
+      imageUrl: response.data.url ? response.data.url : null,
+      title: title,
+      imageKey: response.data.key,
+      description: description,
+    },
+  });
+  revalidatePath("/admin/dashboard/addBlog");
   redirect("/admin/dashboard");
 };
 
@@ -69,10 +64,10 @@ export const deleteBlog = async (blogId, imageKey) => {
         id: blogId,
       },
     });
+    revalidatePath(`/admin/dashboard`);
   } catch (error) {
     throw new Error(`Error retrieving latest blog: ${error.message}`);
   }
-  redirect("/admin/dashboard");
 };
 
 export const updateBlog = async (id, formData, imageKey) => {
@@ -81,39 +76,34 @@ export const updateBlog = async (id, formData, imageKey) => {
   const urlImage = formData.get("urlImage");
   const title = formData.get("title");
   const description = formData.get("description");
-  try {
-    if (image.size > 0) {
-      await utapi.deleteFiles(imageKey);
-      const response = await utapi.uploadFiles(image);
-      const updated_blog = await prisma.blog.update({
-        where: {
-          id: id,
-        },
-        data: {
-          imageUrl: response.data.url ? response.data.url : null,
-          imageKey: response.data.key,
-          title,
-          description,
-        },
-      });
-    } else {
-      const updated_blog = await prisma.blog.update({
-        where: {
-          id: id,
-        },
-        data: {
-          imageUrl: urlImage ? urlImage : null,
-          imageKey: imageKey,
-          title,
-          description,
-        },
-      });
-    }
-  } catch (error) {
-    throw new Error(`Error retrieving latest blog: ${error.message}`);
-  }
-  // push the data into the DB
 
+  if (image.size > 0) {
+    await utapi.deleteFiles(imageKey);
+    const response = await utapi.uploadFiles(image);
+    await prisma.blog.update({
+      where: {
+        id: id,
+      },
+      data: {
+        imageUrl: response.data.url ? response.data.url : null,
+        imageKey: response.data.key,
+        title,
+        description,
+      },
+    });
+  } else {
+    await prisma.blog.update({
+      where: {
+        id: id,
+      },
+      data: {
+        imageUrl: urlImage ? urlImage : null,
+        imageKey: imageKey,
+        title,
+        description,
+      },
+    });
+  }
   revalidatePath(`/admin/dashboard/updateBlog/${id}`);
   redirect("/admin/dashboard");
 };
@@ -125,6 +115,7 @@ export const fetchSingleBlog = async (id) => {
         id: id,
       },
     });
+    revalidatePath(`/blogs`);
     return blogs;
   } catch (error) {
     throw new Error(`Error retrieving latest blog: ${error.message}`);
@@ -141,7 +132,7 @@ export const getLatestBlog = async () => {
         createAt: "desc",
       },
     });
-
+    revalidatePath(`/blogs`);
     return latestBlog;
   } catch (error) {
     throw new Error(`Error retrieving latest blog: ${error.message}`);

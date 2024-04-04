@@ -24,7 +24,7 @@ export default async function BlogAll() {
                   {blog.title}
                 </span>
                 <div className="flex flex-col   gap-6 items-center lg:items-start">
-                  <span className="text-[#9DA4B2] lg:text-base text-sm line-clamp-4  font-semibold">
+                  <span className="text-[#9DA4B2] whitespace-pre-line lg:text-base text-sm line-clamp-4  font-semibold">
                     {blog.description}
                   </span>
                 </div>

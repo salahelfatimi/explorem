@@ -69,7 +69,7 @@ const BlogItem = ({ blog }) => {
           />
           <div className="flex flex-col text-center lg:text-left gap-4">
             <h2 className=" font-bold text-lg text-black ">{title}</h2>
-            <p className="line-clamp-4 text-[#646c78] font-medium">
+            <p className="line-clamp-4 whitespace-pre-line text-[#646c78] font-medium">
               {description}
             </p>
             <span className="text-[#646c78] font-medium  ">

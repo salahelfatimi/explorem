@@ -73,7 +73,7 @@ export default async function BlogDetail({ params }) {
           </span>
         </div>
 
-        <p className="text-center whitespace-normal text-wrap font-medium  leading-loose capitalize tracking-wide lg:text-xl  ">
+        <p className="  whitespace-pre-line text-center lg:text-left  text-wrap subpixel-antialiased  leading-loose capitalize tracking-wide lg:text-xl   ">
           {blog.description}
         </p>
       </div>
