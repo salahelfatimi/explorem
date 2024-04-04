@@ -4,7 +4,7 @@ export default createMiddleware({
   locales: ["en", "de", "ar"],
   localeDetection: true,
 
-  localeDetection: "en",
+  defaultLocale: "en",
  
 });
 
