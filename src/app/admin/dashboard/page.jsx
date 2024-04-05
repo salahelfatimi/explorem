@@ -12,7 +12,7 @@ const Dashboard = async () => {
       createAt: "desc",
     },
   });
-  revalidatePath(`/admin/dashboard`);
+  await revalidatePath(`/admin/dashboard`);
   return (
     <div className="flex flex-col gap-6">
       <div>

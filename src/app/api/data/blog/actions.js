@@ -31,7 +31,7 @@ export const fetchBlogs = async () => {
         createAt: "desc",
       },
     });
-    revalidatePath(`/admin/dashboard`);
+    revalidatePath(`/blog`);
     return blogs;
   } catch (error) {
     throw new Error(`Error retrieving latest blog: ${error.message}`);

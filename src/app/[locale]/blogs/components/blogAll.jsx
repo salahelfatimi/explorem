@@ -10,6 +10,7 @@ const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
 export default async function BlogAll() {
   const t = await  getTranslations("Blog");
   const blogs = await fetchBlogs();
+  
   return (
     <div className=" flex flex-col gap-6">
       <h2 className=" font-bold  text-2xl bg-[#134ba1] text-white w-full text-center py-2 px-3 ">
