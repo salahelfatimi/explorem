@@ -7,10 +7,7 @@ import { redirect } from "next/navigation";
 
 const UpdateBlogPage = async ({ params }) => {
   const id = params?.id;
-  const session =  await getServerSession(authOptions)
-  if (session?.user?.role !== "ADMIN") {
-    await redirect("/auth/login");
-  }
+ 
   
   const blog = await fetchSingleBlog(id);
 

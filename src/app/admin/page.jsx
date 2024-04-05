@@ -1,10 +1,10 @@
 "use client";
-import { redirect, useRouter } from "next/navigation";
+import {   useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { signIn, useSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
 
-export default function Login() {
+export default  function Login() {
   const router = useRouter();
   const ref = useRef();
   const [userInfo, setUserInfo] = useState({
@@ -12,7 +12,10 @@ export default function Login() {
     password: "",
   });
 
-  
+ 
+ 
+ 
+ 
   const handleChange = (e) => {
     setUserInfo({
       ...userInfo,
@@ -21,8 +24,6 @@ export default function Login() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    console.log(userInfo);
     if ( !userInfo.email || !userInfo.password) {
       toast.error("Must provide all the Credentials ! ");
     } else {

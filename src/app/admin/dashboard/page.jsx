@@ -2,17 +2,11 @@ import { PrismaClient } from "@prisma/client";
 import BlogItem from "./components/BlogItem";
 
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 const prisma = new PrismaClient();
 const Dashboard = async () => {
 
-  const session =  await getServerSession(authOptions)
-  if (session?.user?.role !== "ADMIN") {
-    await redirect("/auth/login");
-  }
+ 
   const blogs = await prisma.blog.findMany({
     orderBy: {
       createAt: "desc",

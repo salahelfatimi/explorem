@@ -1,18 +1,17 @@
 "use client";
 import Swal from "sweetalert2";
-
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Edit, Eye, MessageSquare, Trash } from "react-feather";
+import { Edit, Eye, Trash } from "react-feather";
 import { Published, deleteBlog } from "@/app/api/data/blog/actions";
 import toast, { Toaster } from "react-hot-toast";
-import { useRouter } from "next/navigation";
+
 import { deleteComments } from "@/app/api/data/Comment/actions";
 
 
 const BlogItem = ({ blog }) => {
-  const router = useRouter();
+ 
   const { id, title, imageUrl, description, createAt, published, imageKey } =
     blog || {};
 

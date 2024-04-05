@@ -1,16 +1,11 @@
 import Image from "next/image";
-import { Star, Trash } from "react-feather";
+import { Star } from "react-feather";
 import DeleteComment from "../../components/deleteComment";
 import { fetchComments } from "@/app/api/data/Comment/actions";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import { redirect } from "next/navigation";
+
 
 export default async function CommentsBlog({ params }) {
-  const session =  await getServerSession(authOptions)
-  if (session?.user?.role !== "ADMIN") {
-    await redirect("/auth/login");
-  }
+ 
   const idBlog = params.id;
   const comments = await fetchComments(idBlog);
 
