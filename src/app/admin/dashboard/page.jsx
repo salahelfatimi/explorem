@@ -8,9 +8,10 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 const prisma = new PrismaClient();
 const Dashboard = async () => {
-  const session = await getServerSession(authOptions);
+
+  const session =  await getServerSession(authOptions)
   if (session?.user?.role !== "ADMIN") {
-    redirect("/auth/login");
+    await redirect("/auth/login");
   }
   const blogs = await prisma.blog.findMany({
     orderBy: {
@@ -18,7 +19,7 @@ const Dashboard = async () => {
     },
   });
   await revalidatePath(`/admin/dashboard`);
-  return (
+  return  (
     <div className="flex flex-col gap-6">
       <div>
         <h1 className=" font-bold text-2xl text-[#0149a6] p-4 rounded">

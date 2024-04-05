@@ -4,9 +4,9 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 
 const AddBlog = async () => {
-  const session = await  getServerSession(authOptions)
+  const session = await getServerSession(authOptions);
   if (session?.user?.role !== "ADMIN") {
-    redirect("/auth/login");
+    await redirect("/auth/login");
   }
   return (
     <>

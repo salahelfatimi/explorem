@@ -9,7 +9,7 @@ import { redirect } from "next/navigation";
 export default async function CommentsBlog({ params }) {
   const session =  await getServerSession(authOptions)
   if (session?.user?.role !== "ADMIN") {
-    redirect("/auth/login");
+    await redirect("/auth/login");
   }
   const idBlog = params.id;
   const comments = await fetchComments(idBlog);

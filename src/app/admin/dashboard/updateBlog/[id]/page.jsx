@@ -9,7 +9,7 @@ const UpdateBlogPage = async ({ params }) => {
   const id = params?.id;
   const session =  await getServerSession(authOptions)
   if (session?.user?.role !== "ADMIN") {
-    redirect("/auth/login");
+    await redirect("/auth/login");
   }
   
   const blog = await fetchSingleBlog(id);
