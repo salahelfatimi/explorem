@@ -46,6 +46,8 @@ export default function SideBar() {
           </div>
         </div>
       </aside>
+
+      {/* NAV PHONE */}
       <div>
         <div className=" block fixed bg-white right-0 left-0 lg:hidden z-50">
           <div className="  container  py-8 flex flex-col    ">

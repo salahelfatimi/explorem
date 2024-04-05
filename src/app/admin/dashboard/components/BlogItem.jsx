@@ -8,6 +8,8 @@ import { Edit, Eye, MessageSquare, Trash } from "react-feather";
 import { Published, deleteBlog } from "@/app/api/data/blog/actions";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { deleteComments } from "@/app/api/data/Comment/actions";
+
 
 const BlogItem = ({ blog }) => {
   const router = useRouter();
@@ -28,9 +30,10 @@ const BlogItem = ({ blog }) => {
   };
 
   const deleteBlogHandler = async (id, imageKey) => {
+    
     Swal.fire({
       title: "Are you sure?",
-      text: `You won't be able to revert this Blog`,
+      text: "This action will permanently delete the blog and all associated comments. This action cannot be undone.",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -40,6 +43,7 @@ const BlogItem = ({ blog }) => {
       if (result.isConfirmed) {
         toast.promise(
           (async () => {
+            await deleteComments(id)
             await deleteBlog(id, imageKey);
           })(),
           {

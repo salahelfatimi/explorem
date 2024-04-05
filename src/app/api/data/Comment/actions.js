@@ -38,7 +38,7 @@ export const addCommentToBlog = async (blogId, formData) => {
   // redirect(`/blogs/${blogId}`);
 };
 
-export const deleteComment = async (id, blogId) => {
+export const deleteSingleComment = async (id, blogId) => {
   await prisma.comment.delete({
     where: {
       id: id,
@@ -46,4 +46,12 @@ export const deleteComment = async (id, blogId) => {
     },
   });
   revalidatePath(`/admin/dashboard/comments/${blogId}`);
+};
+export const deleteComments = async (blogId) => {
+  await prisma.comment.deleteMany({
+    where: {
+      blogId: blogId,
+    },
+  });
+  revalidatePath(`/admin/dashboard`);
 };

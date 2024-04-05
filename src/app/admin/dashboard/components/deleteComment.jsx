@@ -1,6 +1,6 @@
 "use client";
 
-import { deleteComment } from "@/app/api/data/Comment/actions";
+import {  deleteSingleComment } from "@/app/api/data/Comment/actions";
 import { Trash } from "react-feather";
 import toast, { Toaster } from "react-hot-toast";
 import Swal from "sweetalert2";
@@ -19,7 +19,7 @@ export default function DeleteComment({ id, idBlog }) {
       if (result.isConfirmed) {
         toast.promise(
           (async () => {
-            await deleteComment(id, idBlog);
+            await deleteSingleComment(id, idBlog);
           })(),
           {
             loading: "Adding Blog ...",
