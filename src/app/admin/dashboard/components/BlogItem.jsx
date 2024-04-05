@@ -43,9 +43,9 @@ const BlogItem = ({ blog }) => {
             await deleteBlog(id, imageKey);
           })(),
           {
-            loading: "Adding Blog ...",
-            success: <b>Blog Added !</b>,
-            error: <b>Failed to Add Blog .</b>,
+            loading: "Deleting Blog ...",
+            success: <b>Blog Deleted !</b>,
+            error: <b>Failed to Delete Blog .</b>,
           }
         );
       }

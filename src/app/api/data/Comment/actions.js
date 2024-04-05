@@ -17,6 +17,7 @@ export const fetchComments = async (blogId) => {
       },
       take: 5,
     });
+    revalidatePath(`/admin/dashboard/comments/${blogId}`);
     revalidatePath(`/blogs/${blogId}`);
     return comments;
   } catch (error) {
@@ -33,6 +34,7 @@ export const addCommentToBlog = async (blogId, formData) => {
     },
   });
   revalidatePath(`/blogs/${blogId}`);
+  
   // redirect(`/blogs/${blogId}`);
 };
 

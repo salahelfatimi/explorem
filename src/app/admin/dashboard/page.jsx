@@ -1,8 +1,11 @@
 import { PrismaClient } from "@prisma/client";
 import BlogItem from "./components/BlogItem";
+
 import Link from "next/link";
+import { redirect } from "next/navigation";
 const prisma = new PrismaClient();
 const Dashboard = async () => {
+ 
   const blogs = await prisma.blog.findMany({
     orderBy: {
       createAt: "desc",

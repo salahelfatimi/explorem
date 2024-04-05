@@ -1,10 +1,12 @@
 "use client";
+
 import { addBlog } from "@/app/api/data/blog/actions";
+
 import Link from "next/link";
 import { useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
-const AddBlog = () => {
+const AddBlog = async () => {
  
   const ref = useRef();
   const addBlogHandler = async (event) => {

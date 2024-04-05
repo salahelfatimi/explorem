@@ -1,4 +1,5 @@
 "use client";
+import { signOut } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -36,12 +37,12 @@ export default function SideBar() {
             ))}
           </div>
           <div className="flex text-center ">
-            <Link
-              href={"/"}
+            <button
+              onClick={()=>signOut()}
               className=" bg-red-600 text-white font-bold w-full py-3  "
             >
               logOut
-            </Link>
+            </button>
           </div>
         </div>
       </aside>
@@ -85,12 +86,12 @@ export default function SideBar() {
                   </Link>
                 ))}
                  <div className="flex w-full text-center ">
-                <Link
-                  href={"/"}
+                <button
+                 onClick={()=>signOut()}
                   className=" bg-red-600 rounded text-white font-bold w-full py-3  "
                 >
                   logOut
-                </Link>
+                </button>
               </div>
               </div>
              

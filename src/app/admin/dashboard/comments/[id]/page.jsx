@@ -23,38 +23,40 @@ export default async function CommentsBlog({ params }) {
                   key={index}
                   className=" flex flex-col lg:flex-row items-center justify-between bg-white p-4 rounded gap-8"
                 >
-                  <div className="flex flex-col lg:flex-row  gap-4">
+                  <div className="flex flex-col lg:flex-row items-center  gap-4">
                     <Image
-                      className="rounded-full "
+                      className="rounded-full w-auto "
                       src="/image/avatar/man.png"
-                      height={70}
-                      width={70}
+                      height={60}
+                      width={60}
                       alt="avatar"
                     />
                     <div className="flex text-center lg:text-left flex-col gap-1">
-                      <p className=" text-gray-500  ">{comment.text}</p>
+                      <span className=" font-bold">{comment.author}</span>
                       <div className="flex items-center justify-center lg:justify-start gap-2">
                         <Star
-                          size={25}
+                          size={20}
                           className=" min-w-4 fill-yellow-400 stroke-yellow-400"
                         />
                         <Star
-                          size={25}
+                          size={20}
                           className=" min-w-4 fill-yellow-400 stroke-yellow-400"
                         />
                         <Star
-                          size={25}
+                          size={20}
                           className=" min-w-4 fill-yellow-400 stroke-yellow-400"
                         />
                         <Star
-                          size={25}
+                          size={20}
                           className=" min-w-4 fill-yellow-400 stroke-yellow-400"
                         />
                         <Star
-                          size={25}
+                          size={20}
                           className=" min-w-4 fill-yellow-400 stroke-yellow-400"
                         />
                       </div>
+                      <p className=" text-gray-500  ">{comment.text}</p>
+
                       <span className="  font-semibold text-[#134ba1] ">
                         {comment.createdAt.toLocaleDateString()}
                       </span>
