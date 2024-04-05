@@ -1,3 +1,4 @@
+import { Providers } from "./providers";
 import "./globals.css"
 export const metadata = {
   title: "Admin",
@@ -6,7 +7,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
       
-          <main>{children}</main>
+          <Providers>{children}</Providers>
         
     )
   }
