@@ -3,6 +3,7 @@ import BlogItem from "./components/BlogItem";
 
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 const prisma = new PrismaClient();
 const Dashboard = async () => {
  
@@ -11,7 +12,7 @@ const Dashboard = async () => {
       createAt: "desc",
     },
   });
-
+  revalidatePath(`/admin/dashboard`);
   return (
     <div className="flex flex-col gap-6">
       <div>
