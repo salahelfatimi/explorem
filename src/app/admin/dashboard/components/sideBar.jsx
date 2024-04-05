@@ -11,7 +11,7 @@ export default function SideBar() {
   const sideBar = [
     { id: 1, title: "All Blog", href: `/admin/dashboard` },
     { id: 2, title: "Add Blog", href: "/admin/dashboard/addBlog" },
-    { id: 3, title: "Cumment", href: "#" },
+    { id: 3, title: "Testimonial", href: "#" },
   ];
   return (
     <>
