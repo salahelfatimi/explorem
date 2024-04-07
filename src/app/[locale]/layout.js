@@ -2,6 +2,10 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
+export const metadata = {
+  title: "explorem",
+  description: "explorem website",
+};
 
 export default function LocaleLayout({ children, params: { locale } }) {
   const messages = useMessages();
