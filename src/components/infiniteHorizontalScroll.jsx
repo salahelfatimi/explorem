@@ -13,9 +13,7 @@ export default  function EmblaCarousel({ images }) {
         {images?.map((src, index) => (
           <div className=" space-x-4 " key={index}>
             <Image
-              blurDataURL={src}
-              placeholder="blur"
-              loading="lazy"
+              
               quality={40}
               width={800}
               height={550}

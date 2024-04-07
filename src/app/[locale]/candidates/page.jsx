@@ -100,9 +100,7 @@ export default function Candidates() {
         <div className="flex flex-col gap-10">
           <div className="relative">
             <Image
-              blurDataURL="/image/candidates/saction1.jpg"
-              placeholder="blur"
-              loading="lazy"
+             
               quality={40}
               src="/image/candidates/saction1.jpg"
               className="h-auto max-w-full w-full  "

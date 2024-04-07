@@ -69,9 +69,7 @@ export default function Employers() {
           <div>
             <div className="relative">
               <Image
-                blurDataURL="/image/employers/saction1.jpg"
-                placeholder="blur"
-                loading="lazy"
+              
                 quality={40}
                 src="/image/employers/saction1.jpg"
                 className="h-auto max-w-full w-full  "

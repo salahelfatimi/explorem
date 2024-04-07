@@ -17,7 +17,7 @@ export default function About() {
     "https://utfs.io/f/996d0739-a423-48ff-a5af-5dd96322642f-vmbc8q.jpg",
     "https://utfs.io/f/c91c9872-f303-4b6e-8a8c-bbb19b6c55af-jlo1ca.jpg",
   ];
- 
+
   return (
     <div className="flex flex-col gap-8 pb-16 bg-[#F5F5F5] ">
       <div className="flex flex-col gap-10">
@@ -27,10 +27,8 @@ export default function About() {
             className="h-auto max-w-full w-full  "
             width={1920}
             height={1080}
-            blurDataURL="/image/aboutUS/saction1.jpg"
-            placeholder="blur"
-            loading="lazy"
-            quality={100}
+            
+            quality={40}
             alt="Explorem"
           />
 
@@ -60,9 +58,7 @@ export default function About() {
           <p>{t("slogen1.line2")}</p>
         </span>
         <Image
-          blurDataURL="/image/aboutUS/slogen1.jpg"
-          placeholder="blur"
-          loading="lazy"
+       
           quality={40}
           src="/image/aboutUS/slogen1.jpg"
           className="lg:w-1/3 rounded-xl"
@@ -213,11 +209,6 @@ export default function About() {
         </ul>
       </div>
       <div className="flex flex-col gap-4">
-        <div className="bg-[#0149a6] py-6 ">
-          <div className="px-2">
-            <InfiniteHorizontalScroll images={images1} />
-          </div>
-        </div>
         <div className=" container">
           <div className="bg-[#0149A6] rounded-md px-4 py-10  ">
             <span className="text-white   rounded-lg  font-mono font-bold lg:text-2xl md:text-xl text-lg text-center">
@@ -226,14 +217,16 @@ export default function About() {
             </span>
           </div>
         </div>
-        
+        <div className="bg-[#0149a6] py-6 ">
+          <div className="px-2">
+            <InfiniteHorizontalScroll images={images1} />
+          </div>
+        </div>
       </div>
       <div className=" space-y-12">
         <span className="flex gap-4  items-center justify-center">
           <Image
-            blurDataURL="/image/aboutUS/logoHand.png"
-            placeholder="blur"
-            loading="lazy"
+         
             quality={40}
             width={500}
             height={500}
@@ -249,9 +242,7 @@ export default function About() {
           <div className="flex lg:flex-row flex-col items-center justify-center gap-4  container ">
             <div className=" flex  justify-center">
               <Image
-                blurDataURL="/image/aboutUS/team/Gracila.jpg"
-                placeholder="blur"
-                loading="lazy"
+                
                 quality={40}
                 width={500}
                 height={500}
