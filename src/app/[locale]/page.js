@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-
 import TestimonialsSlider from "@/components/testimonialsSlider";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
@@ -9,21 +8,22 @@ import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
 
-export default   function Index() {
-  const t =  useTranslations("Index");
-  const  images =  [
-    { src: "/image/aboutUS/slideLeft/image1.jpg" },
-    { src: "/image/aboutUS/slideLeft/image2.jpg" },
-    { src: "/image/aboutUS/slideLeft/image3.jpg" },
-    { src: "/image/aboutUS/slideLeft/image4.jpg" },
-    { src: "/image/aboutUS/slideLeft/image5.jpg" },
-    { src: "/image/aboutUS/slideLeft/image6.jpg" },
-    { src: "/image/aboutUS/slideLeft/image7.jpg" },
-    { src: "/image/aboutUS/slideLeft/image8.jpg" },
-    { src: "/image/aboutUS/slideLeft/image9.jpg" },
+export default function Index() {
+  const t = useTranslations("Index");
+  const images = [
+    "https://utfs.io/f/f4c6f5f8-a9c1-43dc-b9d9-c9cb5b7473f4-jlo1c3.jpg",
+    "https://utfs.io/f/b7543642-62fb-4d92-9114-e7771da839b7-vmbc8r.jpg",
+    "https://utfs.io/f/b2b7c254-2b7c-4624-8cff-8f7437fd7fa8-jlo1c4.jpg",
+    "https://utfs.io/f/d85adf98-614d-4585-b8db-f9a0ee5fd57d-vmbc8s.jpg",
+    "https://utfs.io/f/523cff19-04cb-4d62-a4fb-fad93c957897-jlo1c5.jpg",
+    "https://utfs.io/f/03f5ffd8-6c66-4e70-af4a-f004a7f3a2f7-jlo1c2.jpg",
+    "https://utfs.io/f/c5d41032-39a0-49e3-b020-04b9017d0497-jlo1c7.jpg",
+    "https://utfs.io/f/64303de1-d64e-419e-bd93-3357eba72581-jlo1c6.jpg",
+    "https://utfs.io/f/996d0739-a423-48ff-a5af-5dd96322642f-vmbc8q.jpg",
+    "https://utfs.io/f/c91c9872-f303-4b6e-8a8c-bbb19b6c55af-jlo1ca.jpg",
   ];
- 
-  return  (
+
+  return (
     <>
       <div className="bg-[#F5F5F5]  space-y-8 py-12">
         <div className=" flex flex-col items-center justify-center gap-4">
@@ -62,7 +62,7 @@ export default   function Index() {
         <div className="bg-[#0149a6] py-6 ">
           <div className="px-2">
             {" "}
-            <InfiniteHorizontalScroll  images={images} />
+            <InfiniteHorizontalScroll images={images} />
           </div>
         </div>
         <div>

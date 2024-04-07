@@ -9,18 +9,18 @@ export default  function EmblaCarousel({ images }) {
 
   return (
     <div className=" overflow-hidden" ref={emblaRef}>
-      <div className="flex flex-row gap-6">
-        {images?.map((ele, index) => (
-          <div className=" space-x-4" key={index}>
+      <div className="flex flex-row gap-6 pl-6">
+        {images?.map((src, index) => (
+          <div className=" space-x-4 " key={index}>
             <Image
-              blurDataURL={ele.src}
+              blurDataURL={src}
               placeholder="blur"
               loading="lazy"
-              quality={100}
+              quality={40}
               width={800}
               height={550}
-              src={ele.src}
-              className="max-w-none rounded-sm h-52 w-auto"
+              src={src}
+              className="max-w-none  rounded-sm h-52 w-auto"
               alt="explorem"
             />
           </div>
