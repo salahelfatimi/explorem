@@ -1,9 +1,10 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
+
 import TestimonialsSlider from "@/components/testimonialsSlider";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
+import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
@@ -21,7 +22,7 @@ export default   function Index() {
     { src: "/image/aboutUS/slideLeft/image8.jpg" },
     { src: "/image/aboutUS/slideLeft/image9.jpg" },
   ];
-
+ 
   return  (
     <>
       <div className="bg-[#F5F5F5]  space-y-8 py-12">
@@ -61,7 +62,7 @@ export default   function Index() {
         <div className="bg-[#0149a6] py-6 ">
           <div className="px-2">
             {" "}
-            <InfiniteHorizontalScroll images={images} />
+            <InfiniteHorizontalScroll  images={images} />
           </div>
         </div>
         <div>

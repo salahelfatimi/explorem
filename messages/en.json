@@ -74,7 +74,8 @@
     "candidates": "candidates",
     "contact": "Contact",
     "about": "About",
-    "client": "Client"
+    "client": "Client",
+    "testimonial":"Testimonial"
   },
   "AboutUS": {
     "aboutUs": "About us",

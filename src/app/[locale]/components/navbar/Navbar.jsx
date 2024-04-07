@@ -1,36 +1,32 @@
-"use client"
+"use client";
 
-
-import {  useState } from "react";
+import { useState } from "react";
 import { Menu, Moon, Phone, X } from "react-feather";
 import ChangeLungage from "./changeLungage/changeLungage";
 import Image from "next/image";
-import {  useTranslations } from "next-intl";
-import {createSharedPathnamesNavigation} from 'next-intl/navigation';
+import { useTranslations } from "next-intl";
+import { createSharedPathnamesNavigation } from "next-intl/navigation";
 
-const locales = ['en', 'de','ar'] ;
-const {Link, usePathname} = createSharedPathnamesNavigation({locales});
+const locales = ["en", "de", "ar"];
+const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
 
-
-
-export default function Navbar({locale}) {
-  
-  const pathname=usePathname()
+export default function Navbar({ locale }) {
+  const pathname = usePathname();
   const t = useTranslations("Navbar");
   const [open, setOpen] = useState(true);
   const Nav = [
     { id: 1, title: "home", href: `/` },
     { id: 2, title: "employers", href: "/employers" },
     { id: 3, title: "candidates", href: "/candidates" },
+    { id: 6, title: "testimonial", href: "/testimonial" },
     { id: 4, title: "blog", href: "/blogs" },
     { id: 5, title: "contact", href: "/contact" },
     { id: 6, title: "about", href: "/about" },
-
+  
   ];
 
   return (
     <nav>
-    
       {/* nav pc */}
       <div className=" hidden fixed  bg-white right-0 left-0 lg:block z-50 ">
         <div className="  container  px-8  py-4 flex  flex-row justify-between items-center ">
@@ -48,9 +44,8 @@ export default function Navbar({locale}) {
               <div key={index}>
                 <Link
                   href={ele.href}
-                 
                   className={`${
-                    pathname  == ele.href
+                    pathname == ele.href
                       ? "border-b-2 border-[#0149A6]  text-[#0149A6]"
                       : ""
                   } capitalize text-lg font-semibold`}
@@ -64,7 +59,7 @@ export default function Navbar({locale}) {
               href="tel:+212809-891297"
             >
               <Phone size={20} className=" stroke-[#0149A6]" />
-              <span className="  text-[#0149A6] text-medium font-semibold ">
+              <span className="  text-[#0149A6] text-medium hidden xl:block font-semibold ">
                 {" "}
                 (+212) 8 09 89 12 97
               </span>
@@ -113,7 +108,6 @@ export default function Navbar({locale}) {
                 >
                   <Link
                     href={ele.href}
-                   
                     className={`${
                       pathname == ele.href
                         ? "border-b-2 border-[#0149A6]  text-[#0149A6]"
