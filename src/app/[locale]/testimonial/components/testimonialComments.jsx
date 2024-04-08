@@ -1,8 +1,7 @@
-
 import Image from "next/image";
 
-export default async function TestimonialComments({testimonial}) {
-  const { text, image, author } = testimonial || {};
+export default async function TestimonialComments({ testimonial }) {
+  const { text, image, author, createdAt } = testimonial || {};
   return (
     <>
       <div className="flex flex-col gap-6  p-8   ">
@@ -15,7 +14,12 @@ export default async function TestimonialComments({testimonial}) {
             width={100}
             alt="avatar"
           />
-          <p className="font-bold text-balance capitalize">{author}</p>
+          <div className="flex flex-col gap-2 w-full">
+            <p className="font-bold text-balance capitalize">{author}</p>
+            <p className="font-semibold text-balance text-right capitalize">
+              {createdAt.toLocaleDateString()}
+            </p>
+          </div>
         </div>
       </div>
     </>

@@ -22,20 +22,37 @@ export default async function Testimonial({ searchParams }) {
       <div>
         <AddTestimonial />
       </div>
-      <div className=" flex flex-col gap-4 justify-center">
+      <div className=" flex flex-col  gap-4 justify-center">
         {testimonial?.length > 0 ? (
-          <div className=" grid grid-cols-1 lg:grid-cols-2 gap-2 items-center justify-center">
-            {testimonial?.map((testimonial, index) => {
-              return (
-                <div key={index} className={`${index % 4 < 2 ? "bg-white border-[#0149a6]  rounded-2xl" : "bg-[#0149a6] text-white border-[#ffff]   rounded-2xl "} shadow-lg  `}>
-                  <TestimonialComments  testimonial={testimonial} />
-                </div>
-              );
-            })}
+          <div className=" flex flex-col lg:flex-row gap-4  items-start justify-between  ">
+            <div className="flex-col gap-4 flex ">
+              {testimonial?.map((testimonial, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={` even:hidden odd:block even:bg-white odd:bg-[#0149a6] odd:text-white border-[#ffff] rounded shadow-lg `}
+                  >
+                    <TestimonialComments testimonial={testimonial} />
+                  </div>
+                );
+              })}
+            </div>
+            <div className="flex-col gap-4 flex ">
+              {testimonial?.map((testimonial, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={` even:block odd:hidden even:bg-white odd:bg-[#0149a6] odd:text-white border-[#ffff] rounded shadow-lg `}
+                  >
+                    <TestimonialComments testimonial={testimonial} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         ) : (
           <div className="flex justify-center items-center flex-col gap-6 h-full">
-            <p className="font-medium text-lg text-center text-[#9DA4B2]">
+            <p className="font-medium text-lgtext-center text-[#9DA4B2]">
               No testimonial provided
             </p>
           </div>
