@@ -22,18 +22,20 @@ export const addTestimonial = async (formData) => {
     
   };
 
-  export const fetchTestimonial = async () => {
+  export const fetchTestimonial = async (take) => {
+    
     try {
       const testimonial = await prisma.testimonial.findMany({
         
         orderBy: {
           createdAt: "desc",
         },
-        
+
+        take: take,
       });
       revalidatePath(`/testimonial`);
       return testimonial;
     } catch (error) {
-      throw new Error(`Error retrieving latest blog: ${error.message}`);
+      throw new Error(`Error retrieving Testimonial: ${error.message}`);
     }
   };

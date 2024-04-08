@@ -46,7 +46,7 @@ const CommentAddForm = ({ blogId }) => {
           />{" "}
           <Image
             className="h-14 w-14 rounded-full  hover:border-4 hover:border-[#134ba1]"
-            src="/image/avatar/wamen.png"
+            src="/image/avatar/women.png"
             height={70}
             width={70}
           />

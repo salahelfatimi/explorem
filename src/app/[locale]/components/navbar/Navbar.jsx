@@ -18,7 +18,7 @@ export default function Navbar({ locale }) {
     { id: 1, title: "home", href: `/` },
     { id: 2, title: "employers", href: "/employers" },
     { id: 3, title: "candidates", href: "/candidates" },
-    { id: 5, title: "testimonial", href: "/testimonial" },
+    { id: 5, title: "testimonial", href: "/testimonial?take=6" },
     { id: 6, title: "blog", href: "/blogs" },
     { id: 7, title: "contact", href: "/contact" },
     { id: 8, title: "about", href: "/about" },

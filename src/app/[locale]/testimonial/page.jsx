@@ -1,10 +1,12 @@
-
-import TestimonialComments from "./components/testimonialComments";
+import { fetchTestimonial } from "@/app/api/data/testimonial/action";
 
 import AddTestimonial from "./components/addTestimonial";
+import PaginationTestimonial from "./components/paginationTestimonial";
+import TestimonialComments from "./components/testimonialComments";
 
-
-export default function Testimonial() {
+export default async function Testimonial({ searchParams }) {
+  const take = (await searchParams) == {} ? 6 : parseInt(searchParams.take);
+  const testimonial = await fetchTestimonial(take);
 
   return (
     <div className="flex flex-col  container gap-6 py-12  ">
@@ -20,9 +22,32 @@ export default function Testimonial() {
       <div>
         <AddTestimonial />
       </div>
+      <div className=" flex flex-col gap-4 justify-center">
+        {testimonial?.length > 0 ? (
+          <div className=" grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
+            {testimonial?.map((testimonial, index) => {
+              return (
+                <TestimonialComments key={index} testimonial={testimonial} />
+              );
+            })}
+          </div>
+        ) : (
+          <div className="flex justify-center items-center flex-col gap-6 h-full">
+          
 
-      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
-        <TestimonialComments />
+            <p className="font-medium text-lg text-center text-[#9DA4B2]">
+              No testimonial provided
+            </p>
+          </div>
+        )}
+
+        <div
+          className={`${
+            testimonial?.length >= take ? "block" : "hidden"
+          } flex justify-center`}
+        >
+          <PaginationTestimonial searchParams={searchParams} />
+        </div>
       </div>
     </div>
   );
