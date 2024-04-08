@@ -47,6 +47,7 @@ export default function ChangeLungage({ setOpen, open,locale }) {
               {locales.map((language, index) => {
                 return (
                   <Link
+                  
                     href={pathname}
                     locale={language}
                     className={`${

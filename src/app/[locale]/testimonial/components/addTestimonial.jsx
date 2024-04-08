@@ -49,9 +49,9 @@ export default function AddTestimonial() {
       />
       <form
         action={handeleSubmit}
-        className="flex flex-col gap-4 px-10 py-6    rounded-md w-full items-center justify-center "
+        className="flex flex-col gap-4 px-10 py-6 bg-white shadow-md   rounded-md w-full items-center justify-center "
       >
-        <h2 className="text-[#0149a6] font-bold text-lg uppercase">
+        <h2 className="text-[#0149a6] font-bold text-lg capitalize">
           give us your feedback
         </h2>
         <div className="flex flex-col items-center gap-4">

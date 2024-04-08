@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 
 export default function About({params: { locale }}) {
   const t = useTranslations("AboutUS");
-  console.log(locale)
   const images1 = [
     "https://utfs.io/f/f4c6f5f8-a9c1-43dc-b9d9-c9cb5b7473f4-jlo1c3.jpg",
     "https://utfs.io/f/b7543642-62fb-4d92-9114-e7771da839b7-vmbc8r.jpg",
