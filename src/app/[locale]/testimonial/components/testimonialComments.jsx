@@ -6,7 +6,7 @@ export default async function TestimonialComments({ testimonial }) {
     <>
       <div className="flex flex-col gap-6  p-8   ">
         <p className="">{text}</p>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4  items-center">
           <Image
             className="rounded-full bg-[#0149a6] w-10 "
             src={`/image/avatar/${image}.png`}
@@ -14,9 +14,10 @@ export default async function TestimonialComments({ testimonial }) {
             width={100}
             alt="avatar"
           />
+          <p className="font-bold text-balance capitalize">{author}</p>
           <div className="flex flex-col gap-2 w-full">
-            <p className="font-bold text-balance capitalize">{author}</p>
-            <p className="font-semibold text-balance text-right capitalize">
+            
+            <p className="font-semibold text-right">
               {createdAt.toLocaleDateString()}
             </p>
           </div>
