@@ -24,31 +24,17 @@ export default async function Testimonial({ searchParams }) {
       </div>
       <div className=" flex flex-col  gap-4 justify-center">
         {testimonial?.length > 0 ? (
-          <div className=" flex flex-col lg:flex-row gap-4  items-start justify-between  ">
-            <div className="flex-col gap-4 flex ">
-              {testimonial?.map((testimonial, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={` even:hidden odd:block even:bg-white odd:bg-[#0149a6] odd:text-white border-[#ffff] rounded shadow-lg `}
-                  >
-                    <TestimonialComments testimonial={testimonial} />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="flex-col gap-4 flex ">
-              {testimonial?.map((testimonial, index) => {
-                return (
-                  <div
-                    key={index}
-                    className={` even:block odd:hidden even:bg-white odd:bg-[#0149a6] odd:text-white border-[#ffff] rounded shadow-lg `}
-                  >
-                    <TestimonialComments testimonial={testimonial} />
-                  </div>
-                );
-              })}
-            </div>
+          <div className=" gap-16 columns-1 lg:columns-2 space-y-6 items-center ">
+            {testimonial?.map((testimonial, index) => {
+              return (
+                <div
+                  key={index}
+                  className={`even:bg-white  break-inside-avoid-column odd:bg-[#0149a6] odd:text-white border-[#ffff]   rounded  shadow-lg  `}
+                >
+                  <TestimonialComments testimonial={testimonial} />
+                </div>
+              );
+            })}
           </div>
         ) : (
           <div className="flex justify-center items-center flex-col gap-6 h-full">
