@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 
 function InscriptionCondidates() {
   const t = useTranslations("Candidates");
+  const [validation, setValidation] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -19,56 +20,52 @@ function InscriptionCondidates() {
 
   const registrationCandidates = async (e) => {
     e.preventDefault();
-    const formDataToSend = new FormData();
-    formDataToSend.append("file", formData.pdf);
-    formDataToSend.append("firstName", formData.firstName);
-    formDataToSend.append("lastName", formData.lastName);
-    formDataToSend.append("tele", formData.tele);
-    formDataToSend.append("email", formData.email);
+    setValidation(true);
 
-    if (!formData.firstName) {
-      return toast.error("Please enter your First Name");
-    }
-    if (!formData.lastName) {
-      return toast.error("Please enter your Last Name");
-    }
-    if (!formData.tele) {
-      return toast.error("Please enter your phone number");
-    }
-    if (!formData.pdf) {
-      return toast.error("Please upload your pdf");
-    }
-
-    try {
-      toast.promise(
-        (async () => {
-          const response = await fetch("/api/condidatesInscription", {
-            method: "POST",
-            body: formDataToSend,
-          });
-          if (response.ok) {
-            setFormData({
-              firstName: "",
-              lastName: "",
-              tele: "",
-              email: "",
-              pdf: null,
+    if (
+      formData.firstName &&
+      formData.lastName &&
+      formData.tele &&
+      formData.email &&
+      formData.pdf
+    ) {
+      const formDataToSend = new FormData();
+      formDataToSend.append("file", formData.pdf);
+      formDataToSend.append("firstName", formData.firstName);
+      formDataToSend.append("lastName", formData.lastName);
+      formDataToSend.append("tele", formData.tele);
+      formDataToSend.append("email", formData.email);
+      try {
+        toast.promise(
+          (async () => {
+            const response = await fetch("/api/condidatesInscription", {
+              method: "POST",
+              body: formDataToSend,
             });
-            if (fileInputRef.current) {
-              fileInputRef.current.value = "";
+            if (response.ok) {
+              setFormData({
+                firstName: "",
+                lastName: "",
+                tele: "",
+                email: "",
+                pdf: null,
+              });
+              if (fileInputRef.current) {
+                fileInputRef.current.value = "";
+              }
+            } else {
+              throw new Error("Failed to send message");
             }
-          } else {
-            throw new Error("Failed to send message");
+          })(),
+          {
+            loading: "Registering ...",
+            success: <b>Your registration was successful !</b>,
+            error: <b>Failed to register candidate.</b>,
           }
-        })(),
-        {
-          loading: "Registering ...",
-          success: <b>Your registration was successful !</b>,
-          error: <b>Failed to register candidate.</b>,
-        }
-      );
-    } catch (error) {
-      console.error(error);
+        );
+      } catch (error) {
+        console.error(error);
+      }
     }
   };
 
@@ -107,44 +104,79 @@ function InscriptionCondidates() {
             className: "  bg-white text-black ",
           }}
         />
-        <input
-          value={formData.firstName}
-          onChange={handleInputChange}
-          type="text"
-          name="firstName"
-          className="bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs"
-          placeholder={t("inscriptionCondidates.firstName")}
-        />
-        <input
-          value={formData.lastName}
-          onChange={handleInputChange}
-          type="text"
-          name="lastName"
-          className="bg-[#ffffff] w-full font-semibold h-8 border p-4 rounded-md text-xs"
-          placeholder={t("inscriptionCondidates.lastName")}
-        />
+        <label className="block space-y-2">
+          <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+            {t("inscriptionCondidates.firstName")}
+          </span>
 
-        <input
-          value={formData.email}
-          onChange={handleInputChange}
-          type="email"
-          name="email"
-          className="bg-[#ffffff] w-full font-semibold h-8 border p-4 rounded-md text-xs"
-          placeholder={t("inscriptionCondidates.email")}
-        />
-        <input
-          value={formData.tele}
-          onChange={handleInputChange}
-          type="tel"
-          name="tele"
-          className="bg-[#ffffff] w-full font-semibold h-8 border p-4 rounded-md text-xs"
-          placeholder={t("inscriptionCondidates.tele")}
-        />
-        <div className="flex flex-col gap-2 items-center capitalize">
-          <label htmlFor="pdf" className=" font-bold">
-            {" "}
+          <input
+            value={formData.firstName}
+            onChange={handleInputChange}
+            type="text"
+            name="firstName"
+            className={`${!formData.firstName && validation && "border-red-500 "} bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+          />
+          <p className=" text-red-500 text-xs font-medium">
+            {!formData.firstName &&
+              validation &&
+              "Please enter your First Name"}
+          </p>
+        </label>
+        <label className="block space-y-2">
+          <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+            {t("inscriptionCondidates.lastName")}
+          </span>
+
+          <input
+            value={formData.lastName}
+            onChange={handleInputChange}
+            type="text"
+            name="lastName"
+             className={`${!formData.lastName && validation && "border-red-500 "} bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+          />
+          <p className=" text-red-500 text-xs font-medium">
+            {!formData.lastName && validation && "Please enter your Last Name"}
+          </p>
+        </label>
+        <label className="block space-y-2">
+          <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+            {t("inscriptionCondidates.email")}
+          </span>
+
+          <input
+            value={formData.email}
+            onChange={handleInputChange}
+            type="email"
+            name="email"
+             className={`${!formData.email && validation && "border-red-500 "} bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+            placeholder="example@email.com"
+          />
+          <p className=" text-red-500 text-xs font-medium">
+            {!formData.email && validation && "Please enter your Email"}
+          </p>
+        </label>
+        <label className="block space-y-2">
+          <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+            {t("inscriptionCondidates.tele")}
+          </span>
+
+          <input
+            value={formData.tele}
+            onChange={handleInputChange}
+            type="tel"
+            name="tele"
+             className={`${!formData.tele && validation && "border-red-500 "} bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+            placeholder="+212"
+          />
+          <p className=" text-red-500 text-xs font-medium">
+            {!formData.tele && validation && "Please enter your phone number"}
+          </p>
+        </label>
+        <label className="block space-y-2">
+          <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
             {t("inscriptionCondidates.pdf")}
-          </label>
+          </span>
+
           <input
             id="pdf"
             ref={fileInputRef}
@@ -152,10 +184,12 @@ function InscriptionCondidates() {
             type="file"
             name="pdf"
             accept="application/pdf"
-            className="bg-[#ffffff] w-full font-semibold  border p-4 rounded-md text-xs file:bg-[#0149a6] file:text-white file:rounded file:mr-4 file:py-2 file:px-4 file:border-none file:text-sm file:font-semibold"
+            className={`${!formData.pdf && validation && "border-red-500"} bg-[#ffffff] w-full font-semibold  border p-4 rounded-md text-xs file:bg-[#0149a6] file:text-white file:rounded file:mr-4 file:py-2 file:px-4 file:border-none file:text-sm file:font-semibold`}
           />
-        </div>
-
+          <p className=" text-red-500 text-xs font-medium">
+            {!formData.pdf && validation && "Please upload your pdf"}
+          </p>
+        </label>
         <button
           type="submit"
           className="px-12 py-1 w-full rounded font-bold border-4 duration-700 hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white"

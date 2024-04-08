@@ -141,39 +141,30 @@ export default function About({params: { locale }}) {
         </video>
       </div>
       <div className=" container flex flex-col  gap-4">
-        <p className=" capitalize font-bold text-center text-xl lg:text-3xl text-[#0149a6]">
+        <h2 className=" capitalize font-bold text-center text-xl lg:text-3xl text-[#0149a6]">
           {t("whatWeHaveAchieved.title")}
-        </p>
+        </h2>
 
-        <ul className="  px-2 lg:text-lg flex flex-col gap-4 font-normal list-outside leading-loose ">
-          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
+        <ul className="*:border-l-4 *:border-[#0149a6] *:shadow *:bg-white *:p-2 *:pl-4 *:rounded-r-sm  px-2 lg:text-lg flex flex-col gap-4 font-normal list-outside leading-loose ">
+          <li >
             {t("whatWeHaveAchieved.line1")}
           </li>
-          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
+          <li >
             {t("whatWeHaveAchieved.line2")}
           </li>
-          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
+          <li >
             {t("whatWeHaveAchieved.line3")}
           </li>
-          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
+          <li >
             {t("whatWeHaveAchieved.line4")}
           </li>
-          <li className=" border-l-4 border-[#0149a6] shadow  bg-white p-2 pl-4 flex flex-col gap-2 rounded-r-sm">
+          <li >
             {t("whatWeHaveAchieved.line5")}
             <div className="flex gap-4 items-center ">
-              <a
-                arget="_blank"
-                href="https://www.instagram.com/reel/C3lKOTfAwz3/?igsh=MTRkejE5YWY1bDViMA=="
-              >
-                <Instagram
-                  size={30}
-                  className="  stroke-[#fff] rounded-md p-1 bg-[#f7543e]"
-                />
+              <a arget="_blank" href="https://www.instagram.com/reel/C3lKOTfAwz3/?igsh=MTRkejE5YWY1bDViMA==">
+                <Instagram size={30} className="  stroke-[#fff] rounded-md p-1 bg-[#f7543e]"/>
               </a>
-              <a
-                arget="_blank"
-                href="https://www.zdf.de/nachrichten/politik/ausland/fachkraeftemangel-pflegepersonal-marokko-100.html"
-              >
+              <a arget="_blank" href="https://www.zdf.de/nachrichten/politik/ausland/fachkraeftemangel-pflegepersonal-marokko-100.html">
                 <Link
                   size={30}
                   className=" stroke-[#fff] rounded-md p-1 bg-[#0149a6]"
@@ -181,7 +172,7 @@ export default function About({params: { locale }}) {
               </a>
             </div>
           </li>
-          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
+          <li >
             {t("whatWeHaveAchieved.line6")}
           </li>
           <li className=" border-l-4 border-[#0149a6] shadow  bg-white p-2 pl-4 flex flex-col gap-2 rounded-r-sm">
@@ -198,13 +189,13 @@ export default function About({params: { locale }}) {
               </a>
             </div>
           </li>
-          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
+          <li >
             {t("whatWeHaveAchieved.line8")}
           </li>
-          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
+          <li >
             {t("whatWeHaveAchieved.line9")}
           </li>
-          <li className=" border-l-4 border-[#0149a6] shadow bg-white p-2 pl-4 rounded-r-sm">
+          <li >
             {t("whatWeHaveAchieved.line10")}
           </li>
         </ul>

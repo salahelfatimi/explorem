@@ -1,3 +1,4 @@
+
 import { fetchComments } from "@/app/api/data/Comment/actions";
 import Image from "next/image";
 import { Star } from "react-feather";
@@ -14,13 +15,9 @@ export const CommentListings = async ({ blogId }) => {
         <div className=" flex flex-col gap-4">
           {comments.length > 0 ? (
             comments.map((comment, index) => (
-              <div
-                key={index}
-                className=" flex flex-col lg:flex-row items-center bg-white p-4 rounded gap-8"
-              >
+              <div key={index} className={`  flex flex-col lg:flex-row  items-center bg-white p-4 rounded gap-8`}>
                 <Image
-                  blurDataURL="/image/avatar/man.png"
-                  placeholder="blur"
+                  
                   className="rounded-full "
                   src="/image/avatar/man.png"
                   height={70}
@@ -28,31 +25,30 @@ export const CommentListings = async ({ blogId }) => {
                   alt="avatar"
                 />
                 <div className="flex text-center lg:text-left flex-col gap-1">
-                  <span className=" font-bold">{comment.author}</span>
+                  <p className=" text-gray-500  ">{comment.text}</p>
                   <div className="flex items-center justify-center lg:justify-start gap-2">
                     <Star
-                      size={20}
+                      size={25}
+                      
                       className=" min-w-4 fill-yellow-400 stroke-yellow-400"
                     />
                     <Star
-                      size={20}
+                      size={25}
                       className=" min-w-4 fill-yellow-400 stroke-yellow-400"
                     />
                     <Star
-                      size={20}
+                      size={25}
                       className=" min-w-4 fill-yellow-400 stroke-yellow-400"
                     />
                     <Star
-                      size={20}
+                      size={25}
                       className=" min-w-4 fill-yellow-400 stroke-yellow-400"
                     />
                     <Star
-                      size={20}
+                      size={25}
                       className=" min-w-4 fill-yellow-400 stroke-yellow-400"
                     />
                   </div>
-                  <p className=" text-gray-500  ">{comment.text}</p>
-
                   <span className="  font-semibold text-[#134ba1] ">
                     {comment.createdAt.toLocaleDateString()}
                   </span>

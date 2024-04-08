@@ -15,7 +15,7 @@ export const fetchComments = async (blogId) => {
       orderBy: {
         createdAt: "desc",
       },
-      take: 5,
+      
     });
     revalidatePath(`/admin/dashboard/comments/${blogId}`);
     revalidatePath(`/blogs/${blogId}`);

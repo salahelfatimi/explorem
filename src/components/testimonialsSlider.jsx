@@ -13,7 +13,7 @@ import {
 import "swiper/css";
 import { Star, User } from "react-feather";
 import { useTranslations } from "next-intl";
-
+import Image from "next/image";
 
 const TestimonialsSlider = () => {
   const t = useTranslations("Index");
@@ -100,32 +100,17 @@ const TestimonialsSlider = () => {
         }}
       >
         {testimonials.map((ele, index) => (
-          <SwiperSlide
-            key={index}
-            className=" bg-white border border-solid border-gray-300 rounded-xl  transition-all duration-500  w-full p-4   hover:shadow-sm "
-          >
-            <div className="flex items-center mb-7 gap-2 transition-all duration-500 ">
-              <Star className=" fill-yellow-400 stroke-yellow-400" />
-              <span className="text-base font-semibold text-indigo-600">
-                4.9
-              </span>
-            </div>
-            <p className="text-base text-gray-600 leading-6  transition-all duration-500 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
-              {ele.Comment}
-            </p>
-            <div className="flex items-center gap-5 border-t border-solid border-gray-200 pt-5">
-              <User
-                size={40}
-                className=" bg-[#0149a6] rounded-full p-1 stroke-white"
+          <SwiperSlide key={index} className="flex flex-col gap-10 bg-white p-8 rounded-2xl h-fit border-gray-300 border-2">
+            <p className="">{ele.Comment}</p>
+            <div className="flex gap-4 items-center">
+              <Image
+                className="rounded-md bg-[#5199e2] w-10 "
+                src="/image/avatar/man.png"
+                height={100}
+                width={100}
+                alt="avatar"
               />
-              <div className="block">
-                <h5 className="text-gray-900 font-medium transition-all duration-500  mb-1">
-                  {ele.fullName}
-                </h5>
-                <span className="text-sm leading-4 text-gray-500">
-                  {ele.job}
-                </span>
-              </div>
+              <p className="font-bold capitalize">{ele.fullName}</p>
             </div>
           </SwiperSlide>
         ))}

@@ -25,7 +25,7 @@ export default function Index() {
 
   return (
     <>
-      <div className="bg-[#F5F5F5]  space-y-8 py-12">
+      <div className="bg-[#F5F5F5]  space-y-8 pt-12">
         <div className=" flex flex-col items-center justify-center gap-4">
           <h1 className="flex items-center gap-4 justify-center flex-col text-xl lg:text-2xl font-extrabold capitalize">
             <span>
@@ -215,9 +215,7 @@ export default function Index() {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div>
-          <TestimonialsSlider />
-        </div>
+        
       </div>
     </>
   );

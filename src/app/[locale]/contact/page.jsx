@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 
 export default function Contact() {
   const t = useTranslations("Contact");
+  const [validation, setValidation] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -17,50 +18,43 @@ export default function Contact() {
   });
   const sendEmail = async (e) => {
     e.preventDefault();
-    if (!formData.firstName) {
-      return toast.error("Please enter your firstName");
-    }
-    if (!formData.lastName) {
-      return toast.error("Please enter your lastName");
-    }
-    if (!formData.tele) {
-      return toast.error("Please enter your phone number");
-    }
-    if (!formData.email) {
-      return toast.error("Please enter a email");
-    }
-    if (!formData.subject) {
-      return toast.error("Please enter a subject");
-    }
-    if (!formData.message) {
-      return toast.error("Please enter a message");
-    }
-    toast.promise(
-      (async () => {
-        const response = await fetch("/api/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
-        if (response.status === 200) {
-          setFormData({
-            firstName: "",
-            lastName: "",
-            tele: "",
-            email: "",
-            subject: "",
-            message: "",
+    setValidation(true);
+
+    if (
+      formData.firstName &&
+      formData.lastName &&
+      formData.tele &&
+      formData.email &&
+      formData.subject &&
+      formData.message
+    ) {
+      toast.promise(
+        (async () => {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
           });
+          if (response.status === 200) {
+            setFormData({
+              firstName: "",
+              lastName: "",
+              tele: "",
+              email: "",
+              subject: "",
+              message: "",
+            });
+          }
+        })(),
+        {
+          loading: "Sending...",
+          success: <b>Message was sent successfully ! </b>,
+          error: <b>Failed to send message . </b>,
         }
-      })(),
-      {
-        loading: "Sending...",
-        success: <b>Message was sent successfully ! </b>,
-        error: <b>Failed to send message . </b>,
-      }
-    );
+      );
+    }
   };
 
   const handleInputChange = (e) => {
@@ -99,65 +93,137 @@ export default function Contact() {
                     {t("GetInTouch.title")}
                   </span>
                 </div>
-                <div className="flex justify-between gap-4">
+                <div className="flex lg:flex-row flex-col justify-between  gap-4">
+                  <label className="block space-y-2 lg:w-1/2">
+                    <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                      {t("GetInTouch.firstName")}
+                    </span>
+                    <input
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      type="text"
+                      name="firstName"
+                      id="firstName"
+                      className={`${
+                        !formData.firstName && validation && "border-red-500 "
+                      } bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+                     
+                    />
+                    <p className=" text-red-500 text-xs font-medium">
+                      {!formData.firstName &&
+                        validation &&
+                        "Please enter your First Name"}
+                    </p>
+                  </label>
+                  <label className="block space-y-2 lg:w-1/2">
+                    <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                      {t("GetInTouch.lastName")}
+                    </span>
+                    <input
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      type="text"
+                      name="lastName"
+                      id="lastName"
+                      className={`${
+                        !formData.lastName && validation && "border-red-500 "
+                      } bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+                      
+                    />
+                    <p className=" text-red-500 text-xs font-medium">
+                      {!formData.lastName &&
+                        validation &&
+                        "Please enter your Last Name"}
+                    </p>
+                  </label>
+                </div>
+                <div className="flex justify-between lg:flex-row flex-col gap-4">
+                  <label className="block space-y-2 lg:w-1/2">
+                    <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                      {t("GetInTouch.email")}
+                    </span>
+                    <input
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="example@email.com"
+                      className={`${
+                        !formData.email && validation && "border-red-500 "
+                      } bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+                    
+                    />
+                    <p className=" text-red-500 text-xs font-medium">
+                      {!formData.email &&
+                        validation &&
+                        "Please enter your Email"}
+                    </p>
+                  </label>
+                  <label className="block space-y-2 lg:w-1/2">
+                    <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                      {t("GetInTouch.tele")}
+                    </span>
+                    <input
+                      value={formData.tele}
+                      onChange={handleInputChange}
+                      type="tel"
+                      name="tele"
+                      id="tele"
+                      className={`${
+                        !formData.tele && validation && "border-red-500 "
+                      } bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+                     
+                    />
+                    <p className=" text-red-500 text-xs font-medium">
+                      {!formData.tele &&
+                        validation &&
+                        "Please enter your phone"}
+                    </p>
+                  </label>
+                </div>
+                <label className="block space-y-2 ">
+                  <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                    {t("GetInTouch.subject")}
+                  </span>
                   <input
-                    value={formData.firstName}
+                    value={formData.subject}
                     onChange={handleInputChange}
                     type="text"
-                    name="firstName"
-                    id="firstName"
-                    className="bg-[#ffffff] h-8 w-1/2 border p-4 font-mono text-xs"
-                    placeholder={t("GetInTouch.firstName")}
+                    name="subject"
+                    id="subject"
+                    className={`${
+                      !formData.subject && validation && "border-red-500 "
+                    } bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+                  
                   />
-                  <input
-                    value={formData.lastName}
+                  <p className=" text-red-500 text-xs font-medium">
+                    {!formData.subject &&
+                      validation &&
+                      "Please enter your subject"}
+                  </p>
+                </label>
+                <label className="block space-y-2">
+                  <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                    {t("GetInTouch.message")}
+                  </span>
+                  <textarea
+                    value={formData.message}
                     onChange={handleInputChange}
-                    type="text"
-                    name="lastName"
-                    id="lastName"
-                    className="bg-[#ffffff] w-1/2 h-8 border p-4 font-mono text-xs"
-                    placeholder={t("GetInTouch.lastName")}
-                  />
-                </div>
-                <div className="flex justify-between gap-4">
-                  <input
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="bg-[#ffffff] w-1/2 h-8 border p-4 font-mono text-xs"
-                    placeholder={t("GetInTouch.email")}
-                  />
-                  <input
-                    value={formData.tele}
-                    onChange={handleInputChange}
-                    type="tel"
-                    name="tele"
-                    id="tele"
-                    className="bg-[#ffffff] w-1/2 h-8 border p-4 font-mono text-xs"
-                    placeholder={t("GetInTouch.tele")}
-                  />
-                </div>
-
-                <input
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  className="bg-[#ffffff] w-full h-8 border p-4 font-mono text-xs"
-                  placeholder={t("GetInTouch.subject")}
-                />
-                <textarea
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="form-control bg-[#ffffff] border  py-2 px-4 w-full font-mono text-xs"
-                  name="message"
-                  id="message"
-                  rows="16"
-                  placeholder={t("GetInTouch.message")}
-                ></textarea>
+                    className={`${
+                      !formData.subject && validation && "border-red-500 "
+                    }  bg-[#ffffff] border  py-2 px-4 w-full rounded-md font-mono text-xs`}
+                    name="message"
+                    id="message"
+                    rows="16"
+                   
+                  ></textarea>
+                  <p className=" text-red-500 text-xs font-medium">
+                    {!formData.message &&
+                      validation &&
+                      "Please enter your message"}
+                  </p>
+                </label>
                 <button
                   type="submit"
                   className="  px-12 py-1 w-full rounded font-bold border-4 duration-700  hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white "
