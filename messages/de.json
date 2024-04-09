@@ -1,0 +1,321 @@
+{
+  "Blog": {
+    "title": "Unser Blog",
+    "description": "Alle aktuellen Neuigkeiten von Explorem, direkt vom Team.",
+    "LatestBlog": "Neuester Blog",
+    "new": "Neu",
+    "readMore": "Weiterlesen",
+    "AllBlog": "Alle Blogs",
+    "Attention": {
+      "title": "Achtung",
+      "p": "Noch keine Blogs veröffentlicht",
+      "description": "Wir entschuldigen uns, aber es scheint, dass im Moment keine Blogbeiträge verfügbar sind. Unser Team bei Explorem arbeitet fleißig daran, Ihnen bald wertvolle Inhalte zu liefern. In der Zwischenzeit, warum erkunden und erfahren Sie nicht mehr über unsere Sprachdienste und -angebote? Sie können durch andere Abschnitte unserer Website navigieren, um herauszufinden, wie wir Sie bei Ihrer Sprachlernreise unterstützen können. Vergessen Sie nicht, sich für unseren Newsletter anzumelden, um über zukünftige Blogbeiträge auf dem Laufenden zu bleiben. Vielen Dank für Ihre Geduld und Ihr Verständnis."
+    }
+    
+  },
+  "Index": {
+    "title": {
+      "line1": "Wir machen einen ",
+      "line2": "Unterschied . ",
+      "line3": "Wir lassen es ",
+      "line4": "geschehen . "
+    },
+    "button": {
+      "Candidates": "Registrierung für Kandidaten",
+      "Employers": "Bewerben Sie sich als Arbeitgeber"
+    },
+    "grids": [
+      {
+        "id": 1,
+        "title": "Training / Formation",
+        "description": "Deutschkurs und Pflegeunterricht"
+      },
+      {
+        "id": 2,
+        "title": "Arbeitsvermittlung",
+        "description": "Beschäftigungs- und Berufsausbildungsvermittlung"
+      },
+      {
+        "id": 3,
+        "title": "Projektmanagement",
+        "description": "Effektive Lösungen im Projektmanagement"
+      },
+      {
+        "id": 4,
+        "title": "Anerkennung von Abschlüssen",
+        "description": "Stellen Sie sicher, dass Ihre Abschlüsse anerkannt sind"
+      },
+      {
+        "id": 5,
+        "title": "Berufliche Qualifikation",
+        "description": "Verbessern Sie Ihre beruflichen Fähigkeiten"
+      },
+      {
+        "id": 6,
+        "title": "Onboarding / Integration / Umzug",
+        "description": "Effiziente Prozesse, einschließlich Visa-Unterstützung"
+      }
+    ],
+    "vedioTitle": "Wer wir sind",
+
+    "grid": {
+      "students": "Schüler",
+      "learning-programmes": "Lernprogramme",
+      "teachers": "Lehrer",
+      "language-trainings": "Sprachtrainings"
+    },
+
+    "testimonial": {
+      "title": "Referenz",
+      "description": "Was unsere zufriedenen Kunden sagen ! "
+    }
+  },
+  "Navbar": {
+    "home": "Startseite",
+    "employers": "Arbeitgeber",
+    "blog": "Blog",
+    "candidates": "Bewerber",
+    "contact": "Kontakt",
+    "about": "Über uns",
+    "client": "Kunde",
+    "testimonial":"Zeugnis"
+  },
+  "AboutUS": {
+    "aboutUs": "Über uns",
+    "aboutUsSlogen": "Ein paar Gründe, uns zu wählen",
+    "aboutUsText": {
+      "line1": "Explorem ist ein Team von Experten, das Dienstleistungen im Zusammenhang mit ",
+      "line2": "Personalwesen, Sprache und Ausbildung im Bereich Pflege sowie Coaching in den Bereichen Rekrutierung, Management und Schulung ",
+      "line3": "anbietet, sowohl in Marokko als auch im Ausland.",
+      "line4": "Was uns von anderen unterscheidet, ist, wie wir unsere Kandidaten behandeln und unterstützen, um ihre Karrierechancen zu schaffen und auf dem globalen Markt qualifiziert zu sein.",
+      "line5": "Gegründet im Jahr 2021 von den derzeitigen beiden Geschäftsführern, Herrn Abdessamad Aboul Ossoud und Dr. Gracila V. Ucag. Beide haben wesentliche Erfahrungen in der Zusammenarbeit mit ausländischen Geschäftspartnern, um qualifizierten Fachleuten zu helfen, den Schritt zu ihrem neuen Traumjob zu machen."
+    },
+    "slogen1": {
+      "line1": "„Machen Sie einen Sprung zu Ihrem Traumjob.",
+      "line2": "Schaffen Sie mit uns Ihre Karrierechancen, um Ihre Ziele wahr werden zu lassen!“"
+    },
+    "grid": {
+      "grid1": {
+        "title": "Vision",
+        "text": "Die Vision von Explorem besteht darin, als einflussreicher und renommierter Anbieter von zuverlässigen Dienstleistungen im Bereich Personalwesen, Management und Rekrutierung durch Exzellenz in Ausbildung, wissenschaftlicher Tätigkeit und Forschung sowie Förderung der Berufe jedes Kandidaten anerkannt zu werden."
+      },
+      "grid2": {
+        "title": "Mission",
+        "text": "Zuverlässige und transparente Dienstleistungen im Bereich Personalwesen sowie exzellente professionelle Schulungen und Coachings in den Bereichen Rekrutierung und Management bereitzustellen."
+      }
+    },
+    "WhyChooseUs": {
+      "title": "Warum uns wählen?",
+      "line1": "Wir sind engagiert, zuverlässig und transparent bei der Bereitstellung ausgezeichneter Dienstleistungen für jeden Kunden und Kandidaten, den wir haben.",
+      "line2": "Gemeinsam schaffen wir Möglichkeiten; wir leiten, unterstützen und motivieren Kandidaten, damit ihre Karriereziele wahr werden.",
+      "line3": "Wir sorgen dafür, dass wir einen Unterschied in den von uns erbrachten Dienstleistungen machen, und wir setzen es auf unsere eigene professionelle Weise um.",
+      "line4": "Wir glauben daran, die Grenzen des Möglichen zu erweitern. Wir sind ein Team von Experten, das sich verpflichtet hat, herausragende Ergebnisse zu liefern."
+    },
+    "vedioTitle": "Wer wir sind",
+    "whatWeHaveAchieved": {
+      "title": "Was wir erreicht haben?",
+      "line1": "Unser Programm wurde mehr als 2.000+ Studentenpflegern und Absolventen in ganz Marokko vorgestellt.",
+      "line2": "800+ Studenten und Pfleger haben Verträge mit unserem Programm für qualifizierte Pfleger unterzeichnet.",
+      "line3": "Wir haben die Partnerschaft mit Pflegeschulen aus verschiedenen Städten Marokkos (Rabat, Casablanca, Marrakesch, Agadir, Tetouan, Oujda) aufrechterhalten.",
+      "line4": "Im Jahr 2024 starten wir unser Stipendienprogramm für qualifizierte Pfleger, das einen KOSTENLOSEN Deutschkurs, Rekrutierungs- und Umzugsdienste umfasst.",
+      "line5": "Explorem-Geschäftsführer, Lehrer, Studenten und Kandidaten wurden im Februar 2024 im ZDF heute (deutsches Fernsehen) interviewt und vorgestellt.",
+      "line6": "Im Jahr 2023 erhielten 20 Kandidaten eine Vorabzustimmung für das Visum; 20 aktive Kandidaten zogen nach Deutschland um, und 23 andere Kandidaten erhielten ihren Defizitbescheid für die Anerkennung ihres Diploms.",
+      "line7": "Pflegekandidaten von Explorem, die nach Deutschland umgezogen sind, wurden in der WDR Lokalzeit aus Köln vorgestellt.",
+      "line8": "Im Februar 2023 erhielten in Zusammenarbeit mit deutschen Arbeitgebern 34 neu graduierte Pflegekandidaten Stipendien in unserem Programm. Dies umfasst einen kostenlosen B1- und B2-Sprachkurs, monatliches Stipendium, Prüfungsgebühren, Anerkennungs- und Qualifikationsgebühren, Visakosten und andere Umzugskosten.",
+      "line9": "Von Februar bis März 2023 unterschrieben 54 unserer aktiven Kandidaten direkt ihre Arbeitsverträge mit den deutschen Arbeitgebern.",
+      "line10": "Im Zeitraum von 2021 bis 2022 wurden mehr als 100 Pflegekandidaten, die einen endgültigen Defizitbescheid erhielten und zur Wissensprüfung zugelassen wurden, umgesiedelt; 2 Kandidaten mit direkter Anerkennung; und mehr als 80 Kandidaten, die Empfänger des Programms waren, wurden nach Deutschland umgesiedelt."
+    },
+    "slogen2": {
+      "line1": "„Wir glauben daran, die Grenzen des Möglichen zu erweitern. ",
+      "line2": "  Wir sind ein Team von Experten, das sich verpflichtet hat, herausragende Ergebnisse zu liefern.“ "
+    },
+    "ourTeamManagement": {
+      "title": "Unser Team – Management",
+      "team": {
+        "Gracila": {
+          "fullName": "GRACILA V. UCAG, RN, MAN, PHD",
+          "job": "Gründerin/Geschäftsführerin",
+          "experiences": {
+            "1": "Bachelor of Science in Nursing (BSN)",
+            "2": "Master of Arts in Nursing (MAN) mit Schwerpunkt auf Erwachsenen- und Gemeindekrankenpflege",
+            "3": "Doktor der Philosophie (PhD) in Bildungsmanagement mit Schwerpunkt auf Pflegeausbildung",
+            "4": "Philippinische registrierte Krankenschwester",
+            "5": "Freiberufliche Krankenpflegeprofessorin",
+            "6": "Arbeitet seit 2004 in der Krankenpflegeausbildung/-bildung/-training mit Spezialisierung auf medizinisch-chirurgische Pflege, Pflegeforschung und evidenzbasierte Praxis (12 Jahre an der Universität auf den Philippinen und 5 Jahre in einem von den VAE verwalteten College, Marokko-Campus)."
+          }
+        },
+        "Abdessamad": {
+          "fullName": "ABDESSAMAD ABOUL OSSOUD",
+          "job": "Gründer/Geschäftsführer",
+          "experiences": {
+            "1": "Diplom in Optik Optometrie",
+            "2": "Marokko-Tourismus - Professioneller nationaler offizieller Reiseführer ",
+            "3": "Audiovisueller und professioneller Fotografie-Ortsmanager seit 1995 ",
+            "4": "Sprechen : Arabisch, Französisch, Englisch, Russisch und Spanisch "
+          }
+        }
+      }
+    }
+  },
+  "Contact": {
+    "GetInTouch": {
+      "title": "Kontaktieren Sie uns",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "tele": "Telefoon",
+      "email": "E-Mail",
+      "subject": "Thema",
+      "message": "Nachricht",
+      "send": "Senden"
+    },
+    "Information": {
+      "title": "Information",
+      "location": "Standort Explorem SARL",
+      "mobile": {
+        "title": "Mobilnummern/WhatsApp",
+        "formationCenter": "Ausbildungszentrum",
+        "administration": "Verwaltung",
+        "whatsappAvailable": "(WhatsApp verfügbar)",
+        "landline": "(Festnetz)"
+      },
+      "email": {
+        "title": "E-Mail-Adressen",
+        "recruitment": "Rekrutierung",
+        "administration": "Verwaltung",
+        "documents": "Dokumente",
+        "nursing": "Pflege"
+      }
+    }
+  },
+  "Candidates": {
+    "titleCandidates": "Unsere besten Dienstleistungen für Kandidaten",
+
+    "services": {
+      "Training/Formation": {
+        "title": "Training/Formation (Sprache und Pflege)",
+        "description": [
+          "Online- und Präsenzkurse für Deutsch (Niveau A1 bis B2)",
+          "Online- und Präsenzkurse für Pflege in Englisch",
+          "Teilnahmebescheinigung bei Abschluss des Levels",
+          "Kostenloses Material während des Unterrichts",
+          "Bezahlbare Gebühren",
+          "Unterstützung durch WhatsApp-Gruppen",
+          "International qualifizierte und kompetente Lehrkräfte",
+          "Besondere Aufmerksamkeit für individuelle Schwächen",
+          "Hohe Erfolgsquote garantiert",
+          "Vorgeschlagene Zeitfenster"
+        ]
+      },
+      "JobPlacement": {
+        "title": "Arbeitsvermittlung",
+        "description": [
+          "Überprüfung des Diploms und Zeugnisses des Kandidaten",
+          "Erstellung des Profils des Kandidaten",
+          "Erstellung eines professionellen Lebenslaufs",
+          "Vermittlung von Kandidaten an Arbeitgeber",
+          "Vereinbarung von Vorstellungsgesprächen mit bereitgestellter Dolmetscherunterstützung",
+          "Vorbereitung auf ein Online- oder persönliches Vorstellungsgespräch",
+          "Sicherstellung eines zweisprachigen Arbeitsvertrags"
+        ]
+      },
+      "VocationalTrainingPlacement": {
+        "title": "Berufsausbildungsplatzvermittlung",
+        "description": [
+          "Unterstützung bei der Suche nach beruflicher Ausbildung in Deutschland",
+          "Erstellung eines professionellen Lebenslaufs, der Fähigkeiten und Leistungen hervorhebt",
+          "Unterstützung bei zweisprachigen Ausbildungsverträgen",
+          "Deutschkurse zur Verbesserung der Sprachkenntnisse",
+          "Anleitung und Unterstützung bei Visa-Prozessen",
+          "Fortlaufende Unterstützung bei der Ankunft, einschließlich der Suche nach Unterkünften"
+        ]
+      },
+      "DegreeRecognition": {
+        "title": "Anerkennung von Abschlüssen in Zusammenarbeit mit Arbeitgebern und unseren globalen Partnern",
+        "description": [
+          "Antrag auf Defizitbescheid",
+          "Antrag auf ZAV-Zulassung",
+          "Erstellung eines auf den Kandidaten zugeschnittenen Weiterbildungsvertrags gemäß den Anforderungen der Lizenzbehörden",
+          "Anerkennungsmanagement bis zum Erhalt des Berufszertifikats"
+        ]
+      },
+      "ProfessionalQualification": {
+        "title": "Berufsqualifikation in Zusammenarbeit mit Arbeitgebern und unseren globalen Partnern",
+        "description": ["Vorbereitungskurs für Wissenstests", "Wissenstest"]
+      },
+      "On-boardingandIntegration": {
+        "title": "On-boarding und Integration in Zusammenarbeit mit Arbeitgebern und unseren globalen Partnern",
+        "description": [
+          "Beantragung von Visa und Arbeitserlaubnissen",
+          "Planung und Organisation der Ankunft",
+          "Anmeldung beim zuständigen Gemeindeamt",
+          "Eröffnung eines Bankkontos",
+          "Anmeldung bei der gesetzlichen Krankenversicherung",
+          "Suche nach einer Wohnung"
+        ]
+      }
+    },
+
+    "inscriptionCondidates": {
+      "title": "Registrierung von Kandidaten",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail",
+      "tele": "Telefon",
+      "pdf": "Laden Sie Ihren Lebenslauf hoch",
+
+      "Submit": "Einreichen"
+    }
+  },
+  "Employers": {
+    "titleEmployers": "Unsere besten Dienstleistungen für Arbeitgeber",
+    "descriptionEmployers": "Projektmanagement (im Zusammenhang mit Personalwesen, Rekrutierung, Pflegeausbildung, Sprachbildung/-training)",
+    "Services": {
+      "line1": {
+        "title": "Koordination mit lokalen Partnern",
+        "description": "Zusammenarbeit mit örtlichen Schulen, Institutionen, Verbänden und anderen Partnern zur Einrichtung starker Rekrutierungsnetzwerke."
+      },
+      "line2": {
+        "title": "Projektpräsentation und Zielgruppenansprache",
+        "description": "Erstellen und präsentieren Sie überzeugende Projektpräsentationen, die auf die geeignetsten Profile für die Bedürfnisse Ihrer Organisation abzielen."
+      },
+      "line3": {
+        "title": "Stellenbeschreibungserstellung",
+        "description": "Entwickeln Sie detaillierte Stellenbeschreibungen für jede Kategorie, die Aufgaben, Verantwortlichkeiten und erforderliche Qualifikationen umreißen."
+      },
+      "line4": {
+        "title": "Kandidatenprofilierung",
+        "description": "Identifizieren und zielen Sie auf die geeignetsten Kandidatenprofile ab, einschließlich derjenigen mit mindestens einem B1-Sprachzertifikat oder der Bereitschaft, das erforderliche Sprachniveau zu erlernen."
+      },
+      "line5": {
+        "title": "Qualifikationsbewertung und Kandidatenauswahl",
+        "description": "Führen Sie gründliche Bewertungen der Qualifikationen und Fähigkeiten der Kandidaten durch, um die geeignetsten Kandidaten für Ihre Positionen auszuwählen."
+      },
+      "line6": {
+        "title": "Überwachung der Sprachbildung",
+        "description": "Überwachen Sie den Fortschritt und die Leistung der Kandidaten bei der Sprachbildung basierend auf dem vereinbarten Sprachtrainingsprogramm."
+      },
+      "line7": {
+        "title": "Dokumentensammlung zur Anerkennung",
+        "description": "Unterstützen Sie die Kandidaten bei der Beschaffung der erforderlichen Dokumente zur Anerkennung und Zertifizierung in ihren jeweiligen Bereichen."
+      },
+      "line8": {
+        "title": "Visumantragsunterstützung",
+        "description": "Führen Sie die Kandidaten durch den Visumantragsprozess in ihrem Heimatland und bieten Sie umfassende Unterstützung und Anleitung."
+      },
+      "line9": {
+        "title": "Informationen für Rekruten kommunizieren",
+        "description": "Kommunizieren Sie alle erforderlichen Informationen, Anforderungen und Erwartungen klar an die Rekruten während des gesamten Rekrutierungs- und Umzugsprozesses."
+      },
+      "line10": {
+        "title": "Kontinuierliche Unterstützung der Kandidaten",
+        "description": "Bieten Sie den Kandidaten kontinuierliche Unterstützung vom Vertragsabschluss bis zur Umsiedlung, um einen reibungslosen Übergang zu ihren neuen Rollen im Zielland zu gewährleisten."
+      }
+    },
+    "ourJourneyWithPartners": "Unsere Reise mit Partnern",
+    "slogen": {
+      "line1": "„Wir glauben daran, Grenzen des Möglichen zu verschieben.",
+      "line2": "Wir sind ein Team von Experten, das sich dazu verpflichtet hat, herausragende Ergebnisse zu liefern. “"
+    },
+    "getInTouch": "Kontaktieren Sie uns: Treten Sie noch heute mit uns in Kontakt"
+  }
+}

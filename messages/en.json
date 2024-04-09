@@ -1,0 +1,319 @@
+{
+  "Blog": {
+    "title": "Our Blog",
+    "description": "All the latest Explorem news, straight from the team . ",
+    "LatestBlog": "Latest blog",
+    "new": "New",
+    "readMore": "Read More",
+    "AllBlog": "All Blog",
+    "Attention": {
+      "title": "Attention",
+      "p": "No Blogs Published Yet",
+      "description": "We're sorry, but it looks like there are no blog posts available at the moment. Our team at Explorem is working diligently to bring you valuable content soon. In the meantime, why not explore and learn more about our language services and offerings? You can navigate through other sections of our website to discover how we can assist you in your language learning journey. Don't forget to sign up for our newsletter to stay updated on future blog posts. Thank you for your patience and understanding."
+    }
+  },
+  "Index": {
+    "title": {
+      "line1": "We Make A ",
+      "line2": "Difference .",
+      "line3": "We Make It ",
+      "line4": "Happen ."
+    },
+    "button": {
+      "Candidates": "Register for Candidates",
+      "Employers": "Apply Employers"
+    },
+    "grids": [
+      {
+        "id": 1,
+        "title": "Training/Formation",
+        "description": "German Course and Nursing Tutorial"
+      },
+      {
+        "id": 2,
+        "title": "Job Placement",
+        "description": "Employment and Vocational Training placement"
+      },
+      {
+        "id": 3,
+        "title": "Project Management",
+        "description": "Effective project management solutions"
+      },
+      {
+        "id": 4,
+        "title": "Degree Recognition",
+        "description": "Ensure your degrees are recognized"
+      },
+      {
+        "id": 5,
+        "title": "Professional Qualification",
+        "description": "Enhance your professional skills"
+      },
+      {
+        "id": 6,
+        "title": "Onboarding / Integration / Relocation",
+        "description": "Streamlined processes, including Visa assistance"
+      }
+    ],
+    "vedioTitle": "Who We Are",
+    "grid": {
+      "students": "students",
+      "learning-programmes": "learning programmes",
+      "teachers": "teachers",
+      "language-trainings": "language trainings"
+    },
+    "testimonial": {
+      "title": "testimonial",
+      "description": "What Our Happy Clients Say!"
+    }
+  },
+  "Navbar": {
+    "home": "Home",
+    "employers": "employers",
+    "blog": "blog",
+    "candidates": "candidates",
+    "contact": "Contact",
+    "about": "About",
+    "client": "Client",
+    "testimonial":"Testimonial"
+  },
+  "AboutUS": {
+    "aboutUs": "About us",
+    "aboutUsSlogen": "A few reasons for choosing us",
+    "aboutUsText": {
+      "line1": "Explorem is a team of experts providing services related to ",
+      "line2": "human resources, language, and nursing formation, and coaching on recruitment, management, and training ",
+      "line3": ", both in Morocco and abroad.",
+      "line4": "What makes us different among the others is how we treat and assist our candidates in creating their career opportunities and being qualified in the global market.",
+      "line5": "Founded in the year 2021 by its present two managing directors, Mr. Abdessamad Aboul Ossoud and Dr. Gracila V. Ucag. Both have essential experiences working with foreign business partners in assisting qualified professionals to make the leap to their new dream job."
+    },
+    "slogen1": {
+      "line1": "“Make a leap to your dream job.",
+      "line2": "Create your career opportunities with us to make your goals come true!”"
+    },
+    "grid": {
+      "grid1": {
+        "title": "Vision",
+        "text": "The vision of Explorem is to be recognized as an influential and distinguished provider of reliable human resources, management, and recruitment coaching services through excellence in training, scholarly activity, and research, and advancing each candidate's profession."
+      },
+      "grid2": {
+        "title": "Mission",
+        "text": "To provide reliable and transparent human resources services, and excellent professional training and coaching on recruitment and management."
+      }
+    },
+    "WhyChooseUs": {
+      "title": "Why Choose Us?",
+      "line1": "We are committed, reliable, and transparent in providing excellent services to each client and candidate we have.",
+      "line2": "Together, we create opportunities; we guide, support, and motivate candidates to make their career goals come true.",
+      "line3": "We ensure to make a difference in the services we provide, and we make it happen in our own professional way.",
+      "line4": "We believe in pushing the boundaries of what's possible. We are a team of experts committed to delivering outstanding results."
+    },
+    "vedioTitle": "Who We Are",
+    "whatWeHaveAchieved": {
+      "title": "What we have achieved?",
+      "line1": "Presented our program to more than 2,000+ student-nurses and graduates all over Morocco.",
+      "line2": "800+ students and nurses signed contracts with our program for qualified nurses.",
+      "line3": "Maintained nursing school partnership from different cities of Morocco (Rabat, Casablanca, Marrakech, Agadir, Tetouan, Oujda).",
+      "line4": "In 2024, we launch our scholarship program to qualified nurses, offering FREE German course, recruitment and relocation services.",
+      "line5": "Explorem managing directors, teachers, students and candidates were interviewed and featured in ZDF heute (German TV), in February 2024.",
+      "line6": "In 2023, there were 20 candidates issued with pre-visa approval; 20 active candidates relocated to Germany; and 23 other candidates were issued their deficit notice of their diploma equivalency.",
+      "line7": "Explorem nurse candidates relocated in Germany were featured in WDR Lokalzeit aus Köln.",
+      "line8": "In February 2023, in partnership with German employers, there were 34 newly graduate nurse-candidates who received scholarships in our program. It includes free B1 and B2 language course, with monthly stipend, with examination fees, recognition and professional qualifications fees, visa cost, and other relocation expenses covered.",
+      "line9": "From February to March 2023, 54 of our active candidates directly signed their work contracts with the German employers.",
+      "line10": "In 2021 to 2022, more than 100 nurse candidates who were issued with final deficit notice and qualified to take knowledge test; 2 candidates with direct recognition; and more than 80 candidates who were recipients of the program were relocated to Germany."
+    },
+    "slogen2": {
+      "line1": "“ We believe in pushing boundaries of what’s possible. ",
+      "line2": "  We are a team of experts committed to delivering outstanding results.” "
+    },
+    "ourTeamManagement": {
+      "title": "Our Team – Management",
+      "team": {
+        "Gracila": {
+          "fullName": "GRACILA V. UCAG, RN, MAN, PHD",
+          "job": "Founder/ Managing Director",
+          "experiences": {
+            "1": "Bachelor of Science in Nursing (BSN)",
+            "2": "Master of Arts in Nursing (MAN), with specialization in Adult Health Nursing and Community Health Nursing ",
+            "3": "Doctor of Philosophy (PhD), Educational Management, with specialization in nursing education ",
+            "4": "Philippines Registered Nurse ",
+            "5": "Freelance nursing professor ",
+            "6": "Works in nursing education/formation/training since 2004 , with specialization in medical-surgical nursing, nursing research and evidence-based practice (12 years in the University in Philippines and 5 years in UAE-managed College, Morocco Campus)."
+          }
+        },
+        "Abdessamad": {
+          "fullName": "ABDESSAMAD ABOUL OSSOUD",
+          "job": "Founder/ Managing Director",
+          "experiences": {
+            "1": "Diploma in Optics Optometry",
+            "2": "Morocco tourism - Professional National Official Tour Guide ",
+            "3": "Audio-visual and professional photography location manager since 1995 ",
+            "4": "Speaking : Arabic, French, English, Russian, and Spanish "
+          }
+        }
+      }
+    }
+  },
+
+  "Contact": {
+    "GetInTouch": {
+      "title": "Get In Touch",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "tele": "Phone",
+      "subject": "subject",
+      "message": "message",
+      "send": "Send"
+    },
+    "Information": {
+      "title": "Information",
+      "location": "Location Explorem SARL ",
+      "mobile": {
+        "title": "Mobile Numbers/ Whatsapp",
+        "formationCenter": "Formation Center",
+        "administration": "Administration",
+        "whatsappAvailable": "(Whatsapp available)",
+        "landline": "(Landline)"
+      },
+      "email": {
+        "title": "Email Addresses",
+        "recruitment": "Recruitment",
+        "administration": "Administration",
+        "documents": "Documents",
+        "nursing": "Nursing"
+      }
+    }
+  },
+  "Candidates": {
+    "titleCandidates": "Our Best Services For Candidates",
+
+    "services": {
+      "Training/Formation": {
+        "title": "Training/Formation (Language and Nursing)",
+        "description": [
+          "Online and onsite German courses (A1 to B2 level)",
+          "Online and onsite Nursing courses in English",
+          "With participation certificate when level is completed",
+          "Free material given during the class",
+          "Affordable fees",
+          "With WhatsApp Group Support",
+          "Internationally qualified and competent teachers",
+          "Special focus for individual weaknesses",
+          "High guaranteed success rate",
+          "Proposed Time slots"
+        ]
+      },
+      "JobPlacement": {
+        "title": "Job Placement",
+        "description": [
+          "Examination of candidate’s diploma and certificate",
+          "Creation of candidates’ profile",
+          "Professional CV creation",
+          "Connecting candidates with employers",
+          "Arranging job interviews with provided interpreter support",
+          "Preparation for an online or face to face interview",
+          "Ensuring a bilingual employment contract is in place"
+        ]
+      },
+      "VocationalTrainingPlacement": {
+        "title": "Vocational Training Placement",
+        "description": [
+          "Assistance in finding vocational training in Germany",
+          "Professional CV creation highlighting skills and achievements",
+          "Support with bilingual training contracts",
+          "German language courses to enhance proficiency",
+          "Guidance and assistance with visa processes",
+          "Ongoing support upon arrival, including accommodation search"
+        ]
+      },
+      "DegreeRecognition": {
+        "title": "Degree recognition in collaboration with the employers and our global partners",
+        "description": [
+          "Application for the deficit notice",
+          "Application for ZAV approval",
+          "Creation of a candidate-specific further education agreement according to the requirements of the licensing authorities",
+          "Recognition management until receipt of the professional certificate"
+        ]
+      },
+      "ProfessionalQualification": {
+        "title": "Professional qualification in collaboration with employers and our global partners",
+        "description": ["Knowledge test preparation course", "Knowledge test"]
+      },
+      "On-boardingandIntegration": {
+        "title": "On-boarding and Integration in collaboration with the employers and our global partners",
+        "description": [
+          "Applying for visas and work permits",
+          "Scheduling and organization of arrival",
+          "Registration at the responsible municipality",
+          "Opening a bank account",
+          "Registration with the statutory health insurance",
+          "Apartment search"
+        ]
+      }
+    },
+
+    "inscriptionCondidates": {
+      "title": "Registration of Candidates",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "tele": "Phone",
+      "pdf": "Upload Your CV",
+
+      "Submit": "Submit"
+    }
+  },
+  "Employers": {
+    "titleEmployers": "Our Best Services For Employers",
+    "descriptionEmployers": "Project Management (related to human resources, recruitment, nursing education, language formation/training)",
+    "Services": {
+      "line1": {
+        "title": "Coordination with Local Partners",
+        "description": "Collaborate with local schools, institutions, associations, and other partners to establish strong recruitment networks."
+      },
+      "line2": {
+        "title": "Project Presentation and Targeting",
+        "description": "Craft and deliver compelling project presentations targeting the most suitable profiles for your organization's needs."
+      },
+      "line3": {
+        "title": "Job Description Establishment",
+        "description": "Develop detailed job descriptions for each category, outlining roles, responsibilities, and required qualifications."
+      },
+      "line4": {
+        "title": "Candidate Profiling",
+        "description": "Identify and target the most suitable candidate profiles, including those with at least a B1 language certificate or a willingness to learn the required language level."
+      },
+      "line5": {
+        "title": "Qualification Assessment and Candidate Selection",
+        "description": "Conduct thorough assessments of candidate qualifications and skills to select the most suitable candidates for your positions."
+      },
+      "line6": {
+        "title": "Language Formation Monitoring",
+        "description": "Monitor candidates' language formation progress and performance based on the agreed-upon language training program."
+      },
+      "line7": {
+        "title": "Document Collection for Recognition",
+        "description": "Assist candidates in gathering necessary documents for recognition and certification in their respective fields."
+      },
+      "line8": {
+        "title": "Visa Application Assistance",
+        "description": "Guide candidates through the visa application process in their home country, providing comprehensive support and guidance."
+      },
+      "line9": {
+        "title": "Information Communication to Recruits",
+        "description": "Communicate all necessary information, requirements, and expectations clearly to recruits throughout the recruitment and relocation process."
+      },
+      "line10": {
+        "title": "Continuous Candidate Support",
+        "description": "Provide continuous support to candidates from contract signing to relocation, ensuring a smooth transition to their new roles in the target country."
+      }
+    },
+    "ourJourneyWithPartners": "Our Journey With Partners",
+    "slogen": {
+      "line1": " “ We believe in pushing boundaries of what’s possible.",
+      "line2": "We are a team of experts committed to delivering outstanding results . ”"
+    },
+    "getInTouch": "Get In Touch: Reach Out To Us Today"
+  }
+}
