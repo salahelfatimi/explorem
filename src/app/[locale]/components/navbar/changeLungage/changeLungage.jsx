@@ -10,7 +10,7 @@ const { Link, useRouter, usePathname, redirect } =
 export default function ChangeLungage({ setOpen, open,locale }) {
   const [showLanguage, setShowLanguage] = useState(false);
   const pathname = usePathname();
-
+ 
   return (
     <>
       <div className="relative inline-block text-left">

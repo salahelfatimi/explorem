@@ -5,7 +5,7 @@ import PaginationTestimonial from "./components/paginationTestimonial";
 import TestimonialComments from "./components/testimonialComments";
 
 export default async function Testimonial({ searchParams }) {
-  const take = (await searchParams) == {} ? 6 : parseInt(searchParams.take);
+  const take = await searchParams.take ? parseInt(searchParams.take) : 6;
   const testimonial = await fetchTestimonial(take);
 
   return (
