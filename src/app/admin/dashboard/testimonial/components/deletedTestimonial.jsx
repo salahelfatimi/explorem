@@ -38,7 +38,7 @@ export default function DeletedTestimonial({ id }) {
           className: "  bg-white text-black ",
         }}
       />
-      <button className="flex justify-end" onClick={() => deleteTestimonialHandler()}>
+      <button  onClick={() => deleteTestimonialHandler()}>
         <Trash className="min-w-4 stroke-2  stroke-red-500" />
       </button>
     </>
