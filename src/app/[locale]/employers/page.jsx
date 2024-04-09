@@ -69,7 +69,6 @@ export default function Employers() {
           <div>
             <div className="relative">
               <Image
-              
                 quality={40}
                 src="/image/employers/saction1.jpg"
                 className="h-auto max-w-full w-full  "
@@ -112,16 +111,12 @@ export default function Employers() {
                 <span className="flex  items-center gap-4 justify-center">
                   <Image
                     src="/image/aboutUS/logoHand.png"
-                    className="w-20 lg:w-24"
+                    className="w-14 lg:w-16"
                     width={195}
                     height={159}
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                    }}
                     alt="Explorem"
                   />
-                  <span className=" capitalize font-bold text-xl lg:text-2xl text-[#0149a6]">
+                  <span className=" capitalize font-bold text-xl lg:text-3xl text-[#0149a6]">
                     {t("ourJourneyWithPartners")}
                   </span>
                 </span>
@@ -146,16 +141,12 @@ export default function Employers() {
               <span className="flex  items-center gap-4 justify-center">
                 <Image
                   src="/image/aboutUS/logoHand.png"
-                  className="w-20 lg:w-24"
+                  className="w-14 lg:w-16"
                   width={195}
                   height={159}
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
                   alt="Explorem"
                 />
-                <span className=" capitalize text-center font-bold text-md lg:text-2xl text-[#0149a6]">
+                <span className=" capitalize text-center font-bold text-md lg:text-3xl text-[#0149a6]">
                   {t("getInTouch")}
                 </span>
               </span>

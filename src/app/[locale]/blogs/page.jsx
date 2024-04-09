@@ -16,7 +16,7 @@ async function Blog() {
               <h1 className=" mb-4 text-3xl sm:text-4xl tracking-tight text-[#134ba1] font-bold ">
                 {t("title")}
               </h1>
-              <p className="text-lg text-black font-medium">
+              <p className="text-lg text-gray-500 font-medium">
                 {t("description")}
               </p>
             </div>

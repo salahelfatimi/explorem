@@ -3,7 +3,7 @@ import { Instagram, Link } from "react-feather";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-export default function About({params: { locale }}) {
+export default function About({ params: { locale } }) {
   const t = useTranslations("AboutUS");
   const images1 = [
     "https://utfs.io/f/f4c6f5f8-a9c1-43dc-b9d9-c9cb5b7473f4-jlo1c3.jpg",
@@ -27,7 +27,6 @@ export default function About({params: { locale }}) {
             className="h-auto max-w-full w-full  "
             width={1920}
             height={1080}
-            
             quality={40}
             alt="Explorem"
           />
@@ -58,7 +57,6 @@ export default function About({params: { locale }}) {
           <p>{t("slogen1.line2")}</p>
         </span>
         <Image
-       
           quality={40}
           src="/image/aboutUS/slogen1.jpg"
           className="lg:w-1/3 rounded-xl"
@@ -78,7 +76,7 @@ export default function About({params: { locale }}) {
           width={195}
           height={159}
           src="/image/aboutUS/logoHand.png"
-          className="w-36"
+          className="w-28"
           alt="Explorem"
         />
         <span className=" bg-white shadow lg:w-1/3 flex flex-col gap-3 p-4 rounded-xl">
@@ -111,16 +109,12 @@ export default function About({params: { locale }}) {
         <span className="flex  items-center gap-4 justify-center">
           <Image
             src="/image/aboutUS/logoHand.png"
-            className="w-20 lg:w-24"
+            className="w-14 lg:w-16"
             width={195}
             height={159}
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-            }}
             alt="Explorem"
           />
-          <p className=" capitalize font-bold text-xl lg:text-2xl text-[#0149a6]">
+          <p className=" capitalize font-bold text-xl lg:text-3xl text-[#0149a6]">
             {t("vedioTitle")}
           </p>
         </span>
@@ -145,25 +139,26 @@ export default function About({params: { locale }}) {
         </h2>
 
         <ul className="*:border-l-4 *:border-[#0149a6] *:shadow *:bg-white *:p-2 *:pl-4 *:rounded-r-sm  px-2 lg:text-lg flex flex-col gap-4 font-normal list-outside leading-loose ">
-          <li >
-            {t("whatWeHaveAchieved.line1")}
-          </li>
-          <li >
-            {t("whatWeHaveAchieved.line2")}
-          </li>
-          <li >
-            {t("whatWeHaveAchieved.line3")}
-          </li>
-          <li >
-            {t("whatWeHaveAchieved.line4")}
-          </li>
-          <li >
+          <li>{t("whatWeHaveAchieved.line1")}</li>
+          <li>{t("whatWeHaveAchieved.line2")}</li>
+          <li>{t("whatWeHaveAchieved.line3")}</li>
+          <li>{t("whatWeHaveAchieved.line4")}</li>
+          <li>
             {t("whatWeHaveAchieved.line5")}
             <div className="flex gap-4 items-center ">
-              <a arget="_blank" href="https://www.instagram.com/reel/C3lKOTfAwz3/?igsh=MTRkejE5YWY1bDViMA==">
-                <Instagram size={30} className="  stroke-[#fff] rounded-md p-1 bg-[#f7543e]"/>
+              <a
+                arget="_blank"
+                href="https://www.instagram.com/reel/C3lKOTfAwz3/?igsh=MTRkejE5YWY1bDViMA=="
+              >
+                <Instagram
+                  size={30}
+                  className="  stroke-[#fff] rounded-md p-1 bg-[#f7543e]"
+                />
               </a>
-              <a arget="_blank" href="https://www.zdf.de/nachrichten/politik/ausland/fachkraeftemangel-pflegepersonal-marokko-100.html">
+              <a
+                arget="_blank"
+                href="https://www.zdf.de/nachrichten/politik/ausland/fachkraeftemangel-pflegepersonal-marokko-100.html"
+              >
                 <Link
                   size={30}
                   className=" stroke-[#fff] rounded-md p-1 bg-[#0149a6]"
@@ -171,9 +166,7 @@ export default function About({params: { locale }}) {
               </a>
             </div>
           </li>
-          <li >
-            {t("whatWeHaveAchieved.line6")}
-          </li>
+          <li>{t("whatWeHaveAchieved.line6")}</li>
           <li className=" border-l-4 border-[#0149a6] shadow  bg-white p-2 pl-4 flex flex-col gap-2 rounded-r-sm">
             {t("whatWeHaveAchieved.line7")}
             <div className="flex gap-4 items-center ">
@@ -188,15 +181,9 @@ export default function About({params: { locale }}) {
               </a>
             </div>
           </li>
-          <li >
-            {t("whatWeHaveAchieved.line8")}
-          </li>
-          <li >
-            {t("whatWeHaveAchieved.line9")}
-          </li>
-          <li >
-            {t("whatWeHaveAchieved.line10")}
-          </li>
+          <li>{t("whatWeHaveAchieved.line8")}</li>
+          <li>{t("whatWeHaveAchieved.line9")}</li>
+          <li>{t("whatWeHaveAchieved.line10")}</li>
         </ul>
       </div>
       <div className="flex flex-col gap-4">
@@ -216,16 +203,14 @@ export default function About({params: { locale }}) {
       </div>
       <div className=" space-y-12">
         <span className="flex gap-4  items-center justify-center">
-          <Image
-         
-            quality={40}
-            width={500}
-            height={500}
-            src="/image/aboutUS/logoHand.png"
-            className="w-24 lg:w-28"
-            alt="Explorem"
-          />
-          <p className=" capitalize font-bold text-xl lg:text-xl text-[#0149a6]">
+        <Image
+              src="/image/aboutUS/logoHand.png"
+              className="w-14 lg:w-16"
+              width={195}
+              height={159}
+              alt="Explorem"
+            />
+          <p className=" capitalize font-bold text-xl lg:text-3xl text-[#0149a6]">
             {t("ourTeamManagement.title")}
           </p>
         </span>
@@ -233,8 +218,7 @@ export default function About({params: { locale }}) {
           <div className="flex lg:flex-row flex-col items-center justify-center gap-4  container ">
             <div className=" flex  justify-center">
               <Image
-                
-                quality={40}
+                quality={100}
                 width={500}
                 height={500}
                 src="/image/aboutUS/team/Gracila.jpg"
@@ -277,7 +261,7 @@ export default function About({params: { locale }}) {
                 blurDataURL="/image/aboutUS/team/Abdessamad.png"
                 placeholder="blur"
                 loading="lazy"
-                quality={40}
+                quality={100}
                 width={500}
                 height={500}
                 src="/image/aboutUS/team/Abdessamad.png"

@@ -2,7 +2,7 @@ import { fetchTestimonial } from "@/app/api/data/testimonial/action";
 
 import AddTestimonial from "./components/addTestimonial";
 import PaginationTestimonial from "./components/paginationTestimonial";
-import TestimonialComments from "./components/testimonialComments";
+import TestimonialComments from "@/components/testimonialComments";
 
 export default async function Testimonial({ searchParams }) {
   const take = await searchParams.take ? parseInt(searchParams.take) : 6;

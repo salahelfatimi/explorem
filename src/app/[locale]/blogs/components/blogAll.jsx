@@ -1,4 +1,3 @@
-
 import { Clock, Link2 } from "react-feather";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
@@ -8,23 +7,23 @@ import { fetchBlogs } from "@/app/api/data/blog/actions";
 const locales = ["en", "de", "ar"];
 const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
 export default async function BlogAll() {
-  const t = await  getTranslations("Blog");
+  const t = await getTranslations("Blog");
   const blogs = await fetchBlogs();
-  
+
   return (
     <div className=" flex flex-col gap-6">
-      <h2 className=" font-bold  text-2xl bg-[#134ba1] text-white w-full text-center py-2 px-3 ">
+      <h2 className=" font-bold  text-2xl text-[#134ba1]  border-y-4 border-[#134ba1] w-full text-center py-2 px-3 ">
         {t("AllBlog")}
       </h2>
-      {blogs.map((blog, index) => (
-        <div key={index}>
-          <div className="flex flex-col    gap-8 justify-between items-center    container">
-            <div className={`${index % 2 === 0 ? "xl:flex-row-reverse  flex-col-reverse " : "xl:flex-row  flex-col-reverse "}     w-full flex   gap-2 rounded-xl border-8 border-white  drop-shadow-2xl  bg-white `}>
-              <div className="flex justify-between flex-col gap-8 xl:w-1/2 p-6 items-center xl:items-start">
-                <span className=" uppercase font-bold text-xl xl:text-xl xl:text-start text-center  text-black">
+      <div className=" columns-1  lg:columns-2 space-y-8 gap-4">
+        {blogs.map((blog, index) => (
+          <div key={index}>
+            <div className={` flex break-inside-avoid-column flex-col-reverse   gap-2  rounded  bg-white `}>
+              <div className="flex justify-between flex-col gap-8 p-6 items-center ">
+                <span className=" uppercase font-bold text-xl  text-center  text-black">
                   {blog.title}
                 </span>
-                <div className="flex flex-col   gap-6 items-center xl:items-start">
+                <div className="flex flex-col   gap-6 items-center ">
                   <span className="text-[#9DA4B2] whitespace-pre-line xl:text-base text-sm line-clamp-4  font-semibold">
                     {blog.description}
                   </span>
@@ -46,7 +45,7 @@ export default async function BlogAll() {
                   </span>
                 </div>
               </div>
-              <div className="xl:w-1/2 flex items-center  ">
+              <div className=" flex items-center  ">
                 <Image
                   blurDataURL={blog.imageUrl}
                   placeholder="blur"
@@ -54,15 +53,15 @@ export default async function BlogAll() {
                   width="1920"
                   height="1080"
                   quality={100}
-                  className="object-cover  xl:h-80     rounded-t-xl  xl:rounded-xl     "
+                  className="object-cover   rounded-t      "
                   src={blog.imageUrl}
                   alt="explorem"
                 />
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
