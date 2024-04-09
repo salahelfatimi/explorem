@@ -27,7 +27,7 @@ export default function About({ params: { locale } }) {
             className="h-auto max-w-full w-full  "
             width={1920}
             height={1080}
-            quality={40}
+            quality={100}
             alt="Explorem"
           />
 
@@ -233,23 +233,23 @@ export default function About({ params: { locale } }) {
               <span className=" font-semibold bg-[#0149a6] rounded-sm text-white text-center lg:w-fit p-2">
                 {t("ourTeamManagement.team.Gracila.job")}
               </span>
-              <ul className="px-2 flex flex-col gap-4  list-outside ">
-                <li className=" border-l-4 border-[#0149a6] bg-white p-2 pl-4  rounded-r-sm">
+              <ul className="px-2  *:border-l-4 *:border-[#0149a6] *:bg-white *:p-2 *:pl-4  *:rounded-r-sm flex flex-col gap-4  list-outside ">
+                <li >
                   {t("ourTeamManagement.team.Gracila.experiences.1")}
                 </li>
-                <li className=" border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+                <li >
                   {t("ourTeamManagement.team.Gracila.experiences.2")}
                 </li>
-                <li className=" border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+                <li >
                   {t("ourTeamManagement.team.Gracila.experiences.3")}
                 </li>
-                <li className="  border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+                <li >
                   {t("ourTeamManagement.team.Gracila.experiences.4")}
                 </li>
-                <li className="  border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+                <li >
                   {t("ourTeamManagement.team.Gracila.experiences.5")}
                 </li>
-                <li className="  border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+                <li >
                   {t("ourTeamManagement.team.Gracila.experiences.6")}
                 </li>
               </ul>
@@ -276,17 +276,17 @@ export default function About({ params: { locale } }) {
               <span className=" font-semibold bg-[#0149a6] rounded-sm text-white text-center lg:w-fit p-2">
                 {t("ourTeamManagement.team.Abdessamad.job")}
               </span>
-              <ul className="px-2 flex flex-col gap-4  list-outside ">
-                <li className="  border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+              <ul className="px-2    *:border-l-4 *:border-[#0149a6] *:bg-white *:p-2 *:pl-4  *:rounded-r-sm flex flex-col gap-4  list-outside ">
+                <li className="  ">
                   {t("ourTeamManagement.team.Abdessamad.experiences.1")}
                 </li>
-                <li className="  border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+                <li className="  ">
                   {t("ourTeamManagement.team.Abdessamad.experiences.2")}
                 </li>
-                <li className="  border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+                <li className="  ">
                   {t("ourTeamManagement.team.Abdessamad.experiences.3")}
                 </li>
-                <li className="  border-l-4 border-[#0149a6] bg-white p-2 pl-4 rounded-r-sm">
+                <li className="  ">
                   {t("ourTeamManagement.team.Abdessamad.experiences.4")}
                 </li>
               </ul>

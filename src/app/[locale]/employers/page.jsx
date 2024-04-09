@@ -69,7 +69,7 @@ export default function Employers() {
           <div>
             <div className="relative">
               <Image
-                quality={40}
+                quality={100}
                 src="/image/employers/saction1.jpg"
                 className="h-auto max-w-full w-full  "
                 width={1920}

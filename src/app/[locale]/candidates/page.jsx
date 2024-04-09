@@ -101,7 +101,7 @@ export default function Candidates() {
           <div className="relative">
             <Image
              
-              quality={40}
+              quality={100}
               src="/image/candidates/saction1.jpg"
               className="h-auto max-w-full w-full  "
               width={1920}
