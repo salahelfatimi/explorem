@@ -19,7 +19,7 @@ export default function AddTestimonial() {
     text: "",
     file: null,
   });
-  console.log(formData)
+
   const handeleSubmit = async (e) => {
     e.preventDefault();
     setValidation(true);
