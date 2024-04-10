@@ -1,5 +1,5 @@
 "use client";
-import { addTestimonial } from "@/app/api/data/testimonial/action";
+import { addTestimonial } from "@/app/api/data/testimonial/actions";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -63,7 +63,6 @@ export default function AddTestimonial() {
               type="radio"
               name="image"
               value="man"
-              
               hidden
             />
             <label

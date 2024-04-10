@@ -1,7 +1,6 @@
 "use client";
 
-
-import { deletedTestimonial } from "@/app/api/data/testimonial/action";
+import { deletedTestimonial } from "@/app/api/data/testimonial/actions";
 import { Trash } from "react-feather";
 import toast, { Toaster } from "react-hot-toast";
 import Swal from "sweetalert2";
@@ -38,7 +37,7 @@ export default function DeletedTestimonial({ id }) {
           className: "  bg-white text-black ",
         }}
       />
-      <button  onClick={() => deleteTestimonialHandler()}>
+      <button onClick={() => deleteTestimonialHandler()}>
         <Trash className="min-w-4 stroke-2  stroke-red-500" />
       </button>
     </>

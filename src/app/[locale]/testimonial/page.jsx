@@ -1,11 +1,11 @@
-import { fetchTestimonial } from "@/app/api/data/testimonial/action";
+import { fetchTestimonial } from "@/app/api/data/testimonial/actions";
 
 import AddTestimonial from "./components/addTestimonial";
 import PaginationTestimonial from "./components/paginationTestimonial";
 import TestimonialComments from "@/components/testimonialComments";
 
 export default async function Testimonial({ searchParams }) {
-  const take = await searchParams.take ? parseInt(searchParams.take) : 6;
+  const take = (await searchParams.take) ? parseInt(searchParams.take) : 6;
   const testimonial = await fetchTestimonial(take);
 
   return (

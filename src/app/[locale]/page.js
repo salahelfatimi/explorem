@@ -1,11 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-
-import TestimonialsSlider from "@/components/testimonialsSlider";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
-import { fetchTestimonial } from "../api/data/testimonial/action";
+import { fetchTestimonial } from "../api/data/testimonial/actions";
 import TestimonialComments from "@/components/testimonialComments";
+import FetchImageScroll from "@/components/fetchImageScroll";
 
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
@@ -95,8 +94,9 @@ export default async function Index() {
         </div>
         <div className="bg-[#0149a6] py-6 ">
           <div className="px-2">
-            {" "}
-            <InfiniteHorizontalScroll images={images} />
+          <InfiniteHorizontalScroll>
+            <FetchImageScroll />
+          </InfiniteHorizontalScroll>
           </div>
         </div>
         <div className=" flex flex-col gap-6 ">
