@@ -45,7 +45,9 @@ model Testimonial{
     id        String  @id @default(auto()) @map("_id") @db.ObjectId
     image     String
     author    String    
-    text      String
+    text      String?
+    fileUrl   String?
+    fileKey   String?
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
     

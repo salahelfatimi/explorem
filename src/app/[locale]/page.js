@@ -84,21 +84,16 @@ export default async function Index() {
             >
               {t("button.Candidates")}
             </Link>
-            {/* <Link
-              href="/employers"
-              className="bg-[#ffff] lg:py-3 py-2 transition duration-700 ease-in-out  border-4 border-[#134BA1]  px-6 text-[#134BA1] font-bold rounded-full  capitalize"
-            >
-              {t("button.Employers")}
-            </Link> */}
           </div>
         </div>
         <div className="bg-[#0149a6] py-6 ">
           <div className="px-2">
-          <InfiniteHorizontalScroll>
-            <FetchImageScroll />
-          </InfiniteHorizontalScroll>
+            <InfiniteHorizontalScroll>
+              <FetchImageScroll />
+            </InfiniteHorizontalScroll>
           </div>
         </div>
+
         <div className=" flex flex-col gap-6 ">
           <div className="flex justify-center gap-4 items-center">
             <Image
@@ -188,7 +183,7 @@ export default async function Index() {
           </div>
           <div className=" flex flex-col container  gap-4 justify-center">
             {testimonial?.length > 0 ? (
-              <div className=" gap-10 columns-1 lg:columns-2 space-y-6 items-center ">
+              <div className=" gap-10 columns-1 md:columns-2 lg:columns-3 space-y-6 items-center  ">
                 {testimonial?.map((testimonial, index) => {
                   return (
                     <div

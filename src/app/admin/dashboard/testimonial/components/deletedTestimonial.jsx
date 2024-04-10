@@ -5,7 +5,7 @@ import { Trash } from "react-feather";
 import toast, { Toaster } from "react-hot-toast";
 import Swal from "sweetalert2";
 
-export default function DeletedTestimonial({ id }) {
+export default function DeletedTestimonial({ id,fileKey }) {
   const deleteTestimonialHandler = async () => {
     Swal.fire({
       title: "Are you sure?",
@@ -19,7 +19,7 @@ export default function DeletedTestimonial({ id }) {
       if (result.isConfirmed) {
         toast.promise(
           (async () => {
-            await deletedTestimonial(id);
+            await deletedTestimonial(id,fileKey);
           })(),
           {
             loading: "Deleting Testimonial ...",

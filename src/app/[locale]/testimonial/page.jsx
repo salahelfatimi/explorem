@@ -24,7 +24,7 @@ export default async function Testimonial({ searchParams }) {
       </div>
       <div className=" flex flex-col  gap-4 justify-center">
         {testimonial?.length > 0 ? (
-          <div className=" gap-10 columns-1 lg:columns-2 space-y-6 items-center ">
+          <div className=" gap-10 columns-1 md:columns-2 lg:columns-3 space-y-6 items-center ">
             {testimonial?.map((testimonial, index) => {
               return (
                 <div
