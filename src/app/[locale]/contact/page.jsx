@@ -46,6 +46,7 @@ export default function Contact() {
               subject: "",
               message: "",
             });
+            setValidation(false)
           }
         })(),
         {
@@ -325,38 +326,38 @@ export default function Contact() {
                     <div className="gap-2  border-l-8  border-white flex flex-col pl-1 md:pl-4 ">
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto  rounded-r p-1 md:pl-4 pl-2 ">
                         <a
-                          href="mailto: explorem21@gmail.com"
+                          href="mailto:  explorem21@explorem.net"
                           className="  text-sm "
                         >
                           {t("Information.email.administration")} :
-                          explorem21@gmail.com
+                          explorem21@explorem.net
                         </a>
                       </span>
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto  rounded-r p-1 md:pl-4 pl-2">
                         <a
-                          href="mailto: erecruit21@gmail.com"
+                          href="mailto: erecruit21@explorem.net	"
                           className="  text-sm "
                         >
                           {t("Information.email.recruitment")} :
-                          erecruit21@gmail.com
+                          erecruit21@explorem.net	
                         </a>
                       </span>
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto  rounded-r p-1 md:pl-4 pl-2 ">
                         <a
-                          href="mailto: explorem.documents@gmail.com"
+                          href="mailto: explorem.documents@explorem.net	"
                           className="  text-sm "
                         >
                           {t("Information.email.documents")} :
-                          explorem.documents@gmail.com
+                          explorem.documents@explorem.net	
                         </a>
                       </span>
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto  rounded-r p-1 md:pl-4 pl-2 ">
                         <a
-                          href="mailto: explorem.nursing@gmail.com"
+                          href="mailto: explorem.nursing@explorem.net"
                           className="  text-sm "
                         >
                           {t("Information.email.nursing")} :
-                          explorem.nursing@gmail.com
+                          explorem.nursing@explorem.net
                         </a>
                       </span>
                     </div>

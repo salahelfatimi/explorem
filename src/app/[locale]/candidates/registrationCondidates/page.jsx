@@ -53,6 +53,7 @@ function InscriptionCondidates() {
               if (fileInputRef.current) {
                 fileInputRef.current.value = "";
               }
+              setValidation(false)
             } else {
               throw new Error("Failed to send message");
             }
