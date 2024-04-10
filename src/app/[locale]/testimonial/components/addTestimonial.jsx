@@ -10,6 +10,7 @@ import {
 
 export default function AddTestimonial() {
   const [validation, setValidation] = useState(false);
+  const [sizeVideo, setSizeVideo] = useState(false);
   const [inputType, setInputType] = useState("comment");
   const fileInputRef = useRef(null);
 
@@ -24,7 +25,11 @@ export default function AddTestimonial() {
     e.preventDefault();
     setValidation(true);
 
-    if (formData.fullName && (formData.text || formData.file) && formData.image) {
+    if (
+      formData.fullName &&
+      (formData.text || formData.file) &&
+      formData.image
+    ) {
       const formDataToSend = new FormData();
       formDataToSend.append("image", formData.image);
       formDataToSend.append("fullName", formData.fullName);
@@ -75,11 +80,23 @@ export default function AddTestimonial() {
   };
   const handleFileChange = (e) => {
     const fileInput = e.target.files[0];
-    setFormData({
-      ...formData,
-      file: fileInput,
-    });
+    if (fileInput) {
+      const fileSizeInMB = fileInput.size / (1024 * 1024);
+      const maxFileSizeMB = 4;
+      if (fileSizeInMB > maxFileSizeMB) {
+        if (fileInputRef.current) {
+          fileInputRef.current.value = "";
+        }
+        setSizeVideo(true);
+      } else {
+        setFormData({
+          ...formData,
+          file: fileInput,
+        });
+      }
+    }
   };
+
   return (
     <div className="flex flex-col gap-4 px-10 py-6 bg-white shadow-md   rounded-md w-full">
       <Toaster
@@ -216,9 +233,7 @@ export default function AddTestimonial() {
               rows="4"
             ></textarea>
             <p className=" text-red-500 text-xs font-medium">
-              {!formData.text &&
-                validation &&
-                "Please enter your Comment"}
+              {!formData.text && validation && "Please enter your Comment"}
             </p>
           </label>
         ) : (
@@ -232,13 +247,26 @@ export default function AddTestimonial() {
               onChange={handleFileChange}
               name="file"
               className={`${
-                !formData.file && validation && "border-red-500 "
+                (!formData.file && validation) || sizeVideo
+                  ? "border-red-500 "
+                  : ""
               }  bg-[#ffffff] w-full font-semibold  border p-4 rounded-md text-xs file:bg-[#0149a6] file:text-white file:rounded file:mr-4 file:py-2 file:px-4 file:border-none file:text-sm file:font-semibold`}
             />
             <p className=" text-red-500 text-xs font-medium">
-              {!formData.file &&
-                validation &&
-                "Please enter your Comment"}
+              {!formData.file && validation ? "Please enter your Comment" : ""}
+              {sizeVideo && (
+                <p className="text-red-500 text-xs font-medium">
+                  File size exceeds the maximum limit of 4 MB.{" "}
+                  <a
+                  className=" text-blue-500 underline "
+                    href="https://www.freeconvert.com/video-compressor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Click here to compress the video.
+                  </a>
+                </p>
+              )}
             </p>
           </label>
         )}
