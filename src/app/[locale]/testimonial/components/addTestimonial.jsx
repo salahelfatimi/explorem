@@ -239,7 +239,7 @@ export default function AddTestimonial() {
         ) : (
           <label className="block space-y-2 w-full">
             <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
-              uploade
+              upload
             </span>
             <input
               type="file"
