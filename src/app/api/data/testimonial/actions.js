@@ -22,9 +22,9 @@ export const addTestimonialcomment = async (formDataToSend) => {
 
 
 export const addTestimonialfile = async (formDataToSend) => {
-  const image = formDataToSend.get("image");
-  const fullName = formDataToSend.get("fullName");
-  const file = formDataToSend.get("file");
+  const image = await formDataToSend.get("image");
+  const fullName = await formDataToSend.get("fullName");
+  const file = await formDataToSend.get("file");
   const response = await utapi.uploadFiles(file);
   await prisma.testimonial.create({
     data: {

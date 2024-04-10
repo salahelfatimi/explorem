@@ -12,12 +12,14 @@ export default function AddTestimonial() {
   const [validation, setValidation] = useState(false);
   const [inputType, setInputType] = useState("comment");
   const fileInputRef = useRef(null);
+
   const [formData, setFormData] = useState({
     image: "",
     fullName: "",
     text: "",
     file: null,
   });
+  console.log(formData)
   const handeleSubmit = async (e) => {
     e.preventDefault();
     setValidation(true);
