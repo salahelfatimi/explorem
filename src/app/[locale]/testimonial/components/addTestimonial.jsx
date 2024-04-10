@@ -93,6 +93,7 @@ export default function AddTestimonial() {
           ...formData,
           file: fileInput,
         });
+        setSizeVideo(false);
       }
     }
   };
