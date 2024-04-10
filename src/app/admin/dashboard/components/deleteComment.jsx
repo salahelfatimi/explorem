@@ -22,9 +22,9 @@ export default function DeleteComment({ id, idBlog }) {
             await deleteSingleComment(id, idBlog);
           })(),
           {
-            loading: "Adding Blog ...",
-            success: <b>Blog Added !</b>,
-            error: <b>Failed to Add Blog .</b>,
+            loading: "Deleting Comment ...",
+            success: <b>Comment Deleted !</b>,
+            error: <b>Failed to Deleted Comment .</b>,
           }
         );
       }

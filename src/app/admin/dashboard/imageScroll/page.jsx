@@ -2,11 +2,12 @@ import Image from "next/image";
 import AddImageScrollHandler from "../components/form/addImageScroll";
 import { X } from "react-feather";
 import { fetchImageScroll } from "@/app/api/data/ImageScroll/actions";
+import DeleteImageScroll from "../components/deleteImageScroll";
 export default async function ImageScroll() {
   const images = await fetchImageScroll();
 
   return (
-    <>
+    <div className="flex flex-col gap-6">
     <h2 className=" text-3xl font-bold text-[#0149a6] ">Image Scroll</h2>
       <div className="   columns-1 md:columns-2 lg:columns-3 xl:columns-4 space-y-4">
        <div >
@@ -24,13 +25,12 @@ export default async function ImageScroll() {
                 className=" rounded-lg "
                 alt="explorem"
               />
-              <div className=" absolute top-2 bg-red-600 p-1 rounded-full right-2">
-                <X size={25} className="   stroke-white  stroke-2 " />
-              </div>
+              
+              <DeleteImageScroll idImage={url.id} keyImage={url.imageKey}/>
             </div>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }

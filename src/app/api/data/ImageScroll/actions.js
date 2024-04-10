@@ -25,3 +25,17 @@ export const addImageScroll = async (formData) => {
     revalidatePath("/admin/dashboard/imageScroll");
     return response
   };
+
+  export const deleteImageScroll = async (idImage, keyImage) => {
+    try {
+      await utapi.deleteFiles(keyImage);
+      await prisma.imageScroll.delete({
+        where: {
+          id: idImage,
+        },
+      });
+      revalidatePath(`/admin/dashboard/imageScroll`);
+    } catch (error) {
+      throw new Error(`Error retrieving latest blog: ${error.message}`);
+    }
+  };
