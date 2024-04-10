@@ -5,15 +5,16 @@ import { PrismaClient } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 
 const prisma = new PrismaClient();
+
 export const addTestimonialcomment = async (formDataToSend) => {
   const image = formDataToSend.get("image");
   const fullName = formDataToSend.get("fullName");
-  const testimonialType = formDataToSend.get("testimonialType");
+  const text = formDataToSend.get("text");
   await prisma.testimonial.create({
     data: {
       image: image,
       author: fullName,
-      text: testimonialType,
+      text: text,
     },
   });
   revalidatePath(`/testimonial`);
@@ -23,8 +24,8 @@ export const addTestimonialcomment = async (formDataToSend) => {
 export const addTestimonialfile = async (formDataToSend) => {
   const image = formDataToSend.get("image");
   const fullName = formDataToSend.get("fullName");
-  const testimonialType = formDataToSend.get("testimonialType");
-  const response = await utapi.uploadFiles(testimonialType);
+  const file = formDataToSend.get("file");
+  const response = await utapi.uploadFiles(file);
   await prisma.testimonial.create({
     data: {
       image: image,

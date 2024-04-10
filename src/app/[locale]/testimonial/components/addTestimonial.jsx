@@ -15,22 +15,22 @@ export default function AddTestimonial() {
   const [formData, setFormData] = useState({
     image: "",
     fullName: "",
-    testimonialType: "",
+    text: "",
+    file: null,
   });
   const handeleSubmit = async (e) => {
     e.preventDefault();
     setValidation(true);
 
-    if (formData.fullName && formData.testimonialType && formData.image) {
+    if (formData.fullName && (formData.text || formData.file) && formData.image) {
       const formDataToSend = new FormData();
       formDataToSend.append("image", formData.image);
       formDataToSend.append("fullName", formData.fullName);
-      formDataToSend.append("testimonialType", formData.testimonialType);
 
       if (inputType === "comment") {
-        formDataToSend.append("comment", formData.testimonialType);
+        formDataToSend.append("comment", formData.text);
       } else {
-        formDataToSend.append("file", formData.testimonialType);
+        formDataToSend.append("file", formData.file);
       }
 
       const loadingToast = toast.loading("Adding Testimonial ...");
@@ -43,7 +43,8 @@ export default function AddTestimonial() {
         setFormData({
           image: "",
           fullName: "",
-          testimonialType: "",
+          text: "",
+          file: null,
         });
         setValidation(false);
         if (fileInputRef.current) {
@@ -71,10 +72,10 @@ export default function AddTestimonial() {
     });
   };
   const handleFileChange = (e) => {
-    const file = e.target.files[0];
+    const fileInput = e.target.files[0];
     setFormData({
       ...formData,
-      testimonialType: file,
+      file: fileInput,
     });
   };
   return (
@@ -102,10 +103,10 @@ export default function AddTestimonial() {
 
           <button
             onClick={() => {
-              setInputType("video"), setValidation(false);
+              setInputType("file"), setValidation(false);
             }}
             className={`${
-              inputType == "video"
+              inputType == "file"
                 ? "bg-[#0149a6] text-white border-white "
                 : " text-[#0149a6]  border-[#0149a6]"
             } border-2 flex gap-1  duration-500  py-1 px-2 rounded-full font-medium`}
@@ -203,7 +204,7 @@ export default function AddTestimonial() {
               Comment
             </span>
             <textarea
-              value={formData.testimonialType}
+              value={formData.text}
               onChange={handleInputChange}
               name="testimonialType"
               className={`${
@@ -229,11 +230,11 @@ export default function AddTestimonial() {
               onChange={handleFileChange}
               name="file"
               className={`${
-                !formData.testimonialType && validation && "border-red-500 "
+                !formData.file && validation && "border-red-500 "
               }  bg-[#ffffff] w-full font-semibold  border p-4 rounded-md text-xs file:bg-[#0149a6] file:text-white file:rounded file:mr-4 file:py-2 file:px-4 file:border-none file:text-sm file:font-semibold`}
             />
             <p className=" text-red-500 text-xs font-medium">
-              {!formData.testimonialType &&
+              {!formData.file &&
                 validation &&
                 "Please enter your Comment"}
             </p>
