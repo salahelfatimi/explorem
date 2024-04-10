@@ -206,15 +206,15 @@ export default function AddTestimonial() {
             <textarea
               value={formData.text}
               onChange={handleInputChange}
-              name="testimonialType"
+              name="text"
               className={`${
-                !formData.testimonialType && validation && "border-red-500 "
+                !formData.text && validation && "border-red-500 "
               }  bg-[#ffffff] border  py-2 px-4 w-full rounded-md font-mono text-xs`}
               cols="30"
               rows="4"
             ></textarea>
             <p className=" text-red-500 text-xs font-medium">
-              {!formData.testimonialType &&
+              {!formData.text &&
                 validation &&
                 "Please enter your Comment"}
             </p>
