@@ -2,13 +2,14 @@
 
 import { addBlog } from "@/app/api/data/blog/actions";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 const AddBlogForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const ref = useRef();
-
+  const router = useRouter();
   const addBlogHandler = async (event) => {
     event.preventDefault();
     setIsLoading(true);
@@ -80,14 +81,8 @@ const AddBlogForm = () => {
         >
           {isLoading ? "Adding..." : "Add Blog"}
         </button>
-
-        <Link
-          href="/admin/dashboard/"
-          className="text-center px-12 py-4 w-full rounded font-bold border-4 duration-700 hover:bg-white hover:text-red-500 border-red-500 bg-red-500 text-white"
-        >
-          Cancel
-        </Link>
       </form>
+     
     </>
   );
 };
