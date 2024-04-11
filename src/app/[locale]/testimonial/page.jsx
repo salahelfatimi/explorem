@@ -46,7 +46,7 @@ export default async function Testimonial({ searchParams }) {
 
         <div
           className={`${
-            take > testimonial?.length ? "hidden" : "block"
+            take >= testimonial?.length ? "hidden" : "block"
           } flex justify-center`}
         >
           <PaginationTestimonial searchParams={searchParams} />
