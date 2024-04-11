@@ -23,9 +23,13 @@ export default async function BlogDetail({ params }) {
     "November",
     "December",
   ];
+  const createMarkup = (text) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, '<a class=" text-blue-500 underline underline-offset-2" href="$1" target="_blank">$1</a>');
+  };
   return (
     <>
-      <div className="container items-center   flex flex-col gap-16 py-10">
+      <div className="container px-4 items-center   flex flex-col gap-16 py-10">
         <h3 className="font-bold italic   border-b-4 text-[#134ba1] border-[#134ba1] uppercase text-wrap text-center text-2xl lg:text-4xl   ">
           {blog.title}
         </h3>
@@ -74,9 +78,10 @@ export default async function BlogDetail({ params }) {
           </span>
         </div>
 
-        <p className="  whitespace-pre-line text-center lg:text-left  text-wrap subpixel-antialiased  leading-loose capitalize tracking-wide lg:text-xl   ">
-          {blog.description}
-        </p>
+        <p
+          className="whitespace-pre-line text-center lg:text-left break-words container   leading-loose capitalize  lg:text-xl"
+          dangerouslySetInnerHTML={{ __html: createMarkup(blog.description) }}
+        ></p>
       </div>
       <div className="flex gap-4 flex-col  container">
         <div>

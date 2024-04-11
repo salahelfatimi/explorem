@@ -18,16 +18,17 @@ export default async function BlogAll() {
       <div className=" columns-1  lg:columns-2 space-y-8 gap-4">
         {blogs.map((blog, index) => (
           <div key={index}>
-            <div className={` flex break-inside-avoid-column flex-col-reverse   gap-2  rounded  bg-white `}>
-              <div className="flex justify-between flex-col gap-8 p-6 items-center ">
+            <div
+              className={` flex break-inside-avoid-column flex-col-reverse    gap-2  rounded  bg-white `}
+            >
+              <div className="flex justify-between flex-col gap-8 p-6 items-center  ">
                 <span className=" uppercase font-bold text-xl  text-center  text-black">
                   {blog.title}
                 </span>
-                <div className="flex flex-col   gap-6 items-center ">
-                  <span className="text-[#9DA4B2] whitespace-pre-line xl:text-base text-sm line-clamp-4  font-semibold">
-                    {blog.description}
-                  </span>
-                </div>
+
+                <span className="text-[#9DA4B2] text-center whitespace-pre-line  xl:text-base text-sm line-clamp-4 break-all    font-semibold">
+                  {blog.description}
+                </span>
 
                 <Link
                   href={`/blogs/${blog.id}`}
