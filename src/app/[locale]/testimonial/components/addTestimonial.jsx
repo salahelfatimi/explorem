@@ -9,6 +9,7 @@ import {
 } from "@/app/api/data/testimonial/actions";
 
 export default function AddTestimonial() {
+  const [isLoading, setIsLoading] = useState(false)
   const [validation, setValidation] = useState(false);
   const [sizeVideo, setSizeVideo] = useState(false);
   const [inputType, setInputType] = useState("comment");
@@ -22,13 +23,15 @@ export default function AddTestimonial() {
 
   const handeleSubmit = async (e) => {
     e.preventDefault();
+
     setValidation(true);
+    setIsLoading(true)
 
     if (
       formData.fullName &&
       (formData.text || formData.file) &&
       formData.image
-    ) {
+    )  {
       const formDataToSend = new FormData();
       formDataToSend.append("image", formData.image);
       formDataToSend.append("fullName", formData.fullName);
@@ -67,7 +70,10 @@ export default function AddTestimonial() {
         toast.dismiss(loadingToast);
 
         toast.error("Failed to Add Testimonial .");
+      }finally {
+        setIsLoading(false)
       }
+  
     }
   };
 
@@ -274,6 +280,7 @@ export default function AddTestimonial() {
         <button
           type="submit"
           className="w-full bg-[#0149a6] py-2 text-white font-bold rounded-md"
+          disabled={isLoading}
         >
           Add
         </button>

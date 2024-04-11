@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 
 function InscriptionCondidates() {
   const t = useTranslations("Candidates");
+  const [isLoading, setIsLoading] = useState(false)
   const [validation, setValidation] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -20,6 +21,7 @@ function InscriptionCondidates() {
 
   const registrationCandidates = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
     setValidation(true);
 
     if (
@@ -66,7 +68,10 @@ function InscriptionCondidates() {
         );
       } catch (error) {
         console.error(error);
+      }finally {
+        setIsLoading(false)
       }
+  
     }
   };
 
@@ -194,6 +199,7 @@ function InscriptionCondidates() {
         <button
           type="submit"
           className="px-12 py-1 w-full rounded font-bold border-4 duration-700 hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white"
+          disabled={isLoading}
         >
           {t("inscriptionCondidates.Submit")}
         </button>

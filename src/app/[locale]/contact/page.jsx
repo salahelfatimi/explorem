@@ -28,6 +28,7 @@ export default function Contact() {
       formData.subject &&
       formData.message
     ) {
+      try{
       toast.promise(
         (async () => {
           const response = await fetch("/api/contact", {
@@ -55,6 +56,12 @@ export default function Contact() {
           error: <b>Failed to send message . </b>,
         }
       );
+    }catch{
+      toast.error("Failed to Send Email .");
+    }finally {
+      setIsLoading(false)
+    }
+
     }
   };
 
