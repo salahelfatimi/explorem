@@ -51,12 +51,7 @@ export default async function TestimonialComments({ testimonial }) {
         ) : isString(text) ? (
           <p className="">{text}</p>
         ) : istext(fileUrl) ? (
-          <iframe
-            src={`${fileUrl}`}
-            width="100%"
-            height="100%"
-            className="w-full h-[34rem] "
-          ></iframe>
+          <a href={fileUrl} target="_blank" className=" font-bold text-center hover:bg-red-600 bg-gray-500  duration-500 hover:text-white rounded text-white py-3 px-4"> click to show File Testimonial</a>
         ) : null}
         <div className="flex gap-4  items-center">
           <Image

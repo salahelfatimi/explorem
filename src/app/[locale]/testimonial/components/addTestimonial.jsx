@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { File, Image as IconImage, MessageCircle, Video } from "react-feather";
+import { File, MessageCircle } from "react-feather";
 import {
   addTestimonialcomment,
   addTestimonialfile,
@@ -13,7 +13,6 @@ export default function AddTestimonial() {
   const [sizeVideo, setSizeVideo] = useState(false);
   const [inputType, setInputType] = useState("comment");
   const fileInputRef = useRef(null);
-
   const [formData, setFormData] = useState({
     image: "",
     fullName: "",
@@ -61,6 +60,7 @@ export default function AddTestimonial() {
         toast.dismiss(loadingToast);
 
         toast.success("Testimonial Added !");
+        
       } catch (error) {
         console.error("Failed to add testimonial:", error);
 
