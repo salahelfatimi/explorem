@@ -1,12 +1,12 @@
 "use client";
 import { Mail, MapPin, Phone } from "react-feather";
 import toast, { Toaster } from "react-hot-toast";
-
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 
 export default function Contact() {
   const t = useTranslations("Contact");
+  const [isLoading, setIsLoading] = useState(false);
   const [validation, setValidation] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -16,8 +16,10 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+
   const sendEmail = async (e) => {
     e.preventDefault();
+    
     setValidation(true);
 
     if (
@@ -28,40 +30,35 @@ export default function Contact() {
       formData.subject &&
       formData.message
     ) {
-      try{
-      toast.promise(
-        (async () => {
-          const response = await fetch("/api/contact", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
+      setIsLoading(true);
+      const loadingToast = toast.loading("Sending ...");
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+        if (response.status === 200) {
+          setFormData({
+            firstName: "",
+            lastName: "",
+            tele: "",
+            email: "",
+            subject: "",
+            message: "",
           });
-          if (response.status === 200) {
-            setFormData({
-              firstName: "",
-              lastName: "",
-              tele: "",
-              email: "",
-              subject: "",
-              message: "",
-            });
-            setValidation(false)
-          }
-        })(),
-        {
-          loading: "Sending...",
-          success: <b>Message was sent successfully ! </b>,
-          error: <b>Failed to send message . </b>,
+          setValidation(false);
+          setIsLoading(false);
+          toast.dismiss(loadingToast);
+          toast.success("Message was sent successfully!");
         }
-      );
-    }catch{
-      toast.error("Failed to Send Email .");
-    }finally {
-      setIsLoading(false)
-    }
-
+      } catch {
+        toast.dismiss(loadingToast);
+        setIsLoading(false);
+        toast.error("Failed to Send Email.");
+      }
     }
   };
 
@@ -78,7 +75,7 @@ export default function Contact() {
       <div className="">
         <Toaster
           toastOptions={{
-            className: "dark:bg-[#121212] dark:text-white bg-white text-black ",
+            className: "dark:bg-[#121212] dark:text-white bg-white text-black",
           }}
         />
 
@@ -92,10 +89,10 @@ export default function Contact() {
             tabIndex="0"
           ></iframe>
         </div>
-        <div className=" px-4 lg:px-[10rem]  ">
+        <div className="px-4 lg:px-[10rem]  ">
           <div className="bg-[#ffffff] drop-shadow-xl relative bottom-24 py-12 px-5 ">
-            <div className=" grid grid-cols-1  lg:grid-cols-2 gap-4">
-              <form className="space-y-3 " onSubmit={sendEmail}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <form className="space-y-3" onSubmit={sendEmail}>
                 <div className="pb-4">
                   <span className="text-[#0149a6] font-bold  text-xl ">
                     {t("GetInTouch.title")}
@@ -115,9 +112,8 @@ export default function Contact() {
                       className={`${
                         !formData.firstName && validation && "border-red-500 "
                       } bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
-                     
                     />
-                    <p className=" text-red-500 text-xs font-medium">
+                    <p className="text-red-500 text-xs font-medium">
                       {!formData.firstName &&
                         validation &&
                         "Please enter your First Name"}
@@ -136,9 +132,8 @@ export default function Contact() {
                       className={`${
                         !formData.lastName && validation && "border-red-500 "
                       } bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
-                      
                     />
-                    <p className=" text-red-500 text-xs font-medium">
+                    <p className="text-red-500 text-xs font-medium">
                       {!formData.lastName &&
                         validation &&
                         "Please enter your Last Name"}
@@ -160,9 +155,8 @@ export default function Contact() {
                       className={`${
                         !formData.email && validation && "border-red-500 "
                       } bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
-                    
                     />
-                    <p className=" text-red-500 text-xs font-medium">
+                    <p className="text-red-500 text-xs font-medium">
                       {!formData.email &&
                         validation &&
                         "Please enter your Email"}
@@ -181,9 +175,8 @@ export default function Contact() {
                       className={`${
                         !formData.tele && validation && "border-red-500 "
                       } bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
-                     
                     />
-                    <p className=" text-red-500 text-xs font-medium">
+                    <p className="text-red-500 text-xs font-medium">
                       {!formData.tele &&
                         validation &&
                         "Please enter your phone"}
@@ -203,9 +196,8 @@ export default function Contact() {
                     className={`${
                       !formData.subject && validation && "border-red-500 "
                     } bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
-                  
                   />
-                  <p className=" text-red-500 text-xs font-medium">
+                  <p className="text-red-500 text-xs font-medium">
                     {!formData.subject &&
                       validation &&
                       "Please enter your subject"}
@@ -224,38 +216,38 @@ export default function Contact() {
                     name="message"
                     id="message"
                     rows="16"
-                   
                   ></textarea>
-                  <p className=" text-red-500 text-xs font-medium">
+                  <p className="text-red-500 text-xs font-medium">
                     {!formData.message &&
                       validation &&
                       "Please enter your message"}
                   </p>
                 </label>
                 <button
+                  disabled={isLoading}
                   type="submit"
-                  className="  px-12 py-1 w-full rounded font-bold border-4 duration-700  hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white "
+                  className="px-12 py-1 w-full rounded font-bold border-4 duration-700 hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white"
                 >
-                  {isLoading ? "Sending..." : t("GetInTouch.send")}
+                  {isLoading ? "sending..." : t("GetInTouch.send")}
                 </button>
               </form>
-              <div className=" space-y-3">
+              <div className="space-y-3">
                 <div className="pb-4">
                   <span className="text-[#0149a6] font-bold  text-xl ">
                     {t("Information.title")}
                   </span>
                 </div>
                 <div className="space-y-4">
-                  <div className="flex flex-col gap-2     text-black">
-                    <span className="flex gap-2 font-semibold  items-center border-[#0149a6] border-2 w-auto text-[#0149a6]  rounded p-1 pl-4">
-                      <MapPin size={20} className=" stroke-[#0149a6] min-w-8" />
-                      <span className="">{t("Information.location")}</span>
+                  <div className="flex flex-col gap-2 text-black">
+                    <span className="flex gap-2 font-semibold items-center border-[#0149a6] border-2 w-auto text-[#0149a6] rounded p-1 pl-4">
+                      <MapPin size={20} className="stroke-[#0149a6] min-w-8" />
+                      <span>{t("Information.location")}</span>
                     </span>
-                    <div className="gap-2  border-l-8 pl-2 border-white flex flex-col ">
-                      <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto  rounded-r p-1 pl-4">
+                    <div className="gap-2 border-l-8 pl-2 border-white flex flex-col">
+                      <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 pl-4">
                         <a
                           href="https://maps.app.goo.gl/djcimpjqdNjy9pcZ6"
-                          className=" text-sm   "
+                          className="text-sm"
                         >
                           6 Rue des Vieux Marrakech, Bureau Nr 7 Gueliz,
                           Marrakech, Morocco
@@ -263,61 +255,52 @@ export default function Contact() {
                       </span>
                     </div>
                   </div>
-                  <div className="flex flex-col gap-2     text-black">
-                    <span className="flex gap-2 font-semibold  items-center border-[#0149a6] border-2 w-auto text-[#0149a6]  rounded p-1 pl-4">
-                      <Phone
-                        size={20}
-                        className=" stroke-[#0149a6] min-w-8  "
-                      />
-                      <span className="">{t("Information.mobile.title")}</span>
+                  <div className="flex flex-col gap-2 text-black">
+                    <span className="flex gap-2 font-semibold items-center border-[#0149a6] border-2 w-auto text-[#0149a6] rounded p-1 pl-4">
+                      <Phone size={20} className="stroke-[#0149a6] min-w-8" />
+                      <span>{t("Information.mobile.title")}</span>
                     </span>
-                    <div className="gap-2  border-l-8 pl-2 border-white flex flex-col ">
-                      <div className="flex flex-col  gap-1 ">
-                        <span className="  bg-[#0149a6] w-fit p-1 text-white ">
+                    <div className="gap-2 border-l-8 pl-2 border-white flex flex-col">
+                      <div className="flex flex-col gap-1">
+                        <span className="bg-[#0149a6] w-fit p-1 text-white">
                           {t("Information.mobile.formationCenter")}
                         </span>
-                        <div className="border-l-4 border-[#0149a6] p-1 ml-3 pl-2  flex flex-col gap-2">
-                          <span className="flex gap-2  w-auto   ">
-                            <a
-                              href="tel:+212668-676518"
-                              className=" flex flex-row gap-1 text-sm "
-                            >
+                        <div className="border-l-4 border-[#0149a6] p-1 ml-3 pl-2 flex flex-col gap-2">
+                          <span className="flex gap-2 w-auto">
+                            <a href="tel:+212668-676518" className="text-sm">
                               (+212) 6 68 67 65 18{" "}
-                              <span className="font-semibold ">
+                              <span className="font-semibold">
                                 {t("Information.mobile.whatsappAvailable")}
                               </span>{" "}
                             </a>
                           </span>
-                          <span className="flex gap-2 w-auto ">
-                            <a
-                              href="tel:+212809-891297"
-                              className="flex flex-row gap-1 text-sm "
-                            >
+                          <span className="flex gap-2 w-auto">
+                            <a href="tel:+212809-891297" className="text-sm">
                               (+212) 8 09 89 12 97{" "}
-                              <span className="font-semibold ">
+                              <span className="font-semibold">
                                 {t("Information.mobile.landline")}
                               </span>
                             </a>
                           </span>
                         </div>
                       </div>
-                      <div className="flex flex-col  gap-1 ">
-                        <span className="  bg-[#0149a6] w-fit p-1 text-white  ">
+                      <div className="flex flex-col gap-1">
+                        <span className="bg-[#0149a6] w-fit p-1 text-white">
                           {t("Information.mobile.administration")}
                         </span>
-                        <div className="border-l-4 border-[#0149a6] p-1 ml-3 pl-2   flex flex-col gap-2">
-                          <span className="flex gap-2  w-auto   ">
-                            <a href="tel:+212650-656897" className="  text-sm ">
+                        <div className="border-l-4 border-[#0149a6] p-1 ml-3 pl-2 flex flex-col gap-2">
+                          <span className="flex gap-2 w-auto">
+                            <a href="tel:+212650-656897" className="text-sm">
                               (+212) 6 50 65 68 97{" "}
-                              <span className="font-semibold ">
+                              <span className="font-semibold">
                                 (ABDESSAMAD)
                               </span>
                             </a>
                           </span>
-                          <span className="flex gap-2  w-auto   ">
-                            <a href="tel:+212608-789360" className="  text-sm ">
+                          <span className="flex gap-2 w-auto">
+                            <a href="tel:+212608-789360" className="text-sm">
                               (+212) 6 08 78 93 60{" "}
-                              <span className="font-semibold ">(GRACILA)</span>
+                              <span className="font-semibold">(GRACILA)</span>
                             </a>{" "}
                           </span>
                         </div>
@@ -325,43 +308,43 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col gap-2     text-black">
-                    <span className="flex gap-2 font-semibold  items-center border-[#0149a6] border-2 w-auto text-[#0149a6]  rounded p-1 pl-4">
-                      <Mail size={20} className=" stroke-[#0149A6] min-w-8" />
-                      <span className="">{t("Information.email.title")}</span>
+                  <div className="flex flex-col gap-2 text-black">
+                    <span className="flex gap-2 font-semibold items-center border-[#0149a6] border-2 w-auto text-[#0149a6] rounded p-1 pl-4">
+                      <Mail size={20} className="stroke-[#0149A6] min-w-8" />
+                      <span>{t("Information.email.title")}</span>
                     </span>
-                    <div className="gap-2  border-l-8  border-white flex flex-col pl-1 md:pl-4 ">
-                      <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto  rounded-r p-1 md:pl-4 pl-2 ">
+                    <div className="gap-2 border-l-8 border-white flex flex-col pl-1 md:pl-4">
+                      <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
-                          href="mailto:  explorem21@explorem.net"
-                          className="  text-sm "
+                          href="mailto:explorem21@explorem.net"
+                          className="text-sm"
                         >
                           {t("Information.email.administration")} :
                           explorem21@explorem.net
                         </a>
                       </span>
-                      <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto  rounded-r p-1 md:pl-4 pl-2">
+                      <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
-                          href="mailto: erecruit21@explorem.net	"
-                          className="  text-sm "
+                          href="mailto:erecruit21@explorem.net"
+                          className="text-sm"
                         >
                           {t("Information.email.recruitment")} :
-                          erecruit21@explorem.net	
+                          erecruit21@explorem.net
                         </a>
                       </span>
-                      <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto  rounded-r p-1 md:pl-4 pl-2 ">
+                      <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
-                          href="mailto: explorem.documents@explorem.net	"
-                          className="  text-sm "
+                          href="mailto:explorem.documents@explorem.net"
+                          className="text-sm"
                         >
                           {t("Information.email.documents")} :
-                          explorem.documents@explorem.net	
+                          explorem.documents@explorem.net
                         </a>
                       </span>
-                      <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto  rounded-r p-1 md:pl-4 pl-2 ">
+                      <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
-                          href="mailto: explorem.nursing@explorem.net"
-                          className="  text-sm "
+                          href="mailto:explorem.nursing@explorem.net"
+                          className="text-sm"
                         >
                           {t("Information.email.nursing")} :
                           explorem.nursing@explorem.net

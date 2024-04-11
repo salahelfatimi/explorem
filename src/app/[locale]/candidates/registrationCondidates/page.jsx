@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 
 function InscriptionCondidates() {
   const t = useTranslations("Candidates");
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const [validation, setValidation] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -21,7 +21,7 @@ function InscriptionCondidates() {
 
   const registrationCandidates = async (e) => {
     e.preventDefault();
-    setIsLoading(true)
+
     setValidation(true);
 
     if (
@@ -31,6 +31,8 @@ function InscriptionCondidates() {
       formData.email &&
       formData.pdf
     ) {
+      setIsLoading(true);
+      const loadingToast = toast.loading("registering ...");
       const formDataToSend = new FormData();
       formDataToSend.append("file", formData.pdf);
       formDataToSend.append("firstName", formData.firstName);
@@ -38,40 +40,35 @@ function InscriptionCondidates() {
       formDataToSend.append("tele", formData.tele);
       formDataToSend.append("email", formData.email);
       try {
-        toast.promise(
-          (async () => {
-            const response = await fetch("/api/condidatesInscription", {
-              method: "POST",
-              body: formDataToSend,
-            });
-            if (response.ok) {
-              setFormData({
-                firstName: "",
-                lastName: "",
-                tele: "",
-                email: "",
-                pdf: null,
-              });
-              if (fileInputRef.current) {
-                fileInputRef.current.value = "";
-              }
-              setValidation(false)
-            } else {
-              throw new Error("Failed to send message");
-            }
-          })(),
-          {
-            loading: "Registering ...",
-            success: <b>Your registration was successful !</b>,
-            error: <b>Failed to register candidate.</b>,
+        const response = await fetch("/api/condidatesInscription", {
+          method: "POST",
+          body: formDataToSend,
+        });
+        if (response.ok) {
+          setFormData({
+            firstName: "",
+            lastName: "",
+            tele: "",
+            email: "",
+            pdf: null,
+          });
+          if (fileInputRef.current) {
+            fileInputRef.current.value = "";
           }
-        );
+          setValidation(false);
+          toast.dismiss(loadingToast);
+          toast.success("Your registration was successful !");
+        } else {
+          toast.dismiss(loadingToast);
+          throw new Error("Failed to send message");
+        }
       } catch (error) {
+        toast.dismiss(loadingToast);
         console.error(error);
-      }finally {
-        setIsLoading(false)
+        toast.error("Failed to register candidate.");
+      } finally {
+        setIsLoading(false);
       }
-  
     }
   };
 
@@ -107,7 +104,7 @@ function InscriptionCondidates() {
       >
         <Toaster
           toastOptions={{
-            className: "  bg-white text-black ",
+            className: "bg-white text-black",
           }}
         />
         <label className="block space-y-2">
@@ -202,7 +199,6 @@ function InscriptionCondidates() {
           disabled={isLoading}
         >
           {isLoading ? "registering..." :  t("inscriptionCondidates.Submit")}
-         
         </button>
       </form>
     </div>
