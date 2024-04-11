@@ -3,7 +3,7 @@ import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { fetchBlogs } from "@/app/api/data/blog/actions";
-import PaginationTestimonial from "../../testimonial/components/paginationTestimonial";
+import PaginationBlog from "./paginationBlog";
 
 const locales = ["en", "de", "ar"];
 const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
@@ -69,7 +69,7 @@ export default async function BlogAll({ take }) {
             take >= blogs?.length ? "hidden" : "block"
           } flex justify-center`}
         >
-          <PaginationTestimonial take={take} />
+          <PaginationBlog take={take} />
         </div>
     </div>
   );
