@@ -9,12 +9,12 @@ const prisma = new PrismaClient();
 export const addTestimonialcomment = async (formDataToSend) => {
   const image = formDataToSend.get("image");
   const fullName = formDataToSend.get("fullName");
-  const text = formDataToSend.get("text");
+  const comment = formDataToSend.get("comment");
   await prisma.testimonial.create({
     data: {
       image: image,
       author: fullName,
-      text: text,
+      text: comment,
     },
   });
   revalidatePath(`/testimonial`);
