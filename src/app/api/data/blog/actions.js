@@ -72,8 +72,7 @@ export const deleteBlog = async (blogId, imageKey) => {
 
 export const updateBlog = async (id, formData, imageKey) => {
   // collect info from form using formData
-  const image = formData.get("image");
-  const urlImage = formData.get("urlImage");
+  const image = formData.get("image");;
   const title = formData.get("title");
   const description = formData.get("description");
 
@@ -85,7 +84,7 @@ export const updateBlog = async (id, formData, imageKey) => {
         id: id,
       },
       data: {
-        imageUrl: response.data.url ? response.data.url : null,
+        imageUrl: response.data.url ,
         imageKey: response.data.key,
         title,
         description,
@@ -97,8 +96,6 @@ export const updateBlog = async (id, formData, imageKey) => {
         id: id,
       },
       data: {
-        imageUrl: urlImage ? urlImage : null,
-        imageKey: imageKey,
         title,
         description,
       },

@@ -7,7 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 const AddBlogForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const fileInputRef = useRef(null);
-  const [sizeVideo, setSizeVideo] = useState(false);
+  const [sizeImage, setSizeImage] = useState(false);
   const [validation, setValidation] = useState(false);
   const [formData, setFormData] = useState({
     title: "",
@@ -66,13 +66,13 @@ const AddBlogForm = () => {
         if (fileInputRef.current) {
           fileInputRef.current.value = "";
         }
-        setSizeVideo(true);
+        setSizeImage(true);
       } else {
         setFormData({
           ...formData,
           image: fileInput,
         });
-        setSizeVideo(false);
+        setSizeImage(false);
       }
     }
   };
@@ -145,7 +145,7 @@ const AddBlogForm = () => {
           />
           <p className=" text-red-500 text-xs font-medium">
             {!formData.image && validation ? "Please load Image" : ""}
-            {sizeVideo && (
+            {sizeImage && (
               <p className="text-red-500 text-xs font-medium">
                 File size exceeds the maximum limit of 4 MB.{" "}
                 <a
