@@ -280,7 +280,7 @@ export default function AddTestimonial() {
           className="w-full bg-[#0149a6] py-2 text-white font-bold rounded-md"
           disabled={isLoading}
         >
-          Add
+          {isLoading ? "Adding..." : "Add testimonial"}
         </button>
       </form>
     </div>

@@ -201,7 +201,8 @@ function InscriptionCondidates() {
           className="px-12 py-1 w-full rounded font-bold border-4 duration-700 hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white"
           disabled={isLoading}
         >
-          {t("inscriptionCondidates.Submit")}
+          {isLoading ? "registering..." :  t("inscriptionCondidates.Submit")}
+         
         </button>
       </form>
     </div>
