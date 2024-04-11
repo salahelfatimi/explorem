@@ -64,6 +64,7 @@ export default function AddTestimonial() {
 
         toast.success("Testimonial Added !");
       } catch (error) {
+        setValidation(false);
         console.error("Failed to add testimonial:", error);
 
         toast.dismiss(loadingToast);
@@ -251,6 +252,7 @@ export default function AddTestimonial() {
               ref={fileInputRef}
               onChange={handleFileChange}
               name="file"
+              accept="video/*, application/pdf, image/*"
               className={`${
                 (!formData.file && validation) || sizeVideo
                   ? "border-red-500 "

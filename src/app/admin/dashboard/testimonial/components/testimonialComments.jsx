@@ -4,14 +4,6 @@ import DeletedTestimonial from "./deletedTestimonial";
 export default async function TestimonialComments({ testimonial }) {
   const { id, text, image, author, fileKey, fileUrl, createdAt } =
     testimonial || {};
-  const isToday = (someDate) => {
-    const today = new Date();
-    return (
-      someDate.getDate() === today.getDate() &&
-      someDate.getMonth() === today.getMonth() &&
-      someDate.getFullYear() === today.getFullYear()
-    );
-  };
   // Function to determine if the file URL is an image
   const isImage = (url) => /\.(jpg|jpeg|png|gif)$/i.test(url);
   const isString = (url) => typeof url === "string";
@@ -23,11 +15,8 @@ export default async function TestimonialComments({ testimonial }) {
     <>
       <div className="flex flex-col gap-6  p-8   ">
         <div className="flex justify-between   ">
-          {isToday(new Date(createdAt)) && (
-            <p className="bg-red-500 text-white shadow-lg font-semibold py-1 px-2">
-              New
-            </p>
-          )}
+        <span className=" font-bold bg-red-600 w-fit py-1 px-4 text-white capitalize">{isImage(fileUrl)?"Image":isVideo(fileUrl)?"video":istext(fileUrl)?"File":"Comment"}</span>
+
           <DeletedTestimonial id={id} fileKey={fileKey} />
         </div>
         {isImage(fileUrl) ? (

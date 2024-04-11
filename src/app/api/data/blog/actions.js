@@ -46,7 +46,7 @@ export const addBlog = async (formData) => {
   const response = await utapi.uploadFiles(image);
   await prisma.blog.create({
     data: {
-      imageUrl: response.data.url ? response.data.url : null,
+      imageUrl: response.data.url,
       title: title,
       imageKey: response.data.key,
       description: description,
