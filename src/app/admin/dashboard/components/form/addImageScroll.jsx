@@ -8,23 +8,28 @@ import toast, { Toaster } from "react-hot-toast";
 
 export default function AddImageScrollHandler({ imagesLength }) {
   const [image, setImage] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
   const addImageScrollHandler = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
+
     const formData = new FormData();
     if (image) {
       formData.append("image", image[0]);
     }
-    toast.promise(
-      (async () => {
-        await addImageScroll(formData);
-        await setImage("");
-      })(),
-      {
-        loading: "Adding Image Scroll ...",
-        success: <b>Image Scroll Added !</b>,
-        error: <b>Failed to Add Image Scroll .</b>,
-      }
-    );
+    const loadingToast = toast.loading("Adding Image Scroll ...");
+    try {
+      await addImageScroll(formData);
+      toast.success("Image Scroll Added !");
+      setImage(null);
+      toast.dismiss(loadingToast);
+    } catch {
+      toast.dismiss(loadingToast);
+      toast.error("Failed to Add Image Scroll .");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -39,7 +44,7 @@ export default function AddImageScrollHandler({ imagesLength }) {
           <label
             htmlFor="dropzone-file"
             className={`${
-              imagesLength >= 10 ? " cursor-not-allowed " : "cursor-pointer"
+              imagesLength >= 10 ? "cursor-not-allowed" : "cursor-pointer"
             } flex flex-col items-center justify-center w-full h-64 border-2 border-[#0149a6] border-dashed rounded-lg  bg-white`}
           >
             <div className="flex flex-col items-center justify-center gap-2 pt-5 pb-6">
@@ -57,18 +62,18 @@ export default function AddImageScrollHandler({ imagesLength }) {
             <button
               type="submit"
               className="px-6 py-2 w-fit rounded font-bold border-4 duration-700 hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white"
-              disabled={imagesLength >= 10}
+              disabled={imagesLength >= 10 || isLoading}
             >
-              Upload
+              {isLoading ? "Uploading..." : "Upload"}
             </button>
             <input
-              onChange={(e) => setImage(e.target.files)} // Fix here
+              onChange={(e) => setImage(e.target.files)}
               accept="image/*"
               id="dropzone-file"
               name="image"
               type="file"
-              className="hidden "
-              disabled={imagesLength >= 10}
+              className="hidden"
+              disabled={imagesLength >= 10 || isLoading}
             />
           </label>
         </div>

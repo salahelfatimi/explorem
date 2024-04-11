@@ -9,7 +9,7 @@ import {
 } from "@/app/api/data/testimonial/actions";
 
 export default function AddTestimonial() {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const [validation, setValidation] = useState(false);
   const [sizeVideo, setSizeVideo] = useState(false);
   const [inputType, setInputType] = useState("comment");
@@ -25,13 +25,13 @@ export default function AddTestimonial() {
     e.preventDefault();
 
     setValidation(true);
-    setIsLoading(true)
+    setIsLoading(true);
 
     if (
       formData.fullName &&
       (formData.text || formData.file) &&
       formData.image
-    )  {
+    ) {
       const formDataToSend = new FormData();
       formDataToSend.append("image", formData.image);
       formDataToSend.append("fullName", formData.fullName);
@@ -63,17 +63,15 @@ export default function AddTestimonial() {
         toast.dismiss(loadingToast);
 
         toast.success("Testimonial Added !");
-        
       } catch (error) {
         console.error("Failed to add testimonial:", error);
 
         toast.dismiss(loadingToast);
 
         toast.error("Failed to Add Testimonial .");
-      }finally {
-        setIsLoading(false)
+      } finally {
+        setIsLoading(false);
       }
-  
     }
   };
 
@@ -265,7 +263,7 @@ export default function AddTestimonial() {
                 <p className="text-red-500 text-xs font-medium">
                   File size exceeds the maximum limit of 4 MB.{" "}
                   <a
-                  className=" text-blue-500 underline "
+                    className=" text-blue-500 underline "
                     href="https://www.freeconvert.com/video-compressor"
                     target="_blank"
                     rel="noopener noreferrer"
