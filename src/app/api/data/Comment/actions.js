@@ -27,10 +27,15 @@ export const fetchComments = async (blogId) => {
 
 export const addCommentToBlog = async (blogId, formData) => {
   const text = formData.get("text");
+  const image = formData.get("image");
+  const author = formData.get("fullName");
+
   await prisma.comment.create({
     data: {
-      blogId: blogId,
-      text: text,
+      image,
+      author,
+      blogId,
+      text,
     },
   });
   revalidatePath(`/blogs/${blogId}`);

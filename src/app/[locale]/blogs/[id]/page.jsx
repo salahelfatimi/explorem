@@ -83,13 +83,14 @@ export default async function BlogDetail({ params }) {
           dangerouslySetInnerHTML={{ __html: createMarkup(blog.description) }}
         ></p>
       </div>
-      <div className="flex gap-4 flex-col  container">
+      <div className="flex gap-4 flex-col py-10  container">
+      <div className=" bg-white px-4 pb-10">
+          <CommentAddForm blogId={blog.id} />
+        </div>
         <div>
           <CommentListings blogId={blog.id} />
         </div>
-        <div className=" bg-white px-4 py-6">
-          <CommentAddForm blogId={blog.id} />
-        </div>
+      
       </div>
     </>
   );

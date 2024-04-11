@@ -12,26 +12,25 @@ export default function AddImageScrollHandler({ imagesLength }) {
 
   const addImageScrollHandler = async (event) => {
     event.preventDefault();
-    setIsLoading(true);
 
     const formData = new FormData();
     if (image) {
       formData.append("image", image[0]);
-    }
-    const loadingToast = toast.loading("Adding Image Scroll ...");
-    try {
-      await addImageScroll(formData);
-      toast.success("Image Scroll Added !");
-      setImage(null);
-      toast.dismiss(loadingToast);
-    } catch {
-      toast.dismiss(loadingToast);
-      toast.error("Failed to Add Image Scroll .");
-    } finally {
-      setIsLoading(false);
+      setIsLoading(true);
+      const loadingToast = toast.loading("Adding Image Scroll ...");
+      try {
+        await addImageScroll(formData);
+        toast.success("Image Scroll Added !");
+        setImage(null);
+        toast.dismiss(loadingToast);
+      } catch {
+        toast.dismiss(loadingToast);
+        toast.error("Failed to Add Image Scroll .");
+      } finally {
+        setIsLoading(false);
+      }
     }
   };
-
   return (
     <>
       <Toaster

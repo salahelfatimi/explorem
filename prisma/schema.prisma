@@ -34,7 +34,8 @@ enum Role {
 
 model Comment {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  author    String   @default("Explorem") 
+  image     String
+  author    String   
   text      String
   blogId    String   @db.ObjectId
   blog      Blog?    @relation(fields: [blogId], references: [id])

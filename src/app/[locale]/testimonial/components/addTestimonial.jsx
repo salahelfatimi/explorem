@@ -25,7 +25,7 @@ export default function AddTestimonial() {
     e.preventDefault();
 
     setValidation(true);
-    setIsLoading(true);
+  
 
     if (
       formData.fullName &&
@@ -41,7 +41,7 @@ export default function AddTestimonial() {
       } else {
         formDataToSend.append("file", formData.file);
       }
-
+      setIsLoading(true);
       const loadingToast = toast.loading("Adding Testimonial ...");
 
       try {
