@@ -39,6 +39,7 @@ model Comment {
   text      String
   blogId    String   @db.ObjectId
   blog      Blog?    @relation(fields: [blogId], references: [id])
+  published Boolean @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -49,6 +50,7 @@ model Testimonial{
     text      String?
     fileUrl   String?
     fileKey   String?
+    published Boolean @default(false)
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
     
