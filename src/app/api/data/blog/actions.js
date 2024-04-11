@@ -21,7 +21,7 @@ export const Published = async (id, publish) => {
   }
 };
 
-export const fetchBlogs = async () => {
+export const fetchBlogs = async (take) => {
   try {
     const blogs = await prisma.blog.findMany({
       where: {
@@ -30,6 +30,7 @@ export const fetchBlogs = async () => {
       orderBy: {
         createAt: "desc",
       },
+      take: take,
     });
     revalidatePath(`/blog`);
     return blogs;

@@ -3,19 +3,20 @@ import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { fetchBlogs } from "@/app/api/data/blog/actions";
+import PaginationTestimonial from "../../testimonial/components/paginationTestimonial";
 
 const locales = ["en", "de", "ar"];
 const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
-export default async function BlogAll() {
+export default async function BlogAll({ take }) {
   const t = await getTranslations("Blog");
-  const blogs = await fetchBlogs();
+  const blogs = await fetchBlogs(take);
 
   return (
     <div className=" flex flex-col gap-6">
       <h2 className=" font-bold  text-2xl text-[#134ba1]  border-y-4 border-[#134ba1] w-full text-center py-2 px-3 ">
         {t("AllBlog")}
       </h2>
-      <div className=" columns-1  lg:columns-2 space-y-8 gap-4">
+      <div className=" columns-1  lg:columns-3 space-y-8 gap-4">
         {blogs.map((blog, index) => (
           <div key={index}>
             <div
@@ -63,6 +64,13 @@ export default async function BlogAll() {
           </div>
         ))}
       </div>
+      <div
+          className={`${
+            take >= blogs?.length ? "hidden" : "block"
+          } flex justify-center`}
+        >
+          <PaginationTestimonial take={take} />
+        </div>
     </div>
   );
 }

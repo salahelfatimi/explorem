@@ -4,7 +4,8 @@ import BlogAll from "./components/blogAll";
 import LatestBlog from "./components/latestBlog";
 import { getTranslations } from "next-intl/server";
 
-async function Blog() {
+async function Blog({ searchParams }) {
+  const take = (await searchParams.take) ? parseInt(searchParams.take) : 6;
   const t = await getTranslations("Blog");
   const latestBlog = await fetchBlogs();
   return (
@@ -24,7 +25,8 @@ async function Blog() {
               <LatestBlog />
             </div>
             <div>
-              <BlogAll />
+              <BlogAll take={take}/>
+              
             </div>
           </>
         ) : (

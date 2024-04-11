@@ -2,9 +2,8 @@
 
 import { useRouter } from "next/navigation";
 
-export default async function PaginationTestimonial({ searchParams }) {
-  const router = useRouter();
-  const take = parseInt(searchParams.take) || 6; // Set default value to 6 if take is undefined or null
+export default async function PaginationTestimonial({ take }) {
+  const router = useRouter(); 
 
   const handleNextPage = () => {
     router.push(`?take=${take + 6}`, { scroll: false });
