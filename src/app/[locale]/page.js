@@ -104,7 +104,7 @@ export default async function Index() {
               alt="Explorem"
             />
             <h2 className="text-3xl text-center font-bold text-[#0149a6] capitalize">
-              Our Services
+              {t('OurServices')}
             </h2>
           </div>
 
@@ -208,7 +208,7 @@ export default async function Index() {
               className="bg-[#0149a6] w-fit py-2 border-white px-4 font-semibold border-2 duration-500 hover:text-[#0149a6] hover:bg-white hover:border-[#0149a6]"
               href="/testimonial"
             >
-              See More
+             {t('seeMore')}
             </Link>
           </div>
         </div>

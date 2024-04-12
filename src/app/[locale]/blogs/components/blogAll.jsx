@@ -39,7 +39,7 @@ export default async function BlogAll({ take }) {
                 </Link>
                 <div className="flex justify-between  w-full flex-row-reverse items-center">
                   <span className="text-[#646c78]   font-semibold flex gap-2">
-                    {blog.createAt.toLocaleDateString()}
+                    {blog.createAt}
                     <Clock className="min-w-4" />{" "}
                   </span>
                   <span className="font-bold">

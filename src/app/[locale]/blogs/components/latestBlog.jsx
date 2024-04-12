@@ -45,7 +45,7 @@ export default async function LatestBlog() {
 
             <div className="flex justify-between w-full flex-row-reverse items-center">
               <span className="text-[#646c78]   font-semibold flex gap-2">
-                <Clock className="min-w-4" /> {createAt?.toLocaleDateString()}
+                <Clock className="min-w-4" /> {createAt}
               </span>
               <span className="font-bold">
                 By <span className="text-[#134ba1]">{author}</span>

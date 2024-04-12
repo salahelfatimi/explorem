@@ -1,8 +1,9 @@
 import Image from "next/image";
-
+import { getTranslations } from "next-intl/server";
 export default async function TestimonialComments({ testimonial }) {
   const { text, image, author, fileKey, fileUrl, createdAt } =
     testimonial || {};
+    const t = await getTranslations("Testimonial");
   // Function to determine if the file URL is an image
   const isImage = (url) => /\.(jpg|jpeg|png|gif)$/i.test(url);
   const isString = (url) => typeof url === "string";
@@ -11,7 +12,7 @@ export default async function TestimonialComments({ testimonial }) {
   return (
     <>
       <div className="flex flex-col gap-6  p-8   ">
-        <span className=" font-bold bg-red-600 w-fit py-1 px-4 text-white capitalize">{isImage(fileUrl)?"Image":isVideo(fileUrl)?"video":istext(fileUrl)?"File":"Comment"}</span>
+        <span className=" font-bold bg-red-600 w-fit py-1 px-4 text-white capitalize">{isImage(fileUrl)?t('image'):isVideo(fileUrl)?t('video'):istext(fileUrl)?t('file'):t('comment')}</span>
         {isImage(fileUrl) ? (
           <Image
             className=" bg-[#0149a6] w-auto bg-cover"
@@ -33,7 +34,7 @@ export default async function TestimonialComments({ testimonial }) {
         ) : isString(text) ? (
           <p className="">{text}</p>
         ) : istext(fileUrl) ? (
-          <a href={fileUrl} target="_blank" className=" font-bold text-center hover:bg-red-600 bg-gray-500  duration-500 hover:text-white rounded text-white py-3 px-4"> click to show File Testimonial</a>
+          <a href={fileUrl} target="_blank" className=" font-bold text-center hover:bg-red-600 bg-gray-500  duration-500 hover:text-white rounded text-white py-3 px-4">{t('fileClick')}</a>
          
         ) : "text"}
         <div className="flex gap-4  items-center">
@@ -50,7 +51,7 @@ export default async function TestimonialComments({ testimonial }) {
           </div>
         </div>
         <p className="font-semibold text-right">
-          {createdAt.toLocaleDateString()}
+          {createdAt}
         </p>
       </div>
     </>

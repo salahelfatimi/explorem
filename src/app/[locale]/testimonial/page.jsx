@@ -1,26 +1,22 @@
 import { fetchTestimonial } from "@/app/api/data/testimonial/actions";
-
-import AddTestimonial from "./components/addTestimonial";
 import PaginationTestimonial from "./components/paginationTestimonial";
 import TestimonialComments from "@/components/testimonialComments";
-
+import { getTranslations } from "next-intl/server";
 export default async function Testimonial({ searchParams }) {
-  const take = (await searchParams.take) ? parseInt(searchParams.take) : 6;
+  const t = await getTranslations("Testimonial");
+  const take = (await searchParams.take) ? parseInt(searchParams.take) : 12;
   const testimonial = await fetchTestimonial(take);
 
   return (
     <div className="flex flex-col  container gap-6 py-12  ">
       <div className="flex  flex-col gap-4 items-center">
         <span className=" py-1 px-4 rounded-full text-white font-bold shadow-xl bg-[#0149a6]">
-          Client stories
+          {t('clientStories')}
         </span>
-        <h1 className=" font-serif font-bold text-4xl ">Our wall of love</h1>
+        <h1 className=" font-serif font-bold text-4xl "> {t('title')}</h1>
         <p className=" text-[#9da4b2]  text-center  text-lg ">
-          Read what our client are saying about Explorem
+        {t('description')}
         </p>
-      </div>
-      <div>
-        <AddTestimonial />
       </div>
       <div className=" flex flex-col  gap-4 justify-center">
         {testimonial?.length > 0 ? (

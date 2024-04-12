@@ -23,6 +23,7 @@
       "Candidates": "Register for Candidates",
       "Employers": "Apply Employers"
     },
+    "OurServices":"Our Services",
     "grids": [
       {
         "id": 1,
@@ -65,7 +66,9 @@
     "testimonial": {
       "title": "testimonial",
       "description": "What Our Happy Clients Say!"
-    }
+    },
+    "seeMore": "See More"
+
   },
   "Navbar": {
     "home": "Home",
@@ -315,5 +318,15 @@
       "line2": "We are a team of experts committed to delivering outstanding results . ”"
     },
     "getInTouch": "Get In Touch: Reach Out To Us Today"
+  },
+  "Testimonial":{
+      "clientStories":"Client stories",
+      "title":"Our wall of love ",
+      "description":"Read what our client are saying about Explorem",
+      "video":"Video",
+      "file":"File",
+      "comment":"Comment",
+      "image":"Image",
+      "fileClick":"Click to show File Testimonial"
   }
 }

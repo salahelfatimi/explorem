@@ -2,8 +2,6 @@
 import Image from "next/image";
 
 import { Clock, Facebook, Instagram, Send } from "react-feather";
-import { CommentListings } from "../components/CommentListings";
-import CommentAddForm from "../components/form/CommentAddForm";
 import { fetchSingleBlog } from "@/app/api/data/blog/actions";
 export default async function BlogDetail({ params }) {
   const id = params?.id;
@@ -31,7 +29,7 @@ export default async function BlogDetail({ params }) {
     <>
       <div className="container px-4 items-center   flex flex-col gap-16 py-10">
         <h3 className="font-bold italic   border-b-4 text-[#134ba1] border-[#134ba1] uppercase text-wrap text-center text-2xl lg:text-4xl   ">
-          {blog.title}
+          {blog?.title}
         </h3>
         <div className=" flex  flex-col lg:flex-row gap-4">
           {"/image/aboutUS/slideLeft/image1.jpg" ? (
@@ -83,15 +81,8 @@ export default async function BlogDetail({ params }) {
           dangerouslySetInnerHTML={{ __html: createMarkup(blog.description) }}
         ></p>
       </div>
-      <div className="flex gap-4 flex-col py-10  container">
-      <div className=" bg-white px-4 pb-10">
-          <CommentAddForm blogId={blog.id} />
-        </div>
-        <div>
-          <CommentListings blogId={blog.id} />
-        </div>
-      
-      </div>
+     
+     
     </>
   );
 }
