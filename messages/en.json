@@ -23,52 +23,26 @@
       "Candidates": "Register for Candidates",
       "Employers": "Apply Employers"
     },
-    "OurServices":"Our Services",
-    "grids": [
-      {
-        "id": 1,
-        "title": "Training/Formation",
-        "description": "German Course and Nursing Tutorial"
-      },
-      {
-        "id": 2,
-        "title": "Job Placement",
-        "description": "Employment and Vocational Training placement"
-      },
-      {
-        "id": 3,
-        "title": "Project Management",
-        "description": "Effective project management solutions"
-      },
-      {
-        "id": 4,
-        "title": "Degree Recognition",
-        "description": "Ensure your degrees are recognized"
-      },
-      {
-        "id": 5,
-        "title": "Professional Qualification",
-        "description": "Enhance your professional skills"
-      },
-      {
-        "id": 6,
-        "title": "Onboarding / Integration / Relocation",
-        "description": "Streamlined processes, including Visa assistance"
-      }
-    ],
-    "vedioTitle": "Who We Are",
-    "grid": {
-      "students": "students",
-      "learning-programmes": "learning programmes",
-      "teachers": "teachers",
-      "language-trainings": "language trainings"
+    "whatWeHaveAchieved": {
+      "title": "What we have achieved?",
+      "line1": "Presented our program to more than 2,000+ student-nurses and graduates all over Morocco.",
+      "line2": "800+ students and nurses signed contracts with our program for qualified nurses.",
+      "line3": "Maintained nursing school partnership from different cities of Morocco (Rabat, Casablanca, Marrakech, Agadir, Tetouan, Oujda).",
+      "line4": "In 2024, we launch our scholarship program to qualified nurses, offering FREE German course, recruitment and relocation services.",
+      "line5": "Explorem managing directors, teachers, students and candidates were interviewed and featured in ZDF heute (German TV), in February 2024.",
+      "line6": "In 2023, there were 20 candidates issued with pre-visa approval; 20 active candidates relocated to Germany; and 23 other candidates were issued their deficit notice of their diploma equivalency.",
+      "line7": "Explorem nurse candidates relocated in Germany were featured in WDR Lokalzeit aus Köln.",
+      "line8": "In February 2023, in partnership with German employers, there were 34 newly graduate nurse-candidates who received scholarships in our program. It includes free B1 and B2 language course, with monthly stipend, with examination fees, recognition and professional qualifications fees, visa cost, and other relocation expenses covered.",
+      "line9": "From February to March 2023, 54 of our active candidates directly signed their work contracts with the German employers.",
+      "line10": "In 2021 to 2022, more than 100 nurse candidates who were issued with final deficit notice and qualified to take knowledge test; 2 candidates with direct recognition; and more than 80 candidates who were recipients of the program were relocated to Germany."
     },
+   
+   
     "testimonial": {
       "title": "testimonial",
       "description": "What Our Happy Clients Say!"
     },
     "seeMore": "See More"
-
   },
   "Navbar": {
     "home": "Home",
@@ -78,7 +52,7 @@
     "contact": "Contact",
     "about": "About",
     "client": "Client",
-    "testimonial":"Testimonial"
+    "testimonial": "Testimonial"
   },
   "AboutUS": {
     "aboutUs": "About us",
@@ -112,19 +86,7 @@
       "line4": "We believe in pushing the boundaries of what's possible. We are a team of experts committed to delivering outstanding results."
     },
     "vedioTitle": "Who We Are",
-    "whatWeHaveAchieved": {
-      "title": "What we have achieved?",
-      "line1": "Presented our program to more than 2,000+ student-nurses and graduates all over Morocco.",
-      "line2": "800+ students and nurses signed contracts with our program for qualified nurses.",
-      "line3": "Maintained nursing school partnership from different cities of Morocco (Rabat, Casablanca, Marrakech, Agadir, Tetouan, Oujda).",
-      "line4": "In 2024, we launch our scholarship program to qualified nurses, offering FREE German course, recruitment and relocation services.",
-      "line5": "Explorem managing directors, teachers, students and candidates were interviewed and featured in ZDF heute (German TV), in February 2024.",
-      "line6": "In 2023, there were 20 candidates issued with pre-visa approval; 20 active candidates relocated to Germany; and 23 other candidates were issued their deficit notice of their diploma equivalency.",
-      "line7": "Explorem nurse candidates relocated in Germany were featured in WDR Lokalzeit aus Köln.",
-      "line8": "In February 2023, in partnership with German employers, there were 34 newly graduate nurse-candidates who received scholarships in our program. It includes free B1 and B2 language course, with monthly stipend, with examination fees, recognition and professional qualifications fees, visa cost, and other relocation expenses covered.",
-      "line9": "From February to March 2023, 54 of our active candidates directly signed their work contracts with the German employers.",
-      "line10": "In 2021 to 2022, more than 100 nurse candidates who were issued with final deficit notice and qualified to take knowledge test; 2 candidates with direct recognition; and more than 80 candidates who were recipients of the program were relocated to Germany."
-    },
+
     "slogen2": {
       "line1": "“ We believe in pushing boundaries of what’s possible. ",
       "line2": "  We are a team of experts committed to delivering outstanding results.” "
@@ -319,14 +281,14 @@
     },
     "getInTouch": "Get In Touch: Reach Out To Us Today"
   },
-  "Testimonial":{
-      "clientStories":"Client stories",
-      "title":"Our wall of love ",
-      "description":"Read what our client are saying about Explorem",
-      "video":"Video",
-      "file":"File",
-      "comment":"Comment",
-      "image":"Image",
-      "fileClick":"Click to show File Testimonial"
+  "Testimonial": {
+    "clientStories": "Client stories",
+    "title": "Our wall of love ",
+    "description": "Read what our client are saying about Explorem",
+    "video": "Video",
+    "file": "File",
+    "comment": "Comment",
+    "image": "Image",
+    "fileClick": "Click to show File Testimonial"
   }
 }

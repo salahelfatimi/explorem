@@ -78,16 +78,16 @@ export default function Employers() {
             </h2>
           </div>
 
-          <div className="px-2 grid grid-cols-1 lg:grid-cols-2  container gap-4  list-outside ">
+          <div className="px-2 grid grid-cols-1 lg:grid-cols-3  container gap-4  list-outside ">
             {services.map((ele, index) => (
               <div
                 key={index}
-                className="border-l-4 flex flex-col border-[#0149a6] bg-white p-2 pl-4  rounded-r-sm container"
+                className="relative w-96 h-60  text-white overflow-hidden cursor-pointer transition-all duration-700 card flex flex-col   p-2  container"
               >
-                <span className="text-md lg:text-lg  font-semibold mb-4 text-[#0149a6]">
+                <span className="absolute font-bold p-4 text-center inset-0 w-full h-full flex justify-center items-center rounded-2xl  bg-white transition-all duration-100 delay-200 z-20 hover:opacity-0 text-[#0149a6]">
                   {ele.title}
                 </span>
-                <span className="text-gray-700 text-sm md:text-base">
+                <span className=" absolute inset-0 w-full h-full flex justify-center items-center p-5 text-center font-semibold rounded-2xl bg-[#ffff] text-[#0149A6]  transition-all z-10 card-back  text-sm md:text-base">
                   {ele.description}
                 </span>
               </div>

@@ -15,10 +15,8 @@ export default async function LatestBlog() {
   return (
     <>
       <div className="flex flex-col gap-4">
-        {/* <h2 className=" font-bold  text-2xl bg-[#134ba1] text-white w-full text-center py-2 px-3 ">
-        {t('LatestBlog')}
-        </h2> */}
-        <div className=" w-full gap-4 lg:items-center  flex flex-col lg:flex-row-reverse ">
+        
+        <div className="container w-full gap-4 lg:items-center  flex flex-col lg:flex-row-reverse ">
           
           <Image
             blurDataURL={imageUrl}

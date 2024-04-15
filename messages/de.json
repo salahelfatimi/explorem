@@ -23,47 +23,19 @@
       "Candidates": "Registrierung für Kandidaten",
       "Employers": "Bewerben Sie sich als Arbeitgeber"
     },
-    "OurServices": "Unsere Dienstleistungen",
 
-    "grids": [
-      {
-        "id": 1,
-        "title": "Training / Formation",
-        "description": "Deutschkurs und Pflegeunterricht"
-      },
-      {
-        "id": 2,
-        "title": "Arbeitsvermittlung",
-        "description": "Beschäftigungs- und Berufsausbildungsvermittlung"
-      },
-      {
-        "id": 3,
-        "title": "Projektmanagement",
-        "description": "Effektive Lösungen im Projektmanagement"
-      },
-      {
-        "id": 4,
-        "title": "Anerkennung von Abschlüssen",
-        "description": "Stellen Sie sicher, dass Ihre Abschlüsse anerkannt sind"
-      },
-      {
-        "id": 5,
-        "title": "Berufliche Qualifikation",
-        "description": "Verbessern Sie Ihre beruflichen Fähigkeiten"
-      },
-      {
-        "id": 6,
-        "title": "Onboarding / Integration / Umzug",
-        "description": "Effiziente Prozesse, einschließlich Visa-Unterstützung"
-      }
-    ],
-    "vedioTitle": "Wer wir sind",
-
-    "grid": {
-      "students": "Schüler",
-      "learning-programmes": "Lernprogramme",
-      "teachers": "Lehrer",
-      "language-trainings": "Sprachtrainings"
+    "whatWeHaveAchieved": {
+      "title": "Was wir erreicht haben?",
+      "line1": "Unser Programm wurde mehr als 2.000+ Studentenpflegern und Absolventen in ganz Marokko vorgestellt.",
+      "line2": "800+ Studenten und Pfleger haben Verträge mit unserem Programm für qualifizierte Pfleger unterzeichnet.",
+      "line3": "Wir haben die Partnerschaft mit Pflegeschulen aus verschiedenen Städten Marokkos (Rabat, Casablanca, Marrakesch, Agadir, Tetouan, Oujda) aufrechterhalten.",
+      "line4": "Im Jahr 2024 starten wir unser Stipendienprogramm für qualifizierte Pfleger, das einen KOSTENLOSEN Deutschkurs, Rekrutierungs- und Umzugsdienste umfasst.",
+      "line5": "Explorem-Geschäftsführer, Lehrer, Studenten und Kandidaten wurden im Februar 2024 im ZDF heute (deutsches Fernsehen) interviewt und vorgestellt.",
+      "line6": "Im Jahr 2023 erhielten 20 Kandidaten eine Vorabzustimmung für das Visum; 20 aktive Kandidaten zogen nach Deutschland um, und 23 andere Kandidaten erhielten ihren Defizitbescheid für die Anerkennung ihres Diploms.",
+      "line7": "Pflegekandidaten von Explorem, die nach Deutschland umgezogen sind, wurden in der WDR Lokalzeit aus Köln vorgestellt.",
+      "line8": "Im Februar 2023 erhielten in Zusammenarbeit mit deutschen Arbeitgebern 34 neu graduierte Pflegekandidaten Stipendien in unserem Programm. Dies umfasst einen kostenlosen B1- und B2-Sprachkurs, monatliches Stipendium, Prüfungsgebühren, Anerkennungs- und Qualifikationsgebühren, Visakosten und andere Umzugskosten.",
+      "line9": "Von Februar bis März 2023 unterschrieben 54 unserer aktiven Kandidaten direkt ihre Arbeitsverträge mit den deutschen Arbeitgebern.",
+      "line10": "Im Zeitraum von 2021 bis 2022 wurden mehr als 100 Pflegekandidaten, die einen endgültigen Defizitbescheid erhielten und zur Wissensprüfung zugelassen wurden, umgesiedelt; 2 Kandidaten mit direkter Anerkennung; und mehr als 80 Kandidaten, die Empfänger des Programms waren, wurden nach Deutschland umgesiedelt."
     },
 
     "testimonial": {
@@ -71,7 +43,6 @@
       "description": "Was unsere zufriedenen Kunden sagen ! "
     },
     "seeMore": "Mehr anzeigen"
-
   },
   "Navbar": {
     "home": "Startseite",
@@ -115,19 +86,7 @@
       "line4": "Wir glauben daran, die Grenzen des Möglichen zu erweitern. Wir sind ein Team von Experten, das sich verpflichtet hat, herausragende Ergebnisse zu liefern."
     },
     "vedioTitle": "Wer wir sind",
-    "whatWeHaveAchieved": {
-      "title": "Was wir erreicht haben?",
-      "line1": "Unser Programm wurde mehr als 2.000+ Studentenpflegern und Absolventen in ganz Marokko vorgestellt.",
-      "line2": "800+ Studenten und Pfleger haben Verträge mit unserem Programm für qualifizierte Pfleger unterzeichnet.",
-      "line3": "Wir haben die Partnerschaft mit Pflegeschulen aus verschiedenen Städten Marokkos (Rabat, Casablanca, Marrakesch, Agadir, Tetouan, Oujda) aufrechterhalten.",
-      "line4": "Im Jahr 2024 starten wir unser Stipendienprogramm für qualifizierte Pfleger, das einen KOSTENLOSEN Deutschkurs, Rekrutierungs- und Umzugsdienste umfasst.",
-      "line5": "Explorem-Geschäftsführer, Lehrer, Studenten und Kandidaten wurden im Februar 2024 im ZDF heute (deutsches Fernsehen) interviewt und vorgestellt.",
-      "line6": "Im Jahr 2023 erhielten 20 Kandidaten eine Vorabzustimmung für das Visum; 20 aktive Kandidaten zogen nach Deutschland um, und 23 andere Kandidaten erhielten ihren Defizitbescheid für die Anerkennung ihres Diploms.",
-      "line7": "Pflegekandidaten von Explorem, die nach Deutschland umgezogen sind, wurden in der WDR Lokalzeit aus Köln vorgestellt.",
-      "line8": "Im Februar 2023 erhielten in Zusammenarbeit mit deutschen Arbeitgebern 34 neu graduierte Pflegekandidaten Stipendien in unserem Programm. Dies umfasst einen kostenlosen B1- und B2-Sprachkurs, monatliches Stipendium, Prüfungsgebühren, Anerkennungs- und Qualifikationsgebühren, Visakosten und andere Umzugskosten.",
-      "line9": "Von Februar bis März 2023 unterschrieben 54 unserer aktiven Kandidaten direkt ihre Arbeitsverträge mit den deutschen Arbeitgebern.",
-      "line10": "Im Zeitraum von 2021 bis 2022 wurden mehr als 100 Pflegekandidaten, die einen endgültigen Defizitbescheid erhielten und zur Wissensprüfung zugelassen wurden, umgesiedelt; 2 Kandidaten mit direkter Anerkennung; und mehr als 80 Kandidaten, die Empfänger des Programms waren, wurden nach Deutschland umgesiedelt."
-    },
+
     "slogen2": {
       "line1": "„Wir glauben daran, die Grenzen des Möglichen zu erweitern. ",
       "line2": "  Wir sind ein Team von Experten, das sich verpflichtet hat, herausragende Ergebnisse zu liefern.“ "
