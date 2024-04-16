@@ -7,6 +7,7 @@ import TestimonialComments from "@/components/testimonialComments";
 import FetchImageScroll from "@/components/fetchImageScroll";
 import { Instagram, Link2 } from "react-feather";
 import LatestBlog from "./blogs/components/latestBlog";
+import FetchLogoScroll from "@/components/fetchLogoScroll";
 
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
@@ -45,16 +46,41 @@ export default async function Index() {
             </Link>
           </div>
         </div>
-        <div className="bg-[#0149a6] py-6 ">
-          <div className="px-2">
-            <InfiniteHorizontalScroll>
-              <FetchImageScroll />
-            </InfiniteHorizontalScroll>
+        <div>
+          <div className="bg-[#0149a6] py-6 ">
+            <div className="px-2">
+              <InfiniteHorizontalScroll>
+                <FetchImageScroll />
+              </InfiniteHorizontalScroll>
+            </div>
+          </div>
+          <div className=" flex bg-white py-10 justify-center items-center gap-8 flex-col">
+            <div className="flex gap- items-center">
+              <Image
+                src="/image/aboutUS/logoHand.png"
+                className="w-14 lg:w-16"
+                width={195}
+                height={159}
+                alt="Explorem"
+              />
+              <h2 className=" text-3xl font-bold text-[#0149a6] capitalize">
+                Latest Updates
+              </h2>
+            </div>
+            <LatestBlog />
+            <div className=" text-center text-white">
+              <Link
+                className="bg-[#0149a6] w-fit py-2 border-white px-4 font-semibold border-2 duration-500 hover:text-[#0149a6] hover:bg-white hover:border-[#0149a6]"
+                href="/blog"
+              >
+                {t("seeMore")} Blog
+              </Link>
+            </div>
           </div>
         </div>
+
         <div className=" container flex flex-col items-center justify-center  gap-4">
           <div className="flex gap-4 items-center">
-        
             <h2 className=" text-3xl font-bold text-[#0149a6] capitalize">
               {t("whatWeHaveAchieved.title")}
             </h2>
@@ -111,9 +137,6 @@ export default async function Index() {
         <div className="flex flex-col gap-8">
           <div className=" flex justify-center items-center gap-4 flex-col">
             <div className="flex gap-4 items-center">
-              <h2 className=" text-3xl font-bold text-[#0149a6] capitalize">
-                {t("testimonial.title")}
-              </h2>
               <Image
                 src="/image/aboutUS/logoHand.png"
                 className="w-14 lg:w-16"
@@ -121,6 +144,9 @@ export default async function Index() {
                 height={159}
                 alt="Explorem"
               />
+              <h2 className=" text-3xl font-bold text-[#0149a6] capitalize">
+                {t("testimonial.title")}
+              </h2>
             </div>
 
             <p className=" text-xl font-medium text-gray-600">
@@ -150,27 +176,18 @@ export default async function Index() {
             </div>
           </div>
         </div>
-        <div className=" flex bg-white py-10 justify-center items-center gap-4 flex-col">
-        <div className="flex gap-4 items-center">
-              <h2 className=" text-3xl font-bold text-[#0149a6] capitalize">
-               latest Blog
-              </h2>
-              <Image
-                src="/image/aboutUS/logoHand.png"
-                className="w-14 lg:w-16"
-                width={195}
-                height={159}
-                alt="Explorem"
-              />
-            </div>
-          <LatestBlog />
-          <div className=" text-center text-white">
-            <Link
-              className="bg-[#0149a6] w-fit py-2 border-white px-4 font-semibold border-2 duration-500 hover:text-[#0149a6] hover:bg-white hover:border-[#0149a6]"
-              href="/blog"
-            >
-              {t("seeMore")} Blog
-            </Link>
+      </div>
+      <div>
+        <div className="flex justify-center py-6 gap-4 items-center">
+          <h2 className=" text-3xl border-b-4  border-[#0149a6] font-bold text-[#0149a6] capitalize">
+            Our Partners
+          </h2>
+        </div>
+        <div className="bg-[#fff] py-6 ">
+          <div className="px-2">
+            <InfiniteHorizontalScroll>
+              <FetchLogoScroll />
+            </InfiniteHorizontalScroll>
           </div>
         </div>
       </div>

@@ -78,16 +78,17 @@ export default function Employers() {
             </h2>
           </div>
 
-          <div className="px-2 grid grid-cols-1 lg:grid-cols-3  container gap-4  list-outside ">
+          <div className="  grid grid-cols-1 lg:grid-cols-3 container gap-6   ">
             {services.map((ele, index) => (
+              
               <div
                 key={index}
-                className="relative w-96 h-60  text-white overflow-hidden cursor-pointer transition-all duration-700 card flex flex-col   p-2  container"
+                className="relative   t-2 rounded w-full  h-60 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card     "
               >
-                <span className="absolute font-bold p-4 text-center inset-0 w-full h-full flex justify-center items-center rounded-2xl  bg-white transition-all duration-100 delay-200 z-20 hover:opacity-0 text-[#0149a6]">
+                <span className="absolute font-extrabold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                   {ele.title}
                 </span>
-                <span className=" absolute inset-0 w-full h-full flex justify-center items-center p-5 text-center font-semibold rounded-2xl bg-[#ffff] text-[#0149A6]  transition-all z-10 card-back  text-sm md:text-base">
+                <span className=" absolute inset-0 w-full h-full flex justify-center    items-center p-5 text-center font-semibold    transition-all z-10 card-back   text-sm md:text-base opacity-0 duration-700 group-hover/item:opacity-100 ">
                   {ele.description}
                 </span>
               </div>

@@ -11,6 +11,7 @@ export default function Candidates() {
     {
       id: 1,
       title: t("services.Training/Formation.title"),
+      svg: "training.svg",
       description: [
         t("services.Training/Formation.description.0"),
         t("services.Training/Formation.description.1"),
@@ -27,6 +28,7 @@ export default function Candidates() {
     {
       id: 2,
       title: t("services.JobPlacement.title"),
+      svg: "social-management.svg",
       description: [
         t("services.JobPlacement.description.0"),
         t("services.JobPlacement.description.1"),
@@ -40,6 +42,7 @@ export default function Candidates() {
     {
       id: 3,
       title: t("services.VocationalTrainingPlacement.title"),
+      svg: "search-job.svg",
       description: [
         t("services.VocationalTrainingPlacement.description.0"),
         t("services.VocationalTrainingPlacement.description.1"),
@@ -52,6 +55,7 @@ export default function Candidates() {
     {
       id: 4,
       title: t("services.DegreeRecognition.title"),
+      svg: "academy-cap.svg",
       description: [
         t("services.DegreeRecognition.description.0"),
         t("services.DegreeRecognition.description.1"),
@@ -61,6 +65,7 @@ export default function Candidates() {
     },
     {
       id: 5,
+      svg: "diploma.svg",
       title: t("services.ProfessionalQualification.title"),
       description: [
         t("services.ProfessionalQualification.description.0"),
@@ -69,6 +74,7 @@ export default function Candidates() {
     },
     {
       id: 6,
+      svg: "passport.svg",
       title: t("services.On-boardingandIntegration.title"),
       description: [
         t("services.On-boardingandIntegration.description.0"),
@@ -107,20 +113,28 @@ export default function Candidates() {
         </div>
 
         <div className="container">
-          <div className="px-2 grid grid-cols-1 lg:grid-cols-2   gap-4  list-outside ">
+          <div className="px-2 grid grid-cols-1 lg:grid-cols-3   gap-4   ">
             {Services.map((ele, index) => (
               <div
                 key={index}
-                className=" flex flex-col  bg-white shadow  rounded-lg "
+                className=" relative    rounded  h-60 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    "
               >
-                <span className="text-sm md:text-base  font-semibold mb-4 text-white rounded-t-lg p-4 bg-[#0149a6]">
-                  {ele.title}
-                </span>
-                <ul className="p-3 pl-4 flex flex-col gap-2    ">
+                <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
+                  <Image
+                    quality={100}
+                    src={`/image/candidates/icon/${ele.svg}`}
+                    className=" w-14  "
+                    width={500}
+                    height={500}
+                    alt="Explorem"
+                  />
+                  <span>{ele.title}</span>
+                </div>
+                <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-10    list-outside  font-bold    transition-all z-10 card-back   text-sm md:text-base opacity-0 duration-700 group-hover/item:opacity-100   ">
                   {ele.description.map((ele, index) => (
                     <li
                       key={index}
-                      className=" text-xs md:text-sm capitalize  border-[#0149a6] border-l-4 pl-4 "
+                      className=" text-xs md:text-sm capitalize  "
                     >
                       {ele}
                     </li>
