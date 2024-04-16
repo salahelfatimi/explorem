@@ -83,7 +83,7 @@ export default function Employers() {
               
               <div
                 key={index}
-                className="relative   t-2 rounded w-full  h-60 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card     "
+                className="relative  last:col-start-1 lg:last:col-start-2  rounded w-full  h-60 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card     "
               >
                 <span className="absolute font-extrabold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                   {ele.title}
