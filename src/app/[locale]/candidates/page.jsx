@@ -118,17 +118,17 @@ export default function Candidates() {
             {Services.map((ele, index) => (
               <div
                 key={index}
-                className=" relative    rounded  h-96 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    "
+                className=" relative    rounded h-[20rem]  sm:h-[16rem] lg:h-64 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    "
               >
                 <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <span>{ele.svg}</span>
                   <span>{ele.title}</span>
                 </div>
-                <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-10    list-outside  font-bold    transition-all z-10 card-back   text-sm md:text-base opacity-0 duration-700 group-hover/item:opacity-100   ">
+                <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                   {ele.description.map((ele, index) => (
                     <li
                       key={index}
-                      className=" text-xs md:text-sm capitalize  "
+                      className=" text-xs   capitalize  "
                     >
                       {ele}
                     </li>
