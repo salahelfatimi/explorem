@@ -2,17 +2,17 @@ import { fetchImageScroll } from "@/app/api/data/ImageScroll/actions";
 import Image from "next/image";
 export default async function FetchLogoScroll() {
     const images = [
-      
+
       "Barmer.png",
       "Brera.png",
       "Little.png",
       "MarburgConsulting.png",
-      "Mfpd.png",
+      "mfpd.png",
       "Barmer.png",
       "Brera.png",
       "Little.png",
       "MarburgConsulting.png",
-      "Mfpd.png",
+      "mfpd.png",
     ]
   return (
     <>
