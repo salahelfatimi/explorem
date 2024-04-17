@@ -8,6 +8,7 @@ import FetchImageScroll from "@/components/fetchImageScroll";
 import { Instagram, Link2 } from "react-feather";
 import LatestBlog from "./blogs/components/latestBlog";
 import FetchLogoScroll from "@/components/fetchLogoScroll";
+import CourseSchedule from "@/components/Schedule/courseSchedule";
 
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
@@ -190,6 +191,9 @@ export default async function Index() {
             </InfiniteHorizontalScroll>
           </div>
         </div>
+      </div>
+      <div className=" py-8 ">
+        <CourseSchedule/>
       </div>
     </>
   );

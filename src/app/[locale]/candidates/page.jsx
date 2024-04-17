@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 import InscriptionCondidates from "./registrationCondidates/page";
 import FetchImageScroll from "@/components/fetchImageScroll";
+import { Book, FileSearch2, GraduationCap, Plane, School, UserSearch } from "lucide-react";
 
 export default function Candidates() {
   const t = useTranslations("Candidates");
@@ -11,7 +12,7 @@ export default function Candidates() {
     {
       id: 1,
       title: t("services.Training/Formation.title"),
-      svg: "training.svg",
+      svg: <Book size={40} />,
       description: [
         t("services.Training/Formation.description.0"),
         t("services.Training/Formation.description.1"),
@@ -28,7 +29,7 @@ export default function Candidates() {
     {
       id: 2,
       title: t("services.JobPlacement.title"),
-      svg: "social-management.svg",
+      svg: <UserSearch size={40} />,
       description: [
         t("services.JobPlacement.description.0"),
         t("services.JobPlacement.description.1"),
@@ -42,7 +43,7 @@ export default function Candidates() {
     {
       id: 3,
       title: t("services.VocationalTrainingPlacement.title"),
-      svg: "search-job.svg",
+      svg: <FileSearch2 size={40} />,
       description: [
         t("services.VocationalTrainingPlacement.description.0"),
         t("services.VocationalTrainingPlacement.description.1"),
@@ -55,7 +56,7 @@ export default function Candidates() {
     {
       id: 4,
       title: t("services.DegreeRecognition.title"),
-      svg: "academy-cap.svg",
+      svg: <GraduationCap size={40} />,
       description: [
         t("services.DegreeRecognition.description.0"),
         t("services.DegreeRecognition.description.1"),
@@ -65,7 +66,7 @@ export default function Candidates() {
     },
     {
       id: 5,
-      svg: "diploma.svg",
+      svg:  <School size={40}/>,
       title: t("services.ProfessionalQualification.title"),
       description: [
         t("services.ProfessionalQualification.description.0"),
@@ -74,7 +75,7 @@ export default function Candidates() {
     },
     {
       id: 6,
-      svg: "passport.svg",
+      svg: <Plane size={40}/>,
       title: t("services.On-boardingandIntegration.title"),
       description: [
         t("services.On-boardingandIntegration.description.0"),
@@ -113,21 +114,14 @@ export default function Candidates() {
         </div>
 
         <div className="container">
-          <div className="px-2 grid grid-cols-1 lg:grid-cols-3   gap-4   ">
+          <div className="px-2 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3   gap-4   ">
             {Services.map((ele, index) => (
               <div
                 key={index}
-                className=" relative    rounded  h-60 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    "
+                className=" relative    rounded  h-96 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    "
               >
                 <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
-                  <Image
-                    quality={100}
-                    src={`/image/candidates/icon/${ele.svg}`}
-                    className=" w-14  "
-                    width={500}
-                    height={500}
-                    alt="Explorem"
-                  />
+                <span>{ele.svg}</span>
                   <span>{ele.title}</span>
                 </div>
                 <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-10    list-outside  font-bold    transition-all z-10 card-back   text-sm md:text-base opacity-0 duration-700 group-hover/item:opacity-100   ">

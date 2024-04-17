@@ -1,3 +1,4 @@
+import { Clock1, MapPinIcon, PhoneCall, PhoneCallIcon } from "lucide-react";
 import Image from "next/image";
 import {
   Clock,
@@ -15,7 +16,7 @@ export default function Footer() {
       <div className=" py-20 container gap-8 flex flex-col lg:flex-row items-center justify-between">
         <div className=" flex flex-col   gap-4">
           <span className="flex flex-col lg:flex-row text-center items-center hover:underline decoration-4 underline-offset-4 hover:duration-700 transition  decoration-[#0149A6] gap-2">
-            <MapPin size={30} className=" stroke-[#0149A6]" />
+            <MapPinIcon size={30} className=" stroke-[#0149A6]" />
             <a
               href="https://maps.app.goo.gl/djcimpjqdNjy9pcZ6"
               target="_blank"
@@ -25,13 +26,13 @@ export default function Footer() {
             </a>
           </span>
           <span className="flex flex-col lg:flex-row text-center items-center hover:underline decoration-4 underline-offset-4 hover:duration-700 transition  decoration-[#0149A6] gap-2">
-            <Phone size={30} className=" stroke-[#0149A6]" />
+            <PhoneCallIcon size={30} className=" stroke-[#0149A6]" />
             <a href="tel:+212809-891297" className=" font-bold text-white">
               (+212) 8 09 89 12 97
             </a>
           </span>
           <span className="flex  flex-col lg:flex-row text-center items-center  gap-2">
-            <Clock size={30} className=" stroke-[#0149A6]" />
+            <Clock1 size={30} className=" stroke-[#0149A6]" />
             <p className=" font-bold text-white ">
               Monday - Friday: 9 AM - 6 PM{" "}
             </p>

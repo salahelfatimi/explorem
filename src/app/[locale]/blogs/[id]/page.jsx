@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { Clock, Facebook, Instagram, Send } from "react-feather";
 import { fetchSingleBlog } from "@/app/api/data/blog/actions";
+
 export default async function BlogDetail({ params }) {
   const id = params?.id;
 
@@ -58,15 +59,15 @@ export default async function BlogDetail({ params }) {
                 {new Date(blog.createAt).getFullYear()}
               </p>
             </span>
-            <span className=" rounded-full border-[#134ba1]  border-2 w-fit h-fit p-2">
-              <Facebook className=" stroke-[#134ba1] stroke-2" />
-            </span>
-            <span className=" rounded-full border-[#134ba1] border-2 w-fit h-fit p-2">
-              <Instagram className=" stroke-[#134ba1] stroke-2" />
-            </span>
-            <span className=" rounded-full border-[#134ba1] border-2 w-fit h-fit p-2">
-              <Send className=" stroke-[#134ba1] stroke-2" />
-            </span>
+            <a href="https://web.facebook.com/ExploremSARL" className="  rounded-full duration-500 border-[#134ba1] bg-[#134ba1] hover:bg-white  border-2 w-fit h-fit p-2">
+              <Facebook className=" stroke-[#fff] hover:stroke-[#134ba1] stroke-2" />
+            </a>
+            <a href="https://www.instagram.com/explorem21/" className=" rounded-full duration-500 border-[#134ba1] bg-[#134ba1] hover:bg-white border-2 w-fit h-fit p-2">
+              <Instagram className=" stroke-[#fff] hover:stroke-[#134ba1] stroke-2" />
+            </a>
+            <a href={`https://www.facebook.com/sharer/sharer.php?u=https://www.explorem.net/en/blogs/${id}`} className=" rounded-full duration-500 border-[#134ba1] hover:bg-white bg-[#134ba1] border-2 w-fit h-fit p-2">
+              <Send className=" stroke-[#fff] hover:stroke-[#134ba1] stroke-2" />
+            </a>
           </div>
         </div>
 

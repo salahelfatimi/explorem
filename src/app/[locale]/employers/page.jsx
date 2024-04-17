@@ -4,48 +4,59 @@ import Image from "next/image";
 import Contact from "../contact/page";
 import { useTranslations } from "next-intl";
 import FetchImageScroll from "@/components/fetchImageScroll";
+import { Crosshair, EyeIcon, FileTextIcon, FolderCheck, GraduationCap, Handshake, Infinity, MousePointerClick, PaperclipIcon, Plane, RotateCcwIcon, Share2, User2 } from "lucide-react";
 
 export default function Employers() {
   const t = useTranslations("Employers");
 
   const services = [
     {
+      svg:<Handshake  size={40}/>,
       title: t("Services.line1.title"),
       description: t("Services.line1.description"),
     },
     {
+      svg:<Crosshair size={40}/>,
       title: t("Services.line2.title"),
       description: t("Services.line2.description"),
     },
     {
+      svg:<GraduationCap  size={40}/>,
       title: t("Services.line3.title"),
       description: t("Services.line3.description"),
     },
     {
+      svg:<FileTextIcon size={40}/>,
       title: t("Services.line4.title"),
       description: t("Services.line4.description"),
     },
     {
+      svg:<MousePointerClick size={40}/>,
       title: t("Services.line5.title"),
       description: t("Services.line5.description"),
     },
     {
+      svg:<EyeIcon size={40}/>,
       title: t("Services.line6.title"),
       description: t("Services.line6.description"),
     },
     {
+      svg:<PaperclipIcon size={40}/>,
       title: t("Services.line7.title"),
       description: t("Services.line7.description"),
     },
     {
+      svg: <Plane size={40}/>,
       title: t("Services.line8.title"),
       description: t("Services.line8.description"),
     },
     {
+      svg:<FolderCheck size={40}/>,
       title: t("Services.line9.title"),
       description: t("Services.line9.description"),
     },
     {
+      svg:<Infinity  size={40}/>,
       title: t("Services.line10.title"),
       description: t("Services.line10.description"),
     },
@@ -85,9 +96,10 @@ export default function Employers() {
                 key={index}
                 className="relative  last:col-start-1 lg:last:col-start-2  rounded w-full  h-60 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card     "
               >
-                <span className="absolute font-extrabold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
+                <div className="absolute font-extrabold flex-col gap-4 p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
+                  {ele.svg}
                   {ele.title}
-                </span>
+                </div>
                 <span className=" absolute inset-0 w-full h-full flex justify-center    items-center p-5 text-center font-semibold    transition-all z-10 card-back   text-sm md:text-base opacity-0 duration-700 group-hover/item:opacity-100 ">
                   {ele.description}
                 </span>

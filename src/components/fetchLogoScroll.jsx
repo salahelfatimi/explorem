@@ -6,10 +6,12 @@ export default async function FetchLogoScroll() {
       "Brera.png",
       "Little.png",
       "MarburgConsulting.png",
+      "Mfpd.png",
       "Barmer.png",
       "Brera.png",
       "Little.png",
-      "MarburgConsulting.png"
+      "MarburgConsulting.png",
+      "Mfpd.png",
     ]
   return (
     <>
