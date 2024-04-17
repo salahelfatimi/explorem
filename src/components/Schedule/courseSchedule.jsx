@@ -6,9 +6,7 @@ export default function CourseSchedule() {
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
+    "Thursday"
 ];
 const currentDayIndex = new Date().getDay();
   return (
