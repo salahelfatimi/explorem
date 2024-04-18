@@ -122,7 +122,7 @@ export default function Candidates() {
 
         <div className="container">
           <div className="px-2 columns-1 lg:columns-2 space-y-3   gap-4   ">
-            <div className=" relative    rounded h-[20rem]  sm:h-[16rem] lg:h-64 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
+            <div className=" relative    rounded h-[18rem]  sm:h-[16rem] lg:h-64 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
               <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <Book size={40} />
                 <span>{t("services.Training/Formation.title")}</span>
@@ -160,7 +160,7 @@ export default function Candidates() {
                 </li>
               </ul>
             </div>
-            <div className=" relative    rounded h-[16rem]  sm:h-[12rem] lg:h-48 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
+            <div className=" relative    rounded h-[15rem]  sm:h-[12rem] lg:h-48 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
               <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <UserSearch size={40} />
                 <span>{t("services.JobPlacement.title")}</span>
@@ -189,7 +189,7 @@ export default function Candidates() {
                 </li>
               </ul>
             </div>
-            <div className=" relative    rounded h-[16rem]  sm:h-[10rem] lg:h-40 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
+            <div className=" relative    rounded h-[14rem]  sm:h-[10rem] lg:h-40 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
               <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <FileSearch2 size={40} />
                 <span>{t("services.VocationalTrainingPlacement.title")}</span>
@@ -215,7 +215,7 @@ export default function Candidates() {
                 </li>
               </ul>
             </div>
-            <div className=" relative    rounded h-[11rem]  sm:h-[8rem] lg:h-36 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
+            <div className=" relative    rounded h-[10rem]  sm:h-[8rem] lg:h-36 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
               <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <GraduationCap size={40} />
                 <span>{t("services.DegreeRecognition.title")}</span>
@@ -249,7 +249,7 @@ export default function Candidates() {
                 </li>
               </ul>
             </div>
-            <div className=" relative    rounded h-[12rem]  sm:h-[8rem] lg:h-40 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
+            <div className=" relative    rounded h-[11rem]  sm:h-[8rem] lg:h-40 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
               <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <Plane size={40} />
                 <span>{t("services.On-boardingandIntegration.title")}</span>
