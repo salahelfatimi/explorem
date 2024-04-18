@@ -1,6 +1,6 @@
 import Image from "next/image";
-import DeletedTestimonial from "./deletedTestimonial";
-
+import PublishedTestimonial from "./publishedTestimonial";
+import DeletedTestimonial from "../components/deletedTestimonial";
 
 export default async function TestimonialComments({ testimonial }) {
   const { id, text, image, author, fileKey, fileUrl, createdAt } =
@@ -19,9 +19,10 @@ export default async function TestimonialComments({ testimonial }) {
         <span className=" font-bold bg-red-600 w-fit py-1 px-4 text-white capitalize">{isImage(fileUrl)?"Image":isVideo(fileUrl)?"video":istext(fileUrl)?"File":"Comment"}</span>
 
          
-       
+          <div className="flex flex-row gap-4 items-center">
           <DeletedTestimonial id={id} fileKey={fileKey} />
-      
+          <PublishedTestimonial id={id}/>
+          </div>
         </div>
         {isImage(fileUrl) ? (
           <Image

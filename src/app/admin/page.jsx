@@ -1,10 +1,12 @@
 "use client";
-import {   useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { signIn } from "next-auth/react";
 
-export default  function Login() {
+export default function Login() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [validation, setValidation] = useState(false);
   const router = useRouter();
   const ref = useRef();
   const [userInfo, setUserInfo] = useState({
@@ -12,21 +14,12 @@ export default  function Login() {
     password: "",
   });
 
- 
- 
- 
- 
-  const handleChange = (e) => {
-    setUserInfo({
-      ...userInfo,
-      [e.target.name]: e.target.value,
-    });
-  };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if ( !userInfo.email || !userInfo.password) {
-      toast.error("Must provide all the Credentials ! ");
-    } else {
+    setValidation(true);
+    if (userInfo.email && userInfo.password) {
+      setIsLoading(true);
+      setValidation(false);
       try {
         const res = await signIn("credentials", {
           email: userInfo.email,
@@ -37,23 +30,32 @@ export default  function Login() {
 
         if (!res.ok) {
           toast.error("Problem signing in!");
+          setIsLoading(false);
         }
 
         if (res.error) {
           toast.error("Invalid credentials");
-          
+          setIsLoading(false);
+
           return;
         }
 
-       
         router.replace("/admin/dashboard");
+        setIsLoading(false);
       } catch (error) {
         toast.error("Something went wrong");
+        setIsLoading(false);
+      } finally {
+        setIsLoading(false);
       }
     }
   };
- 
-  
+  const handleChange = (e) => {
+    setUserInfo({
+      ...userInfo,
+      [e.target.name]: e.target.value,
+    });
+  };
   return (
     <>
       <Toaster
@@ -70,29 +72,44 @@ export default  function Login() {
           onSubmit={handleSubmit}
           className="flex flex-col w-full gap-6"
         >
-          <input
-            type="text"
-            className="p-2 border placeholder:text-center rounded"
-            placeholder="email"
-            name="email"
-            value={userInfo.email}
-            onChange={handleChange}
-            
-          />
-          <input
-            type="password"
-            value={userInfo.password}
-            
-            name="password"
-            onChange={handleChange}
-            className="p-2 border placeholder:text-center rounded"
-            placeholder="********"
-          />
+          <label className="block space-y-2 w-full">
+            <input
+              type="text"
+              className={`${
+                !userInfo.email && validation && "border-red-500 "
+              } bg-[#ffffff]  w-full font-bold text-center  placeholder:text-center border p-4 rounded-md text-xs`}
+              placeholder="email"
+              name="email"
+              value={userInfo.email}
+              onChange={handleChange}
+            />
+            <p className=" text-red-500 text-xs font-medium">
+              {!userInfo.email && validation && "Please enter your Email"}
+            </p>
+          </label>
+          <label className="block space-y-2 w-full">
+            <input
+              type="password"
+              value={userInfo.password}
+              name="password"
+              onChange={handleChange}
+              className={`${
+                !userInfo.password && validation && "border-red-500 "
+              } bg-[#ffffff]  w-full font-bold text-center  placeholder:text-center border p-4 rounded-md text-xs`}
+              placeholder="********"
+            />
+            <p className=" text-red-500 text-xs font-medium">
+              {!userInfo.password &&
+                validation &&
+                "Please enter your Password"}
+            </p>
+          </label>
           <button
             type="submit"
-            className="bg-[#0149a6] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-[#0149a6] hover:bg-blue-700 text-white font-bold py-4 px-4 rounded"
+            disabled={isLoading}
           >
-            Login
+            {isLoading ? "logging..." : "Login"}
           </button>
         </form>
       </div>

@@ -37,9 +37,16 @@ export const addTestimonialfile = async (formDataToSend) => {
   revalidatePath(`/testimonial`);
 };
 
+
+
 export const fetchTestimonial = async (take) => {
+ 
+
   try {
     const testimonial = await prisma.testimonial.findMany({
+      where:{
+        published:true
+    },
       orderBy: {
         createdAt: "desc",
       },
@@ -47,17 +54,21 @@ export const fetchTestimonial = async (take) => {
       take: take,
     });
     revalidatePath(`/testimonial`);
+    revalidatePath(`/admin/dashboard/testimonial`);
     return testimonial;
   } catch (error) {
     throw new Error(`Error retrieving Testimonial: ${error.message}`);
   }
 };
 
-export const fetchTestimonialAdmin = async (take) => {
+export const fetchTestimonialFalseAdmin = async (take) => {
  
 
   try {
     const testimonial = await prisma.testimonial.findMany({
+      where:{
+          published:false
+      },
       orderBy: {
         createdAt: "desc",
       },
@@ -70,6 +81,24 @@ export const fetchTestimonialAdmin = async (take) => {
     throw new Error(`Error retrieving Testimonial: ${error.message}`);
   }
 };
+
+export const publishedTestimonial = async (idTestimonial) => {
+ 
+  try {
+    await prisma.testimonial.update({
+      where: {
+        id: idTestimonial,
+      },
+      data: {
+        published: true,
+      },
+    });
+    revalidatePath(`/admin/dashboard/testimonial/testimonialNotValidate`);
+  } catch (error) {
+    throw new Error(`Error retrieving Testimonial: ${error.message}`);
+  }
+};
+
 export const deletedTestimonial = async (idTestimonial,fileKey) => {
  
   try {

@@ -46,7 +46,7 @@ const RegisterPage = () => {
             loading: "Registering ...",
             success: (data) => {
               ref?.current?.reset(); // Reset the form
-              router.push("/auth/login"); // Navigate to login page
+              router.push("/admin"); // Navigate to login page
               return data ? <b>{data.message}</b> : null;
             },
             error: (error) => (error ? <b>{error.message}</b> : null),
