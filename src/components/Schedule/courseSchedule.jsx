@@ -2,11 +2,12 @@ import Image from "next/image";
 
 export default function CourseSchedule() {
   const dayNames = [
-    "Sunday",
+   
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thursday"
+    "Thursday",
+    "Friday"
 ];
 const currentDayIndex = new Date().getDay();
   return (
