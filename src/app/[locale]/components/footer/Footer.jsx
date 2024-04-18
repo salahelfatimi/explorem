@@ -1,4 +1,5 @@
 import { Clock1, MapPinIcon, PhoneCall, PhoneCallIcon } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import {
   Clock,
@@ -10,7 +11,8 @@ import {
   Youtube,
 } from "react-feather";
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations("Footer");
   return (
     <footer className="bg-[#22242B]">
       <div className=" py-20 container gap-8 flex flex-col lg:flex-row items-center justify-between">
@@ -83,24 +85,24 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-4 w-full lg:w-auto">
           <span className=" font-bold text-xl text-center lg:text-left text-white">
-            Newsletter
+            {t('newsLetter')}
           </span>
           <input
             type="text"
             name="Newsletter"
-            placeholder="Your Email"
+            placeholder={t('email')}
             className=" placeholder-white bg-[#22242B] border-[#0149A6] border-2 py-2 px-4 rounded-full "
             id="Newsletter"
           />
           <button className="bg-[#0149A6] rounded-full py-2 px-4 text-white font-semibold uppercase">
-            subscribe
+          {t('subscribe')}
           </button>
         </div>
       </div>
       <div className=" flex items-center justify-center bg-[#0149A6] py-4">
         <span className=" flex gap-4 flex-col lg:flex-row items-center font-bold capitalize text-center md:text-start text-white ">
-          Copyright &copy; {new Date().getFullYear()} . All rights are reserved
-          by{" "}
+        {t('Copyright1')} &copy; {new Date().getFullYear()} .{t('Copyright2')}
+         
           <span className="bg-white text-[#0149A6] w-fit p-2 uppercase font-bold">
             explorem
           </span>

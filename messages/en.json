@@ -1,4 +1,11 @@
 {
+  "Footer": {
+    "newsLetter": "Newsletter",
+    "email": "Your Email",
+    "subscribe":"SUBSCRIBE",
+    "Copyright1": "Copyright",
+    "Copyright2": "All Rights Are Reserved By"
+  },
   "Blog": {
     "title": "Our Blog",
     "description": "All the latest Explorem news, straight from the team . ",
@@ -23,6 +30,8 @@
       "Candidates": "Register for Candidates",
       "Employers": "Apply Employers"
     },
+    "latestUpdates": "Latest Updates",
+    "blog": "Blog",
     "whatWeHaveAchieved": {
       "title": "What we have achieved?",
       "line1": "Presented our program to more than 2,000+ student-nurses and graduates all over Morocco.",
@@ -36,13 +45,22 @@
       "line9": "From February to March 2023, 54 of our active candidates directly signed their work contracts with the German employers.",
       "line10": "In 2021 to 2022, more than 100 nurse candidates who were issued with final deficit notice and qualified to take knowledge test; 2 candidates with direct recognition; and more than 80 candidates who were recipients of the program were relocated to Germany."
     },
-   
-   
+
     "testimonial": {
       "title": "testimonial",
       "description": "What Our Happy Clients Say!"
     },
-    "seeMore": "See More"
+    "seeMore": "See More",
+    "ourPartners": "Our Partners",
+    "germanCourseSchedule": "German Course Schedule",
+    "onsiteCourse": "ONSITE COURSE",
+    "standardProgram": "Standard Program",
+    "intensiveProgram": "Intensive Program",
+    "ongoingOnsiteCourse": "Ongoing Onsite Course",
+    "ongoingRegistration": "Ongoing Registration (until April",
+    "onlineCourse": "ONLINE COURSE",
+    "hours/day": "hours/ day",
+    "time": "Time"
   },
   "Navbar": {
     "home": "Home",

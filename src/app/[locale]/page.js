@@ -65,7 +65,7 @@ export default async function Index() {
                 alt="Explorem"
               />
               <h2 className=" text-3xl font-bold text-[#0149a6] capitalize">
-                Latest Updates
+                {t('latestUpdates')}
               </h2>
             </div>
             <LatestBlog />
@@ -74,7 +74,7 @@ export default async function Index() {
                 className="bg-[#0149a6] w-fit py-2 border-white px-4 font-semibold border-2 duration-500 hover:text-[#0149a6] hover:bg-white hover:border-[#0149a6]"
                 href="/blog"
               >
-                {t("seeMore")} Blog
+                {t("seeMore")} {t('blog')}
               </Link>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default async function Index() {
       <div>
         <div className="flex justify-center py-6 gap-4 items-center">
           <h2 className=" text-3xl border-b-4  border-[#0149a6] font-bold text-[#0149a6] capitalize">
-            Our Partners
+          {t("ourPartners")}
           </h2>
         </div>
         <div className="bg-[#fff] py-6 ">
@@ -193,7 +193,7 @@ export default async function Index() {
         </div>
       </div>
       <div className=" py-8 ">
-        <CourseSchedule/>
+        <CourseSchedule />
       </div>
     </>
   );
