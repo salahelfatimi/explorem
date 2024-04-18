@@ -9,7 +9,7 @@ export default function CourseSchedule() {
     "Thursday",
     "Friday"
 ];
-const currentDayIndex = new Date().getDay();
+const currentDayIndex = new Date().getDay()-1;
   return (
     <div className=" flex items-center flex-col gap-8">
       <div className="flex gap-2 justify-center items-center">
