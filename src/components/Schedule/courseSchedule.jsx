@@ -4,7 +4,7 @@ export default function CourseSchedule() {
   const dayNames = [
    
     "Monday",
-    
+
     "Tuesday",
     "Wednesday",
     "Thursday",

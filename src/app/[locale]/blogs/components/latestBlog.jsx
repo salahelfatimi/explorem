@@ -15,10 +15,8 @@ export default async function LatestBlog() {
   return (
     <>
       <div className="flex flex-col gap-4">
-        {/* <h2 className=" font-bold  text-2xl bg-[#134ba1] text-white w-full text-center py-2 px-3 ">
-        {t('LatestBlog')}
-        </h2> */}
-        <div className=" w-full gap-4 lg:items-center  flex flex-col lg:flex-row-reverse ">
+        
+        <div className="container w-full gap-4 lg:items-center  flex flex-col lg:flex-row-reverse ">
           
           <Image
             blurDataURL={imageUrl}
@@ -53,7 +51,7 @@ export default async function LatestBlog() {
             </div>
             <Link
               href={`/blogs/${id}`}
-              className="border-2 border-[#134ba1] py-2 px-3 rounded font-bold text-[#134ba1] w-fit"
+              className="border-2 border-[#134ba1] py-2 px-3 rounded font-bold text-[#134ba1] w-full text-center lg:w-fit"
             >
               {t("readMore")}
             </Link>

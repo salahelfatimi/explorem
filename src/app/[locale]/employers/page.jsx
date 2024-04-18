@@ -4,48 +4,59 @@ import Image from "next/image";
 import Contact from "../contact/page";
 import { useTranslations } from "next-intl";
 import FetchImageScroll from "@/components/fetchImageScroll";
+import { Crosshair, EyeIcon, FileTextIcon, FolderCheck, GraduationCap, Handshake, Infinity, MousePointerClick, PaperclipIcon, Plane, RotateCcwIcon, Share2, User2 } from "lucide-react";
 
 export default function Employers() {
   const t = useTranslations("Employers");
 
   const services = [
     {
+      svg:<Handshake  size={40}/>,
       title: t("Services.line1.title"),
       description: t("Services.line1.description"),
     },
     {
+      svg:<Crosshair size={40}/>,
       title: t("Services.line2.title"),
       description: t("Services.line2.description"),
     },
     {
+      svg:<GraduationCap  size={40}/>,
       title: t("Services.line3.title"),
       description: t("Services.line3.description"),
     },
     {
+      svg:<FileTextIcon size={40}/>,
       title: t("Services.line4.title"),
       description: t("Services.line4.description"),
     },
     {
+      svg:<MousePointerClick size={40}/>,
       title: t("Services.line5.title"),
       description: t("Services.line5.description"),
     },
     {
+      svg:<EyeIcon size={40}/>,
       title: t("Services.line6.title"),
       description: t("Services.line6.description"),
     },
     {
+      svg:<PaperclipIcon size={40}/>,
       title: t("Services.line7.title"),
       description: t("Services.line7.description"),
     },
     {
+      svg: <Plane size={40}/>,
       title: t("Services.line8.title"),
       description: t("Services.line8.description"),
     },
     {
+      svg:<FolderCheck size={40}/>,
       title: t("Services.line9.title"),
       description: t("Services.line9.description"),
     },
     {
+      svg:<Infinity  size={40}/>,
       title: t("Services.line10.title"),
       description: t("Services.line10.description"),
     },
@@ -78,16 +89,18 @@ export default function Employers() {
             </h2>
           </div>
 
-          <div className="px-2 grid grid-cols-1 lg:grid-cols-2  container gap-4  list-outside ">
+          <div className="  grid grid-cols-1 lg:grid-cols-3 container gap-6   ">
             {services.map((ele, index) => (
+              
               <div
                 key={index}
-                className="border-l-4 flex flex-col border-[#0149a6] bg-white p-2 pl-4  rounded-r-sm container"
+                className="relative  last:col-start-1 lg:last:col-start-2  rounded w-full  h-60 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card     "
               >
-                <span className="text-md lg:text-lg  font-semibold mb-4 text-[#0149a6]">
+                <div className="absolute font-extrabold flex-col gap-4 p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
+                  {ele.svg}
                   {ele.title}
-                </span>
-                <span className="text-gray-700 text-sm md:text-base">
+                </div>
+                <span className=" absolute inset-0 w-full h-full flex justify-center    items-center p-5 text-center font-semibold    transition-all z-10 card-back   text-sm md:text-base opacity-0 duration-700 group-hover/item:opacity-100 ">
                   {ele.description}
                 </span>
               </div>

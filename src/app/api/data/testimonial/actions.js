@@ -131,7 +131,7 @@ export const fetchTestimonial = async () => {
     },
   ];
 
-  return testimonial.map(item => {
+  return testimonial.map((item) => {
     return {
       _id: item._id.$oid,
       image: item.image,
@@ -139,15 +139,81 @@ export const fetchTestimonial = async () => {
       fileUrl: item.fileUrl,
       fileKey: item.fileKey,
       createdAt: formatDate(item.createdAt.$date),
-      updatedAt: formatDate(item.updatedAt.$date)
+      updatedAt: formatDate(item.updatedAt.$date),
+    };
+  });
+};
+
+export const fetchTestimonialLatest = async () => {
+  const testimonial = [
+    {
+      _id: {
+        $oid: "6617183bb2c32fb2c43e73fe",
+      },
+      image: "man",
+      author: "Jamal Bamou",
+      fileUrl:
+        "https://utfs.io/f/619ed8da-f5f4-431c-b516-10e33998f537-rlti49.mp4",
+      fileKey: "619ed8da-f5f4-431c-b516-10e33998f537-rlti49.mp4",
+      createdAt: {
+        $date: "2024-04-10T22:52:43.622Z",
+      },
+      updatedAt: {
+        $date: "2024-04-10T22:52:43.622Z",
+      },
+    },
+    {
+      _id: {
+        $oid: "6617d186e4a47aeaaa42c0bf",
+      },
+      image: "man",
+      author: "Ayoub Benchrifa",
+      fileUrl:
+        "https://utfs.io/f/022c5d24-16c4-4b3b-8338-b9b7c96db9c7-731j5e.mp4",
+      fileKey: "022c5d24-16c4-4b3b-8338-b9b7c96db9c7-731j5e.mp4",
+      createdAt: {
+        $date: "2024-04-11T12:03:18.102Z",
+      },
+      updatedAt: {
+        $date: "2024-04-11T12:03:18.102Z",
+      },
+    },
+
+    {
+      _id: {
+        $oid: "6618003a43e05984e2d70d6f",
+      },
+      image: "women",
+      author: "ProSo",
+      fileUrl:
+        "https://utfs.io/f/7eabdb14-9bcd-4cda-b440-88cf34703b8c-fazkdw.png",
+      fileKey: "7eabdb14-9bcd-4cda-b440-88cf34703b8c-fazkdw.png",
+      createdAt: {
+        $date: "2024-04-11T15:22:34.076Z",
+      },
+      updatedAt: {
+        $date: "2024-04-11T15:22:34.076Z",
+      },
+    },
+  ];
+
+  return testimonial.map((item) => {
+    return {
+      _id: item._id.$oid,
+      image: item.image,
+      author: item.author,
+      fileUrl: item.fileUrl,
+      fileKey: item.fileKey,
+      createdAt: formatDate(item.createdAt.$date),
+      updatedAt: formatDate(item.updatedAt.$date),
     };
   });
 };
 
 const formatDate = (isoDate) => {
   const date = new Date(isoDate);
-  const day = date.getDate().toString().padStart(2, '0');
-  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, "0");
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
   const year = date.getFullYear();
   return `${month}/${day}/${year}`;
 };

@@ -13,3 +13,12 @@
   flex: 0 0 100%;
   min-width: 0;
 }
+
+.card:hover {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}

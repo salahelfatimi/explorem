@@ -1,5 +1,4 @@
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
-import { Instagram, Link } from "react-feather";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import FetchImageScroll from "@/components/fetchImageScroll";
@@ -121,59 +120,7 @@ export default function About({ params: { locale } }) {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className=" container flex flex-col  gap-4">
-        <h2 className=" capitalize font-bold text-center text-xl lg:text-3xl text-[#0149a6]">
-          {t("whatWeHaveAchieved.title")}
-        </h2>
-
-        <ul className="*:border-l-4 *:border-[#0149a6] *:shadow *:bg-white *:p-2 *:pl-4 *:rounded-r-sm  px-2 lg:text-lg flex flex-col gap-4 font-normal list-outside leading-loose ">
-          <li>{t("whatWeHaveAchieved.line1")}</li>
-          <li>{t("whatWeHaveAchieved.line2")}</li>
-          <li>{t("whatWeHaveAchieved.line3")}</li>
-          <li>{t("whatWeHaveAchieved.line4")}</li>
-          <li>
-            {t("whatWeHaveAchieved.line5")}
-            <div className="flex gap-4 items-center ">
-              <a
-                arget="_blank"
-                href="https://www.instagram.com/reel/C3lKOTfAwz3/?igsh=MTRkejE5YWY1bDViMA=="
-              >
-                <Instagram
-                  size={30}
-                  className="  stroke-[#fff] rounded-md p-1 bg-[#f7543e]"
-                />
-              </a>
-              <a
-                arget="_blank"
-                href="https://www.zdf.de/nachrichten/politik/ausland/fachkraeftemangel-pflegepersonal-marokko-100.html"
-              >
-                <Link
-                  size={30}
-                  className=" stroke-[#fff] rounded-md p-1 bg-[#0149a6]"
-                />
-              </a>
-            </div>
-          </li>
-          <li>{t("whatWeHaveAchieved.line6")}</li>
-          <li className=" border-l-4 border-[#0149a6] shadow  bg-white p-2 pl-4 flex flex-col gap-2 rounded-r-sm">
-            {t("whatWeHaveAchieved.line7")}
-            <div className="flex gap-4 items-center ">
-              <a
-                arget="_blank"
-                href="https://www1.wdr.de/lokalzeit/fernsehen/koeln/pflegeinternat-gegen-pflegekraeftemangel-im-bergischen--100.html"
-              >
-                <Link
-                  size={30}
-                  className=" stroke-[#fff] rounded-md p-1 bg-[#0149a6]"
-                />
-              </a>
-            </div>
-          </li>
-          <li>{t("whatWeHaveAchieved.line8")}</li>
-          <li>{t("whatWeHaveAchieved.line9")}</li>
-          <li>{t("whatWeHaveAchieved.line10")}</li>
-        </ul>
-      </div>
+      
       <div className="flex flex-col gap-4">
         <div className=" container">
           <div className="bg-[#0149A6] rounded-md px-4 py-10  ">

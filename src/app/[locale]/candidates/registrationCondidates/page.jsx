@@ -117,7 +117,7 @@ function InscriptionCondidates() {
             onChange={handleInputChange}
             type="text"
             name="firstName"
-            className={`${!formData.firstName && validation && "border-red-500 "} bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+            className={`${!formData.firstName && validation && "border-red-500 "} bg-[#ffffff] h-10 w-full font-semibold border p-4 rounded text-xs`}
           />
           <p className=" text-red-500 text-xs font-medium">
             {!formData.firstName &&
@@ -135,7 +135,7 @@ function InscriptionCondidates() {
             onChange={handleInputChange}
             type="text"
             name="lastName"
-             className={`${!formData.lastName && validation && "border-red-500 "} bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+             className={`${!formData.lastName && validation && "border-red-500 "} bg-[#ffffff] h-10 w-full font-semibold border p-4 rounded text-xs`}
           />
           <p className=" text-red-500 text-xs font-medium">
             {!formData.lastName && validation && "Please enter your Last Name"}
@@ -151,7 +151,7 @@ function InscriptionCondidates() {
             onChange={handleInputChange}
             type="email"
             name="email"
-             className={`${!formData.email && validation && "border-red-500 "} bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+             className={`${!formData.email && validation && "border-red-500 "} bg-[#ffffff] h-10 w-full font-semibold border p-4 rounded text-xs`}
             placeholder="example@email.com"
           />
           <p className=" text-red-500 text-xs font-medium">
@@ -168,7 +168,7 @@ function InscriptionCondidates() {
             onChange={handleInputChange}
             type="tel"
             name="tele"
-             className={`${!formData.tele && validation && "border-red-500 "} bg-[#ffffff] h-8 w-full font-semibold border p-4 rounded-md text-xs`}
+             className={`${!formData.tele && validation && "border-red-500 "} bg-[#ffffff] h-10 w-full font-semibold border p-4 rounded text-xs`}
             placeholder="+212"
           />
           <p className=" text-red-500 text-xs font-medium">
@@ -187,7 +187,7 @@ function InscriptionCondidates() {
             type="file"
             name="pdf"
             accept="application/pdf"
-            className={`${!formData.pdf && validation && "border-red-500"} bg-[#ffffff] w-full font-semibold  border p-4 rounded-md text-xs file:bg-[#0149a6] file:text-white file:rounded file:mr-4 file:py-2 file:px-4 file:border-none file:text-sm file:font-semibold`}
+            className={`${!formData.pdf && validation && "border-red-500"} bg-[#ffffff] w-full font-semibold  border p-4 rounded text-xs file:bg-[#0149a6] file:text-white file:rounded file:mr-4 file:py-2 file:px-4 file:border-none file:text-sm file:font-semibold`}
           />
           <p className=" text-red-500 text-xs font-medium">
             {!formData.pdf && validation && "Please upload your pdf"}
