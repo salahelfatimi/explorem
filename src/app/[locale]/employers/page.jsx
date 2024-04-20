@@ -69,7 +69,7 @@ export default function Employers() {
             <div className="relative">
               <Image
                 quality={100}
-                src="/image/employers/saction1.jpg"
+                src="https://utfs.io/f/99c71e49-0747-40ba-8bed-6e59befe8e15-rzwhrc.jpg"
                 className="h-auto max-w-full w-full  "
                 width={1920}
                 height={1080}

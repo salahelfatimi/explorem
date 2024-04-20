@@ -10,7 +10,7 @@ export default function About({ params: { locale } }) {
       <div className="flex flex-col gap-10">
         <div className="relative">
           <Image
-            src="/image/aboutUS/saction1.jpg"
+            src="https://utfs.io/f/eab58830-8018-4931-a850-746714e4abf2-rzwhrc.jpg"
             className="h-auto max-w-full w-full  "
             width={1920}
             height={1080}
@@ -45,7 +45,7 @@ export default function About({ params: { locale } }) {
         </span>
         <Image
           quality={40}
-          src="/image/aboutUS/slogen1.jpg"
+          src="https://utfs.io/f/ebdd55e0-eb16-4b8b-98c4-435461f660e0-yyeg2x.jpg"
           className="lg:w-1/3 rounded-xl"
           width={1920}
           height={1080}
@@ -120,7 +120,7 @@ export default function About({ params: { locale } }) {
           Your browser does not support the video tag.
         </video>
       </div>
-      
+
       <div className="flex flex-col gap-4">
         <div className=" container">
           <div className="bg-[#0149A6] rounded-md px-4 py-10  ">
