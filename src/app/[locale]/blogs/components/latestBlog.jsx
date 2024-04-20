@@ -19,9 +19,8 @@ export default async function LatestBlog() {
         <div className="container w-full gap-4 lg:items-center  flex flex-col lg:flex-row-reverse ">
           
           <Image
-            blurDataURL={imageUrl}
+            blurDataURL={`/_next/image?url=${imageUrl}&w=16&q=1`}
             placeholder="blur"
-            loading="lazy"
             quality={100}
             width={1920}
             height={1000}

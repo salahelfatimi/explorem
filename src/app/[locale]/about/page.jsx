@@ -2,6 +2,10 @@ import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import FetchImageScroll from "@/components/fetchImageScroll";
+import slogen1 from "/public/image/aboutUS/slogen1.jpg";
+import saction1 from "/public/image/aboutUS/saction1.jpg";
+import Gracila from "/public/image/aboutUS/team/Gracila.jpg";
+import Abdessamad from "/public/image/aboutUS/team/Abdessamad.png";
 
 export default function About({ params: { locale } }) {
   const t = useTranslations("AboutUS");
@@ -10,11 +14,12 @@ export default function About({ params: { locale } }) {
       <div className="flex flex-col gap-10">
         <div className="relative">
           <Image
-            src="https://utfs.io/f/eab58830-8018-4931-a850-746714e4abf2-rzwhrc.jpg"
+            src={saction1}
             className="h-auto max-w-full w-full  "
-            width={1920}
-            height={1080}
+            width={1280}
+            height={612}
             quality={100}
+            placeholder="blur"
             alt="Explorem"
           />
 
@@ -45,10 +50,11 @@ export default function About({ params: { locale } }) {
         </span>
         <Image
           quality={40}
-          src="https://utfs.io/f/ebdd55e0-eb16-4b8b-98c4-435461f660e0-yyeg2x.jpg"
+          src={slogen1}
           className="lg:w-1/3 rounded-xl"
-          width={1920}
-          height={1080}
+          placeholder="blur"
+          width={6240}
+          height={3512}
           alt="Explorem"
         />
       </div>
@@ -156,9 +162,10 @@ export default function About({ params: { locale } }) {
             <div className=" flex  justify-center">
               <Image
                 quality={100}
-                width={500}
-                height={500}
-                src="/image/aboutUS/team/Gracila.jpg"
+                width={555}
+                height={388}
+                placeholder="blur"
+                src={Gracila}
                 className="w-2/3 rounded-md "
                 alt="Gracila"
               />
@@ -183,13 +190,11 @@ export default function About({ params: { locale } }) {
           <div className="flex lg:flex-row-reverse flex-col items-center justify-center gap-4  container ">
             <div className=" flex  justify-center">
               <Image
-                blurDataURL="/image/aboutUS/team/Abdessamad.png"
                 placeholder="blur"
-                loading="lazy"
                 quality={100}
-                width={500}
-                height={500}
-                src="/image/aboutUS/team/Abdessamad.png"
+                width={334}
+                height={264}
+                src={Abdessamad}
                 className="w-2/3 rounded-md "
                 alt="Gracila"
               />

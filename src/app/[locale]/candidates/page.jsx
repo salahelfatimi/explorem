@@ -12,6 +12,7 @@ import {
   School,
   UserSearch,
 } from "lucide-react";
+import saction1 from '/public/image/candidates/saction1.jpg'
 
 export default function Candidates() {
   const t = useTranslations("Candidates");
@@ -102,10 +103,11 @@ export default function Candidates() {
           <div className="relative">
             <Image
               quality={100}
-              src="https://utfs.io/f/637a3c56-d278-4d93-8e8b-7e47457e83b7-rzwhrc.jpg"
+              src={saction1}
               className="h-auto max-w-full w-full  "
-              width={1920}
-              height={1080}
+              placeholder = 'blur'
+              width={6240}
+              height={2528}
               alt="Explorem"
             />
 

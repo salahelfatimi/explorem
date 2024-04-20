@@ -16,11 +16,11 @@ export default async function BlogAll({ take }) {
       <h2 className=" font-bold  text-2xl text-[#134ba1]  border-y-4 border-[#134ba1] w-full text-center py-2 px-3 ">
         {t("AllBlog")}
       </h2>
-      <div className=" columns-1  lg:columns-3 space-y-8 gap-4">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {blogs.map((blog, index) => (
-          <div key={index}>
+          <div key={index} className=" ">
             <div
-              className={` flex break-inside-avoid-column flex-col-reverse    gap-2  rounded  bg-white `}
+              className={` flex flex-col-reverse justify-between h-full    gap-2  rounded  bg-white `}
             >
               <div className="flex justify-between flex-col gap-8 p-6 items-center  ">
                 <span className=" uppercase font-bold text-xl  text-center  text-black">
@@ -49,13 +49,12 @@ export default async function BlogAll({ take }) {
               </div>
               <div className=" flex items-center  ">
                 <Image
-                  blurDataURL={blog.imageUrl}
+                  blurDataURL={`/_next/image?url=${blog.imageUrl}&w=16&q=1`}
                   placeholder="blur"
-                  loading="lazy"
                   width="1920"
-                  height="1080"
+                  height="384"
                   quality={100}
-                  className="object-cover   rounded-t      "
+                  className="object-cover  h-96  rounded-t      "
                   src={blog.imageUrl}
                   alt="explorem"
                 />
@@ -65,12 +64,12 @@ export default async function BlogAll({ take }) {
         ))}
       </div>
       <div
-          className={`${
-            take > blogs?.length ? "hidden" : "block"
-          } flex justify-center`}
-        >
-          <PaginationBlog take={take} />
-        </div>
+        className={`${
+          take >= blogs?.length ? "hidden" : "block"
+        } flex justify-center`}
+      >
+        <PaginationBlog take={take} />
+      </div>
     </div>
   );
 }
