@@ -90,7 +90,8 @@ export default async function BlogDetail({ params }) {
           className="whitespace-pre-line text-center  break-words container   leading-loose   lg:text-xl"
           dangerouslySetInnerHTML={{ __html: createMarkup(blog.description) }}
         ></p>
-        <div className=" flex  flex-col lg:flex-row gap-4">
+        {blog?.imageUrl1&&(
+          <div className=" flex  flex-col lg:flex-row gap-4">
           <Image
             blurDataURL={`/_next/image?url=${blog.imageUrl1}&w=16&q=1`}
             placeholder="blur"
@@ -104,6 +105,8 @@ export default async function BlogDetail({ params }) {
 
          
         </div>
+        )}
+        
       </div>
     </>
   );
