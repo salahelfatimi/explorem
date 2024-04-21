@@ -4,7 +4,7 @@ import TestimonialComments from "@/components/testimonialComments";
 import { getTranslations } from "next-intl/server";
 export default async function Testimonial({ searchParams }) {
   const t = await getTranslations("Testimonial");
-  const take = (await searchParams.take) ? parseInt(searchParams.take) : 12;
+  const take = (await searchParams.take) ? parseInt(searchParams.take) : 6;
   const testimonial = await fetchTestimonial(take);
 
   return (
@@ -42,10 +42,10 @@ export default async function Testimonial({ searchParams }) {
 
         <div
           className={`${
-            take >= testimonial?.length ? "hidden" : "block"
+            take > testimonial?.length ? "hidden" : "block"
           } flex justify-center`}
         >
-          <PaginationTestimonial searchParams={searchParams} />
+          <PaginationTestimonial take={take} />
         </div>
       </div>
     </div>

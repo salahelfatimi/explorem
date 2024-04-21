@@ -65,7 +65,7 @@ export default async function BlogAll({ take }) {
       </div>
       <div
         className={`${
-          take >= blogs?.length ? "hidden" : "block"
+          take > blogs?.length ? "hidden" : "block"
         } flex justify-center`}
       >
         <PaginationBlog take={take} />

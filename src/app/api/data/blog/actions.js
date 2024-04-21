@@ -127,7 +127,8 @@ export const fetchBlogs = async (take) => {
       }
     }]
     blogs.sort((a, b) => new Date(b.updateAt.$date) - new Date(a.updateAt.$date));
-    return blogs.map(blog => {
+    const slicedBlogs = blogs.slice(0, take);
+    return slicedBlogs.map(blog => {
       return {
           id: blog._id.$oid,
           imageUrl: blog.imageUrl,

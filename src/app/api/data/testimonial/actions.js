@@ -1,5 +1,5 @@
 "use server";
-export const fetchTestimonial = async () => {
+export const fetchTestimonial = async (take) => {
   const testimonial = [
     {
       _id: {
@@ -130,8 +130,14 @@ export const fetchTestimonial = async () => {
       },
     },
   ];
+  testimonial.sort(
+    (a, b) => new Date(b.updatedAt.$date) - new Date(a.updatedAt.$date)
+  );
 
-  return testimonial.map((item) => {
+  // Slice the array to return only 'take' number of testimonials
+  const slicedTestimonials = testimonial.slice(0, take);
+
+  return slicedTestimonials.map((item) => {
     return {
       _id: item._id.$oid,
       image: item.image,
