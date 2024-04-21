@@ -36,7 +36,7 @@ export default async function BlogDetail({ params }) {
         </h3>
         <div className=" flex  flex-col lg:flex-row gap-4">
           <Image
-            blurDataURL={blog.imageUrl}
+            blurDataURL={`/_next/image?url=${blog.imageUrl}&w=16&q=1`}
             placeholder="blur"
             quality={100}
             src={blog.imageUrl}
@@ -92,7 +92,7 @@ export default async function BlogDetail({ params }) {
         ></p>
         {blog?.imageUrl1 ? (
           <Image
-            blurDataURL={blog?.imageUrl1}
+            blurDataURL={`/_next/image?url=${blog?.imageUrl1}&w=16&q=1`}
             placeholder="blur"
             quality={100}
             src={blog?.imageUrl1}
