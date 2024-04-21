@@ -1,9 +1,7 @@
-import * as React from "react";
+
 import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
 
-
-import { getLatestBlog } from "@/app/api/data/blog/actions";
 
 const getImage = async (src) => {
   const buffer = await fetch(src).then(async (res) =>
