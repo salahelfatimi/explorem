@@ -22,9 +22,9 @@ export default async function LatestBlog() {
             blurDataURL={`/_next/image?url=${imageUrl}&w=16&q=1`}
             placeholder="blur"
             quality={100}
-            width={1920}
-            height={1000}
-            className="lg:w-1/2 object-cover lg:max-h-96  rounded  shadow-2xl    bg-no-repeat "
+            width={1536}
+            height={2048}
+            className="lg:w-1/2 object-cover h-auto  rounded  shadow-2xl  "
             src={imageUrl}
             alt="explorem"
           />

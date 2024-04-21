@@ -108,7 +108,25 @@ export const fetchBlogs = async (take) => {
       "updateAt": {
         "$date": "2024-04-11T14:32:14.835Z"
       }
+    },
+    {
+      "_id": {
+        "$oid": "662532a0f0d00b380426017a"
+      },
+      "imageUrl": "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+      "imageKey": "92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+      "title": "22 Candidates Successfully Relocated to Germany!",
+      "description": "In April 20 and 21, the 22 of the EXPLOREM nurse-candidates were successfully\r\nrelocated to Cologne Germany. As to date, there are 32 out of 37 program recipients\r\nwere relocated. The 5 other candidates are waiting for their pre-approval documents\r\nfor visa process. These 37 candidates are graduates of Excel Group of Institutes\r\n(Marrakech), Galien Institute (Agadir), and Work Center (Oujda).\r\n\r\nThis is one of the successful recruitment projects managed by EXPLOREM, in\r\ncollaboration with DRK-Rettungsdienst Rhein-Berg GmbH and Marburg\r\nConsulting.\r\n\r\nThrough the efforts and initiatives of EXPLOREM managing directors, Mr.\r\nAbdessamad Aboul ossoud and Dr. Gracila Ucag, the recipients of the program\r\nreceived monthly stipend for one year and were provided with FREE services on\r\nlanguage formation until B2 level; services on documentation, recognition, visa\r\nprocess, relocation support such as flight tickets, insurance registration, etc. All\r\ncosts/ expenses are paid by DRK, the employer.\r\n\r\nEXPLOREM has more fruitful projects in the table in which students, skilled workers\r\nand professionals will benefit. With the new Skilled Immigrant Act of Germany,\r\nexisting mechanisms for skilled workers with a university degree, such as the EU Blue\r\nCard, will continue and in some cases be extended. In addition, a new opportunity\r\ncard will enable third-country nationals to seek employment.\r\n\r\nWith all the relocated candidates of Explorem since year 2020, the team is a reliable\r\ncompany to provide the best services in language and nursing formation, recruitment\r\nmanagement, documentation and recognition process, relocation support such as\r\nvisa assistance, insurance registration and apartment search, etc.\r\n\r\nEXPLOREM made a difference. EXPLOREM made it happen.",
+      "author": "Explorem",
+      "published": true,
+      "createAt": {
+        "$date": "2024-04-21T15:37:03.907Z"
+      },
+      "updateAt": {
+        "$date": "2024-04-21T15:37:03.907Z"
+      }
     }]
+    blogs.sort((a, b) => new Date(b.updateAt.$date) - new Date(a.updateAt.$date));
     return blogs.map(blog => {
       return {
           id: blog._id.$oid,
@@ -227,6 +245,25 @@ export const fetchSingleBlog = async (id) => {
     "updateAt": {
       "$date": "2024-04-11T14:32:14.835Z"
     }
+  },
+  {
+    "_id": {
+      "$oid": "662532a0f0d00b380426017a"
+    },
+    "imageUrl": "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+    "imageKey": "92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+    "imageUrl1": "https://utfs.io/f/7178297b-2e01-42d8-a98b-b0a412b2f7dd-rpbt4b.jpg",
+    "imageKey1": "7178297b-2e01-42d8-a98b-b0a412b2f7dd-rpbt4b.jpg",
+    "title": "22 Candidates Successfully Relocated to Germany!",
+    "description": "In April 20 and 21, the 22 of the EXPLOREM nurse-candidates were successfully\r\nrelocated to Cologne Germany. As to date, there are 32 out of 37 program recipients\r\nwere relocated. The 5 other candidates are waiting for their pre-approval documents\r\nfor visa process. These 37 candidates are graduates of Excel Group of Institutes\r\n(Marrakech), Galien Institute (Agadir), and Work Center (Oujda).\r\n\r\nThis is one of the successful recruitment projects managed by EXPLOREM, in\r\ncollaboration with DRK-Rettungsdienst Rhein-Berg GmbH and Marburg\r\nConsulting.\r\n\r\nThrough the efforts and initiatives of EXPLOREM managing directors, Mr.\r\nAbdessamad Aboul ossoud and Dr. Gracila Ucag, the recipients of the program\r\nreceived monthly stipend for one year and were provided with FREE services on\r\nlanguage formation until B2 level; services on documentation, recognition, visa\r\nprocess, relocation support such as flight tickets, insurance registration, etc. All\r\ncosts/ expenses are paid by DRK, the employer.\r\n\r\nEXPLOREM has more fruitful projects in the table in which students, skilled workers\r\nand professionals will benefit. With the new Skilled Immigrant Act of Germany,\r\nexisting mechanisms for skilled workers with a university degree, such as the EU Blue\r\nCard, will continue and in some cases be extended. In addition, a new opportunity\r\ncard will enable third-country nationals to seek employment.\r\n\r\nWith all the relocated candidates of Explorem since year 2020, the team is a reliable\r\ncompany to provide the best services in language and nursing formation, recruitment\r\nmanagement, documentation and recognition process, relocation support such as\r\nvisa assistance, insurance registration and apartment search, etc.\r\n\r\nEXPLOREM made a difference. EXPLOREM made it happen.",
+    "author": "Explorem",
+    "published": true,
+    "createAt": {
+      "$date": "2024-04-21T15:37:03.907Z"
+    },
+    "updateAt": {
+      "$date": "2024-04-21T15:37:03.907Z"
+    }
   }]
   const blog = blogs.find(blog => blog._id.$oid === id);
   
@@ -234,6 +271,8 @@ export const fetchSingleBlog = async (id) => {
         id: blog._id.$oid,
         imageUrl: blog.imageUrl,
         imageKey: blog.imageKey,
+        imageUrl1: blog.imageUrl1,
+        imageKey1: blog.imageKey1,
         title: blog.title,
         description: blog.description,
         author: blog.author,
@@ -247,21 +286,21 @@ export const fetchSingleBlog = async (id) => {
 export const getLatestBlog = async () => {
   const latestBlog={
     "_id": {
-      "$oid": "6617f453c36786caae8b2e6e"
+      "$oid": "662532a0f0d00b380426017a"
     },
-    "imageUrl": "https://utfs.io/f/fd980f35-e7d0-40d4-9f71-abfd60f97751-k378iq.jpg",
-    "imageKey": "fd980f35-e7d0-40d4-9f71-abfd60f97751-k378iq.jpg",
-    "title": "23 Explorem nurse scholars received their Visa!",
-    "description": "Among the best services Explorem have provided to their candidates for almost 3 years are Visa process and Relocation candidate support, aside from language formation and qualification.\r\n\r\nExplorem is assisting qualified candidates in visa application, getting visa appointments, compiling necessary documents, giving an orientation or preparation regarding visa, organization, and implementation of the journey or flight to Germany.\r\n\r\nIn March 2024, Explorem received a great news that 23 of their nurse scholars received their Visa and soon to be relocated. ",
+    "imageUrl": "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+    "imageKey": "92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+    "title": "22 Candidates Successfully Relocated to Germany!",
+    "description": "In April 20 and 21, the 22 of the EXPLOREM nurse-candidates were successfully\r\nrelocated to Cologne Germany. As to date, there are 32 out of 37 program recipients\r\nwere relocated. The 5 other candidates are waiting for their pre-approval documents\r\nfor visa process. These 37 candidates are graduates of Excel Group of Institutes\r\n(Marrakech), Galien Institute (Agadir), and Work Center (Oujda).\r\n\r\nThis is one of the successful recruitment projects managed by EXPLOREM, in\r\ncollaboration with DRK-Rettungsdienst Rhein-Berg GmbH and Marburg\r\nConsulting.\r\n\r\nThrough the efforts and initiatives of EXPLOREM managing directors, Mr.\r\nAbdessamad Aboul ossoud and Dr. Gracila Ucag, the recipients of the program\r\nreceived monthly stipend for one year and were provided with FREE services on\r\nlanguage formation until B2 level; services on documentation, recognition, visa\r\nprocess, relocation support such as flight tickets, insurance registration, etc. All\r\ncosts/ expenses are paid by DRK, the employer.\r\n\r\nEXPLOREM has more fruitful projects in the table in which students, skilled workers\r\nand professionals will benefit. With the new Skilled Immigrant Act of Germany,\r\nexisting mechanisms for skilled workers with a university degree, such as the EU Blue\r\nCard, will continue and in some cases be extended. In addition, a new opportunity\r\ncard will enable third-country nationals to seek employment.\r\n\r\nWith all the relocated candidates of Explorem since year 2020, the team is a reliable\r\ncompany to provide the best services in language and nursing formation, recruitment\r\nmanagement, documentation and recognition process, relocation support such as\r\nvisa assistance, insurance registration and apartment search, etc.\r\n\r\nEXPLOREM made a difference. EXPLOREM made it happen.",
     "author": "Explorem",
     "published": true,
     "createAt": {
-      "$date": "2024-04-11T14:31:46.651Z"
+      "$date": "2024-04-21T15:37:03.907Z"
     },
     "updateAt": {
-      "$date": "2024-04-11T14:32:14.835Z"
+      "$date": "2024-04-21T15:37:03.907Z"
     }
-  } 
+  }
   
     return {
         id: latestBlog._id.$oid,
