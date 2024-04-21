@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Clock, Facebook, Instagram, Send } from "react-feather";
 import { fetchSingleBlog } from "@/app/api/data/blog/actions";
+import GetBase64Image from "@/app/base64/getBase64ImageSingle/page";
 
 export default async function BlogDetail({ params }) {
   const id = params?.id;
@@ -35,15 +36,11 @@ export default async function BlogDetail({ params }) {
           {blog?.title}
         </h3>
         <div className=" flex  flex-col lg:flex-row gap-4">
-          <Image
-            blurDataURL={`/_next/image?url=${blog.imageUrl}&w=16&q=1`}
-            placeholder="blur"
-            quality={100}
-            src={blog.imageUrl}
-            alt={blog?.title}
-            width="1920"
-            height="1080"
-            className=" object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat   "
+          <GetBase64Image
+            imageUrl={blog.imageUrl}
+            className={
+              "object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat"
+            }
           />
 
           <div className="flex justify-center lg:flex-col gap-4 items-center">
@@ -90,23 +87,18 @@ export default async function BlogDetail({ params }) {
           className="whitespace-pre-line text-center  break-words container   leading-loose   lg:text-xl"
           dangerouslySetInnerHTML={{ __html: createMarkup(blog.description) }}
         ></p>
-        {blog?.imageUrl1&&(
+        {blog?.imageUrl1 && (
           <div className=" flex  flex-col lg:flex-row gap-4">
-          <Image
-            blurDataURL={`/_next/image?url=${blog.imageUrl1}&w=16&q=1`}
-            placeholder="blur"
-            quality={100}
-            src={blog.imageUrl1}
+            <GetBase64Image
+            imageUrl={blog.imageUrl1}
+            className={
+              "object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat"
+            }
             alt={blog?.title}
-            width="1920"
-            height="1080"
-            className=" object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat   "
           />
-
-         
-        </div>
+           
+          </div>
         )}
-        
       </div>
     </>
   );

@@ -1,5 +1,7 @@
 
 import { getLatestBlog } from "@/app/api/data/blog/actions";
+import GetBase64Image from "@/app/base64/getBase64ImageSingle/page";
+
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
@@ -17,17 +19,8 @@ export default async function LatestBlog() {
       <div className="flex flex-col gap-4">
         
         <div className="container w-full gap-4 lg:items-center  flex flex-col lg:flex-row-reverse ">
-          
-          <Image
-            blurDataURL={`/_next/image?url=${imageUrl}&w=16&q=1`}
-            placeholder="blur"
-            quality={100}
-            width={1536}
-            height={2048}
-            className="lg:w-1/2 object-cover h-auto  rounded  shadow-2xl  "
-            src={imageUrl}
-            alt="explorem"
-          />
+          <div   className="lg:w-1/2 object-cover h-auto  rounded  shadow-2xl  "><GetBase64Image imageUrl={imageUrl} alt={title} className={'object-cover  h-96  rounded-t '}/></div>
+        
           <div className=" lg:w-1/2 flex gap-4  lg:gap-8 flex-col">
             <span className="text-[#fff] font-bold  bg-[#134ba1] w-fit py-1 px-3">
               {t("new")}

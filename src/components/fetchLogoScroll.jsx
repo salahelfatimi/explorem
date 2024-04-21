@@ -19,12 +19,13 @@ export default async function FetchLogoScroll() {
       {images?.map((src, index) => (
         <div className=" space-x-4  p-2" key={index}>
           <Image
+          
             quality={40}
             width={800}
             height={550}
             src={`/image/partnersLogo/${src}`}
             className="max-w-none   h-24 w-auto   "
-            alt="explorem"
+            alt={src}
           />
         </div>
       ))}
