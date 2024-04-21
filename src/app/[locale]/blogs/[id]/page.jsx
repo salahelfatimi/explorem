@@ -87,7 +87,7 @@ export default async function BlogDetail({ params }) {
         </div>
 
         <p
-          className="whitespace-pre-line text-center  break-words container   leading-loose capitalize  lg:text-xl"
+          className="whitespace-pre-line text-center  break-words container   leading-loose   lg:text-xl"
           dangerouslySetInnerHTML={{ __html: createMarkup(blog.description) }}
         ></p>
         <div className=" flex  flex-col lg:flex-row gap-4">
