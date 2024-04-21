@@ -5,7 +5,7 @@ import { getPlaiceholder } from "plaiceholder";
 
 const getImage = async (src) => {
   const buffer = await fetch(src).then(async (res) =>
-    Buffer.from(await res.arrayBuffer())
+    Buffer?.from(await res?.arrayBuffer())
   );
 
   const {
