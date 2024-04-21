@@ -40,8 +40,9 @@ export default async function BlogDetail({ params }) {
               loading="lazy"
               quality={100}
               src={blog.imageUrl}
-              alt="ffff"
+              alt={blog?.title}
               width="1920"
+             
               height="1080"
               className=" object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat   "
             />
