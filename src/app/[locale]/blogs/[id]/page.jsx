@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Clock, Facebook, Instagram, Send } from "react-feather";
 import { fetchSingleBlog } from "@/app/api/data/blog/actions";
-import GetBase64Image from "@/app/base64/getBase64ImageSingle/page";
+import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 
 export default async function BlogDetail({ params }) {
   const id = params?.id;
@@ -90,13 +90,12 @@ export default async function BlogDetail({ params }) {
         {blog?.imageUrl1 && (
           <div className=" flex  flex-col lg:flex-row gap-4">
             <GetBase64Image
-            imageUrl={blog.imageUrl1}
-            className={
-              "object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat"
-            }
-            alt={blog?.title}
-          />
-           
+              imageUrl={blog.imageUrl1}
+              className={
+                "object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat"
+              }
+              alt={blog?.title}
+            />
           </div>
         )}
       </div>

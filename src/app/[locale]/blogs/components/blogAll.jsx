@@ -3,7 +3,7 @@ import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { fetchBlogs } from "@/app/api/data/blog/actions";
 import PaginationBlog from "./paginationBlog";
 
-import GetBase64Image from "@/app/base64/getBase64ImageSingle/page";
+import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 import { useTranslations } from "next-intl";
 
 const locales = ["en", "de", "ar"];
@@ -49,10 +49,11 @@ export default async function BlogAll({ take }) {
                 </div>
               </div>
               <div className=" flex items-center  ">
-              
-                  <GetBase64Image imageUrl={blog.imageUrl} alt={blog.title} className={'object-cover  h-96  rounded-t'}/>
-               
-              
+                <GetBase64Image
+                  imageUrl={blog.imageUrl}
+                  alt={blog.title}
+                  className={"object-cover  h-96  rounded-t"}
+                />
               </div>
             </div>
           </div>

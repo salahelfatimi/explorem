@@ -1,6 +1,5 @@
-
 import { getLatestBlog } from "@/app/api/data/blog/actions";
-import GetBase64Image from "@/app/base64/getBase64ImageSingle/page";
+import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
@@ -10,17 +9,22 @@ import { Clock } from "react-feather";
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
 export default async function LatestBlog() {
-  const t = await  getTranslations("Blog");
+  const t = await getTranslations("Blog");
   const latestBlog = await getLatestBlog();
   const { id, title, imageUrl, description, author, createAt } =
     latestBlog || {};
   return (
     <>
       <div className="flex flex-col gap-4">
-        
         <div className="container w-full gap-4 lg:items-center  flex flex-col lg:flex-row-reverse ">
-          <div   className="lg:w-1/2 object-cover h-auto  rounded  shadow-2xl  "><GetBase64Image imageUrl={imageUrl} alt={title} className={'object-cover  h-96  rounded-t '}/></div>
-        
+          <div className="lg:w-1/2 object-cover h-auto  rounded  shadow-2xl  ">
+            <GetBase64Image
+              imageUrl={imageUrl}
+              alt={title}
+              className={"object-cover  h-96  rounded-t "}
+            />
+          </div>
+
           <div className=" lg:w-1/2 flex gap-4  lg:gap-8 flex-col">
             <span className="text-[#fff] font-bold  bg-[#134ba1] w-fit py-1 px-3">
               {t("new")}
