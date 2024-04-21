@@ -90,18 +90,20 @@ export default async function BlogDetail({ params }) {
           className="whitespace-pre-line text-center  break-words container   leading-loose capitalize  lg:text-xl"
           dangerouslySetInnerHTML={{ __html: createMarkup(blog.description) }}
         ></p>
-        {blog?.imageUrl1 ? (
+        <div className=" flex  flex-col lg:flex-row gap-4">
           <Image
-            blurDataURL={`/_next/image?url=${blog?.imageUrl1}&w=16&q=1`}
+            blurDataURL={`/_next/image?url=${blog.imageUrl1}&w=16&q=1`}
             placeholder="blur"
             quality={100}
-            src={blog?.imageUrl1}
+            src={blog.imageUrl1}
             alt={blog?.title}
             width="1920"
             height="1080"
-            className=" object-cover  rounded  shadow-2xl   w-full lg:h-[30rem]   "
+            className=" object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat   "
           />
-        ) : null}
+
+         
+        </div>
       </div>
     </>
   );
