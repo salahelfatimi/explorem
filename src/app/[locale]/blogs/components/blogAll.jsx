@@ -24,9 +24,9 @@ export default async function BlogAll({ take }) {
               className={` flex flex-col-reverse justify-between h-full    gap-2  rounded  bg-white `}
             >
               <div className="flex justify-between flex-col gap-8 p-6 items-center  ">
-                <span className=" uppercase font-bold text-xl  text-center  text-black">
+                <title className=" uppercase font-bold text-xl  text-center  text-black">
                   {blog.title}
-                </span>
+                </title>
 
                 <span className="text-[#9DA4B2] text-center whitespace-pre-line  xl:text-base text-sm line-clamp-4 break-all    font-semibold">
                   {blog.description}

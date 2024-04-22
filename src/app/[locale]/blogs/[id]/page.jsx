@@ -32,9 +32,9 @@ export default async function BlogDetail({ params }) {
   return (
     <>
       <div className="container px-4 items-center   flex flex-col gap-16 py-10">
-        <h3 className="font-bold italic   border-b-4 text-[#134ba1] border-[#134ba1] uppercase text-wrap text-center text-2xl lg:text-4xl   ">
+        <title className="font-bold italic   border-b-4 text-[#134ba1] border-[#134ba1] uppercase text-wrap text-center text-2xl lg:text-4xl   ">
           {blog?.title}
-        </h3>
+        </title>
         <div className=" flex  flex-col lg:flex-row gap-4">
           <GetBase64Image
             imageUrl={blog.imageUrl}
