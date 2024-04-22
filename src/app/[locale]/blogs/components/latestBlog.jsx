@@ -31,9 +31,9 @@ export default async function LatestBlog() {
               {t("new")}
             </span>
 
-            <title className=" font-bold text-xl lg:text-4xl text-black ">
+            <h2 className=" font-bold text-xl lg:text-4xl text-black ">
               {title}
-            </title>
+            </h2>
             <p className="line-clamp-4 whitespace-pre-line text-[#646c78] font-medium">
               {description}
             </p>
