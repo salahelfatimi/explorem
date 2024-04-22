@@ -7,6 +7,7 @@ import PaginationBlog from "./paginationBlog";
 
 const locales = ["en", "de", "ar"];
 const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
+
 export default async function BlogAll({ take }) {
   const t = await getTranslations("Blog");
   const blogs = await fetchBlogs(take);
@@ -49,7 +50,7 @@ export default async function BlogAll({ take }) {
               </div>
               <div className=" flex items-center  ">
                 <Image
-                  blurDataURL={`/_next/image?url=${blog.imageUrl}&w=16&q=1`}
+                  blurDataURL={'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAIAAABPmPnhAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nAH4AAf/ACo0LhIaFCoyJ2tzaGBeR0pFJ1lTMYB0QJ2VZKKkgwBPYWErPjwrOTdodW5QWlFRWkxlc19QWkeCjYB9gnMAVWpwT3R9UHBvbXp2W1pNaWBNUVRBU0k2V1RBSls/ACo7PUphZSYhHBQNE0E9NCYjHicdFnpuW5OeiIuqkwBxeHaWmZVSQysRBQBOP0JBOjsOFh0+MyS1qYTo2rYAxL+4wreuvqB3cGAke19lkXl5SVRYQCgjspF18eS+AMe+tMi+ssq7qtTEstXEs82+rtvMurunmNnErf/v0gDj2szr39D15dHz49D46NT/8t7/9N//+uX//eb/+uDB3HQvKnXFjAAAAABJRU5ErkJggg=='}
                   placeholder="blur"
                   width="1920"
                   height="384"
