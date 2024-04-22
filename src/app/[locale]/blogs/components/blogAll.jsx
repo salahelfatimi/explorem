@@ -1,15 +1,14 @@
 import { Clock, Link2 } from "react-feather";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
+import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { fetchBlogs } from "@/app/api/data/blog/actions";
 import PaginationBlog from "./paginationBlog";
 
-import GetBase64Image from "@/app/base64/getBase64ImageSingle";
-import { useTranslations } from "next-intl";
-
 const locales = ["en", "de", "ar"];
-const { Link } = createSharedPathnamesNavigation({ locales });
+const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
 export default async function BlogAll({ take }) {
-  const t = await useTranslations("Blog");
+  const t = await getTranslations("Blog");
   const blogs = await fetchBlogs(take);
 
   return (
@@ -49,10 +48,15 @@ export default async function BlogAll({ take }) {
                 </div>
               </div>
               <div className=" flex items-center  ">
-                <GetBase64Image
-                  imageUrl={blog.imageUrl}
-                  alt={blog.title}
-                  className={"object-cover  h-96  rounded-t"}
+                <Image
+                  blurDataURL={`/_next/image?url=${blog.imageUrl}&w=16&q=1`}
+                  placeholder="blur"
+                  width="1920"
+                  height="384"
+                  quality={100}
+                  className="object-cover  h-96  rounded-t      "
+                  src={blog.imageUrl}
+                  alt="explorem"
                 />
               </div>
             </div>
