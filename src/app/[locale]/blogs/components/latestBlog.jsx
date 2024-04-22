@@ -22,7 +22,7 @@ export default async function LatestBlog() {
             <GetBase64Image
               imageUrl={imageUrl}
               alt={title}
-              className={"object-cover  h-96  rounded-t "}
+              className={"object-cover  h-auto  rounded-t "}
             />
           </div>
 
