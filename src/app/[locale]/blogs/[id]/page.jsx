@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Clock, Facebook, Instagram, Send } from "react-feather";
 import { fetchSingleBlog } from "@/app/api/data/blog/actions";
-import GetBase64Image from "@/app/base64/getBase64ImageSingle";
+import GetBase64Image from "@/app/base64/page";
 
 export default async function BlogDetail({ params }) {
   const id = params?.id;

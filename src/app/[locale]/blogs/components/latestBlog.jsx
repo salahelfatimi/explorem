@@ -1,6 +1,7 @@
 import { getLatestBlog } from "@/app/api/data/blog/actions";
 import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 
+
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
