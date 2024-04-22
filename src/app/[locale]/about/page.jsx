@@ -14,6 +14,7 @@ export default function About({ params: { locale } }) {
       <div className="flex flex-col gap-10">
         <div className="relative">
           <Image
+            title={"explorem"}
             src={saction1}
             className="h-auto max-w-full w-full  "
             width={1280}
@@ -49,6 +50,7 @@ export default function About({ params: { locale } }) {
           <p>{t("slogen1.line2")}</p>
         </span>
         <Image
+          title={"explorem"}
           quality={40}
           src={slogen1}
           className="lg:w-1/3 rounded-xl"
@@ -101,6 +103,7 @@ export default function About({ params: { locale } }) {
       <div className=" flex flex-col gap-4">
         <span className="flex  items-center gap-4 justify-center">
           <Image
+             title={'explorem'}
             src="/image/aboutUS/logoHand.png"
             className="w-14 lg:w-16"
             width={195}
@@ -161,6 +164,7 @@ export default function About({ params: { locale } }) {
           <div className="flex lg:flex-row flex-col items-center justify-center gap-4  container ">
             <div className=" flex  justify-center">
               <Image
+                 title={'Gracila'}
                 quality={100}
                 width={555}
                 height={388}
@@ -190,13 +194,14 @@ export default function About({ params: { locale } }) {
           <div className="flex lg:flex-row-reverse flex-col items-center justify-center gap-4  container ">
             <div className=" flex  justify-center">
               <Image
+                title={'Abdessamad'}
                 placeholder="blur"
                 quality={100}
                 width={334}
                 height={264}
                 src={Abdessamad}
                 className="w-2/3 rounded-md "
-                alt="Gracila"
+                alt="Abdessamad"
               />
             </div>
             <div className=" flex gap-4 flex-col lg:w-1/2  ">

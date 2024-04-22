@@ -19,7 +19,7 @@ export default async function FetchLogoScroll() {
       {images?.map((src, index) => (
         <div className=" space-x-4  p-2" key={index}>
           <Image
-          
+             title={src}
             quality={40}
             width={800}
             height={550}

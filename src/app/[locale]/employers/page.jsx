@@ -69,6 +69,7 @@ export default function Employers() {
           <div>
             <div className="relative">
               <Image
+                  title={'explorem'}
                 quality={100}
                 src={saction1}
                 className="h-auto max-w-full w-full  "

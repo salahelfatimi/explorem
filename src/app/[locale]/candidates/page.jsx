@@ -12,7 +12,7 @@ import {
   School,
   UserSearch,
 } from "lucide-react";
-import saction1 from '/public/image/candidates/saction1.jpg'
+import saction1 from "/public/image/candidates/saction1.jpg";
 
 export default function Candidates() {
   const t = useTranslations("Candidates");
@@ -102,10 +102,11 @@ export default function Candidates() {
         <div className="flex flex-col gap-10">
           <div className="relative">
             <Image
+              title={"explorem"}
               quality={100}
               src={saction1}
               className="h-auto max-w-full w-full  "
-              placeholder = 'blur'
+              placeholder="blur"
               width={6240}
               height={2528}
               alt="Explorem"
