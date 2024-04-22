@@ -41,6 +41,7 @@ export default async function BlogDetail({ params }) {
             className={
               "object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat"
             }
+            alt={blog?.title}
           />
 
           <div className="flex justify-center lg:flex-col gap-4 items-center">

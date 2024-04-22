@@ -54,9 +54,11 @@ export default async function BlogAll({ take }) {
                   width="1920"
                   height="384"
                   quality={100}
+                  alt={blog.title}
+                  title={blog.title}
                   className="object-cover  h-96  rounded-t      "
                   src={blog.imageUrl}
-                  alt="explorem"
+               
                 />
               </div>
             </div>
