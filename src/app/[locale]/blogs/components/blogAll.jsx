@@ -33,7 +33,7 @@ export default async function BlogAll({ take }) {
                 </span>
 
                 <Link
-                  href={`/blogs/${blog.title.replace(/\s+/g, '-')}`}
+                  href={`/blogs/${blog.id}`}
                   className="bg-[#134ba0]  font-bold w-full  justify-center  text-white rounded-md  py-2 px-4  capitalize flex gap-2 items-center "
                 >
                   <span>{t("readMore")}</span> <Link2 size={25} />

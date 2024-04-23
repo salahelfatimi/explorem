@@ -59,7 +59,7 @@ export default async function LatestBlog() {
               </span>
             </div>
             <Link
-              href={`/blogs/${title.replace(/\s+/g, '-')}`}
+              href={`/blogs/${id}`}
               className="border-2 border-[#134ba1] py-2 px-3 rounded font-bold text-[#134ba1] w-full text-center lg:w-fit"
             >
               {t("readMore")}
