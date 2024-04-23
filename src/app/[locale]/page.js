@@ -9,6 +9,7 @@ import { Instagram, Link2 } from "react-feather";
 import LatestBlog from "./blogs/components/latestBlog";
 import FetchLogoScroll from "@/components/fetchLogoScroll";
 import CourseSchedule from "@/components/Schedule/courseSchedule";
+import GetBase64Image from "../base64/getBase64ImageSingle";
 
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
@@ -19,6 +20,7 @@ export default async function Index() {
 
   return (
     <>
+   
       <div className="bg-[#F5F5F5]   space-y-8 py-12">
         <div className=" flex flex-col items-center justify-center gap-4">
           <h1 className="flex items-center gap-4 justify-center flex-col text-xl lg:text-2xl font-extrabold capitalize">
@@ -65,16 +67,16 @@ export default async function Index() {
                 alt="Explorem"
               />
               <h2 className=" text-3xl font-bold text-[#0149a6] capitalize">
-                Latest Updates
+                {t('latestUpdates')}
               </h2>
             </div>
             <LatestBlog />
             <div className=" text-center text-white">
               <Link
                 className="bg-[#0149a6] w-fit py-2 border-white px-4 font-semibold border-2 duration-500 hover:text-[#0149a6] hover:bg-white hover:border-[#0149a6]"
-                href="/blog"
+                href="/blogs"
               >
-                {t("seeMore")} Blog
+                {t("seeMore")} {t('blog')}
               </Link>
             </div>
           </div>
@@ -181,7 +183,7 @@ export default async function Index() {
       <div>
         <div className="flex justify-center py-6 gap-4 items-center">
           <h2 className=" text-3xl border-b-4  border-[#0149a6] font-bold text-[#0149a6] capitalize">
-            Our Partners
+          {t("ourPartners")}
           </h2>
         </div>
         <div className="bg-[#fff] py-6 ">
@@ -193,7 +195,7 @@ export default async function Index() {
         </div>
       </div>
       <div className=" py-8 ">
-        <CourseSchedule/>
+        <CourseSchedule />
       </div>
     </>
   );

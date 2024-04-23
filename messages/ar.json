@@ -1,4 +1,11 @@
 {
+  "Footer": {
+    "newsLetter": "النشرة الإخبارية",
+    "email": "بريدك الإلكتروني",
+    "subscribe":"اشتراك",
+    "Copyright1": "حقوق النشر",
+    "Copyright2": "جميع الحقوق محفوظة من"
+    },
   "Blog": {
     "title": "مدونتنا",
     "description": "جميع أخبار إكسبلورم الأحدث، مباشرة من الفريق.",
@@ -23,6 +30,8 @@
       "Candidates": "تسجيل المرشحين",
       "Employers": "قدم طلب كصاحب عمل"
     },
+    "latestUpdates": "أحدث التحديثات",
+    "blog": "مدونة",
     "whatWeHaveAchieved": {
       "title": "ما حققناه؟",
       "line1": "تم تقديم برنامجنا لأكثر من 2000+ طالب ممرض وخريج في جميع أنحاء المغرب.",
@@ -41,7 +50,18 @@
       "title": "شهادة",
       "description": "! ما يقوله عملاؤنا السعداء"
     },
-    "seeMore": "المزيد"
+    "seeMore": "المزيد",
+    "ourPartners": "شركاؤنا",
+    "germanCourseSchedule": "جدول دورة اللغة الألمانية",
+    "onsiteCourse": "دورة في الموقع",
+    "standardProgram": "البرنامج القياسي",
+    "intensiveProgram": "البرنامج المكثف",
+    "ongoingOnsiteCourse": "دورة مستمرة في الموقع",
+    "ongoingRegistration": "التسجيل المستمر (حتى أبريل",
+    "onlineCourse": "دورة عبر الإنترنت",
+
+    "hours/day": "ساعات / يوم",
+    "time": "الوقت"
   },
 
   "Navbar": {

@@ -3,7 +3,10 @@ import { fetchBlogs } from "@/app/api/data/blog/actions";
 import BlogAll from "./components/blogAll";
 import LatestBlog from "./components/latestBlog";
 import { getTranslations } from "next-intl/server";
-
+export const metadata = {
+  title: "Blog",
+  
+};
 async function Blog({ searchParams }) {
   const take = (await searchParams.take) ? parseInt(searchParams.take) : 6;
   const t = await getTranslations("Blog");

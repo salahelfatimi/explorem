@@ -1,4 +1,4 @@
-import { fetchImageScroll } from "@/app/api/data/ImageScroll/actions";
+
 import Image from "next/image";
 export default async function FetchLogoScroll() {
     const images = [
@@ -19,12 +19,13 @@ export default async function FetchLogoScroll() {
       {images?.map((src, index) => (
         <div className=" space-x-4  p-2" key={index}>
           <Image
+             title={src}
             quality={40}
             width={800}
             height={550}
             src={`/image/partnersLogo/${src}`}
             className="max-w-none   h-24 w-auto   "
-            alt="explorem"
+            alt={src}
           />
         </div>
       ))}

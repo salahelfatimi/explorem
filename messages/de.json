@@ -1,4 +1,12 @@
 {
+  "Footer": {
+    "newsLetter": "Newsletter",
+    "email": "Deine E-Mail",
+    "subscribe": "ABONNIEREN",
+
+    "Copyright1": "Urheberrecht",
+    "Copyright2": "Alle Rechte vorbehalten von"
+  },
   "Blog": {
     "title": "Unser Blog",
     "description": "Alle aktuellen Neuigkeiten von Explorem, direkt vom Team.",
@@ -23,7 +31,8 @@
       "Candidates": "Registrierung für Kandidaten",
       "Employers": "Bewerben Sie sich als Arbeitgeber"
     },
-
+    "latestUpdates": "Neueste Aktualisierungen",
+    "blog": "Blog",
     "whatWeHaveAchieved": {
       "title": "Was wir erreicht haben?",
       "line1": "Unser Programm wurde mehr als 2.000+ Studentenpflegern und Absolventen in ganz Marokko vorgestellt.",
@@ -42,7 +51,17 @@
       "title": "Referenz",
       "description": "Was unsere zufriedenen Kunden sagen ! "
     },
-    "seeMore": "Mehr anzeigen"
+    "seeMore": "Mehr anzeigen",
+    "ourPartners": "Unsere Partner",
+    "germanCourseSchedule": "Deutscher Kursplan",
+    "onsiteCourse": "KURS VOR ORT",
+    "standardProgram": "Standardprogramm",
+    "intensiveProgram": "Intensivprogramm",
+    "ongoingOnsiteCourse": "Laufender Kurs vor Ort",
+    "ongoingRegistration": "Fortlaufende Anmeldung (bis April",
+    "onlineCourse": "ONLINE-KURS",
+    "hours/day": "Stunden/Tag",
+    "time": "Zeit"
   },
   "Navbar": {
     "home": "Startseite",

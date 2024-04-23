@@ -1,7 +1,7 @@
 import "./globals.css";
 export const metadata = {
-  title: "explorem",
-  description: "explorem website",
+  title: {default:"explorem", template:"%s - explorem"},
+  description: "We Make A Difference , We Make It Happen .",
 };
 export default function RootLayout({ children }) {
   return (

@@ -2,7 +2,14 @@ import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import FetchImageScroll from "@/components/fetchImageScroll";
-
+import slogen1 from "/public/image/aboutUS/slogen1.jpg";
+import saction1 from "/public/image/aboutUS/saction1.jpg";
+import Gracila from "/public/image/aboutUS/team/Gracila.jpg";
+import Abdessamad from "/public/image/aboutUS/team/Abdessamad.png";
+export const metadata = {
+  title: "Aboute",
+  
+};
 export default function About({ params: { locale } }) {
   const t = useTranslations("AboutUS");
   return (
@@ -10,11 +17,13 @@ export default function About({ params: { locale } }) {
       <div className="flex flex-col gap-10">
         <div className="relative">
           <Image
-            src="/image/aboutUS/saction1.jpg"
+            title={"explorem"}
+            src={saction1}
             className="h-auto max-w-full w-full  "
-            width={1920}
-            height={1080}
+            width={1280}
+            height={612}
             quality={100}
+            placeholder="blur"
             alt="Explorem"
           />
 
@@ -44,11 +53,13 @@ export default function About({ params: { locale } }) {
           <p>{t("slogen1.line2")}</p>
         </span>
         <Image
+          title={"explorem"}
           quality={40}
-          src="/image/aboutUS/slogen1.jpg"
+          src={slogen1}
           className="lg:w-1/3 rounded-xl"
-          width={1920}
-          height={1080}
+          placeholder="blur"
+          width={6240}
+          height={3512}
           alt="Explorem"
         />
       </div>
@@ -95,6 +106,7 @@ export default function About({ params: { locale } }) {
       <div className=" flex flex-col gap-4">
         <span className="flex  items-center gap-4 justify-center">
           <Image
+             title={'explorem'}
             src="/image/aboutUS/logoHand.png"
             className="w-14 lg:w-16"
             width={195}
@@ -120,7 +132,7 @@ export default function About({ params: { locale } }) {
           Your browser does not support the video tag.
         </video>
       </div>
-      
+
       <div className="flex flex-col gap-4">
         <div className=" container">
           <div className="bg-[#0149A6] rounded-md px-4 py-10  ">
@@ -155,10 +167,12 @@ export default function About({ params: { locale } }) {
           <div className="flex lg:flex-row flex-col items-center justify-center gap-4  container ">
             <div className=" flex  justify-center">
               <Image
+                 title={'Gracila'}
                 quality={100}
-                width={500}
-                height={500}
-                src="/image/aboutUS/team/Gracila.jpg"
+                width={555}
+                height={388}
+                placeholder="blur"
+                src={Gracila}
                 className="w-2/3 rounded-md "
                 alt="Gracila"
               />
@@ -183,15 +197,14 @@ export default function About({ params: { locale } }) {
           <div className="flex lg:flex-row-reverse flex-col items-center justify-center gap-4  container ">
             <div className=" flex  justify-center">
               <Image
-                blurDataURL="/image/aboutUS/team/Abdessamad.png"
+                title={'Abdessamad'}
                 placeholder="blur"
-                loading="lazy"
                 quality={100}
-                width={500}
-                height={500}
-                src="/image/aboutUS/team/Abdessamad.png"
+                width={334}
+                height={264}
+                src={Abdessamad}
                 className="w-2/3 rounded-md "
-                alt="Gracila"
+                alt="Abdessamad"
               />
             </div>
             <div className=" flex gap-4 flex-col lg:w-1/2  ">

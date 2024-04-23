@@ -1,18 +1,52 @@
+"use client";
 import { Clock1, MapPinIcon, PhoneCall, PhoneCallIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
+
 import Image from "next/image";
-import {
-  Clock,
-  Facebook,
-  Instagram,
-  Linkedin,
-  MapPin,
-  Phone,
-  Youtube,
-} from "react-feather";
+import { useState } from "react";
+import { Facebook, Instagram, Linkedin, Youtube } from "react-feather";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+  const [isLoading, setIsLoading] = useState(false);
+  const [validation, setValidation] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const newsLetter = async (e) => {
+    e.preventDefault();
+
+    setValidation(true);
+
+    if (email) {
+      setIsLoading(true);
+      const loadingToast = toast.loading("Subscribing ...");
+      try {
+        const response = await fetch("/api/newsLetter", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        });
+        if (response.status === 200) {
+          setEmail("");
+          setValidation(false);
+          setIsLoading(false);
+          toast.dismiss(loadingToast);
+          toast.success(" Subscribe Newsletter!");
+        }
+      } catch {
+        toast.dismiss(loadingToast);
+        setIsLoading(false);
+        toast.error("Failed to SUBSCRIBE Newsletter.");
+      }
+    }
+  };
+
   return (
     <footer className="bg-[#22242B]">
+      <Toaster position="bottom-right" reverseOrder={false} />
       <div className=" py-20 container gap-8 flex flex-col lg:flex-row items-center justify-between">
         <div className=" flex flex-col   gap-4">
           <span className="flex flex-col lg:flex-row text-center items-center hover:underline decoration-4 underline-offset-4 hover:duration-700 transition  decoration-[#0149A6] gap-2">
@@ -81,26 +115,41 @@ export default function Footer() {
             </a>
           </span>
         </div>
-        <div className="flex flex-col gap-4 w-full lg:w-auto">
+        <form
+          onSubmit={newsLetter}
+          className="flex flex-col gap-4 w-full lg:w-auto"
+        >
           <span className=" font-bold text-xl text-center lg:text-left text-white">
-            Newsletter
+            {t("newsLetter")}
           </span>
-          <input
-            type="text"
-            name="Newsletter"
-            placeholder="Your Email"
-            className=" placeholder-white bg-[#22242B] border-[#0149A6] border-2 py-2 px-4 rounded-full "
-            id="Newsletter"
-          />
-          <button className="bg-[#0149A6] rounded-full py-2 px-4 text-white font-semibold uppercase">
-            subscribe
+          <label className=" space-y-2 flex flex-col ">
+            <input
+              type="email"
+              name="Newsletter"
+              value={email}
+              placeholder={t("email")}
+              onChange={(e) => setEmail(e.target.value)}
+              className={`${
+                !email && validation && "border-red-500 "
+              }  placeholder-white bg-[#22242B] border-[#0149A6]  text-white border-2 py-2 px-4 rounded-full `}
+              id="Newsletter"
+            />
+            <p className="text-red-500 text-center text-xs font-medium">
+              {!email && validation && "Please enter your Email"}
+            </p>
+          </label>
+          <button
+            disabled={isLoading}
+            type="submit"
+            className="px-12 py-1 w-full rounded-full font-bold border-4 duration-700 hover:bg-[#22242B] hover:text-[#fff] border-[#0149a6] bg-[#0149a6] text-white"
+          >
+            {isLoading ? "sending..." : t("subscribe")}
           </button>
-        </div>
+        </form>
       </div>
       <div className=" flex items-center justify-center bg-[#0149A6] py-4">
         <span className=" flex gap-4 flex-col lg:flex-row items-center font-bold capitalize text-center md:text-start text-white ">
-          Copyright &copy; {new Date().getFullYear()} . All rights are reserved
-          by{" "}
+          {t("Copyright1")} &copy; {new Date().getFullYear()} .{t("Copyright2")}
           <span className="bg-white text-[#0149A6] w-fit p-2 uppercase font-bold">
             explorem
           </span>

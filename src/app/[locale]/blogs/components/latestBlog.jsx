@@ -1,4 +1,3 @@
-
 import { getLatestBlog } from "@/app/api/data/blog/actions";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
@@ -8,27 +7,37 @@ import { Clock } from "react-feather";
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
 export default async function LatestBlog() {
-  const t = await  getTranslations("Blog");
+  const t = await getTranslations("Blog");
   const latestBlog = await getLatestBlog();
-  const { id, title, imageUrl, description, author, createAt } =
-    latestBlog || {};
+  const {
+    id,
+    title,
+    imageUrl,
+    base64,
+    description,
+    width,
+    height,
+    author,
+    createAt,
+  } = latestBlog || {};
   return (
     <>
       <div className="flex flex-col gap-4">
-        
         <div className="container w-full gap-4 lg:items-center  flex flex-col lg:flex-row-reverse ">
-          
-          <Image
-            blurDataURL={imageUrl}
-            placeholder="blur"
-            loading="lazy"
-            quality={100}
-            width={1920}
-            height={1000}
-            className="lg:w-1/2 object-cover lg:max-h-96  rounded  shadow-2xl    bg-no-repeat "
-            src={imageUrl}
-            alt="explorem"
-          />
+          <div className="lg:w-1/2 object-cover h-auto  rounded  shadow-2xl  ">
+            <Image
+              title={title}
+              blurDataURL={base64}
+              placeholder="blur"
+              quality={100}
+              width={width}
+              height={height}
+              src={imageUrl}
+              className="object-cover  h-auto  rounded-t "
+              alt={title}
+            />
+          </div>
+
           <div className=" lg:w-1/2 flex gap-4  lg:gap-8 flex-col">
             <span className="text-[#fff] font-bold  bg-[#134ba1] w-fit py-1 px-3">
               {t("new")}

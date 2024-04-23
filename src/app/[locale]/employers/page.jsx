@@ -5,7 +5,11 @@ import Contact from "../contact/page";
 import { useTranslations } from "next-intl";
 import FetchImageScroll from "@/components/fetchImageScroll";
 import { Crosshair, EyeIcon, FileTextIcon, FolderCheck, GraduationCap, Handshake, Infinity, MousePointerClick, PaperclipIcon, Plane, RotateCcwIcon, Share2, User2 } from "lucide-react";
-
+import saction1 from '/public/image/employers/saction1.jpg'
+export const metadata = {
+  title: "Employers",
+  
+};
 export default function Employers() {
   const t = useTranslations("Employers");
 
@@ -68,11 +72,13 @@ export default function Employers() {
           <div>
             <div className="relative">
               <Image
+                  title={'explorem'}
                 quality={100}
-                src="/image/employers/saction1.jpg"
+                src={saction1}
                 className="h-auto max-w-full w-full  "
-                width={1920}
-                height={1080}
+                width={6240}
+                height={2153}
+                placeholder = 'blur'
                 alt="Explorem"
               />
 

@@ -12,7 +12,11 @@ import {
   School,
   UserSearch,
 } from "lucide-react";
-
+import saction1 from "/public/image/candidates/saction1.jpg";
+export const metadata = {
+  title: "Candidates",
+  
+};
 export default function Candidates() {
   const t = useTranslations("Candidates");
   const Services = [
@@ -101,11 +105,13 @@ export default function Candidates() {
         <div className="flex flex-col gap-10">
           <div className="relative">
             <Image
+              title={"explorem"}
               quality={100}
-              src="/image/candidates/saction1.jpg"
+              src={saction1}
               className="h-auto max-w-full w-full  "
-              width={1920}
-              height={1080}
+              placeholder="blur"
+              width={6240}
+              height={2528}
               alt="Explorem"
             />
 
