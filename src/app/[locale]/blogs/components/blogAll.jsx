@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { fetchBlogs } from "@/app/api/data/blog/actions";
 import PaginationBlog from "./paginationBlog";
+import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 
 const locales = ["en", "de", "ar"];
 const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
@@ -50,10 +51,10 @@ export default async function BlogAll({ take }) {
               </div>
               <div className=" flex items-center  ">
                 <Image
-                  blurDataURL={'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAIAAABPmPnhAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nAH4AAf/ACo0LhIaFCoyJ2tzaGBeR0pFJ1lTMYB0QJ2VZKKkgwBPYWErPjwrOTdodW5QWlFRWkxlc19QWkeCjYB9gnMAVWpwT3R9UHBvbXp2W1pNaWBNUVRBU0k2V1RBSls/ACo7PUphZSYhHBQNE0E9NCYjHicdFnpuW5OeiIuqkwBxeHaWmZVSQysRBQBOP0JBOjsOFh0+MyS1qYTo2rYAxL+4wreuvqB3cGAke19lkXl5SVRYQCgjspF18eS+AMe+tMi+ssq7qtTEstXEs82+rtvMurunmNnErf/v0gDj2szr39D15dHz49D46NT/8t7/9N//+uX//eb/+uDB3HQvKnXFjAAAAABJRU5ErkJggg=='}
+                  blurDataURL={blog.base64}
                   placeholder="blur"
-                  width="1920"
-                  height="384"
+                  width={blog.width}
+                  height={blog.height}
                   quality={100}
                   alt={blog.title}
                   title={blog.title}
@@ -61,6 +62,7 @@ export default async function BlogAll({ take }) {
                   src={blog.imageUrl}
                
                 />
+                  
               </div>
             </div>
           </div>

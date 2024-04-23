@@ -17,7 +17,6 @@ export default async function FetchImageScroll() {
             className="max-w-none   rounded-sm h-52 w-auto"
             alt="explorem"
           />
-          
         </div>
       ))}
     </>
