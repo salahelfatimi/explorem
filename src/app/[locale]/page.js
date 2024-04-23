@@ -72,7 +72,7 @@ export default async function Index() {
             <div className=" text-center text-white">
               <Link
                 className="bg-[#0149a6] w-fit py-2 border-white px-4 font-semibold border-2 duration-500 hover:text-[#0149a6] hover:bg-white hover:border-[#0149a6]"
-                href="/blog"
+                href="/blogs"
               >
                 {t("seeMore")} {t('blog')}
               </Link>

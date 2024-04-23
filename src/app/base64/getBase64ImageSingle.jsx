@@ -22,7 +22,7 @@ const getImage = async (src) => {
 export default async function GetBase64Image({imageUrl,className,alt}) {
  
   const { base64, img } = await getImage(imageUrl);
-
+ 
   return (
     <div>
       <Image

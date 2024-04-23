@@ -1,7 +1,6 @@
 import { getLatestBlog } from "@/app/api/data/blog/actions";
 import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 
-
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
@@ -12,17 +11,32 @@ const { Link } = createSharedPathnamesNavigation({ locales });
 export default async function LatestBlog() {
   const t = await getTranslations("Blog");
   const latestBlog = await getLatestBlog();
-  const { id, title, imageUrl, description, author, createAt } =
-    latestBlog || {};
+  const {
+    id,
+    title,
+    imageUrl,
+    base64,
+    description,
+    width,
+    height,
+    author,
+    createAt,
+  } = latestBlog || {};
   return (
     <>
       <div className="flex flex-col gap-4">
         <div className="container w-full gap-4 lg:items-center  flex flex-col lg:flex-row-reverse ">
           <div className="lg:w-1/2 object-cover h-auto  rounded  shadow-2xl  ">
-            <GetBase64Image
-              imageUrl={imageUrl}
+            <Image
+              title={title}
+              blurDataURL={base64}
+              placeholder="blur"
+              quality={100}
+              width={width}
+              height={height}
+              src={imageUrl}
+              className="object-cover  h-auto  rounded-t "
               alt={title}
-              className={"object-cover  h-auto  rounded-t "}
             />
           </div>
 
