@@ -23,7 +23,7 @@ export default async function TestimonialComments({ testimonial }) {
           />
         ) : isVideo(fileUrl) ? (
           <video
-            className=" bg-[#0149a6] w-auto  "
+            className=" bg-[#0149a6] h-[32rem] min-h-96 w-auto  "
             height={100}
             width={100}
             controls

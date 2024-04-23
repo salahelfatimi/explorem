@@ -9,6 +9,7 @@ import { Instagram, Link2 } from "react-feather";
 import LatestBlog from "./blogs/components/latestBlog";
 import FetchLogoScroll from "@/components/fetchLogoScroll";
 import CourseSchedule from "@/components/Schedule/courseSchedule";
+import GetBase64Image from "../base64/getBase64ImageSingle";
 
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
@@ -19,6 +20,7 @@ export default async function Index() {
 
   return (
     <>
+   
       <div className="bg-[#F5F5F5]   space-y-8 py-12">
         <div className=" flex flex-col items-center justify-center gap-4">
           <h1 className="flex items-center gap-4 justify-center flex-col text-xl lg:text-2xl font-extrabold capitalize">
