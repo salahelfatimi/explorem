@@ -9,7 +9,6 @@ import { Instagram, Link2 } from "react-feather";
 import LatestBlog from "./blogs/components/latestBlog";
 import FetchLogoScroll from "@/components/fetchLogoScroll";
 import CourseSchedule from "@/components/Schedule/courseSchedule";
-import GetBase64Image from "../base64/getBase64ImageSingle";
 
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });

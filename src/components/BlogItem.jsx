@@ -6,10 +6,8 @@ const BlogItem = ({ blog }) => {
   const { id, title, imageUrl, description, category } = blog || {};
   return (
     <div className="bg-gray-900 p-4 border-2 border-green-200 mx-2 my-2 rounded-lg shadow-md">
-      <img
+      <Image
         src={imageUrl}
-        blurDataURL={imageUrl}
-        placeholder="blur"
         loading="lazy"
         width="600"
         height="400"

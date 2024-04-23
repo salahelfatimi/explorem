@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-export default async function PaginationTestimonial({ take }) {
+export default  function PaginationTestimonial({ take }) {
   const router = useRouter();
 
 
