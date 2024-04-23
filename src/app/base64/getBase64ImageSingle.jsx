@@ -22,8 +22,6 @@ const getImage = async (src) => {
 export default async function GetBase64Image({imageUrl,className,alt}) {
  
   const { base64, img } = await getImage(imageUrl);
-  console.log(base64)
-  console.log(img)
   return (
     <div>
       <Image

@@ -36,7 +36,8 @@ export const fetchBlogs = async (take) => {
       _id: {
         $oid: "6617dafae647e176260ada0b",
       },
-      base64:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxUlEQVR4nAG6AEX/AKamsMjO1tnh5ePp7vL+//D+/+Lo683S18bIy8rIyACFf4GYaHKdbXW5eXnPgofEcne2i4mGVlWJbni6yMwAZmtvwJtgo3VJgEU9hywziSMlqomDm3hdqYhdq6yYAIVgTMGmevDCiXxdTC0kJHFtZEg/PHNjUbuXZoZkTQCHYEZ6Y1addl50XEopKCg/PTobGhgmHBc+LSApIh0ABwMAHyAdEhQTNS8pWFVOXFlUWFVRS0pJOjs6MC8rdH1SjD+lpSkAAAAASUVORK5CYII=      ",
+      base64:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAIAAAC+zks0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nAHZACb/AMjK3NrU39nb79jU6trh+tihochCKrdEMtmytP/u+gCtmp7f3vHd09/o4PLE0OfGoKPUd0e5X0Pft7X/9/8Aqo2Uh3ODuqTAlIKUlIuVx5ygsGBDjlBEn3p9x6KgAGNcbCMkQJCY1w0XPBAMCYYyM2g8RxoIE0srLDAXFQB5aHdMR2JtcZw1NFUMAgJKEB1gOD5QPEdKNkQkExQAlIqfGRIcExEaRUJRZGV+DxMqS0JPfm2MrpWxeU05AIWIpzMwOUtNW11bcJmctU9QaTcwQMKnts6yzM6Ufyg7ZTn0w6gKAAAAAElFTkSuQmCC        ",
       width: "6960",
       height: "4640",
 
@@ -356,6 +357,14 @@ export const fetchSingleBlog = async (id) => {
       imageUrl:
         "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
       imageKey: "92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+      base641:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAIAAADzBuo/AAAACXBIWXMAABcMAAAXDAGKAo5mAAAApklEQVR4nAGbAGT/ALTV6q3J3tHKxPf+/bfBs5aKbrCJWVc2F4RsWZ2NgQCCiJdmbXyDfXuBkJtuaWmGZEZtUTdRPy5oVEdIOzQAcXF1IycpAAAIHiElPykua15cMyYiCQQAHBcSIBgGZEZtUTdRPy5oVEdIOzQAcXF1IycpAAAIHiElPykua15cMyYiCQQAHBcSIBgQAFtgazpBSWJgYFxYU4OAd5eKgF1OQU1EN1VKQHdnUwBqb3lua2qTiH+Id2qUhHSei3eXg22bhG6finKnkncjfj4LQl4nbQAAAABJRU5ErkJggg==          ",
+      width1: "3908",
+      height1: "1795",
+
+      imageUrl1:
+        "https://utfs.io/f/7178297b-2e01-42d8-a98b-b0a412b2f7dd-rpbt4b.jpg",
+      imageKey1: "7178297b-2e01-42d8-a98b-b0a412b2f7dd-rpbt4b.jpg",
       title: "22 Candidates Successfully Relocated to Germany!",
       description:
         "In April 20 and 21, the 22 of the EXPLOREM nurse-candidates were successfully\r\nrelocated to Cologne Germany. As to date, there are 32 out of 37 program recipients\r\nwere relocated. The 5 other candidates are waiting for their pre-approval documents\r\nfor visa process. These 37 candidates are graduates of Excel Group of Institutes\r\n(Marrakech), Galien Institute (Agadir), and Work Center (Oujda).\r\n\r\nThis is one of the successful recruitment projects managed by EXPLOREM, in\r\ncollaboration with DRK-Rettungsdienst Rhein-Berg GmbH and Marburg\r\nConsulting.\r\n\r\nThrough the efforts and initiatives of EXPLOREM managing directors, Mr.\r\nAbdessamad Aboul ossoud and Dr. Gracila Ucag, the recipients of the program\r\nreceived monthly stipend for one year and were provided with FREE services on\r\nlanguage formation until B2 level; services on documentation, recognition, visa\r\nprocess, relocation support such as flight tickets, insurance registration, etc. All\r\ncosts/ expenses are paid by DRK, the employer.\r\n\r\nEXPLOREM has more fruitful projects in the table in which students, skilled workers\r\nand professionals will benefit. With the new Skilled Immigrant Act of Germany,\r\nexisting mechanisms for skilled workers with a university degree, such as the EU Blue\r\nCard, will continue and in some cases be extended. In addition, a new opportunity\r\ncard will enable third-country nationals to seek employment.\r\n\r\nWith all the relocated candidates of Explorem since year 2020, the team is a reliable\r\ncompany to provide the best services in language and nursing formation, recruitment\r\nmanagement, documentation and recognition process, relocation support such as\r\nvisa assistance, insurance registration and apartment search, etc.\r\n\r\nEXPLOREM made a difference. EXPLOREM made it happen.",
@@ -375,11 +384,14 @@ export const fetchSingleBlog = async (id) => {
     id: blog._id.$oid,
     base64: blog.base64,
     width: blog.width,
-
     height: blog.height,
-
+    base641: blog?.base641,
+    width1: blog?.width1,
+    height1: blog?.height1,
     imageUrl: blog.imageUrl,
     imageKey: blog.imageKey,
+    imageUrl1: blog?.imageUrl1,
+    imageKey1: blog?.imageKey1,
     title: blog.title,
     description: blog.description,
     author: blog.author,
