@@ -3,14 +3,32 @@ import { fetchSingleBlog } from "@/app/api/data/blog/actions";
 
 import Image from "next/image";
 
-export const metadata = {
-  title: "Blog",
-  
-};
-export default async function BlogDetail({ params }) {
-  const id = params?.id;
 
-  const blog = await fetchSingleBlog(id);
+
+
+export async function generateMetadata({
+  params: { title },
+}){
+  const post = await fetchSingleBlog(title);
+  
+
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: {
+      images: [
+        {
+          url: post.imageUrl
+        }
+      ]
+    }
+  };
+}
+
+export default async function BlogDetail({ params }) {
+  const title = params?.title;
+
+  const blog = await fetchSingleBlog(title);
   const monthNames = [
     "January",
     "February",
@@ -78,7 +96,7 @@ export default async function BlogDetail({ params }) {
               <Instagram className=" stroke-[#fff] hover:stroke-[#134ba1] stroke-2" />
             </a>
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=https://www.explorem.net/en/blogs/${id}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=https://www.explorem.net/en/blogs/${title}`}
               className=" rounded-full duration-500 border-[#134ba1] hover:bg-white bg-[#134ba1] border-2 w-fit h-fit p-2"
             >
               <Send className=" stroke-[#fff] hover:stroke-[#134ba1] stroke-2" />
