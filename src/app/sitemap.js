@@ -15,7 +15,7 @@ export default function sitemap() {
       {
         url: 'https://www.explorem.net/en/blog',
         lastModified: new Date(),
-        changeFrequency: 'weekly',
+        changeFrequency: 'dayly',
         priority: 0.5,
       },
       {
