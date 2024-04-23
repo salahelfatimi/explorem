@@ -3,7 +3,7 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
 export const metadata = {
-  title: {default:"explorem", template:"%s - explorem"},
+  title: {default:"Home", template:"%s - explorem"},
   description: "We Make A Difference , We Make It Happen .",
   metadataBase: new URL('https://www.explorem.net'),
   alternates: {

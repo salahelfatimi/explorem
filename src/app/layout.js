@@ -1,6 +1,6 @@
 import "./globals.css";
 export const metadata = {
-  title: {default:"explorem", template:"%s - explorem"},
+  title: {template:"%s - explorem"},
   description: "We Make A Difference , We Make It Happen .",
   metadataBase: new URL('https://www.explorem.net'),
   alternates: {
