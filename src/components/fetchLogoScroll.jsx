@@ -1,4 +1,4 @@
-import { fetchImageScroll } from "@/app/api/data/ImageScroll/actions";
+
 import Image from "next/image";
 export default async function FetchLogoScroll() {
     const images = [

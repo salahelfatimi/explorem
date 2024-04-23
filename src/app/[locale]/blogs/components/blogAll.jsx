@@ -4,7 +4,6 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { fetchBlogs } from "@/app/api/data/blog/actions";
 import PaginationBlog from "./paginationBlog";
-import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 
 const locales = ["en", "de", "ar"];
 const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
