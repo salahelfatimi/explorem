@@ -6,7 +6,10 @@ import slogen1 from "/public/image/aboutUS/slogen1.jpg";
 import saction1 from "/public/image/aboutUS/saction1.jpg";
 import Gracila from "/public/image/aboutUS/team/Gracila.jpg";
 import Abdessamad from "/public/image/aboutUS/team/Abdessamad.png";
-
+export const metadata = {
+  title: "Aboute",
+  
+};
 export default function About({ params: { locale } }) {
   const t = useTranslations("AboutUS");
   return (

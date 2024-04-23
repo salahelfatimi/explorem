@@ -6,7 +6,10 @@ import { useTranslations } from "next-intl";
 import FetchImageScroll from "@/components/fetchImageScroll";
 import { Crosshair, EyeIcon, FileTextIcon, FolderCheck, GraduationCap, Handshake, Infinity, MousePointerClick, PaperclipIcon, Plane, RotateCcwIcon, Share2, User2 } from "lucide-react";
 import saction1 from '/public/image/employers/saction1.jpg'
-
+export const metadata = {
+  title: "Employers",
+  
+};
 export default function Employers() {
   const t = useTranslations("Employers");
 

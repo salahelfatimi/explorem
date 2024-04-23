@@ -2,8 +2,11 @@ import {  Facebook, Instagram, Send } from "react-feather";
 import { fetchSingleBlog } from "@/app/api/data/blog/actions";
 
 import Image from "next/image";
-import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 
+export const metadata = {
+  title: "Blog",
+  
+};
 export default async function BlogDetail({ params }) {
   const id = params?.id;
 

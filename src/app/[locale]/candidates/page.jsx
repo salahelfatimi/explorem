@@ -13,7 +13,10 @@ import {
   UserSearch,
 } from "lucide-react";
 import saction1 from "/public/image/candidates/saction1.jpg";
-
+export const metadata = {
+  title: "Candidates",
+  
+};
 export default function Candidates() {
   const t = useTranslations("Candidates");
   const Services = [

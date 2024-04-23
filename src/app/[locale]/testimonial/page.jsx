@@ -2,6 +2,10 @@ import { fetchTestimonial } from "@/app/api/data/testimonial/actions";
 import PaginationTestimonial from "./components/paginationTestimonial";
 import TestimonialComments from "@/components/testimonialComments";
 import { getTranslations } from "next-intl/server";
+export const metadata = {
+  title: "Testimonial",
+  
+};
 export default async function Testimonial({ searchParams }) {
   const t = await getTranslations("Testimonial");
   const take = (await searchParams.take) ? parseInt(searchParams.take) : 6;
