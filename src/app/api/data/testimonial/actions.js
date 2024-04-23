@@ -129,6 +129,23 @@ export const fetchTestimonial = async (take) => {
         $date: "2024-04-11T15:24:48.981Z",
       },
     },
+    ,
+    {
+      _id: {
+        $oid: "661800c139aa177c851bf593",
+      },
+      image: "explorem",
+      author: "Explorem",
+      fileUrl:
+        "https://utfs.io/f/3805fd3f-6efd-496b-92c3-fb3c2185c020-37sv7g.mp4",
+      fileKey: "3805fd3f-6efd-496b-92c3-fb3c2185c020-37sv7g.mp4",
+      createdAt: {
+        $date: "2024-04-23T15:24:48.981Z",
+      },
+      updatedAt: {
+        $date: "2024-04-23T15:24:48.981Z",
+      },
+    },
   ];
   testimonial.sort(
     (a, b) => new Date(b.updatedAt.$date) - new Date(a.updatedAt.$date)
@@ -152,22 +169,7 @@ export const fetchTestimonial = async (take) => {
 
 export const fetchTestimonialLatest = async () => {
   const testimonial = [
-    {
-      _id: {
-        $oid: "6617183bb2c32fb2c43e73fe",
-      },
-      image: "man",
-      author: "Jamal Bamou",
-      fileUrl:
-        "https://utfs.io/f/619ed8da-f5f4-431c-b516-10e33998f537-rlti49.mp4",
-      fileKey: "619ed8da-f5f4-431c-b516-10e33998f537-rlti49.mp4",
-      createdAt: {
-        $date: "2024-04-10T22:52:43.622Z",
-      },
-      updatedAt: {
-        $date: "2024-04-10T22:52:43.622Z",
-      },
-    },
+   
     {
       _id: {
         $oid: "6617d186e4a47aeaaa42c0bf",
@@ -201,8 +203,27 @@ export const fetchTestimonialLatest = async () => {
         $date: "2024-04-11T15:22:34.076Z",
       },
     },
+    ,
+    {
+      _id: {
+        $oid: "661800c139aa177c851bf593",
+      },
+      image: "explorem",
+      author: "Explorem",
+      fileUrl:
+        "https://utfs.io/f/3805fd3f-6efd-496b-92c3-fb3c2185c020-37sv7g.mp4",
+      fileKey: "3805fd3f-6efd-496b-92c3-fb3c2185c020-37sv7g.mp4",
+      createdAt: {
+        $date: "2024-04-23T15:24:48.981Z",
+      },
+      updatedAt: {
+        $date: "2024-04-23T15:24:48.981Z",
+      },
+    },
   ];
-
+  testimonial.sort(
+    (a, b) => new Date(b.updatedAt.$date) - new Date(a.updatedAt.$date)
+  );
   return testimonial.map((item) => {
     return {
       _id: item._id.$oid,
