@@ -34,9 +34,7 @@ export async function generateMetadata({
 export default async function BlogDetail({ params:{id} }) {
 
   const blog = await fetchSingleBlog(id);
-  if(blog.status===404){
-    notFound()
-  }
+  
   const monthNames = [
     "January",
     "February",
