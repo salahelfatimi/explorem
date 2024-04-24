@@ -1,15 +1,10 @@
 import {  Facebook, Instagram, Send } from "react-feather";
-import { fetchBlogs, fetchSingleBlog } from "@/app/api/data/blog/actions";
+import {  fetchSingleBlog } from "@/app/api/data/blog/actions";
 
 import Image from "next/image";
-import { notFound } from "next/navigation";
 
-export async function generateStaticParams() {
-  const blogs = await fetchBlogs(50);
-  
 
-  return blogs.map(({ id }) => id);
-}
+
 
 
 export async function generateMetadata({
