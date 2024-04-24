@@ -199,7 +199,7 @@ export const fetchBlogs = async (take) => {
   });
 };
 
-export const fetchSingleBlog = async (id) => {
+export const fetchSingleBlog = async (title) => {
   const blogs = [
     {
       _id: {
@@ -378,7 +378,7 @@ export const fetchSingleBlog = async (id) => {
       },
     },
   ];
-  const blog = blogs.find((blog) => blog._id.$oid === id);
+  const blog = blogs.find((blog) => blog.title.replace(/\s+/g, '-') === title);
   if(blog){
 
   return {

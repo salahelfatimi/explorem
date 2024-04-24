@@ -23,9 +23,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogDetail({ params:{id} }) {
+export default async function BlogDetail({ params:{title} }) {
 
-  const blog = await fetchSingleBlog(id);
+  const blog = await fetchSingleBlog(title);
   if(blog.status===404){
     notFound()
   }
@@ -96,7 +96,7 @@ export default async function BlogDetail({ params:{id} }) {
               <Instagram className=" stroke-[#fff] hover:stroke-[#134ba1] stroke-2" />
             </a>
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=https://www.explorem.net/en/blogs/${id}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=https://www.explorem.net/en/blogs/${title}`}
               className=" rounded-full duration-500 border-[#134ba1] hover:bg-white bg-[#134ba1] border-2 w-fit h-fit p-2"
             >
               <Send className=" stroke-[#fff] hover:stroke-[#134ba1] stroke-2" />
