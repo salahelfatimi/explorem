@@ -379,7 +379,6 @@ export const fetchSingleBlog = async (id) => {
     },
   ];
   const blog = blogs.find((blog) => blog._id.$oid === id);
-  if(blog){
 
   return {
     id: blog._id.$oid,
@@ -400,11 +399,6 @@ export const fetchSingleBlog = async (id) => {
     createAt: formatDate(blog.createAt.$date),
     updateAt: formatDate(blog.updateAt.$date),
   };
-}else{
-  return{
-    status:404
-  }
-}
 };
 
 export const getLatestBlog = async () => {
