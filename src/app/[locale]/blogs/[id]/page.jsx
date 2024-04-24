@@ -4,14 +4,6 @@ import { fetchBlogs, fetchSingleBlog } from "@/app/api/data/blog/actions";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-export async function generateStaticParams() {
-  const blogs = await fetchBlogs(6);
-  
-
-  return blogs.map(({ id }) => id.id);
-}
-
-
 export async function generateMetadata({
   params: { id },
 }){
