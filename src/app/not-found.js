@@ -13,7 +13,7 @@ export default function NotFound() {
           alt="Explorem"
         />
         <p className=" font-bold text-2xl flex items-center gap-2 flex-col text-center justify-center text-[#0248a9]">
-          Look like this page doesn't exist
+          Look like this page doesn&apos;t exist
         </p>
         <Link
           className=" underline underline-offset-4  font-bold text-xl text-blue-600 flex  duration-700 items-center gap-2"
