@@ -20,7 +20,6 @@ export const metadata = {
 export default async function RootLayout({ children }) {
   const cookieStore = await cookies()
   const locale = await cookieStore.get('NEXT_LOCALE')
-  console.log(locale)
 
   return (
     <html lang={locale.value}>
