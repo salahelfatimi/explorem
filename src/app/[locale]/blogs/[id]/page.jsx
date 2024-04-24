@@ -8,7 +8,7 @@ export async function generateStaticParams() {
   const blogs = await fetchBlogs(6);
   
 
-  return blogs.map(({ id }) => id);
+  return blogs.map(({ id }) => id.id);
 }
 
 
