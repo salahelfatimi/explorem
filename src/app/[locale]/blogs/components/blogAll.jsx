@@ -59,9 +59,7 @@ export default async function BlogAll({ take }) {
                   title={blog.title}
                   className="object-cover  h-96  rounded-t      "
                   src={blog.imageUrl}
-               
                 />
-                  
               </div>
             </div>
           </div>

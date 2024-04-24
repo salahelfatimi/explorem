@@ -48,10 +48,10 @@ export default function About({ params: { locale } }) {
         </span>
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-between w-full container gap-4 ">
-        <span className="bg-[#0149A6] text-white py-10 px-2 rounded-lg lg:w-1/2 font-mono font-bold lg:text-2xl md:text-xl text-lg text-center">
+        <h2 className="bg-[#0149A6] text-white py-10 px-2 rounded-lg lg:w-1/2 font-mono font-bold lg:text-2xl md:text-xl text-lg text-center">
           <p>{t("slogen1.line1")}</p>
           <p>{t("slogen1.line2")}</p>
-        </span>
+        </h2>
         <Image
           title={"explorem"}
           quality={40}
@@ -65,9 +65,9 @@ export default function About({ params: { locale } }) {
       </div>
       <div className="container flex flex-col gap-4 lg:flex-row w-full items-center justify-between text-center">
         <span className=" bg-white shadow lg:w-1/3 flex flex-col gap-3 p-4 rounded-xl">
-          <p className=" font-bold text-xl uppercase lg:text-2xl text-[#0149a6]">
+          <h2 className=" font-bold text-xl uppercase lg:text-2xl text-[#0149a6]">
             {t("grid.grid1.title")}
-          </p>
+          </h2>
           <p className=" lg:text-lg font-medium">{t("grid.grid1.text")}</p>
         </span>
         <Image
@@ -78,9 +78,9 @@ export default function About({ params: { locale } }) {
           alt="Explorem"
         />
         <span className=" bg-white shadow lg:w-1/3 flex flex-col gap-3 p-4 rounded-xl">
-          <p className=" font-bold text-xl uppercase lg:text-2xl text-[#0149a6]">
+          <h2 className=" font-bold text-xl uppercase lg:text-2xl text-[#0149a6]">
             {t("grid.grid2.title")}
-          </p>
+          </h2>
           <p className=" lg:text-lg font-medium">{t("grid.grid2.text")}</p>
         </span>
       </div>
@@ -113,9 +113,9 @@ export default function About({ params: { locale } }) {
             height={159}
             alt="Explorem"
           />
-          <p className=" capitalize font-bold text-xl lg:text-3xl text-[#0149a6]">
+          <h2 className=" capitalize font-bold text-xl lg:text-3xl text-[#0149a6]">
             {t("vedioTitle")}
-          </p>
+          </h2>
         </span>
 
         <video
@@ -136,10 +136,10 @@ export default function About({ params: { locale } }) {
       <div className="flex flex-col gap-4">
         <div className=" container">
           <div className="bg-[#0149A6] rounded-md px-4 py-10  ">
-            <span className="text-white   rounded-lg  font-mono font-bold lg:text-2xl md:text-xl text-lg text-center">
+            <h2 className="text-white   rounded-lg  font-mono font-bold lg:text-2xl md:text-xl text-lg text-center">
               <p>{t("slogen2.line1")}</p>
               <p>{t("slogen2.line2")}</p>
-            </span>
+            </h2>
           </div>
         </div>
         <div className="bg-[#0149a6] py-6 ">
@@ -159,9 +159,9 @@ export default function About({ params: { locale } }) {
             height={159}
             alt="Explorem"
           />
-          <p className=" capitalize font-bold text-xl lg:text-3xl text-[#0149a6]">
+          <h2 className=" capitalize font-bold text-xl lg:text-3xl text-[#0149a6]">
             {t("ourTeamManagement.title")}
-          </p>
+          </h2>
         </span>
         <div className=" space-y-16">
           <div className="flex lg:flex-row flex-col items-center justify-center gap-4  container ">

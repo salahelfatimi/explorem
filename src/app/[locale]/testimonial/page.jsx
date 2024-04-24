@@ -6,6 +6,7 @@ export const metadata = {
   title: "Testimonial",
   
 };
+
 export default async function Testimonial({ searchParams }) {
   const t = await getTranslations("Testimonial");
   const take = (await searchParams.take) ? parseInt(searchParams.take) : 6;

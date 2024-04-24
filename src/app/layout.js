@@ -1,18 +1,18 @@
 import "./globals.css";
 export const metadata = {
-  title: {template:"%s - explorem"},
+  title: { template: "%s - Explorem" },
   description: "We Make A Difference , We Make It Happen .",
-  metadataBase: new URL('https://www.explorem.net'),
+  metadataBase: new URL("https://www.explorem.net"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
     languages: {
-      'en': '/en',
-      'de': '/de',
-      'ar': '/ar',
+      en: "/en",
+      de: "/de",
+      ar: "/ar",
     },
   },
   openGraph: {
-    images: '/opengraph-image.png',
+    images: "/opengraph-image.png",
   },
 };
 export default function RootLayout({ children }) {

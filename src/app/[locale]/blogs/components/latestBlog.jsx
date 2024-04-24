@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Clock } from "react-feather";
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
+
 export default async function LatestBlog() {
   const t = await getTranslations("Blog");
   const latestBlog = await getLatestBlog();
