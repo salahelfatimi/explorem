@@ -7,12 +7,12 @@ import { useState } from "react";
 import { Facebook, Instagram, Linkedin, Youtube } from "react-feather";
 import toast, { Toaster } from "react-hot-toast";
 
-export default function Footer() {
+export default function Footer({locale}) {
   const t = useTranslations("Footer");
   const [isLoading, setIsLoading] = useState(false);
   const [validation, setValidation] = useState(false);
   const [email, setEmail] = useState("");
-
+  console.log(locale)
   const newsLetter = async (e) => {
     e.preventDefault();
 
@@ -148,7 +148,7 @@ export default function Footer() {
         </form>
       </div>
       <div className=" flex items-center justify-center bg-[#0149A6] py-4">
-        <span className=" flex gap-4 flex-col lg:flex-row items-center font-bold capitalize text-center md:text-start text-white ">
+        <span className={` flex gap-4 flex-col ${locale==='ar'?'lg:flex-row-reverse':'lg:flex-row'}  items-center font-bold capitalize text-center md:text-start text-white `}>
           {t("Copyright1")} &copy; {new Date().getFullYear()} .{t("Copyright2")}
           <span className="bg-white text-[#0149A6] w-fit p-2 uppercase font-bold">
             explorem

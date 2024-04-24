@@ -13,10 +13,10 @@ import CourseSchedule from "@/components/Schedule/courseSchedule";
 const locales = ["en", "de", "ar"];
 const { Link } = createSharedPathnamesNavigation({ locales });
 
-export default async function Index() {
+export default async function Index({ params: { locale } }) {
   const testimonial = await fetchTestimonialLatest();
   const t = await getTranslations("Index");
-
+  
   return (
     <>
    
@@ -87,7 +87,7 @@ export default async function Index() {
               {t("whatWeHaveAchieved.title")}
             </h2>
           </div>
-          <ul className="*:border-l-4 *:border-[#0149a6] *:shadow *:bg-white *:p-2 *:pl-4 *:rounded-r-sm  px-2 lg:text-lg flex flex-col gap-4 font-normal list-outside leading-loose ">
+          <ul className={` ${locale==='ar'?'*:border-r-4 text-right':'*:border-l-4 text-left'} *:border-[#0149a6] *:shadow *:bg-white *:p-2 *:pl-4 *:rounded-r-sm  px-2 lg:text-lg flex flex-col gap-4 font-normal list-outside leading-loose `}>
             <li>{t("whatWeHaveAchieved.line1")}</li>
             <li>{t("whatWeHaveAchieved.line2")}</li>
             <li>{t("whatWeHaveAchieved.line3")}</li>
@@ -116,7 +116,7 @@ export default async function Index() {
               </div>
             </li>
             <li>{t("whatWeHaveAchieved.line6")}</li>
-            <li className=" border-l-4 border-[#0149a6] shadow  bg-white p-2 pl-4 flex flex-col gap-2 rounded-r-sm">
+            <li className=" ">
               {t("whatWeHaveAchieved.line7")}
               <div className="flex gap-4 items-center ">
                 <a

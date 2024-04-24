@@ -17,7 +17,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
             <div className="flex flex-col justify-between  h-screen">
               <Navbar locale={locale} />
               <div className="pt-20 lg:pt-24    mb-auto bg-[#f5f5f5]">{children}</div>
-              <Footer />
+              <Footer locale={locale}/>
             </div>
           </NextIntlClientProvider>
         </main>
