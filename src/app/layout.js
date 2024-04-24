@@ -5,9 +5,8 @@ export const metadata = {
   description: "We Make A Difference , We Make It Happen .",
   metadataBase: new URL("https://www.explorem.net"),
   alternates: {
-    canonical: "/",
+    canonical: "/en",
     languages: {
-      en: "/en",
       de: "/de",
       ar: "/ar",
     },
