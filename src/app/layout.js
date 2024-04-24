@@ -1,4 +1,4 @@
-
+// i finich the project 
 import "./globals.css";
 export const metadata = {
   title: { template: "%s - Explorem" },
