@@ -1,4 +1,4 @@
-import Head from "next/head";
+
 import "./globals.css";
 export const metadata = {
   title: { template: "%s - Explorem" },
@@ -11,6 +11,7 @@ export const metadata = {
       de: "/de",
       ar: "/ar",
     },
+    
   },
   openGraph: {
     images: "/opengraph-image.png",
@@ -19,12 +20,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="U7WYTE5ZRtqvqaGCPKOfzh0eHWzM0E-XRhHeWvedXek"
-        />
-      </Head>
+      <head>
+      <meta name="google-site-verification" content="U7WYTE5ZRtqvqaGCPKOfzh0eHWzM0E-XRhHeWvedXek" />
+      </head>
       <body className="bg-[#f5f5f5] ">
         <main>{children}</main>
       </body>
