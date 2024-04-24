@@ -5,18 +5,6 @@ import "./globals.css";
 export const metadata = {
   title: {default:"Home", template:"%s - Explorem"},
   description: "We Make A Difference , We Make It Happen .",
-  metadataBase: new URL('https://www.explorem.net'),
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en': '/en',
-      'de': '/de',
-      'ar': '/ar',
-    },
-  },
-  openGraph: {
-    images: '/opengraph-image.png',
-  },
 };
 
 
