@@ -1,4 +1,5 @@
 // i finich the project 
+import { cookies } from "next/headers";
 import "./globals.css";
 export const metadata = {
   title: { template: "%s - Explorem" },
@@ -16,9 +17,13 @@ export const metadata = {
     images: "/opengraph-image.png",
   },
 };
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const cookieStore = await cookies()
+  const locale = await cookieStore.get('NEXT_LOCALE')
+  console.log(locale)
+
   return (
-    <html lang="en">
+    <html lang={locale.value}>
       <head>
       <meta name="google-site-verification" content="U7WYTE5ZRtqvqaGCPKOfzh0eHWzM0E-XRhHeWvedXek" />
       </head>
