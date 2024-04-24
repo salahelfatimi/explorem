@@ -7,10 +7,10 @@ import { useState } from "react";
 const locales = ["en", "de", "ar"];
 const { Link, redirect, usePathname, useRouter } =
   createSharedPathnamesNavigation({ locales });
-export default function ChangeLungage({ setOpen, open,locale }) {
+export default function ChangeLungage({ setOpen, open, locale }) {
   const [showLanguage, setShowLanguage] = useState(false);
   const pathname = usePathname();
-  const router=useRouter()
+  
   return (
     <>
       <div className="relative inline-block text-left">
@@ -47,7 +47,6 @@ export default function ChangeLungage({ setOpen, open,locale }) {
               {locales.map((language, index) => {
                 return (
                   <Link
-               
                     href={pathname}
                     locale={language}
                     className={`${
@@ -57,7 +56,10 @@ export default function ChangeLungage({ setOpen, open,locale }) {
                     }  px-4 py-2 text-sm gap-2 text-left items-center inline-flex  first:rounded-t-md last:rounded-b-md hover:bg-[#0149a6] hover:text-white `}
                     key={index}
                     onClick={() => {
-                      setShowLanguage(!showLanguage), setOpen(!open),router.refresh();
+                     
+                      setShowLanguage(!showLanguage);
+                      setOpen(!open);
+                      
                     }}
                   >
                     <Image
