@@ -5,9 +5,9 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 export async function generateMetadata({
-  params: { id },
+  params: { title },
 }){
-  const post = await fetchSingleBlog(id);
+  const post = await fetchSingleBlog(title);
   
 
   return {
