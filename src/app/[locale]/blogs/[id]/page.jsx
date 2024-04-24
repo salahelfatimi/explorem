@@ -111,7 +111,7 @@ export default async function BlogDetail({ params:{id} }) {
         </div>
 
         <p
-          className="whitespace-pre-line text-center  break-words container   leading-loose   lg:text-xl"
+          className="whitespace-pre-line text-center lg:text-left flex  justify-center  break-words container   leading-loose   lg:text-xl"
           dangerouslySetInnerHTML={{ __html: createMarkup(blog.description) }}
         ></p>
         {blog?.imageUrl1 && (
