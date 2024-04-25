@@ -127,6 +127,7 @@ export default function About({ params: { locale } }) {
           width="320"
           height="240"
           preload="none"
+          title="Who is explorem"
         >
           <source src="/video/Explorem.mp4" type="video/mp4" />
           Your browser does not support the video tag.

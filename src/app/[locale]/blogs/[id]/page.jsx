@@ -1,33 +1,31 @@
-import {  Facebook, Instagram, Send } from "react-feather";
+import { Facebook, Instagram, Send } from "react-feather";
 import { fetchBlogs, fetchSingleBlog } from "@/app/api/data/blog/actions";
 
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-export async function generateMetadata({
-  params: { title },
-}){
-  const post = await fetchSingleBlog(title);
-  
+export async function generateMetadata({ params: { id } }) {
+  const post = await fetchSingleBlog(id);
 
   return {
-    title: post.title,
+    id: post.id,
     description: post.description,
     openGraph: {
       images: [
         {
-          url: post.imageUrl
-        }
-      ]
-    }
+          url: post.Org,
+        },
+      ],
+    },
   };
 }
 
-export default async function BlogDetail({ params:{title} }) {
-
-  const blog = await fetchSingleBlog(title);
-  if(blog.status===404){
-    notFound()
+export default async function BlogDetail({ params: { id } }) {
+  const blog = await fetchSingleBlog(id);
+  const isImage = (url) => /\.(jpg|jpeg|png|gif)$/i.test(url);
+  const isVideo = (url) => /\.(mp4|avi|mov|wmv)$/i.test(url);
+  if (blog.status === 404) {
+    notFound();
   }
   const monthNames = [
     "January",
@@ -57,18 +55,30 @@ export default async function BlogDetail({ params:{title} }) {
           {blog?.title}
         </h1>
         <div className=" flex  flex-col lg:flex-row gap-4">
-         
-          <Image
+          {isImage(blog?.Url) && (
+            <Image
               title={blog?.title}
               blurDataURL={blog?.base64}
               placeholder="blur"
               quality={100}
               width={blog?.width}
               height={blog?.height}
-              src={blog?.imageUrl}
+              src={blog?.Url}
               className="object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat"
               alt={blog?.title}
             />
+          )}
+          {isVideo(blog?.Url) && (
+            <video
+              className=" bg-[#0149a6] h-[32rem] min-h-96 w-auto  "
+              height={100}
+              width={100}
+              controls
+            >
+              <source src={blog?.Url} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
 
           <div className="flex justify-center lg:flex-col gap-4 items-center">
             <span className=" border-t-4 border-[#134ba1] items-center  h-fit p-2 flex-row lg:flex-col font-bold flex gap-2">
@@ -96,7 +106,7 @@ export default async function BlogDetail({ params:{title} }) {
               <Instagram className=" stroke-[#fff] hover:stroke-[#134ba1] stroke-2" />
             </a>
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=https://www.explorem.net/en/blogs/${title}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=https://www.explorem.net/en/blogs/${id}`}
               className=" rounded-full duration-500 border-[#134ba1] hover:bg-white bg-[#134ba1] border-2 w-fit h-fit p-2"
             >
               <Send className=" stroke-[#fff] hover:stroke-[#134ba1] stroke-2" />
@@ -116,7 +126,7 @@ export default async function BlogDetail({ params:{title} }) {
         ></p>
         {blog?.imageUrl1 && (
           <div className=" flex  flex-col lg:flex-row gap-4">
-              <Image
+            <Image
               title={blog?.title}
               blurDataURL={blog?.base64}
               placeholder="blur"

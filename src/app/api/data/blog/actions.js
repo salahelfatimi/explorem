@@ -17,8 +17,7 @@ export const fetchBlogs = async (take) => {
       width: "6240",
       height: "3512",
 
-      imageUrl:
-        "https://utfs.io/f/1db72baf-74ba-4649-b6b3-963ca5c8a2a9-emt7mz.jpg",
+      Url: "https://utfs.io/f/1db72baf-74ba-4649-b6b3-963ca5c8a2a9-emt7mz.jpg",
       imageKey: "1db72baf-74ba-4649-b6b3-963ca5c8a2a9-emt7mz.jpg",
       title: "New Milestone Unlocked!",
       description:
@@ -41,10 +40,9 @@ export const fetchBlogs = async (take) => {
       width: "6960",
       height: "4640",
 
-      imageUrl:
-        "https://utfs.io/f/bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
+      Url: "https://utfs.io/f/bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
       imageKey: "bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
-      title: "Explorem candidates in WDR Lokalzeit aus Köln! ",
+       title: "Explorem candidates in WDR Lokalzeit aus Köln!",
       description:
         "Our first 8 relocated nurse-candidates in Köln were covered and interviewed in Köln local TV.\r\n\r\nhttps://www1.wdr.de/lokalzeit/fernsehen/koeln/pflegeinternat-gegen-pflegekraeftemangel-im-bergischen--100.html\r\n\r\nWe are PROUD of you... Keep up the good work!!!  \r\n",
       author: "Explorem",
@@ -65,8 +63,7 @@ export const fetchBlogs = async (take) => {
       width: "6960",
       height: "4640",
 
-      imageUrl:
-        "https://utfs.io/f/5f5beb44-abcc-402b-a7e5-75906b6b9133-1x9z5t.JPG",
+      Url: "https://utfs.io/f/5f5beb44-abcc-402b-a7e5-75906b6b9133-1x9z5t.JPG",
       imageKey: "5f5beb44-abcc-402b-a7e5-75906b6b9133-1x9z5t.JPG",
       title: "Explorem team and candidates featured in ZDF TV",
       description:
@@ -89,8 +86,7 @@ export const fetchBlogs = async (take) => {
       width: "1280",
       height: "958",
 
-      imageUrl:
-        "https://utfs.io/f/f3a4ceb4-a75a-4228-bd98-f09deb21d1e4-j9ayf.jpg",
+      Url: "https://utfs.io/f/f3a4ceb4-a75a-4228-bd98-f09deb21d1e4-j9ayf.jpg",
       imageKey: "f3a4ceb4-a75a-4228-bd98-f09deb21d1e4-j9ayf.jpg",
       title: "100% Passed the B1 external exam!",
       description:
@@ -113,8 +109,7 @@ export const fetchBlogs = async (take) => {
       width: "4624",
       height: "3468",
 
-      imageUrl:
-        "https://utfs.io/f/6098ab76-14e0-44f4-857b-03e4f6de3324-z9pfeo.jpg",
+      Url: "https://utfs.io/f/6098ab76-14e0-44f4-857b-03e4f6de3324-z9pfeo.jpg",
       imageKey: "6098ab76-14e0-44f4-857b-03e4f6de3324-z9pfeo.jpg",
       title: "Nurses Successfully Relocated to Germany!",
       description:
@@ -137,8 +132,7 @@ export const fetchBlogs = async (take) => {
       width: "4624",
       height: "2604",
 
-      imageUrl:
-        "https://utfs.io/f/fd980f35-e7d0-40d4-9f71-abfd60f97751-k378iq.jpg",
+      Url: "https://utfs.io/f/fd980f35-e7d0-40d4-9f71-abfd60f97751-k378iq.jpg",
       imageKey: "fd980f35-e7d0-40d4-9f71-abfd60f97751-k378iq.jpg",
       title: "23 Explorem nurse scholars received their Visa!",
       description:
@@ -161,8 +155,7 @@ export const fetchBlogs = async (take) => {
       width: "2048",
       height: "1536",
 
-      imageUrl:
-        "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+      Url: "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
       imageKey: "92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
       title: "22 Candidates Successfully Relocated to Germany!",
       description:
@@ -187,7 +180,7 @@ export const fetchBlogs = async (take) => {
 
       height: blog.height,
 
-      imageUrl: blog.imageUrl,
+      Url: blog.Url,
       imageKey: blog.imageKey,
       title: blog.title,
       description: blog.description,
@@ -199,7 +192,7 @@ export const fetchBlogs = async (take) => {
   });
 };
 
-export const fetchSingleBlog = async (title) => {
+export const fetchSingleBlog = async (id) => {
   const blogs = [
     {
       _id: {
@@ -209,9 +202,8 @@ export const fetchSingleBlog = async (title) => {
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxUlEQVR4nAG6AEX/AJSTmqGfqaensKmjr5+fqZybp6uqro6Y0xtW8WWP/wCqqrajqb6yr761tMGhl5+LhJKgm6einschYv5ojv8Avb7QopinjnyAhX+IaF9pf2Jd18jO+/7/QWjjao3/ALqzvVFITA8KDHl4gBAWI3FgWsCkmNXU4zNYzXiW/wC6oo5qWEkWHz1CQ0wDAQZ3bWV5dGyDgonW3O/r8f8Ao4BMQzs2AB9pNT1TJycsFRQVS0tNen6D1tro8vb/4NdgftmcUAsAAAAASUVORK5CYII=        ",
       width: "6240",
       height: "3512",
-
-      imageUrl:
-        "https://utfs.io/f/1db72baf-74ba-4649-b6b3-963ca5c8a2a9-emt7mz.jpg",
+      Org: "https://utfs.io/f/1db72baf-74ba-4649-b6b3-963ca5c8a2a9-emt7mz.jpg",
+      Url: "https://utfs.io/f/1db72baf-74ba-4649-b6b3-963ca5c8a2a9-emt7mz.jpg",
       imageKey: "1db72baf-74ba-4649-b6b3-963ca5c8a2a9-emt7mz.jpg",
       title: "New Milestone Unlocked!",
       description:
@@ -233,11 +225,10 @@ export const fetchSingleBlog = async (title) => {
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAIAAAC+zks0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nAHZACb/AMjK3NrU39nb79jU6trh+tihochCKrdEMtmytP/u+gCtmp7f3vHd09/o4PLE0OfGoKPUd0e5X0Pft7X/9/8Aqo2Uh3ODuqTAlIKUlIuVx5ygsGBDjlBEn3p9x6KgAGNcbCMkQJCY1w0XPBAMCYYyM2g8RxoIE0srLDAXFQB5aHdMR2JtcZw1NFUMAgJKEB1gOD5QPEdKNkQkExQAlIqfGRIcExEaRUJRZGV+DxMqS0JPfm2MrpWxeU05AIWIpzMwOUtNW11bcJmctU9QaTcwQMKnts6yzM6Ufyg7ZTn0w6gKAAAAAElFTkSuQmCC        ",
       width: "6960",
       height: "4640",
-
-      imageUrl:
-        "https://utfs.io/f/bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
+      Org: "https://utfs.io/f/bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
+      Url: "https://utfs.io/f/bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
       imageKey: "bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
-      title: "Explorem candidates in WDR Lokalzeit aus Köln! ",
+      title: "Explorem candidates in WDR Lokalzeit aus Köln!",
       description:
         "Our first 8 relocated nurse-candidates in Köln were covered and interviewed in Köln local TV.\r\n\r\nhttps://www1.wdr.de/lokalzeit/fernsehen/koeln/pflegeinternat-gegen-pflegekraeftemangel-im-bergischen--100.html\r\n\r\nWe are PROUD of you... Keep up the good work!!!  \r\n",
       author: "Explorem",
@@ -257,9 +248,8 @@ export const fetchSingleBlog = async (title) => {
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAIAAAC+zks0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nAHZACb/AMjK3NrU39nb79jU6trh+tihochCKrdEMtmytP/u+gCtmp7f3vHd09/o4PLE0OfGoKPUd0e5X0Pft7X/9/8Aqo2Uh3ODuqTAlIKUlIuVx5ygsGBDjlBEn3p9x6KgAGNcbCMkQJCY1w0XPBAMCYYyM2g8RxoIE0srLDAXFQB5aHdMR2JtcZw1NFUMAgJKEB1gOD5QPEdKNkQkExQAlIqfGRIcExEaRUJRZGV+DxMqS0JPfm2MrpWxeU05AIWIpzMwOUtNW11bcJmctU9QaTcwQMKnts6yzM6Ufyg7ZTn0w6gKAAAAAElFTkSuQmCC        ",
       width: "6960",
       height: "4640",
-
-      imageUrl:
-        "https://utfs.io/f/5f5beb44-abcc-402b-a7e5-75906b6b9133-1x9z5t.JPG",
+      Org: "https://utfs.io/f/5f5beb44-abcc-402b-a7e5-75906b6b9133-1x9z5t.JPG",
+      Url: "https://utfs.io/f/5f5beb44-abcc-402b-a7e5-75906b6b9133-1x9z5t.JPG",
       imageKey: "5f5beb44-abcc-402b-a7e5-75906b6b9133-1x9z5t.JPG",
       title: "Explorem team and candidates featured in ZDF TV",
       description:
@@ -281,9 +271,8 @@ export const fetchSingleBlog = async (title) => {
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAIAAAC+zks0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nAHZACb/AOPXveziyejgyt/ZyOTd0OXf0ufg0uvj0ezjze/jzgCNfFaQfVygj23Xy67Tyq/a0Lnz5NT36NHy48v27NgAbFs5ZlUzkHhX39a93tS96d/I8d/L//3r9u3a7+XVAHBsYgAAKGtRO5VjVYqKj6qeko6Slc6tnp6LfVFHPgBgXloFM3giHBlwLzCjmJtdVFGPobTzyM1HNkcXAAAAhIFtxM7OAB8uaSwt16+iV09JZW1qgpasECc7DQYAAJ+ila/HzkFdaXVISI5saZ6WhMvHhWuMm2p4eHJuaIQ/eQGE/yChAAAAAElFTkSuQmCC        ",
       width: "1280",
       height: "958",
-
-      imageUrl:
-        "https://utfs.io/f/f3a4ceb4-a75a-4228-bd98-f09deb21d1e4-j9ayf.jpg",
+      Org: "https://utfs.io/f/f3a4ceb4-a75a-4228-bd98-f09deb21d1e4-j9ayf.jpg",
+      Url: "https://utfs.io/f/f3a4ceb4-a75a-4228-bd98-f09deb21d1e4-j9ayf.jpg",
       imageKey: "f3a4ceb4-a75a-4228-bd98-f09deb21d1e4-j9ayf.jpg",
       title: "100% Passed the B1 external exam!",
       description:
@@ -305,9 +294,8 @@ export const fetchSingleBlog = async (title) => {
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAIAAAC+zks0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nAHZACb/AL7Q3r3O3MDQ2bTCyKetrgwgLQAFFzI3PFBVW2BkaQDA0uK9zt3C0dz7//+hrK4aLToeJy9haG5tdXl3en0AxdXjyNrpwNHc8/v+s7y6JCksGR8ma36SZHJ9aWttAHp6esHQ2snc6ubx9pSjnzhHU1ZaX3VqY2xoZV9gYgBgYF1yc3GxvMLr9/52gIQ/QExQXGtweoNqbnJYWFgAcXBtbm1ocnFssLe5V1xhSkBBaWxyUV9tTFRdTU5NAHFvaHFtZnl3cX58dlhcW2xhWYt4a3NmXDM4PkFCQtgZaFhlulAVAAAAAElFTkSuQmCC        ",
       width: "4624",
       height: "3468",
-
-      imageUrl:
-        "https://utfs.io/f/6098ab76-14e0-44f4-857b-03e4f6de3324-z9pfeo.jpg",
+      Org: "https://utfs.io/f/6098ab76-14e0-44f4-857b-03e4f6de3324-z9pfeo.jpg",
+      Url: "https://utfs.io/f/6098ab76-14e0-44f4-857b-03e4f6de3324-z9pfeo.jpg",
       imageKey: "6098ab76-14e0-44f4-857b-03e4f6de3324-z9pfeo.jpg",
       title: "Nurses Successfully Relocated to Germany!",
       description:
@@ -329,9 +317,8 @@ export const fetchSingleBlog = async (title) => {
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxUlEQVR4nAG6AEX/AJiYndXR0a2tthw2hFdWZpyQeB8gKjItK8iHXMp3QQCenZ3AurbFwMC6vtWjpKyNdXo4OEszOjpoZlF6VUAAp6OhzcrFzMjH//v3n5SQHRgkKSozbWpljXRoDzVfAKKioeXl58TFx56lxGJgchIUFAADG1djaZyPjFFKUACin5/Avr6joqdVYJk7P14uHhYtHiJeeoivzdxtf4cApp+dsaqoxsXF6ersrKOfZ0M/XTE4Vmx0tMvUdIWPGMRbIBgs2R4AAAAASUVORK5CYII=        ",
       width: "4624",
       height: "2604",
-
-      imageUrl:
-        "https://utfs.io/f/fd980f35-e7d0-40d4-9f71-abfd60f97751-k378iq.jpg",
+      Org: "https://utfs.io/f/fd980f35-e7d0-40d4-9f71-abfd60f97751-k378iq.jpg",
+      Url: "https://utfs.io/f/fd980f35-e7d0-40d4-9f71-abfd60f97751-k378iq.jpg",
       imageKey: "fd980f35-e7d0-40d4-9f71-abfd60f97751-k378iq.jpg",
       title: "23 Explorem nurse scholars received their Visa!",
       description:
@@ -353,9 +340,8 @@ export const fetchSingleBlog = async (title) => {
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAIAAABPmPnhAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nAH4AAf/ACo0LhIaFCoyJ2tzaGBeR0pFJ1lTMYB0QJ2VZKKkgwBPYWErPjwrOTdodW5QWlFRWkxlc19QWkeCjYB9gnMAVWpwT3R9UHBvbXp2W1pNaWBNUVRBU0k2V1RBSls/ACo7PUphZSYhHBQNE0E9NCYjHicdFnpuW5OeiIuqkwBxeHaWmZVSQysRBQBOP0JBOjsOFh0+MyS1qYTo2rYAxL+4wreuvqB3cGAke19lkXl5SVRYQCgjspF18eS+AMe+tMi+ssq7qtTEstXEs82+rtvMurunmNnErf/v0gDj2szr39D15dHz49D46NT/8t7/9N//+uX//eb/+uDB3HQvKnXFjAAAAABJRU5ErkJggg==        ",
       width: "2048",
       height: "1536",
-
-      imageUrl:
-        "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+      Org: "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+      Url: "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
       imageKey: "92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
       base641:
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAIAAADzBuo/AAAACXBIWXMAABcMAAAXDAGKAo5mAAAApklEQVR4nAGbAGT/ALTV6q3J3tHKxPf+/bfBs5aKbrCJWVc2F4RsWZ2NgQCCiJdmbXyDfXuBkJtuaWmGZEZtUTdRPy5oVEdIOzQAcXF1IycpAAAIHiElPykua15cMyYiCQQAHBcSIBgGZEZtUTdRPy5oVEdIOzQAcXF1IycpAAAIHiElPykua15cMyYiCQQAHBcSIBgQAFtgazpBSWJgYFxYU4OAd5eKgF1OQU1EN1VKQHdnUwBqb3lua2qTiH+Id2qUhHSei3eXg22bhG6finKnkncjfj4LQl4nbQAAAABJRU5ErkJggg==          ",
@@ -378,33 +364,33 @@ export const fetchSingleBlog = async (title) => {
       },
     },
   ];
-  const blog = blogs.find((blog) => blog.title.replace(/\s+/g, '-') === title);
-  if(blog){
-
-  return {
-    id: blog._id.$oid,
-    base64: blog.base64,
-    width: blog.width,
-    height: blog.height,
-    base641: blog?.base641,
-    width1: blog?.width1,
-    height1: blog?.height1,
-    imageUrl: blog.imageUrl,
-    imageKey: blog.imageKey,
-    imageUrl1: blog?.imageUrl1,
-    imageKey1: blog?.imageKey1,
-    title: blog.title,
-    description: blog.description,
-    author: blog.author,
-    published: blog.published,
-    createAt: formatDate(blog.createAt.$date),
-    updateAt: formatDate(blog.updateAt.$date),
-  };
-}else{
-  return{
-    status:404
+  const blog = blogs.find((blog) => blog._id.$oid == id);
+  if (blog) {
+    return {
+      id: blog._id.$oid,
+      Org:blog.Org,
+      base64: blog.base64,
+      width: blog.width,
+      height: blog.height,
+      base641: blog?.base641,
+      width1: blog?.width1,
+      height1: blog?.height1,
+      Url: blog.Url,
+      imageKey: blog.imageKey,
+      imageUrl1: blog?.imageUrl1,
+      imageKey1: blog?.imageKey1,
+      title: blog.title,
+      description: blog.description,
+      author: blog.author,
+      published: blog.published,
+      createAt: formatDate(blog.createAt.$date),
+      updateAt: formatDate(blog.updateAt.$date),
+    };
+  } else {
+    return {
+      status: 404,
+    };
   }
-}
 };
 
 export const getLatestBlog = async () => {
@@ -417,8 +403,7 @@ export const getLatestBlog = async () => {
     width: "2048",
     height: "1536",
 
-    imageUrl:
-      "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+    Url: "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
     imageKey: "92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
     title: "22 Candidates Successfully Relocated to Germany!",
     description:
@@ -438,7 +423,7 @@ export const getLatestBlog = async () => {
     base64: latestBlog.base64,
     width: latestBlog.width,
     height: latestBlog.height,
-    imageUrl: latestBlog.imageUrl,
+    Url: latestBlog.Url,
     imageKey: latestBlog.imageKey,
     title: latestBlog.title,
     description: latestBlog.description,
