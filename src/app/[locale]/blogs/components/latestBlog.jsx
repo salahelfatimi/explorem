@@ -1,4 +1,5 @@
 import { getLatestBlog } from "@/app/api/data/blog/actions";
+// import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
@@ -37,6 +38,8 @@ export default async function LatestBlog() {
               className="object-cover  h-auto  rounded-t "
               alt={title}
             />
+             {/* <GetBase64Image imageUrl={Url} className={'object-cover  h-auto  rounded-t '} alt={title}/> */}
+             
           </div>
 
           <div className=" lg:w-1/2 flex gap-4  lg:gap-8 flex-col">

@@ -42,7 +42,7 @@ export const fetchBlogs = async (take) => {
 
       Url: "https://utfs.io/f/bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
       imageKey: "bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
-       title: "Explorem candidates in WDR Lokalzeit aus Köln!",
+      title: "Explorem candidates in WDR Lokalzeit aus Köln!",
       description:
         "Our first 8 relocated nurse-candidates in Köln were covered and interviewed in Köln local TV.\r\n\r\nhttps://www1.wdr.de/lokalzeit/fernsehen/koeln/pflegeinternat-gegen-pflegekraeftemangel-im-bergischen--100.html\r\n\r\nWe are PROUD of you... Keep up the good work!!!  \r\n",
       author: "Explorem",
@@ -167,6 +167,31 @@ export const fetchBlogs = async (take) => {
       },
       updateAt: {
         $date: "2024-04-21T15:37:03.907Z",
+      },
+    },
+    ,
+    {
+      _id: {
+        $oid: "662a42f9ae5c9959eea912a0",
+      },
+      base64:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAABJ0AAASdAHeZh94AAAA+0lEQVR4nAXBO0gCARzA4T+0tjQElvQiugaXq8ggO7sjOoUaFDpC5IoWiSIsAx9gUEvekk1hOhlOeuDQEBIIjYE0lNADHKO1saHg1/dJwTLJxJeob0d4nwpxN2lwoemk1lY4DFk0X+DyCSQdVDgKB7kyVukps3yry/z6I5yJzsKgSf0V7gHZ8U2Qm45y4FnEln4cGeXBM8PjWIKklue8+0eu3EMK4STt7Bvd0hdt3ynzfUJGvLiBGLpi0/qEW3ULqeaveb75wT1uUTROsL0aaX+c5l6JilXjw4VOp4ak7BiNcoN9c5MRGWJ8YA51WGM3kKAaq+CsF4luOPwDlm2LWsfdvDgAAAAASUVORK5CYII= ",
+      width: "1758",
+      height: "988",
+
+      Url: "https://utfs.io/f/883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
+      imageKey: "883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
+      title:
+        "Explorem founder/ managing directors speech during the recognition ceremony. ",
+      description:
+        "Explorem founder/ managing directors speech during the recognition ceremony. \r\n\r\nOn April 19, 2024, the Excel Group of Institutes gave recognition to 20 of their nurse graduates who were successfully relocated to Cologne, Germany.\r\n\r\nThis project is part of the Explorem program in relocating qualified professionals to Germany, in collaboration with German employers/companies. With the initiatives of Explorem, these candidates were able to sign employment contracts and received FREE language courses until the B2 level, recognition and documentation, visa process, relocation, etc.. all paid by their employer.\r\n\r\nFor more information, you may visit the Explorem Center located at Imm 6, Rue Vieux des Marrakchis Nr 7 Gueliz Marrakech, or you may call us at 0668676518 (WhatsApp) or 0809891297 (landline).\r\nWe are open from Monday to Friday, from 10h00 to 18h00.\r\n\r\n#explorem\r\n#exploremrecruit\r\n#exploremacademy \r\n#wemakeadifference \r\n#wemakeithappen\r\n",
+      author: "Explorem",
+      published: true,
+      createAt: {
+        $date: "2024-04-25T15:37:03.907Z",
+      },
+      updateAt: {
+        $date: "2024-04-25T15:37:03.907Z",
       },
     },
   ];
@@ -334,33 +359,26 @@ export const fetchSingleBlog = async (id) => {
     },
     {
       _id: {
-        $oid: "662532a0f0d00b380426017a",
+        $oid: "662a42f9ae5c9959eea912a0",
       },
       base64:
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAIAAABPmPnhAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nAH4AAf/ACo0LhIaFCoyJ2tzaGBeR0pFJ1lTMYB0QJ2VZKKkgwBPYWErPjwrOTdodW5QWlFRWkxlc19QWkeCjYB9gnMAVWpwT3R9UHBvbXp2W1pNaWBNUVRBU0k2V1RBSls/ACo7PUphZSYhHBQNE0E9NCYjHicdFnpuW5OeiIuqkwBxeHaWmZVSQysRBQBOP0JBOjsOFh0+MyS1qYTo2rYAxL+4wreuvqB3cGAke19lkXl5SVRYQCgjspF18eS+AMe+tMi+ssq7qtTEstXEs82+rtvMurunmNnErf/v0gDj2szr39D15dHz49D46NT/8t7/9N//+uX//eb/+uDB3HQvKnXFjAAAAABJRU5ErkJggg==        ",
-      width: "2048",
-      height: "1536",
-      Org: "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
-      Url: "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
-      imageKey: "92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
-      base641:
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAIAAADzBuo/AAAACXBIWXMAABcMAAAXDAGKAo5mAAAApklEQVR4nAGbAGT/ALTV6q3J3tHKxPf+/bfBs5aKbrCJWVc2F4RsWZ2NgQCCiJdmbXyDfXuBkJtuaWmGZEZtUTdRPy5oVEdIOzQAcXF1IycpAAAIHiElPykua15cMyYiCQQAHBcSIBgGZEZtUTdRPy5oVEdIOzQAcXF1IycpAAAIHiElPykua15cMyYiCQQAHBcSIBgQAFtgazpBSWJgYFxYU4OAd5eKgF1OQU1EN1VKQHdnUwBqb3lua2qTiH+Id2qUhHSei3eXg22bhG6finKnkncjfj4LQl4nbQAAAABJRU5ErkJggg==          ",
-      width1: "3908",
-      height1: "1795",
-
-      imageUrl1:
-        "https://utfs.io/f/7178297b-2e01-42d8-a98b-b0a412b2f7dd-rpbt4b.jpg",
-      imageKey1: "7178297b-2e01-42d8-a98b-b0a412b2f7dd-rpbt4b.jpg",
-      title: "22 Candidates Successfully Relocated to Germany!",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAABJ0AAASdAHeZh94AAAA+0lEQVR4nAXBO0gCARzA4T+0tjQElvQiugaXq8ggO7sjOoUaFDpC5IoWiSIsAx9gUEvekk1hOhlOeuDQEBIIjYE0lNADHKO1saHg1/dJwTLJxJeob0d4nwpxN2lwoemk1lY4DFk0X+DyCSQdVDgKB7kyVukps3yry/z6I5yJzsKgSf0V7gHZ8U2Qm45y4FnEln4cGeXBM8PjWIKklue8+0eu3EMK4STt7Bvd0hdt3ynzfUJGvLiBGLpi0/qEW3ULqeaveb75wT1uUTROsL0aaX+c5l6JilXjw4VOp4ak7BiNcoN9c5MRGWJ8YA51WGM3kKAaq+CsF4luOPwDlm2LWsfdvDgAAAAASUVORK5CYII= ",
+      width: "1758",
+      height: "988",
+      Org: "https://utfs.io/f/883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
+      Url: "https://utfs.io/f/93e59d44-6155-459d-b8fe-e06805c88728-v2sni1.mp4",
+      imageKey: "883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
+      title:
+        "Explorem founder/ managing directors speech during the recognition ceremony. ",
       description:
-        "In April 20 and 21, the 22 of the EXPLOREM nurse-candidates were successfully\r\nrelocated to Cologne Germany. As to date, there are 32 out of 37 program recipients\r\nwere relocated. The 5 other candidates are waiting for their pre-approval documents\r\nfor visa process. These 37 candidates are graduates of Excel Group of Institutes\r\n(Marrakech), Galien Institute (Agadir), and Work Center (Oujda).\r\n\r\nThis is one of the successful recruitment projects managed by EXPLOREM, in\r\ncollaboration with DRK-Rettungsdienst Rhein-Berg GmbH and Marburg\r\nConsulting.\r\n\r\nThrough the efforts and initiatives of EXPLOREM managing directors, Mr.\r\nAbdessamad Aboul ossoud and Dr. Gracila Ucag, the recipients of the program\r\nreceived monthly stipend for one year and were provided with FREE services on\r\nlanguage formation until B2 level; services on documentation, recognition, visa\r\nprocess, relocation support such as flight tickets, insurance registration, etc. All\r\ncosts/ expenses are paid by DRK, the employer.\r\n\r\nEXPLOREM has more fruitful projects in the table in which students, skilled workers\r\nand professionals will benefit. With the new Skilled Immigrant Act of Germany,\r\nexisting mechanisms for skilled workers with a university degree, such as the EU Blue\r\nCard, will continue and in some cases be extended. In addition, a new opportunity\r\ncard will enable third-country nationals to seek employment.\r\n\r\nWith all the relocated candidates of Explorem since year 2020, the team is a reliable\r\ncompany to provide the best services in language and nursing formation, recruitment\r\nmanagement, documentation and recognition process, relocation support such as\r\nvisa assistance, insurance registration and apartment search, etc.\r\n\r\nEXPLOREM made a difference. EXPLOREM made it happen.",
+        "Explorem founder/ managing directors speech during the recognition ceremony. \r\n\r\nOn April 19, 2024, the Excel Group of Institutes gave recognition to 20 of their nurse graduates who were successfully relocated to Cologne, Germany.\r\n\r\nThis project is part of the Explorem program in relocating qualified professionals to Germany, in collaboration with German employers/companies. With the initiatives of Explorem, these candidates were able to sign employment contracts and received FREE language courses until the B2 level, recognition and documentation, visa process, relocation, etc.. all paid by their employer.\r\n\r\nFor more information, you may visit the Explorem Center located at Imm 6, Rue Vieux des Marrakchis Nr 7 Gueliz Marrakech, or you may call us at 0668676518 (WhatsApp) or 0809891297 (landline).\r\nWe are open from Monday to Friday, from 10h00 to 18h00.\r\n\r\n#explorem\r\n#exploremrecruit\r\n#exploremacademy \r\n#wemakeadifference \r\n#wemakeithappen\r\n",
       author: "Explorem",
       published: true,
       createAt: {
-        $date: "2024-04-21T15:37:03.907Z",
+        $date: "2024-04-25T15:37:03.907Z",
       },
       updateAt: {
-        $date: "2024-04-21T15:37:03.907Z",
+        $date: "2024-04-25T15:37:03.907Z",
       },
     },
   ];
@@ -368,7 +386,7 @@ export const fetchSingleBlog = async (id) => {
   if (blog) {
     return {
       id: blog._id.$oid,
-      Org:blog.Org,
+      Org: blog.Org,
       base64: blog.base64,
       width: blog.width,
       height: blog.height,
@@ -394,29 +412,31 @@ export const fetchSingleBlog = async (id) => {
 };
 
 export const getLatestBlog = async () => {
-  const latestBlog = {
+  const latestBlog = 
+  {
     _id: {
-      $oid: "662532a0f0d00b380426017a",
+      $oid: "662a42f9ae5c9959eea912a0",
     },
     base64:
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAIAAABPmPnhAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nAH4AAf/ACo0LhIaFCoyJ2tzaGBeR0pFJ1lTMYB0QJ2VZKKkgwBPYWErPjwrOTdodW5QWlFRWkxlc19QWkeCjYB9gnMAVWpwT3R9UHBvbXp2W1pNaWBNUVRBU0k2V1RBSls/ACo7PUphZSYhHBQNE0E9NCYjHicdFnpuW5OeiIuqkwBxeHaWmZVSQysRBQBOP0JBOjsOFh0+MyS1qYTo2rYAxL+4wreuvqB3cGAke19lkXl5SVRYQCgjspF18eS+AMe+tMi+ssq7qtTEstXEs82+rtvMurunmNnErf/v0gDj2szr39D15dHz49D46NT/8t7/9N//+uX//eb/+uDB3HQvKnXFjAAAAABJRU5ErkJggg==    ",
-    width: "2048",
-    height: "1536",
-
-    Url: "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
-    imageKey: "92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
-    title: "22 Candidates Successfully Relocated to Germany!",
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAABJ0AAASdAHeZh94AAAA+0lEQVR4nAXBO0gCARzA4T+0tjQElvQiugaXq8ggO7sjOoUaFDpC5IoWiSIsAx9gUEvekk1hOhlOeuDQEBIIjYE0lNADHKO1saHg1/dJwTLJxJeob0d4nwpxN2lwoemk1lY4DFk0X+DyCSQdVDgKB7kyVukps3yry/z6I5yJzsKgSf0V7gHZ8U2Qm45y4FnEln4cGeXBM8PjWIKklue8+0eu3EMK4STt7Bvd0hdt3ynzfUJGvLiBGLpi0/qEW3ULqeaveb75wT1uUTROsL0aaX+c5l6JilXjw4VOp4ak7BiNcoN9c5MRGWJ8YA51WGM3kKAaq+CsF4luOPwDlm2LWsfdvDgAAAAASUVORK5CYII=  ",
+    width: "1758",
+    height: "988",
+    Org: "https://utfs.io/f/883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
+    Url: "https://utfs.io/f/883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
+    imageKey: "883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
+    title:
+      "Explorem founder/ managing directors speech during the recognition ceremony. ",
     description:
-      "In April 20 and 21, the 22 of the EXPLOREM nurse-candidates were successfully\r\nrelocated to Cologne Germany. As to date, there are 32 out of 37 program recipients\r\nwere relocated. The 5 other candidates are waiting for their pre-approval documents\r\nfor visa process. These 37 candidates are graduates of Excel Group of Institutes\r\n(Marrakech), Galien Institute (Agadir), and Work Center (Oujda).\r\n\r\nThis is one of the successful recruitment projects managed by EXPLOREM, in\r\ncollaboration with DRK-Rettungsdienst Rhein-Berg GmbH and Marburg\r\nConsulting.\r\n\r\nThrough the efforts and initiatives of EXPLOREM managing directors, Mr.\r\nAbdessamad Aboul ossoud and Dr. Gracila Ucag, the recipients of the program\r\nreceived monthly stipend for one year and were provided with FREE services on\r\nlanguage formation until B2 level; services on documentation, recognition, visa\r\nprocess, relocation support such as flight tickets, insurance registration, etc. All\r\ncosts/ expenses are paid by DRK, the employer.\r\n\r\nEXPLOREM has more fruitful projects in the table in which students, skilled workers\r\nand professionals will benefit. With the new Skilled Immigrant Act of Germany,\r\nexisting mechanisms for skilled workers with a university degree, such as the EU Blue\r\nCard, will continue and in some cases be extended. In addition, a new opportunity\r\ncard will enable third-country nationals to seek employment.\r\n\r\nWith all the relocated candidates of Explorem since year 2020, the team is a reliable\r\ncompany to provide the best services in language and nursing formation, recruitment\r\nmanagement, documentation and recognition process, relocation support such as\r\nvisa assistance, insurance registration and apartment search, etc.\r\n\r\nEXPLOREM made a difference. EXPLOREM made it happen.",
+      "Explorem founder/ managing directors speech during the recognition ceremony. \r\n\r\nOn April 19, 2024, the Excel Group of Institutes gave recognition to 20 of their nurse graduates who were successfully relocated to Cologne, Germany.\r\n\r\nThis project is part of the Explorem program in relocating qualified professionals to Germany, in collaboration with German employers/companies. With the initiatives of Explorem, these candidates were able to sign employment contracts and received FREE language courses until the B2 level, recognition and documentation, visa process, relocation, etc.. all paid by their employer.\r\n\r\nFor more information, you may visit the Explorem Center located at Imm 6, Rue Vieux des Marrakchis Nr 7 Gueliz Marrakech, or you may call us at 0668676518 (WhatsApp) or 0809891297 (landline).\r\nWe are open from Monday to Friday, from 10h00 to 18h00.\r\n\r\n#explorem\r\n#exploremrecruit\r\n#exploremacademy \r\n#wemakeadifference \r\n#wemakeithappen\r\n",
     author: "Explorem",
     published: true,
     createAt: {
-      $date: "2024-04-21T15:37:03.907Z",
+      $date: "2024-04-25T15:37:03.907Z",
     },
     updateAt: {
-      $date: "2024-04-21T15:37:03.907Z",
+      $date: "2024-04-25T15:37:03.907Z",
     },
-  };
+  }
 
   return {
     id: latestBlog._id.$oid,

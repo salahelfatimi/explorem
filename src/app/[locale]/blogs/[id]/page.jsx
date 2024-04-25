@@ -70,9 +70,10 @@ export default async function BlogDetail({ params: { id } }) {
           )}
           {isVideo(blog?.Url) && (
             <video
-              className=" bg-[#0149a6] h-[32rem] min-h-96 w-auto  "
+              className=" bg-[#0149a6] h-[26rem] min-h-96 w-auto  "
               height={100}
               width={100}
+              title={blog?.title}
               controls
             >
               <source src={blog?.Url} type="video/mp4" />
@@ -121,7 +122,7 @@ export default async function BlogDetail({ params: { id } }) {
         </div>
 
         <p
-          className="whitespace-pre-line text-center lg:text-left flex  justify-center  break-words container   leading-loose   lg:text-xl"
+          className="whitespace-pre-line text-center lg:text-left  flex  justify-center  break-words container   leading-loose   lg:text-xl"
           dangerouslySetInnerHTML={{ __html: createMarkup(blog.description) }}
         ></p>
         {blog?.imageUrl1 && (

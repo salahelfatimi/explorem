@@ -12,7 +12,7 @@ export default function Footer({locale}) {
   const [isLoading, setIsLoading] = useState(false);
   const [validation, setValidation] = useState(false);
   const [email, setEmail] = useState("");
-  console.log(locale)
+ 
   const newsLetter = async (e) => {
     e.preventDefault();
 

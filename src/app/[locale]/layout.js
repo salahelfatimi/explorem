@@ -10,6 +10,7 @@ export const metadata = {
 
 export default function LocaleLayout({ children, params: { locale } }) {
   const messages = useMessages();
+  
   return (
     
         <main>

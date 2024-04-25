@@ -64,7 +64,7 @@ function InscriptionCondidates() {
         }
       } catch (error) {
         toast.dismiss(loadingToast);
-        console.error(error);
+      
         toast.error("Failed to register candidate.");
       } finally {
         setIsLoading(false);

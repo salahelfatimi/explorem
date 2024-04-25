@@ -5,6 +5,7 @@ import Image from "next/image";
 import { fetchBlogs } from "@/app/api/data/blog/actions";
 import PaginationBlog from "./paginationBlog";
 
+
 const locales = ["en", "de", "ar"];
 const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
 
@@ -17,7 +18,7 @@ export default async function BlogAll({ take }) {
       <h2 className=" font-bold  text-2xl text-[#134ba1]  border-y-4 border-[#134ba1] w-full text-center py-2 px-3 ">
         {t("AllBlog")}
       </h2>
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className=" grid grid-cols-1 lg:grid-cols-2  gap-4">
         {blogs.map((blog, index) => (
           <div key={index} className=" ">
             <div
@@ -57,10 +58,10 @@ export default async function BlogAll({ take }) {
                   quality={100}
                   alt={blog.title}
                   title={blog.title}
-                  className="object-cover  h-96  rounded-t      "
+                  className="object-cover  max-h-96  rounded-t      "
                   src={blog.Url}
                 />
-              </div>
+                </div>
             </div>
           </div>
         ))}
