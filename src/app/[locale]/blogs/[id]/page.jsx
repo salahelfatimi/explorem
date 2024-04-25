@@ -3,20 +3,16 @@ import { fetchBlogs, fetchSingleBlog } from "@/app/api/data/blog/actions";
 
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { title } from "process";
 
 export async function generateMetadata({ params: { id } }) {
   const post = await fetchSingleBlog(id);
 
   return {
+    title:post.title,
     id: post.id,
     description: post.description,
-    openGraph: {
-      images: [
-        {
-          url: post.Org,
-        },
-      ],
-    },
+    
   };
 }
 
