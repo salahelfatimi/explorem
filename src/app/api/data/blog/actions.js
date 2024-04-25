@@ -169,7 +169,6 @@ export const fetchBlogs = async (take) => {
         $date: "2024-04-21T15:37:03.907Z",
       },
     },
-    ,
     {
       _id: {
         $oid: "662a42f9ae5c9959eea912a0",
