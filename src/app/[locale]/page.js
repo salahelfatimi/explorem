@@ -87,7 +87,7 @@ export default async function Index({ params: { locale } }) {
               {t("whatWeHaveAchieved.title")}
             </h2>
           </div>
-          <ul className={` ${locale==='ar'?'*:border-r-4 text-right':'*:border-l-4 text-left'} *:border-[#0149a6] *:shadow *:bg-white *:p-2 *:pl-4 *:rounded-r-sm  px-2 lg:text-lg flex flex-col gap-4 font-normal list-outside leading-loose `}>
+          <ul className={` ${locale==='ar'?'*:border-r-4 text-right':'*:border-l-4 text-left'} *:border-[#0149a6] whitespace-pre-line  *:shadow *:bg-white *:p-2 *:pl-4 *:rounded-r-sm  px-2 lg:text-lg flex flex-col gap-4 font-normal list-outside leading-loose `}>
             <li>{t("whatWeHaveAchieved.line1")}</li>
             <li>{t("whatWeHaveAchieved.line2")}</li>
             <li>{t("whatWeHaveAchieved.line3")}</li>
