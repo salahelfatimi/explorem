@@ -120,11 +120,13 @@ export default async function BlogDetail({ params: { id } }) {
             By <span className="text-[#134ba1] uppercase">Explorem</span>
           </span>
         </div>
+        <div >
+          <p
+            className="whitespace-pre-line text-center lg:text-left      break-words container   leading-loose   lg:text-xl"
+            dangerouslySetInnerHTML={{ __html: createMarkup(blog.description) }}
+          ></p>
+        </div>
 
-        <p
-          className="whitespace-pre-line text-center lg:text-left  flex  justify-center  break-words container   leading-loose   lg:text-xl"
-          dangerouslySetInnerHTML={{ __html: createMarkup(blog.description) }}
-        ></p>
         {blog?.imageUrl1 && (
           <div className=" flex  flex-col lg:flex-row gap-4">
             <Image
