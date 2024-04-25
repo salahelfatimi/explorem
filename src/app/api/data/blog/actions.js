@@ -364,8 +364,14 @@ export const fetchSingleBlog = async (id) => {
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAIAAABPmPnhAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nAH4AAf/ACo0LhIaFCoyJ2tzaGBeR0pFJ1lTMYB0QJ2VZKKkgwBPYWErPjwrOTdodW5QWlFRWkxlc19QWkeCjYB9gnMAVWpwT3R9UHBvbXp2W1pNaWBNUVRBU0k2V1RBSls/ACo7PUphZSYhHBQNE0E9NCYjHicdFnpuW5OeiIuqkwBxeHaWmZVSQysRBQBOP0JBOjsOFh0+MyS1qYTo2rYAxL+4wreuvqB3cGAke19lkXl5SVRYQCgjspF18eS+AMe+tMi+ssq7qtTEstXEs82+rtvMurunmNnErf/v0gDj2szr39D15dHz49D46NT/8t7/9N//+uX//eb/+uDB3HQvKnXFjAAAAABJRU5ErkJggg==        ",
       width: "2048",
       height: "1536",
-
+      Org: "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
       Url: "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
+      base641:
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAIAAABPmPnhAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nAH4AAf/ACo0LhIaFCoyJ2tzaGBeR0pFJ1lTMYB0QJ2VZKKkgwBPYWErPjwrOTdodW5QWlFRWkxlc19QWkeCjYB9gnMAVWpwT3R9UHBvbXp2W1pNaWBNUVRBU0k2V1RBSls/ACo7PUphZSYhHBQNE0E9NCYjHicdFnpuW5OeiIuqkwBxeHaWmZVSQysRBQBOP0JBOjsOFh0+MyS1qYTo2rYAxL+4wreuvqB3cGAke19lkXl5SVRYQCgjspF18eS+AMe+tMi+ssq7qtTEstXEs82+rtvMurunmNnErf/v0gDj2szr39D15dHz49D46NT/8t7/9N//+uX//eb/+uDB3HQvKnXFjAAAAABJRU5ErkJggg==        ",
+      width1: "2048",
+      height1: "1536",
+      imageUrl1:
+        "https://utfs.io/f/7178297b-2e01-42d8-a98b-b0a412b2f7dd-rpbt4b.jpg",
       imageKey: "92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
       title: "22 Candidates Successfully Relocated to Germany!",
       description:
@@ -418,7 +424,6 @@ export const fetchSingleBlog = async (id) => {
       Url: blog.Url,
       imageKey: blog.imageKey,
       imageUrl1: blog?.imageUrl1,
-      imageKey1: blog?.imageKey1,
       title: blog.title,
       description: blog.description,
       author: blog.author,
@@ -434,8 +439,7 @@ export const fetchSingleBlog = async (id) => {
 };
 
 export const getLatestBlog = async () => {
-  const latestBlog = 
-  {
+  const latestBlog = {
     _id: {
       $oid: "662a42f9ae5c9959eea912a0",
     },
@@ -458,7 +462,7 @@ export const getLatestBlog = async () => {
     updateAt: {
       $date: "2024-04-25T15:37:03.907Z",
     },
-  }
+  };
 
   return {
     id: latestBlog._id.$oid,
