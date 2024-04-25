@@ -12,7 +12,13 @@ export async function generateMetadata({ params: { id } }) {
     title:post.title,
     id: post.id,
     description: post.description,
-    
+    openGraph: {
+      images: [
+        {
+          url: post.Org,
+        },
+      ],
+    },
   };
 }
 
