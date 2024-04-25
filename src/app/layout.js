@@ -14,7 +14,25 @@ export const metadata = {
     
   },
   openGraph: {
-    images: "/opengraph-image.png",
+    title: 'Explorem',
+    description: 'We Make A Difference , We Make It Happen .',
+    url: '/opengraph-image.png',
+    siteName: 'Explorem',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: '/opengraph-image.png',
+        width: 1800,
+        height: 1600,
+        alt: 'Explorem',
+      },
+    ],
+    locale:["en", "de", "ar"],
+    type: 'website',
   },
 };
 export default async function RootLayout({ children }) {

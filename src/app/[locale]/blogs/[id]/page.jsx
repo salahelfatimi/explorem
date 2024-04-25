@@ -3,24 +3,35 @@ import { fetchBlogs, fetchSingleBlog } from "@/app/api/data/blog/actions";
 
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { title } from "process";
-
+import { createSharedPathnamesNavigation } from "next-intl/navigation";
+const locales = ["en", "de", "ar"];
+const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
 export async function generateMetadata({ params: { id } }) {
   const post = await fetchSingleBlog(id);
-
+  
   return {
-    title:post.title,
-    id: post.id,
-    description: post.description,
     openGraph: {
+      title: post.title,
+      description: post.description,
+      url: post.Org,
+      siteName: 'explorem',
       images: [
         {
           url: post.Org,
+          width: 800,
+          height: 600,
+        },
+        {
+          url: post.Org,
+          width: 1800,
+          height: 1600,
+          alt: post.title,
         },
       ],
-    },
-  };
-}
+      locale: ["en", "de", "ar"],
+      type: 'website',
+    }
+}}
 
 export default async function BlogDetail({ params: { id } }) {
   const blog = await fetchSingleBlog(id);
