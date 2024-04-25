@@ -178,7 +178,7 @@ export const fetchBlogs = async (take) => {
       width: "1758",
       height: "988",
 
-      Url: "https://utfs.io/f/ecb96b96-95ef-4ea8-b339-28b2c633beb3-kplyvh.png",
+      Url: "https://utfs.io/f/84996109-5b07-4e1e-95f0-34b82eec93d3-6tml82.png",
       imageKey: "883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
       title:
         "Explorem founder/ managing directors speech during the recognition ceremony. ",
@@ -393,7 +393,7 @@ export const fetchSingleBlog = async (id) => {
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAABJ0AAASdAHeZh94AAAA+0lEQVR4nAXBO0gCARzA4T+0tjQElvQiugaXq8ggO7sjOoUaFDpC5IoWiSIsAx9gUEvekk1hOhlOeuDQEBIIjYE0lNADHKO1saHg1/dJwTLJxJeob0d4nwpxN2lwoemk1lY4DFk0X+DyCSQdVDgKB7kyVukps3yry/z6I5yJzsKgSf0V7gHZ8U2Qm45y4FnEln4cGeXBM8PjWIKklue8+0eu3EMK4STt7Bvd0hdt3ynzfUJGvLiBGLpi0/qEW3ULqeaveb75wT1uUTROsL0aaX+c5l6JilXjw4VOp4ak7BiNcoN9c5MRGWJ8YA51WGM3kKAaq+CsF4luOPwDlm2LWsfdvDgAAAAASUVORK5CYII= ",
       width: "1758",
       height: "988",
-      Org: "https://utfs.io/f/ecb96b96-95ef-4ea8-b339-28b2c633beb3-kplyvh.png",
+      Org: "https://utfs.io/f/84996109-5b07-4e1e-95f0-34b82eec93d3-6tml82.png",
       Url: "https://utfs.io/f/93e59d44-6155-459d-b8fe-e06805c88728-v2sni1.mp4",
       imageKey: "883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
       title:
@@ -447,8 +447,8 @@ export const getLatestBlog = async () => {
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAABJ0AAASdAHeZh94AAAA+0lEQVR4nAXBO0gCARzA4T+0tjQElvQiugaXq8ggO7sjOoUaFDpC5IoWiSIsAx9gUEvekk1hOhlOeuDQEBIIjYE0lNADHKO1saHg1/dJwTLJxJeob0d4nwpxN2lwoemk1lY4DFk0X+DyCSQdVDgKB7kyVukps3yry/z6I5yJzsKgSf0V7gHZ8U2Qm45y4FnEln4cGeXBM8PjWIKklue8+0eu3EMK4STt7Bvd0hdt3ynzfUJGvLiBGLpi0/qEW3ULqeaveb75wT1uUTROsL0aaX+c5l6JilXjw4VOp4ak7BiNcoN9c5MRGWJ8YA51WGM3kKAaq+CsF4luOPwDlm2LWsfdvDgAAAAASUVORK5CYII=  ",
     width: "1758",
     height: "988",
-    Org: "https://utfs.io/f/ecb96b96-95ef-4ea8-b339-28b2c633beb3-kplyvh.png",
-    Url: "https://utfs.io/f/ecb96b96-95ef-4ea8-b339-28b2c633beb3-kplyvh.png",
+    Org: "https://utfs.io/f/84996109-5b07-4e1e-95f0-34b82eec93d3-6tml82.png",
+    Url: "https://utfs.io/f/84996109-5b07-4e1e-95f0-34b82eec93d3-6tml82.png",
     imageKey: "883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
     title:
       "Explorem founder/ managing directors speech during the recognition ceremony. ",
