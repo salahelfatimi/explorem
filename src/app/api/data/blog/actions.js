@@ -367,9 +367,9 @@ export const fetchSingleBlog = async (id) => {
       Org: "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
       Url: "https://utfs.io/f/92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",
       base641:
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAIAAABPmPnhAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nAH4AAf/ACo0LhIaFCoyJ2tzaGBeR0pFJ1lTMYB0QJ2VZKKkgwBPYWErPjwrOTdodW5QWlFRWkxlc19QWkeCjYB9gnMAVWpwT3R9UHBvbXp2W1pNaWBNUVRBU0k2V1RBSls/ACo7PUphZSYhHBQNE0E9NCYjHicdFnpuW5OeiIuqkwBxeHaWmZVSQysRBQBOP0JBOjsOFh0+MyS1qYTo2rYAxL+4wreuvqB3cGAke19lkXl5SVRYQCgjspF18eS+AMe+tMi+ssq7qtTEstXEs82+rtvMurunmNnErf/v0gDj2szr39D15dHz49D46NT/8t7/9N//+uX//eb/+uDB3HQvKnXFjAAAAABJRU5ErkJggg==        ",
-      width1: "2048",
-      height1: "1536",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAIAAADzBuo/AAAACXBIWXMAABcMAAAXDAGKAo5mAAAApklEQVR4nAGbAGT/ALTV6q3J3tHKxPf+/bfBs5aKbrCJWVc2F4RsWZ2NgQCCiJdmbXyDfXuBkJtuaWmGZEZtUTdRPy5oVEdIOzQAcXF1IycpAAAIHiElPykua15cMyYiCQQAHBcSIBgQAFtgazpBSWJgYFxYU4OAd5eKgF1OQU1EN1VKQHdnUwBqb3lua2qTiH+Id2qUhHSei3eXg22bhG6finKnkncjfj4LQl4nbQAAAABJRU5ErkJggg==  ",
+      width1: "3908",
+      height1: "1795",
       imageUrl1:
         "https://utfs.io/f/7178297b-2e01-42d8-a98b-b0a412b2f7dd-rpbt4b.jpg",
       imageKey: "92e2b629-6904-4472-949d-25aab568e521-kq15iu.jpg",

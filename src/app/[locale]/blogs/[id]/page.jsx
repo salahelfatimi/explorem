@@ -131,7 +131,7 @@ export default async function BlogDetail({ params: { id } }) {
           <div className=" flex  flex-col lg:flex-row gap-4">
             <Image
               title={blog?.title}
-              blurDataURL={blog?.base64}
+              blurDataURL={blog?.base641}
               placeholder="blur"
               quality={100}
               width={blog?.width1}
@@ -140,6 +140,7 @@ export default async function BlogDetail({ params: { id } }) {
               className="object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat"
               alt={blog?.title}
             />
+            
           </div>
         )}
       </div>
