@@ -10,6 +10,7 @@ export async function generateMetadata({ params: { id } }) {
   const post = await fetchSingleBlog(id);
 
   return {
+    title: post.title,
     openGraph: {
       title: post.title,
       description: post.description,
