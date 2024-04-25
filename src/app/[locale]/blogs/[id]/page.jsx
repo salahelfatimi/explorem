@@ -3,24 +3,19 @@ import { fetchBlogs, fetchSingleBlog } from "@/app/api/data/blog/actions";
 
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { createSharedPathnamesNavigation } from "next-intl/navigation";
-const locales = ["en", "de", "ar"];
-const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
+
+
+
 export async function generateMetadata({ params: { id } }) {
   const post = await fetchSingleBlog(id);
-  
+
   return {
     openGraph: {
       title: post.title,
       description: post.description,
-      url: post.Org,
-      siteName: 'explorem',
+      url: `https://www.explorem.net/en/blogs/${id}`,
+      siteName: "Explorem",
       images: [
-        {
-          url: post.Org,
-          width: 800,
-          height: 600,
-        },
         {
           url: post.Org,
           width: 1800,
@@ -28,10 +23,12 @@ export async function generateMetadata({ params: { id } }) {
           alt: post.title,
         },
       ],
-      locale: ["en", "de", "ar"],
-      type: 'website',
-    }
-}}
+      locale: "en", 
+      type: "article",
+    },
+  };
+}
+
 
 export default async function BlogDetail({ params: { id } }) {
   const blog = await fetchSingleBlog(id);

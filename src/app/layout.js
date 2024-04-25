@@ -2,8 +2,7 @@
 import { cookies } from "next/headers";
 import "./globals.css";
 export const metadata = {
-  title: { template: "%s - Explorem" },
-  description: "We Make A Difference , We Make It Happen .",
+ 
   metadataBase: new URL("https://www.explorem.net"),
   alternates: {
     canonical: "/en",
@@ -14,24 +13,24 @@ export const metadata = {
     
   },
   openGraph: {
-    title: 'Explorem',
+   
     description: 'We Make A Difference , We Make It Happen .',
-    url: '/opengraph-image.png',
+    url: 'https://www.explorem.net/en',
     siteName: 'Explorem',
     images: [
       {
-        url: '/opengraph-image.png',
+        url: 'en/opengraph-image.png',
         width: 800,
         height: 600,
       },
       {
-        url: '/opengraph-image.png',
+        url: 'en/opengraph-image.png',
         width: 1800,
         height: 1600,
         alt: 'Explorem',
       },
     ],
-    locale:["en", "de", "ar"],
+    locale:[ "de", "ar"],
     type: 'website',
   },
 };

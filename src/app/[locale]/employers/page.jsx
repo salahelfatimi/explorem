@@ -1,11 +1,12 @@
 
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 import Image from "next/image";
-import Contact from "../contact/page";
+
 import { useTranslations } from "next-intl";
 import FetchImageScroll from "@/components/fetchImageScroll";
 import { Crosshair, EyeIcon, FileTextIcon, FolderCheck, GraduationCap, Handshake, Infinity, MousePointerClick, PaperclipIcon, Plane, RotateCcwIcon, Share2, User2 } from "lucide-react";
 import saction1 from '/public/image/employers/saction1.jpg'
+import Contactform from "../contact/forma/contact";
 export const metadata = {
   title: "Employers",
   
@@ -161,7 +162,7 @@ export default function Employers() {
               </span>
             </div>
 
-            <Contact />
+            <Contactform/>
           </div>
         </div>
       </div>
