@@ -2,9 +2,9 @@ import { fetchBlogs } from "./api/data/blog/actions";
 
 export default async function sitemap() {
   const blogs = await fetchBlogs(50);
-  const blogEntries=blogs.map((id)=>({
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/blogs/${id.id}`,
-      lastModified: new Date(id.updateAt),
+  const blogEntries=blogs.map((blog)=>({
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/blogs/${blog.title.trim().replace(/[/%\s]+/g, '-')}`,
+      lastModified: new Date(blog.updateAt),
       changeFrequency: 'daily',
       priority: 1,
   }))
