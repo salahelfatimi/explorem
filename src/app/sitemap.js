@@ -25,7 +25,7 @@ export default async function sitemap() {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/blog`,
       lastModified: new Date(),
       changeFrequency: 'daily', // Corrected spelling
-      priority: 0.5,
+      priority: 1,
     },
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/employers`,
