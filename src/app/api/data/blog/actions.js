@@ -42,9 +42,9 @@ export const fetchBlogs = async (take) => {
 
       Url: "https://utfs.io/f/bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
       imageKey: "bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
-      title: "Explorem candidates in WDR Lokalzeit aus Köln!",
+      title: "Explorem candidates in WDR Lokalzeit aus Cologne!",
       description:
-        "Our first 8 relocated nurse-candidates in Köln were covered and interviewed in Köln local TV.\r\n\r\nhttps://www1.wdr.de/lokalzeit/fernsehen/koeln/pflegeinternat-gegen-pflegekraeftemangel-im-bergischen--100.html\r\n\r\nWe are PROUD of you... Keep up the good work!!!  \r\n",
+        "Our first 8 relocated nurse-candidates in Cologne were covered and interviewed in Cologne local TV.\r\n\r\nhttps://www1.wdr.de/lokalzeit/fernsehen/koeln/pflegeinternat-gegen-pflegekraeftemangel-im-bergischen--100.html\r\n\r\nWe are PROUD of you... Keep up the good work!!!  \r\n",
       author: "Explorem",
       published: true,
       createAt: {
@@ -181,7 +181,7 @@ export const fetchBlogs = async (take) => {
       Url: "https://utfs.io/f/410eee4c-2880-4007-bbb7-033867d5e855-6tml77.png",
       imageKey: "883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
       title:
-        "Explorem founder/ managing directors speech during the recognition ceremony. ",
+        "Explorem founder/managing directors speech during the recognition ceremony.",
       description:
         "Explorem founder/ managing directors speech during the recognition ceremony. \r\n\r\nOn April 19, 2024, the Excel Group of Institutes gave recognition to 20 of their nurse graduates who were successfully relocated to Cologne, Germany.\r\n\r\nThis project is part of the Explorem program in relocating qualified professionals to Germany, in collaboration with German employers/companies. With the initiatives of Explorem, these candidates were able to sign employment contracts and received FREE language courses until the B2 level, recognition and documentation, visa process, relocation, etc.. all paid by their employer.\r\n\r\nFor more information, you may visit the Explorem Center located at Imm 6, Rue Vieux des Marrakchis Nr 7 Gueliz Marrakech, or you may call us at 0668676518 (WhatsApp) or 0809891297 (landline).\r\nWe are open from Monday to Friday, from 10h00 to 18h00.\r\n\r\n#explorem\r\n#exploremrecruit\r\n#exploremacademy \r\n#wemakeadifference \r\n#wemakeithappen\r\n",
       author: "Explorem",
@@ -216,7 +216,7 @@ export const fetchBlogs = async (take) => {
   });
 };
 
-export const fetchSingleBlog = async (id) => {
+export const fetchSingleBlog = async (title) => {
   const blogs = [
     {
       _id: {
@@ -252,9 +252,9 @@ export const fetchSingleBlog = async (id) => {
       Org: "https://utfs.io/f/bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
       Url: "https://utfs.io/f/bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
       imageKey: "bcd256f6-6a74-4b6a-a967-5a7d40a21def-jy5hdt.jpeg.jpg",
-      title: "Explorem candidates in WDR Lokalzeit aus Köln!",
+      title: "Explorem candidates in WDR Lokalzeit aus Cologne!",
       description:
-        "Our first 8 relocated nurse-candidates in Köln were covered and interviewed in Köln local TV.\r\n\r\nhttps://www1.wdr.de/lokalzeit/fernsehen/koeln/pflegeinternat-gegen-pflegekraeftemangel-im-bergischen--100.html\r\n\r\nWe are PROUD of you... Keep up the good work!!!  \r\n",
+        "Our first 8 relocated nurse-candidates in Cologne were covered and interviewed in Cologne local TV.\r\n\r\nhttps://www1.wdr.de/lokalzeit/fernsehen/koeln/pflegeinternat-gegen-pflegekraeftemangel-im-bergischen--100.html\r\n\r\nWe are PROUD of you... Keep up the good work!!!  \r\n",
       author: "Explorem",
       published: true,
       createAt: {
@@ -397,7 +397,7 @@ export const fetchSingleBlog = async (id) => {
       Url: "https://utfs.io/f/93e59d44-6155-459d-b8fe-e06805c88728-v2sni1.mp4",
       imageKey: "883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
       title:
-        "Explorem founder/ managing directors speech during the recognition ceremony. ",
+        "Explorem founder/managing directors speech during the recognition ceremony.",
       description:
         "Explorem founder/ managing directors speech during the recognition ceremony. \r\n\r\nOn April 19, 2024, the Excel Group of Institutes gave recognition to 20 of their nurse graduates who were successfully relocated to Cologne, Germany.\r\n\r\nThis project is part of the Explorem program in relocating qualified professionals to Germany, in collaboration with German employers/companies. With the initiatives of Explorem, these candidates were able to sign employment contracts and received FREE language courses until the B2 level, recognition and documentation, visa process, relocation, etc.. all paid by their employer.\r\n\r\nFor more information, you may visit the Explorem Center located at Imm 6, Rue Vieux des Marrakchis Nr 7 Gueliz Marrakech, or you may call us at 0668676518 (WhatsApp) or 0809891297 (landline).\r\nWe are open from Monday to Friday, from 10h00 to 18h00.\r\n\r\n#explorem\r\n#exploremrecruit\r\n#exploremacademy \r\n#wemakeadifference \r\n#wemakeithappen\r\n",
       author: "Explorem",
@@ -410,7 +410,8 @@ export const fetchSingleBlog = async (id) => {
       },
     },
   ];
-  const blog = blogs.find((blog) => blog._id.$oid == id);
+  console.log(title)
+  const blog = blogs.find((blog) => blog.title.trim().replace(/[/%\s]+/g, '-') === title);
   if (blog) {
     return {
       id: blog._id.$oid,
@@ -451,7 +452,7 @@ export const getLatestBlog = async () => {
     Url: "https://utfs.io/f/410eee4c-2880-4007-bbb7-033867d5e855-6tml77.png",
     imageKey: "883f093b-43ec-4532-a22e-ed5d884237b4-kplyvh.png",
     title:
-      "Explorem founder/ managing directors speech during the recognition ceremony. ",
+      "Explorem founder/managing directors speech during the recognition ceremony.",
     description:
       "Explorem founder/ managing directors speech during the recognition ceremony. \r\n\r\nOn April 19, 2024, the Excel Group of Institutes gave recognition to 20 of their nurse graduates who were successfully relocated to Cologne, Germany.\r\n\r\nThis project is part of the Explorem program in relocating qualified professionals to Germany, in collaboration with German employers/companies. With the initiatives of Explorem, these candidates were able to sign employment contracts and received FREE language courses until the B2 level, recognition and documentation, visa process, relocation, etc.. all paid by their employer.\r\n\r\nFor more information, you may visit the Explorem Center located at Imm 6, Rue Vieux des Marrakchis Nr 7 Gueliz Marrakech, or you may call us at 0668676518 (WhatsApp) or 0809891297 (landline).\r\nWe are open from Monday to Friday, from 10h00 to 18h00.\r\n\r\n#explorem\r\n#exploremrecruit\r\n#exploremacademy \r\n#wemakeadifference \r\n#wemakeithappen\r\n",
     author: "Explorem",

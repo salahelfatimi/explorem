@@ -6,20 +6,21 @@ import { notFound } from "next/navigation";
 
 
 
-export async function generateMetadata({ params: { id } }) {
-  const post = await fetchSingleBlog(id);
+export async function generateMetadata({ params: { title } }) {
+  const post = await fetchSingleBlog(title);
+  
 
   return {
     title: post.title,
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://www.explorem.net/en/blogs/${id}`,
+      url: `https://www.explorem.net/en/blogs/${title}`,
       siteName: "Explorem",
       images: [
         {
           url: post.Org,
-          width: 1800,
+          wtitleth: 1800,
           height: 1600,
           alt: post.title,
         },
@@ -31,8 +32,9 @@ export async function generateMetadata({ params: { id } }) {
 }
 
 
-export default async function BlogDetail({ params: { id } }) {
-  const blog = await fetchSingleBlog(id);
+export default async function BlogDetail({ params: { title } }) {
+  const blog = await fetchSingleBlog(title);
+  console.log(title)
   const isImage = (url) => /\.(jpg|jpeg|png|gif)$/i.test(url);
   const isVideo = (url) => /\.(mp4|avi|mov|wmv)$/i.test(url);
   if (blog.status === 404) {
@@ -118,7 +120,7 @@ export default async function BlogDetail({ params: { id } }) {
               <Instagram className=" stroke-[#fff] hover:stroke-[#134ba1] stroke-2" />
             </a>
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=https://www.explorem.net/en/blogs/${id}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=https://www.explorem.net/en/blogs/${title}`}
               className=" rounded-full duration-500 border-[#134ba1] hover:bg-white bg-[#134ba1] border-2 w-fit h-fit p-2"
             >
               <Send className=" stroke-[#fff] hover:stroke-[#134ba1] stroke-2" />
