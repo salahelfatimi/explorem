@@ -29,9 +29,9 @@ export default async function BlogAll({ take }) {
                   {blog.title}
                 </h2>
 
-                <span className="text-[#9DA4B2] text-center whitespace-pre-line  xl:text-base text-sm line-clamp-4 break-all    font-semibold">
+                <p className="text-[#9DA4B2] text-center whitespace-pre-line  xl:text-base text-sm line-clamp-4 break-all    font-semibold">
                   {blog.description}
-                </span>
+                </p>
 
                 <Link
               href={`/blogs/${encodeURIComponent(blog.title.trim().replace(/[/%\s]+/g, '-'))}`}
