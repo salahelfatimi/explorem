@@ -1,4 +1,5 @@
 import { getLatestBlog } from "@/app/api/data/blog/actions";
+import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 // import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import { getTranslations } from "next-intl/server";
@@ -35,7 +36,7 @@ export default async function LatestBlog() {
               width={width}
               height={height}
               src={Url}
-              className="object-cover  h-auto  rounded-t "
+              className="object-cover  h-96  rounded-t "
               alt={title}
             />
              {/* <GetBase64Image imageUrl={Url} className={'object-cover  h-auto  rounded-t '} alt={title}/> */}

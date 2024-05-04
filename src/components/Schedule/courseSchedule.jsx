@@ -91,7 +91,7 @@ const currentDayIndex = new Date().getDay()-1;
         </div>
         <div className="flex flex-col items-center gap-4">
           <h3 className=" text-lg text-center  w-fit  font-semibold text-[#0149a6] bg-white px-2">
-          {t("ongoingRegistration")} 30, 2024 )
+          {t("ongoingRegistration")} 17, 2024 )
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col gap-1 bg-[#fff]  py-6 px-14  ">
@@ -127,7 +127,7 @@ const currentDayIndex = new Date().getDay()-1;
       
         <div className="flex flex-col items-center gap-4">
           <h3 className=" text-lg  w-fit  font-semibold text-center text-[#0149a6] bg-white px-2">
-          {t("ongoingRegistration")} 30, 2024 )
+          {t("ongoingRegistration")} 17, 2024 )
           </h3>
           <div className="">
            

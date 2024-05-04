@@ -34,7 +34,6 @@ export async function generateMetadata({ params: { title } }) {
 
 export default async function BlogDetail({ params: { title } }) {
   const blog = await fetchSingleBlog(title);
-  console.log(title)
   const isImage = (url) => /\.(jpg|jpeg|png|gif)$/i.test(url);
   const isVideo = (url) => /\.(mp4|avi|mov|wmv)$/i.test(url);
   if (blog.status === 404) {
