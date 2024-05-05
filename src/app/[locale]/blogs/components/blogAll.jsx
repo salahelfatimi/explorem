@@ -6,8 +6,7 @@ import { fetchBlogs } from "@/app/api/data/blog/actions";
 import PaginationBlog from "./paginationBlog";
 
 
-const locales = ["en", "de", "ar"];
-const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
+import { Link, usePathname } from "@/navigation";
 
 export default async function BlogAll({ take }) {
   const t = await getTranslations("Blog");

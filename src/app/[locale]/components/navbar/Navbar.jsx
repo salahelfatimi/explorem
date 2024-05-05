@@ -5,10 +5,9 @@ import { Menu, Moon, Phone, X } from "react-feather";
 import ChangeLungage from "./changeLungage/changeLungage";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { createSharedPathnamesNavigation } from "next-intl/navigation";
+import { Link, usePathname } from "@/navigation";
 
-const locales = ["en", "de", "ar"];
-const { Link, usePathname } = createSharedPathnamesNavigation({ locales });
+
 
 export default function Navbar({ locale }) {
   const pathname = usePathname();

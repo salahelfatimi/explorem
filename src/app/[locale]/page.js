@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { createSharedPathnamesNavigation } from "next-intl/navigation";
+
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 import { fetchTestimonialLatest } from "../api/data/testimonial/actions";
 import TestimonialComments from "@/components/testimonialComments";
@@ -9,9 +9,9 @@ import { Instagram, Link2 } from "react-feather";
 import LatestBlog from "./blogs/components/latestBlog";
 import FetchLogoScroll from "@/components/fetchLogoScroll";
 import CourseSchedule from "@/components/Schedule/courseSchedule";
+import { Link } from "@/navigation";
 
-const locales = ["en", "de", "ar"];
-const { Link } = createSharedPathnamesNavigation({ locales });
+
 
 export default async function Index({ params: { locale } }) {
   const testimonial = await fetchTestimonialLatest();

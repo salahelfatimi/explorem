@@ -6,8 +6,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
 import { Clock } from "react-feather";
-const locales = ["en", "de", "ar"];
-const { Link } = createSharedPathnamesNavigation({ locales });
+import { Link, usePathname } from "@/navigation";
 
 export default async function LatestBlog() {
   const t = await getTranslations("Blog");

@@ -1,12 +1,10 @@
 "use client";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import Image from "next/image";
-
+import { Link, usePathname } from "@/navigation";
 import { useState } from "react";
 
-const locales = ["en", "de", "ar"];
-const { Link, redirect, usePathname, useRouter } =
-  createSharedPathnamesNavigation({ locales });
+
 export default function ChangeLungage({ setOpen, open, locale }) {
   const [showLanguage, setShowLanguage] = useState(false);
   const pathname = usePathname();
