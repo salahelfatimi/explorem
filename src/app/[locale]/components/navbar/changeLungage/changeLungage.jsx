@@ -1,7 +1,7 @@
 "use client";
 import { createSharedPathnamesNavigation } from "next-intl/navigation";
 import Image from "next/image";
-import { Link, usePathname } from "@/navigation";
+import { Link, usePathname ,locales} from "@/navigation";
 import { useState } from "react";
 
 
