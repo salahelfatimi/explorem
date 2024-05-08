@@ -5,6 +5,7 @@ import "./globals.css";
 export const metadata = {
   title: { default: "Explorem", template: "%s - Explorem" },
   description: "We Make A Difference, We Make It Happen.",
+  metadataBase: new URL("https://www.explorem.net/"),
   alternates: {
     canonical: "/en",
     languages: {
