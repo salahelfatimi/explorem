@@ -2,43 +2,9 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
-export const metadata = {
-  title: { default: "Explorem", template: "%s - Explorem" },
-  description: "We Make A Difference, We Make It Happen.",
-  metadataBase: new URL("https://www.explorem.net/"),
-  alternates: {
-    canonical: "/en",
-    languages: {
-      de: "/de",
-      ar: "/ar",
-    },
-    
-  },
-  openGraph: {
-    url: "https://www.explorem.net/en",
-    siteName: "Explorem",
-    images: [
-      {
-        url: "https://www.explorem.net/en/opengraph-image.jpg",
-        width: 1200,
-        height: 630,
-      },
-      {
-        url: "https://www.explorem.net/en/opengraph-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Explorem",
-      },
-    ],
-    locale: "en",
-    type: "website",
-  },
-};
-
 
 export default function LocaleLayout({ children, params: { locale } }) {
   const messages = useMessages();
-  
   return (
     
         <main>

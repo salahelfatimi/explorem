@@ -454,7 +454,6 @@ export const fetchSingleBlog = async (title) => {
       }
     }
   ];
-  console.log(title)
   const blog = blogs.find((blog) => blog.title.trim().replace(/[/%\s]+/g, '-') === title);
   if (blog) {
     return {

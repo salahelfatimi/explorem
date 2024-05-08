@@ -8,8 +8,6 @@ import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params: { title } }) {
   const post = await fetchSingleBlog(title);
-  
-
   return {
     title: post.title,
     openGraph: {
@@ -17,12 +15,18 @@ export async function generateMetadata({ params: { title } }) {
       description: post.description,
       url: `https://www.explorem.net/en/blogs/${title}`,
       siteName: "Explorem",
+      
       images: [
         {
           url: post.Org,
-          wtitleth: 1200,
+          width: 1200,
           height: 630,
-          alt: post.title,
+        },
+        {
+          url: post.Org,
+          width: 1200,
+          height: 630,
+          alt: "Explorem",
         },
       ],
       locale: "en", 

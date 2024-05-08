@@ -2,8 +2,9 @@
 import { cookies } from "next/headers";
 import "./globals.css";
 export const metadata = {
- 
-  metadataBase: new URL("https://www.explorem.net"),
+  title: { default: "Explorem", template: "%s - Explorem" },
+  description: "We Make A Difference, We Make It Happen.",
+  metadataBase: new URL("https://www.explorem.net/"),
   alternates: {
     canonical: "/en",
     languages: {
@@ -13,25 +14,23 @@ export const metadata = {
     
   },
   openGraph: {
-   
-    description: 'We Make A Difference , We Make It Happen .',
-    url: 'https://www.explorem.net/en',
-    siteName: 'Explorem',
+    url: "https://www.explorem.net/",
+    siteName: "Explorem",
     images: [
       {
-        url: 'https://www.explorem.net/en/opengraph-image.jpg',
+        url: "https://www.explorem.net/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
       {
-        url: 'https://www.explorem.net/en/opengraph-image.jpg',
+        url: "https://www.explorem.net/opengraph-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'Explorem',
+        alt: "Explorem",
       },
     ],
-    locale:[ "de", "ar"],
-    type: 'website',
+    locale: "en",
+    type: "website",
   },
 };
 export default async function RootLayout({ children }) {
