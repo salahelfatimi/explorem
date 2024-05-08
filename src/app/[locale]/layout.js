@@ -3,9 +3,9 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
 export const metadata = {
-  title: { default: "Explorem", template: "%s - Explorem" },
+  title: { default: "Home", template: "%s - Explorem" },
   description: "We Make A Difference, We Make It Happen.",
-  metadataBase: new URL("https://www.explorem.net/en/"),
+  metadataBase: new URL("https://www.explorem.net/en"),
   alternates: {
     canonical: "/en",
     languages: {
@@ -15,7 +15,7 @@ export const metadata = {
     
   },
   openGraph: {
-    url: "https://www.explorem.net/en/",
+    url: "https://www.explorem.net/en",
     siteName: "Explorem",
     images: [
       {
