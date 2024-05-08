@@ -20,8 +20,8 @@ export async function generateMetadata({ params: { title } }) {
       images: [
         {
           url: post.Org,
-          wtitleth: 1800,
-          height: 1600,
+          wtitleth: 1200,
+          height: 630,
           alt: post.title,
         },
       ],

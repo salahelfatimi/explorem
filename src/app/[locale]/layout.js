@@ -10,14 +10,14 @@ export const metadata = {
     siteName: "Explorem",
     images: [
       {
-        url: "https://www.explorem.net/en/opengraph-image.png",
-        width: 800,
-        height: 600,
+        url: "https://www.explorem.net/en/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
       },
       {
-        url: "https://www.explorem.net/en/opengraph-image.png",
-        width: 1800,
-        height: 1600,
+        url: "https://www.explorem.net/en/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "Explorem",
       },
     ],
