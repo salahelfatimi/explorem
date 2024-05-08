@@ -15,7 +15,7 @@ export const metadata = {
     
   },
   openGraph: {
-    url: "https://www.explorem.net/",
+    url: "https://www.explorem.net/en/",
     siteName: "Explorem",
     images: [
       {
