@@ -19,12 +19,12 @@ export const metadata = {
     siteName: "Explorem",
     images: [
       {
-        url: "https://www.explorem.net/en/opengraph-image.jpg",
+        url: "https://www.explorem.net/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
       {
-        url: "https://www.explorem.net/en/opengraph-image.jpg",
+        url: "https://www.explorem.net/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "Explorem",
