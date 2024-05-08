@@ -5,6 +5,14 @@ import "./globals.css";
 export const metadata = {
   title: { default: "Explorem", template: "%s - Explorem" },
   description: "We Make A Difference, We Make It Happen.",
+  alternates: {
+    canonical: "/en",
+    languages: {
+      de: "/de",
+      ar: "/ar",
+    },
+    
+  },
   openGraph: {
     url: "https://www.explorem.net/en",
     siteName: "Explorem",
