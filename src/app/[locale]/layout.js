@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata = {
   title: { default: "Explorem", template: "%s - Explorem" },
   description: "We Make A Difference, We Make It Happen.",
-  metadataBase: new URL("https://www.explorem.net/"),
+  metadataBase: new URL("https://www.explorem.net/er"),
   alternates: {
     canonical: "/en",
     languages: {
@@ -19,12 +19,12 @@ export const metadata = {
     siteName: "Explorem",
     images: [
       {
-        url: "https://www.explorem.net/opengraph-image.jpg",
+        url: "https://www.explorem.net/er/opengraph-image.jpg",
         width: 1200,
         height: 630,
       },
       {
-        url: "https://www.explorem.net/opengraph-image.jpg",
+        url: "https://www.explorem.net/er/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "Explorem",
