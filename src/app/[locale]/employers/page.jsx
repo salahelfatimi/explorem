@@ -89,7 +89,7 @@ export default   function Employers({ params: { locale } }) {
                 </div>
               </div>
             </div>
-            <h2 className=" bg-[#0149A6]   font-bold lg:text-3xl text-md text-[#ffff] text-center p-4  ">
+            <h2 className=" bg-[#0149A6]   font-bold text-xl lg:text-3xl text-md text-[#ffff] text-center p-4  ">
               {t("descriptionEmployers")}
             </h2>
           </div>
