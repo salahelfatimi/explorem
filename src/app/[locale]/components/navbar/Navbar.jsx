@@ -52,7 +52,7 @@ export default function Navbar({ locale }) {
                     </ul>
                     
             </div>
-            <button className="block lg:hidden "  onClick={() => {setOpen(!open);}}>{open?<PanelLeftClose size={35} className=" text-[#0149A6]  " />: <PanelRightClose size={35} className=" text-[#0149A6]  "/>}</button>
+            <button className="block lg:hidden "  onClick={() => {setOpen(!open);}}>{open?<PanelLeftClose size={35} className=" text-[#0149A6]  " />: <PanelRightClose size={35} className=" text-red-500  "/>}</button>
 
         </div>
       </div>
