@@ -83,7 +83,7 @@ export default   function Employers({ params: { locale } }) {
 
               <div className="absolute inset-0 flex justify-center items-center">
                 <div className="bg-[#ffff]  w-full items-center flex flex-col gap-2 capitalize p-9 text-[#0149A6]">
-                  <div className="text-4xl text-center text-md font-bold">
+                  <div className=" text-3xl lg:text-4xl  font-bold text-center">
                     <h1>{t("titleEmployers")}</h1>
                   </div>
                 </div>
