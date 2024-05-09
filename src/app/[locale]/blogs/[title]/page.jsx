@@ -129,6 +129,10 @@ export default async function BlogDetail({ params: { title } }) {
         "height": "1536",
         "Org": "blog7(1).png",
         "Url": "blog7(1).png",
+        "base641":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAIAAADzBuo/AAAACXBIWXMAABcMAAAXDAGKAo5mAAAApklEQVR4nAGbAGT/ALTV6q3J3tHKxPf+/bfBs5aKbrCJWVc2F4RsWZ2NgQCCiJdmbXyDfXuBkJtuaWmGZEZtUTdRPy5oVEdIOzQAcXF1IycpAAAIHiElPykua15cMyYiCQQAHBcSIBgQAFtgazpBSWJgYFxYU4OAd5eKgF1OQU1EN1VKQHdnUwBqb3lua2qTiH+Id2qUhHSei3eXg22bhG6finKnkncjfj4LQl4nbQAAAABJRU5ErkJggg==  ",
+        "width1": "3908",
+        "height1": "1795",
+        "Url1":"blog7(2).png",
         "title": "22 Candidates Successfully Relocated to Germany!",
         "description":"In April 20 and 21, the 22 of the EXPLOREM nurse-candidates were successfully\r\nrelocated to Cologne Germany. As to date, there are 32 out of 37 program recipients\r\nwere relocated. The 5 other candidates are waiting for their pre-approval documents\r\nfor visa process. These 37 candidates are graduates of Excel Group of Institutes\r\n(Marrakech), Galien Institute (Agadir), and Work Center (Oujda).\r\n\r\nThis is one of the successful recruitment projects managed by EXPLOREM, in\r\ncollaboration with DRK-Rettungsdienst Rhein-Berg GmbH and Marburg\r\nConsulting.\r\n\r\nThrough the efforts and initiatives of EXPLOREM managing directors, Mr.\r\nAbdessamad Aboul ossoud and Dr. Gracila Ucag, the recipients of the program\r\nreceived monthly stipend for one year and were provided with FREE services on\r\nlanguage formation until B2 level; services on documentation, recognition, visa\r\nprocess, relocation support such as flight tickets, insurance registration, etc. All\r\ncosts/ expenses are paid by DRK, the employer.\r\n\r\nEXPLOREM has more fruitful projects in the table in which students, skilled workers\r\nand professionals will benefit. With the new Skilled Immigrant Act of Germany,\r\nexisting mechanisms for skilled workers with a university degree, such as the EU Blue\r\nCard, will continue and in some cases be extended. In addition, a new opportunity\r\ncard will enable third-country nationals to seek employment.\r\n\r\nWith all the relocated candidates of Explorem since year 2020, the team is a reliable\r\ncompany to provide the best services in language and nursing formation, recruitment\r\nmanagement, documentation and recognition process, relocation support such as\r\nvisa assistance, insurance registration and apartment search, etc.\r\n\r\nEXPLOREM made a difference. EXPLOREM made it happen.",
         "author": "Explorem",
@@ -320,7 +324,7 @@ export default async function BlogDetail({ params: { title } }) {
           ></p>
         </div>
 
-        {blog?.imageUrl1 && (
+        {blog?.Url1 && (
           <div className=" flex  flex-col lg:flex-row gap-4">
             <Image
               title={blog?.title}
@@ -329,7 +333,7 @@ export default async function BlogDetail({ params: { title } }) {
               quality={100}
               width={blog?.width1}
               height={blog?.height1}
-              src={blog?.imageUrl1}
+              src={`/image/blogExplorem/${blog?.Url1}`}
               className="object-cover  rounded  shadow-2xl  w-full lg:h-[30rem] bg-no-repeat"
               alt={blog?.title}
             />

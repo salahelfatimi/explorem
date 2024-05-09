@@ -1,6 +1,7 @@
 "use client";
 import { locales } from "@/config";
 import { Link, usePathname } from "@/navigation";
+import { ChevronUp } from "lucide-react";
 import Image from "next/image";
 
 import { useState } from "react";
@@ -27,7 +28,8 @@ export default function ChangeLungage({ setOpen, open, locale }) {
             className="h-6 w-8"
             alt="explorem"
           />
-          <ChevronDown size={20}  className="-mr-1 ml-2 h-5 w-5" />
+          <ChevronDown size={20}  className="-mr-1 lg:block hidden ml-2 h-5 w-5" />
+          <ChevronUp size={20}  className="-mr-1 ml-2 block lg:hidden h-5 w-5" />
         </button>
         {showLanguage && (
           <div className=" absolute bottom-12 lg:bottom-auto right-0  mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
