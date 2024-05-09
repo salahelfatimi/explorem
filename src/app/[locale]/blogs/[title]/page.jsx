@@ -109,7 +109,7 @@ export default async function BlogDetail({ params: { title } }) {
         "width": "1758",
         "height": "988",
         "Org": "blog8.png",
-        "Url": "blog8.png",
+        "Url": "blog8.mp4",
         "title":"Explorem founder/managing directors speech during the recognition ceremony.",
         "description":"Explorem founder/ managing directors speech during the recognition ceremony. \r\n\r\nOn April 19, 2024, the Excel Group of Institutes gave recognition to 20 of their nurse graduates who were successfully relocated to Cologne, Germany.\r\n\r\nThis project is part of the Explorem program in relocating qualified professionals to Germany, in collaboration with German employers/companies. With the initiatives of Explorem, these candidates were able to sign employment contracts and received FREE language courses until the B2 level, recognition and documentation, visa process, relocation, etc.. all paid by their employer.\r\n\r\nFor more information, you may visit the Explorem Center located at Imm 6, Rue Vieux des Marrakchis Nr 7 Gueliz Marrakech, or you may call us at 0668676518 (WhatsApp) or 0809891297 (landline).\r\nWe are open from Monday to Friday, from 10h00 to 18h00.\r\n\r\n#explorem\r\n#exploremrecruit\r\n#exploremacademy \r\n#wemakeadifference \r\n#wemakeithappen\r\n",
         "author": "Explorem",
@@ -260,10 +260,10 @@ export default async function BlogDetail({ params: { title } }) {
               className=" bg-[#0149a6] h-[26rem] min-h-96 w-auto  "
               height={100}
               width={100}
-              title={blog?.title}
+              title={blog.title}
               controls
             >
-              <source src={blog?.Url} type="video/mp4" />
+              <source src={`/image/blogExplorem/${blog.Url}`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           )}
