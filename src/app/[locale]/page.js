@@ -1,8 +1,5 @@
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
-import { fetchTestimonialLatest } from "../api/data/testimonial/actions";
 import TestimonialComments from "@/components/testimonialComments";
 import FetchImageScroll from "@/components/fetchImageScroll";
 import { Instagram, Link2 } from "react-feather";
@@ -10,16 +7,40 @@ import LatestBlog from "./blogs/components/latestBlog";
 import FetchLogoScroll from "@/components/fetchLogoScroll";
 import CourseSchedule from "@/components/Schedule/courseSchedule";
 import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 
 
 
-export default async function Index({ params: { locale } }) {
-  const testimonial = await fetchTestimonialLatest();
-  const t = await getTranslations("Index");
+export default  function Index({ params: { locale } }) {
+  const testimonial = [
+    {
+      
+        "image": "explorem",
+        "author": "Explorem",
+        "fileUrl":"Explorem.mp4"
+        
+    },
+    
+    {
+     
+      "image": "man",
+      "author": "Glucksburg",
+      "fileUrl":"Glucksburg.png"
+     
+    },
+    {
+     
+      "image": "man",
+      "author": "Ayoub Benchrifa",
+      "fileUrl":"AyoubBenchrifa.mp4"
+     
+    }
+  ];
+  
+  const t =  useTranslations("Index");
   
   return (
     <>
-   
       <div className="bg-[#F5F5F5]   space-y-8 py-12">
         <div className=" flex flex-col items-center justify-center gap-4">
           <h1 className="flex items-center gap-4 justify-center flex-col text-xl lg:text-2xl font-extrabold capitalize">

@@ -2,51 +2,56 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
-export const metadata = {
-  title: { default: "Home", template: "%s - Explorem" },
-  description: "We Make A Difference, We Make It Happen.",
-  metadataBase: new URL("https://www.explorem.net/en"),
-  alternates: {
-    canonical: "/en",
-    languages: {
-      de: "/de",
-      ar: "/ar",
+import { getMessages} from "next-intl/server";
+import { Suspense } from "react";
+import Loading from "./loading";
+
+
+
+
+export async function generateMetadata({params: {locale}}) {
+  return {
+    title: { default: "Explorem SARL", template: "%s - Explorem SARL" },
+    description: "We Make A Difference, We Make It Happen.",
+    metadataBase: new URL(  `https://update-exolorem.vercel.app/${locale}`),
+    alternates: {
+      canonical: "/en",
+      languages: {
+        de: "/de",
+        ar: "/ar",
+      },
+      
     },
-    
-  },
-  openGraph: {
-    url: "https://www.explorem.net/en",
-    siteName: "Explorem",
     images: [
       {
-        url: "https://www.explorem.net/en/opengraph-image.jpg",
+        url: `https://update-exolorem.vercel.app/${locale}/opengraph-image.jpg`,
         width: 1200,
         height: 630,
       },
       {
-        url: "https://www.explorem.net/en/opengraph-image.jpg",
+        url: `https://update-exolorem.vercel.app/${locale}/opengraph-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Explorem",
       },
     ],
-    locale: "en",
-    type: "website",
-  },
-};
-export default function LocaleLayout({ children, params: { locale } }) {
-  const messages = useMessages();
+  };
+}
+
+export default async  function LocaleLayout({ children, params: { locale } }) {
+  const messages = await getMessages();
   return (
-    
-        <main>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <div className="flex flex-col justify-between  h-screen">
+    <html className="" lang={locale}>
+      <body className="bg-[#f5f5f5]" >
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        <main className="flex flex-col h-screen justify-between ">
               <Navbar locale={locale} />
-              <div className="pt-20 lg:pt-24    mb-auto bg-[#f5f5f5]">{children}</div>
+              
+              <Suspense fallback={<Loading />}><div className=" pt-20 lg:pt-28 ">{children}</div></Suspense>
               <Footer locale={locale}/>
-            </div>
-          </NextIntlClientProvider>
         </main>
-     
+      </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }

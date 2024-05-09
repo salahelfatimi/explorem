@@ -1,8 +1,10 @@
 "use client";
-import { createSharedPathnamesNavigation } from "next-intl/navigation";
+import { locales } from "@/config";
+import { Link, usePathname } from "@/navigation";
 import Image from "next/image";
-import { Link, usePathname ,locales} from "@/navigation";
+
 import { useState } from "react";
+import { ChevronDown } from "react-feather";
 
 
 export default function ChangeLungage({ setOpen, open, locale }) {
@@ -25,22 +27,10 @@ export default function ChangeLungage({ setOpen, open, locale }) {
             className="h-6 w-8"
             alt="explorem"
           />
-          <svg
-            className="-mr-1 ml-2 h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10.293 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L10 12.586l3.293-3.293a1 1 0 011.414 1.414l-4 4z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <ChevronDown size={20}  className="-mr-1 ml-2 h-5 w-5" />
         </button>
         {showLanguage && (
-          <div className="origin-top-right absolute right-0  mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+          <div className=" absolute bottom-12 lg:bottom-auto right-0  mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
             <div className=" grid grid-cols-1 gap-2" role="none">
               {locales.map((language, index) => {
                 return (

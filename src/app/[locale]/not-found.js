@@ -4,15 +4,9 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <>
-      <div className="flex flex-col gap-4 items-center justify-center h-screen bg-[#F5F5F5]">
-        <Image
-          width={1000}
-          height={1000}
-          src={`/image/logo/Explorem_logo.png`}
-          className=" w-44 "
-          alt="Explorem"
-        />
-        <p className=" font-bold text-2xl flex items-center gap-2 flex-col text-center justify-center text-[#0248a9]">
+      <div className="flex flex-col gap-4 items-center justify-center h-96  bg-[#F5F5F5]">
+      
+        <p className=" font-bold text-2xl flex items-center gap-2 flex-col text-center justify-center text-black">
           Look like this page doesn&apos;t exist
         </p>
         <Link

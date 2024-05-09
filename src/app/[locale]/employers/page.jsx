@@ -1,19 +1,17 @@
-
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 import Image from "next/image";
-
-import { useTranslations } from "next-intl";
 import FetchImageScroll from "@/components/fetchImageScroll";
 import { Crosshair, EyeIcon, FileTextIcon, FolderCheck, GraduationCap, Handshake, Infinity, MousePointerClick, PaperclipIcon, Plane, RotateCcwIcon, Share2, User2 } from "lucide-react";
 import saction1 from '/public/image/employers/saction1.jpg'
 import Contactform from "../contact/forma/contact";
+import { useTranslations } from "next-intl";
 export const metadata = {
   title: "Employers",
   
 };
-export default function Employers() {
-  const t = useTranslations("Employers");
+export default   function Employers({ params: { locale } }) {
 
+  const t =  useTranslations("Employers");
   const services = [
     {
       svg:<Handshake  size={40}/>,

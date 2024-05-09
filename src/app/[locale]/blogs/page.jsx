@@ -1,20 +1,19 @@
 
-import { fetchBlogs } from "@/app/api/data/blog/actions";
+
+import { useTranslations } from "next-intl";
 import BlogAll from "./components/blogAll";
 import LatestBlog from "./components/latestBlog";
-import { getTranslations } from "next-intl/server";
+
 export const metadata = {
   title: "Blog",
   
 };
-async function Blog({ searchParams }) {
-  const take = (await searchParams.take) ? parseInt(searchParams.take) : 6;
-  const t = await getTranslations("Blog");
-  const latestBlog = await fetchBlogs();
+ function Blog({ params: { locale } }) {
+
+  const t =  useTranslations("Blog");
   return (
     <>
       <div className="container flex flex-col gap-6 py-10 ">
-        {latestBlog.length ? (
           <>
             <div className="  text-center ">
               <h1 className=" mb-4 text-3xl sm:text-4xl tracking-tight text-[#134ba1] font-bold ">
@@ -28,21 +27,9 @@ async function Blog({ searchParams }) {
               <LatestBlog />
             </div>
             <div>
-              <BlogAll take={take}/>
-              
+              <BlogAll /> 
             </div>
           </>
-        ) : (
-          <div className=" flex items-center flex-col gap-6">
-            <h2 className=" text-3xl font-bold sm:text-4xl tracking-tight text-[#134ba1] ">
-              {t("Attention.title")}
-            </h2>
-            <span className=" font-semibold text-xl ">{t("Attention.p")}</span>
-            <p className=" font-medium text-lg text-center text-[#9DA4B2]">
-              {t("Attention.description")}
-            </p>
-          </div>
-        )}
       </div>
     </>
   );

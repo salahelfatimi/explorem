@@ -5,8 +5,10 @@ import toast, { Toaster } from "react-hot-toast";
 import { FileText } from "react-feather";
 import { useTranslations } from "next-intl";
 
+
 function InscriptionCondidates() {
   const t = useTranslations("Candidates");
+
   const [isLoading, setIsLoading] = useState(false);
   const [validation, setValidation] = useState(false);
   const [formData, setFormData] = useState({

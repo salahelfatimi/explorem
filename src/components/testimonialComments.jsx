@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
-export default async function TestimonialComments({ testimonial }) {
-  const { text, image, author, fileKey, fileUrl, createdAt } =
+export default async function TestimonialComments({ testimonial,locale }) {
+  unstable_setRequestLocale(locale);
+  const { text, image, author, fileUrl } =
     testimonial || {};
     const t = await getTranslations("Testimonial");
-  // Function to determine if the file URL is an image
   const isImage = (url) => /\.(jpg|jpeg|png|gif)$/i.test(url);
   const isString = (url) => typeof url === "string";
   const istext = (url) => /\.(txt|pdf|doc|docx)$/i.test(url);
@@ -17,7 +17,7 @@ export default async function TestimonialComments({ testimonial }) {
         {isImage(fileUrl) ? (
           <Image
             className=" bg-[#0149a6] w-auto bg-cover"
-            src={fileUrl}
+            src={`/image/testimonialExplorem/${fileUrl}`}
             height={1920}
             width={1080}
             alt="avatar"
@@ -29,13 +29,12 @@ export default async function TestimonialComments({ testimonial }) {
             width={100}
             controls
           >
-            <source src={fileUrl} type="video/mp4" />
+            <source src={`/image/testimonialExplorem/${fileUrl}`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        ) : isString(text) ? (
-          <p className="">{text}</p>
+        
         ) : istext(fileUrl) ? (
-          <a href={fileUrl} target="_blank" className=" font-bold text-center hover:bg-red-600 bg-gray-500  duration-500 hover:text-white rounded text-white py-3 px-4">{t('fileClick')}</a>
+          <a href={`/image/testimonialExplorem/${fileUrl}`} target="_blank" className=" font-bold text-center hover:bg-red-600 bg-gray-500  duration-500 hover:text-white rounded text-white py-3 px-4">{t('fileClick')}</a>
          
         ) : "text"}
         <div className="flex gap-4  items-center">
@@ -51,10 +50,8 @@ export default async function TestimonialComments({ testimonial }) {
             <p className="font-bold text-balance capitalize">{author}</p>
           </div>
         </div>
-        <p className="font-semibold text-right">
-          {createdAt}
-        </p>
       </div>
+      
     </>
   );
 }

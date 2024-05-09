@@ -1,6 +1,4 @@
 import Image from "next/image";
-
-import { useTranslations } from "next-intl";
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 import InscriptionCondidates from "./registrationCondidates/page";
 import FetchImageScroll from "@/components/fetchImageScroll";
@@ -13,91 +11,16 @@ import {
   UserSearch,
 } from "lucide-react";
 import saction1 from "/public/image/candidates/saction1.jpg";
+
+import { useTranslations } from "next-intl";
 export const metadata = {
   title: "Candidates",
   
 };
-export default function Candidates() {
-  const t = useTranslations("Candidates");
-  const Services = [
-    {
-      id: 1,
-      title: t("services.Training/Formation.title"),
-      svg: <Book size={40} />,
-      description: [
-        t("services.Training/Formation.description.0"),
-        t("services.Training/Formation.description.1"),
-        t("services.Training/Formation.description.2"),
-        t("services.Training/Formation.description.3"),
-        t("services.Training/Formation.description.4"),
-        t("services.Training/Formation.description.5"),
-        t("services.Training/Formation.description.6"),
-        t("services.Training/Formation.description.7"),
-        t("services.Training/Formation.description.8"),
-        t("services.Training/Formation.description.9"),
-      ],
-    },
-    {
-      id: 2,
-      title: t("services.JobPlacement.title"),
-      svg: <UserSearch size={40} />,
-      description: [
-        t("services.JobPlacement.description.0"),
-        t("services.JobPlacement.description.1"),
-        t("services.JobPlacement.description.2"),
-        t("services.JobPlacement.description.3"),
-        t("services.JobPlacement.description.4"),
-        t("services.JobPlacement.description.5"),
-        t("services.JobPlacement.description.6"),
-      ],
-    },
-    {
-      id: 3,
-      title: t("services.VocationalTrainingPlacement.title"),
-      svg: <FileSearch2 size={40} />,
-      description: [
-        t("services.VocationalTrainingPlacement.description.0"),
-        t("services.VocationalTrainingPlacement.description.1"),
-        t("services.VocationalTrainingPlacement.description.2"),
-        t("services.VocationalTrainingPlacement.description.3"),
-        t("services.VocationalTrainingPlacement.description.4"),
-        t("services.VocationalTrainingPlacement.description.5"),
-      ],
-    },
-    {
-      id: 4,
-      title: t("services.DegreeRecognition.title"),
-      svg: <GraduationCap size={40} />,
-      description: [
-        t("services.DegreeRecognition.description.0"),
-        t("services.DegreeRecognition.description.1"),
-        t("services.DegreeRecognition.description.2"),
-        t("services.DegreeRecognition.description.3"),
-      ],
-    },
-    {
-      id: 5,
-      svg: <School size={40} />,
-      title: t("services.ProfessionalQualification.title"),
-      description: [
-        t("services.ProfessionalQualification.description.0"),
-        t("services.ProfessionalQualification.description.1"),
-      ],
-    },
-    {
-      id: 6,
-      svg: <Plane size={40} />,
-      title: t("services.On-boardingandIntegration.title"),
-      description: [
-        t("services.On-boardingandIntegration.description.0"),
-        t("services.On-boardingandIntegration.description.1"),
-        t("services.On-boardingandIntegration.description.2"),
-        t("services.On-boardingandIntegration.description.3"),
-        t("services.On-boardingandIntegration.description.4"),
-        t("services.On-boardingandIntegration.description.5"),
-      ],
-    },
-  ];
+export default   function Candidates({ params: { locale } }) {
+ 
+  const t =  useTranslations("Candidates");
+ 
 
   return (
     <>

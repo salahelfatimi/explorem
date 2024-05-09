@@ -1,16 +1,87 @@
-import { fetchTestimonial } from "@/app/api/data/testimonial/actions";
+
 import PaginationTestimonial from "./components/paginationTestimonial";
 import TestimonialComments from "@/components/testimonialComments";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 export const metadata = {
   title: "Testimonial",
   
 };
 
-export default async function Testimonial({ searchParams }) {
-  const t = await getTranslations("Testimonial");
-  const take = (await searchParams.take) ? parseInt(searchParams.take) : 6;
-  const testimonial = await fetchTestimonial(take);
+export default  function Testimonial({ params: { locale } }) {
+  const t =  useTranslations("Testimonial");
+
+ 
+
+  const testimonial = [
+    {
+      
+        "image": "explorem",
+        "author": "Explorem",
+        "fileUrl":"Explorem.mp4"
+        
+    },
+    
+    {
+     
+      "image": "man",
+      "author": "Glucksburg",
+      "fileUrl":"Glucksburg.png"
+     
+    }
+    ,
+    {
+     
+        "image": "man",
+        "author": "Marburg",
+        "fileUrl":"Marburg.pdf"
+        
+    }
+    ,
+    {
+     
+      "image": "women",
+      "author": "ProSo",
+      "fileUrl":"ProSo.png"
+     
+    },
+    {
+      
+      "image": "man",
+      "author": "Schirmergut",
+      "fileUrl":"Schirmergut.pdf"
+      
+    },
+    {
+    
+      "image": "women",
+      "author": "Hajar Toumzine",
+      "fileUrl":"HajarToumzine.pdf"
+     
+    },
+    {
+      
+      "image": "women",
+      "author": "Nada Fajri",
+      "fileUrl":"NadaFajri.pdf"
+     
+    },
+    {
+     
+      "image": "man",
+      "author": "Ayoub Benchrifa",
+      "fileUrl":"AyoubBenchrifa.mp4"
+     
+    },
+    {
+      
+      "image": "man",
+      "author": "Jamal Bamou",
+      "fileUrl":"JamalBamou.mp4"
+      
+    }
+    
+  
+  ];
 
   return (
     <div className="flex flex-col  container gap-6 py-12  ">
@@ -32,7 +103,7 @@ export default async function Testimonial({ searchParams }) {
                   key={index}
                   className={`even:bg-white  break-inside-avoid-column odd:bg-[#0149a6] odd:text-white border-[#ffff]   rounded  shadow-lg  `}
                 >
-                  <TestimonialComments testimonial={testimonial} />
+                  <TestimonialComments testimonial={testimonial} locale={locale} />
                 </div>
               );
             })}
@@ -45,13 +116,7 @@ export default async function Testimonial({ searchParams }) {
           </div>
         )}
 
-        <div
-          className={`${
-            take > testimonial?.length ? "hidden" : "block"
-          } flex justify-center`}
-        >
-          <PaginationTestimonial take={take} />
-        </div>
+        
       </div>
     </div>
   );

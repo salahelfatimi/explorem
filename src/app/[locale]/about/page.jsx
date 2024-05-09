@@ -1,16 +1,19 @@
 import InfiniteHorizontalScroll from "@/components/infiniteHorizontalScroll";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+
 import FetchImageScroll from "@/components/fetchImageScroll";
 import slogen1 from "/public/image/aboutUS/slogen1.jpg";
 import saction1 from "/public/image/aboutUS/saction1.jpg";
 import Gracila from "/public/image/aboutUS/team/Gracila.jpg";
 import Abdessamad from "/public/image/aboutUS/team/Abdessamad.png";
+
+import { useTranslations } from "next-intl";
 export const metadata = {
   title: "Aboute",
   
 };
-export default function About({ params: { locale } }) {
+export default  function About( { params: { locale } }) {
+ 
   const t = useTranslations("AboutUS");
   return (
     <div className="flex flex-col gap-8 pb-16 bg-[#F5F5F5] ">
