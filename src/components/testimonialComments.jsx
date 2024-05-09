@@ -3,11 +3,10 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 export default async function TestimonialComments({ testimonial,locale }) {
   unstable_setRequestLocale(locale);
-  const { text, image, author, fileUrl } =
+  const {  image, author, fileUrl } =
     testimonial || {};
     const t = await getTranslations("Testimonial");
   const isImage = (url) => /\.(jpg|jpeg|png|gif)$/i.test(url);
-  const isString = (url) => typeof url === "string";
   const istext = (url) => /\.(txt|pdf|doc|docx)$/i.test(url);
   const isVideo = (url) => /\.(mp4|avi|mov|wmv)$/i.test(url);
   return (
