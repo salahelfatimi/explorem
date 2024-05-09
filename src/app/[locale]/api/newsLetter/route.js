@@ -10,7 +10,7 @@ export async function POST(request) {
       const email  = body.email;
       const data = await resend.contacts.create({
         email,
-        unsubscribed: false,
+        unsubscribed: true,
         audienceId: AUDIENCE_ID,
       });
       return Response.json(data);

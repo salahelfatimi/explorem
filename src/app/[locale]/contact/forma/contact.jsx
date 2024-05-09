@@ -76,7 +76,7 @@ export default function Contactform() {
       <div className="">
         <Toaster
           toastOptions={{
-            className: "dark:bg-[#121212] dark:text-white bg-white text-black",
+            className: " bg-white text-black",
           }}
         />
 
