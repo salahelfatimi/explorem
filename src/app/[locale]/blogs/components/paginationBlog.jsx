@@ -6,7 +6,7 @@ export default  function PaginationBlog({ take }) {
   const router = useRouter(); 
 
   const handleNextPage = () => {
-    router.push(`?take=${take + 6}`, { scroll: false });
+    router.push(`?take=${take + 2}`, { scroll: false });
   };
   return (
     <>

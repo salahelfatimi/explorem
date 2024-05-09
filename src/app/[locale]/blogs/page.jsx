@@ -3,13 +3,14 @@
 import { useTranslations } from "next-intl";
 import BlogAll from "./components/blogAll";
 import LatestBlog from "./components/latestBlog";
+import PaginationBlog from "./components/paginationBlog";
 
 export const metadata = {
   title: "Blog",
   
 };
- function Blog({ params: { locale } }) {
-
+ function Blog({ searchParams }) {
+  const take = ( searchParams.take) ? parseInt(searchParams.take) : 4;
   const t =  useTranslations("Blog");
   return (
     <>
@@ -27,9 +28,10 @@ export const metadata = {
               <LatestBlog />
             </div>
             <div>
-              <BlogAll /> 
+              <BlogAll  take={take}/> 
             </div>
           </>
+          
       </div>
     </>
   );

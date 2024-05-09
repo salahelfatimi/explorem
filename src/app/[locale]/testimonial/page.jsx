@@ -1,4 +1,5 @@
 
+import { testimonial } from "@/app/data/testimonial";
 import PaginationTestimonial from "./components/paginationTestimonial";
 import TestimonialComments from "@/components/testimonialComments";
 import { useTranslations } from "next-intl";
@@ -7,82 +8,10 @@ export const metadata = {
   
 };
 
-export default  function Testimonial({ params: { locale } }) {
+export default  function Testimonial({ params: { locale },searchParams  }) {
+  const take = ( searchParams.take) ? parseInt(searchParams.take) : 4;
+  const testimonialSlice = take ? testimonial.slice(0, take) : testimonial;
   const t =  useTranslations("Testimonial");
-
- 
-
-  const testimonial = [
-    {
-      
-        "image": "explorem",
-        "author": "Explorem",
-        "fileUrl":"Explorem.mp4"
-        
-    },
-    
-    {
-     
-      "image": "man",
-      "author": "Glucksburg",
-      "fileUrl":"Glucksburg.png"
-     
-    }
-    ,
-    {
-     
-        "image": "man",
-        "author": "Marburg",
-        "fileUrl":"Marburg.pdf"
-        
-    }
-    ,
-    {
-     
-      "image": "women",
-      "author": "ProSo",
-      "fileUrl":"ProSo.png"
-     
-    },
-    {
-      
-      "image": "man",
-      "author": "Schirmergut",
-      "fileUrl":"Schirmergut.pdf"
-      
-    },
-    {
-    
-      "image": "women",
-      "author": "Hajar Toumzine",
-      "fileUrl":"HajarToumzine.pdf"
-     
-    },
-    {
-      
-      "image": "women",
-      "author": "Nada Fajri",
-      "fileUrl":"NadaFajri.pdf"
-     
-    },
-    {
-     
-      "image": "man",
-      "author": "Ayoub Benchrifa",
-      "fileUrl":"AyoubBenchrifa.mp4"
-     
-    },
-    {
-      
-      "image": "man",
-      "author": "Jamal Bamou",
-      "fileUrl":"JamalBamou.mp4"
-      
-    }
-    
-  
-  ];
-
   return (
     <div className="flex flex-col  container gap-6 py-12  ">
       <div className="flex  flex-col gap-4 items-center">
@@ -96,14 +25,14 @@ export default  function Testimonial({ params: { locale } }) {
       </div>
       <div className=" flex flex-col  gap-4 justify-center">
         {testimonial?.length > 0 ? (
-          <div className=" gap-10 columns-1 container  md:columns-2 lg:columns-3    space-y-6 items-center ">
-            {testimonial?.map((testimonial, index) => {
+          <div className=" gap-10 columns-1 container  lg:columns-2     space-y-6 items-center ">
+            {testimonialSlice?.map((testimonial, index) => {
               return (
                 <div
                   key={index}
                   className={`even:bg-white  break-inside-avoid-column odd:bg-[#0149a6] odd:text-white border-[#ffff]   rounded  shadow-lg  `}
                 >
-                  <TestimonialComments testimonial={testimonial} locale={locale} />
+                  <TestimonialComments testimonial={testimonial}  locale={locale} />
                 </div>
               );
             })}
@@ -115,7 +44,9 @@ export default  function Testimonial({ params: { locale } }) {
             </p>
           </div>
         )}
-
+        <div className={`${take > testimonial?.length ? "hidden" : "block"} flex justify-center`}>
+          <PaginationTestimonial take={take} />
+        </div>
         
       </div>
     </div>

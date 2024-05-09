@@ -8,37 +8,12 @@ import FetchLogoScroll from "@/components/fetchLogoScroll";
 import CourseSchedule from "@/components/Schedule/courseSchedule";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
+import { testimonialHome } from "../data/testimonial";
 
 
 
 export default  function Index({ params: { locale } }) {
-  const testimonial = [
-    {
-      
-        "image": "explorem",
-        "author": "Explorem",
-        "fileUrl":"Explorem.mp4"
-        
-    },
-    
-    {
-     
-      "image": "man",
-      "author": "Glucksburg",
-      "fileUrl":"Glucksburg.png"
-     
-    },
-    {
-     
-      "image": "man",
-      "author": "Ayoub Benchrifa",
-      "fileUrl":"AyoubBenchrifa.mp4"
-     
-    }
-  ];
-  
   const t =  useTranslations("Index");
-  
   return (
     <>
       <div className="bg-[#F5F5F5]   space-y-8 py-12">
@@ -178,7 +153,7 @@ export default  function Index({ params: { locale } }) {
           </div>
           <div className=" flex flex-col container  gap-8 justify-center">
             <div className=" gap-10 columns-1 md:columns-2 lg:columns-3 space-y-6 items-center  ">
-              {testimonial?.map((testimonial, index) => {
+              {testimonialHome?.map((testimonial, index) => {
                 return (
                   <div
                     key={index}

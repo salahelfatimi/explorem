@@ -7,7 +7,7 @@ export default  function PaginationTestimonial({ take }) {
 
 
   const handleNextPage = () => {
-    router.push(`?take=${take + 6}`, { scroll: false });
+    router.push(`?take=${take + 2}`, { scroll: false });
   };
   return (
     <>
