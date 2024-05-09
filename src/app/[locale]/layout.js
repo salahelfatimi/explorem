@@ -24,12 +24,12 @@ export async function generateMetadata({params: {locale}}) {
     },
     images: [
       {
-        url: `https://update-exolorem.vercel.app/${locale}/opengraph-image.jpg`,
+        url: `/opengraph-image.jpg`,
         width: 1200,
         height: 630,
       },
       {
-        url: `https://update-exolorem.vercel.app/${locale}/opengraph-image.jpg`,
+        url: `/opengraph-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Explorem",
