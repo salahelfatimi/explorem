@@ -15,8 +15,9 @@ export async function generateMetadata({params: {locale}}) {
     description: "We Make A Difference, We Make It Happen.",
     metadataBase: new URL(  `https://www.explorem.net`),
     alternates: {
-      canonical: "/en",
+      canonical: "/",
       languages: {
+        en: "/en",
         de: "/de",
         ar: "/ar",
       },

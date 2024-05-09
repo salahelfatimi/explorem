@@ -67,30 +67,36 @@ export async function generateMetadata({ params: { title } }) {
   }
   return {
     title: post.title,
-    // openGraph: {
-    //   title: post.title,
-    //   description: post.description,
-    //   url: `https://www.explorem.net/en/blogs/${title}`,
-    //   siteName: "Explorem",
+    description: post.description,
+    metadataBase: new URL( `https://www.explorem.net`),
+    alternates: {
+      canonical: "/",
+      languages: {
+        en: "/en",
+        de: "/de",
+        ar: "/ar",
+      },
       
-    //   images: [
-    //     {
-    //       url: `https://www.explorem.net/en/blogs/${post.Org}`,
-    //       width: 1200,
-    //       height: 630,
-    //     },
-    //     {
-    //       url: `https://www.explorem.net/en/blogs/${post.Org}`,
-    //       width: 1200,
-    //       height: 630,
-    //       alt: "Explorem",
-    //     },
-    //   ],
-    //   locale: "en", 
-    //   type: "article",
-    // },
+    },
+    images: [
+      {
+        url: `https://www.explorem.net/opengraph-image.jpg`,
+        width: 1200,
+        height: 630,
+      },
+      {
+        url: `https://www.explorem.net/opengraph-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Explorem SARL",
+      },
+    ],
+    locale: "en",
+    type: "artical ",
   };
+
 }
+
 export default async function BlogDetail({ params: { title } }) {
    const blogs = [
     {
