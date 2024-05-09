@@ -27,6 +27,7 @@ export default async function TestimonialComments({ testimonial,locale }) {
             className=" bg-[#0149a6] h-[32rem] min-h-96 w-auto  "
             height={100}
             width={100}
+            title={author}
             controls
           >
             <source src={`/image/testimonialExplorem/${fileUrl}`} type="video/mp4" />
