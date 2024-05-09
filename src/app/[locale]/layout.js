@@ -24,12 +24,12 @@ export async function generateMetadata({params: {locale}}) {
     },
     images: [
       {
-        url: `/opengraph-image.jpg`,
+        url: `https://www.explorem.net/${locale}/opengraph-image.jpg`,
         width: 1200,
         height: 630,
       },
       {
-        url: `/opengraph-image.jpg`,
+        url: `https://www.explorem.net/${locale}/opengraph-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Explorem",
