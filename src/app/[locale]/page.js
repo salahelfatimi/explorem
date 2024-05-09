@@ -16,8 +16,8 @@ export default  function Index({ params: { locale } }) {
   const t =  useTranslations("Index");
   return (
     <>
-      <div className="bg-[#F5F5F5]   space-y-8 py-12">
-        <div className=" flex flex-col items-center justify-center gap-4">
+      <div className="bg-[#F5F5F5]  pt-28 lg:pt-32  space-y-8 py-12">
+        <div className=" flex flex-col   items-center justify-center gap-4">
           <h1 className="flex items-center gap-4 justify-center flex-col text-xl lg:text-2xl font-extrabold capitalize">
             <span>
               {t("title.line1")}

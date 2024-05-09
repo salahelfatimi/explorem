@@ -31,16 +31,16 @@ export default   function Candidates({ params: { locale } }) {
               title={"explorem"}
               quality={100}
               src={saction1}
-              className="h-auto max-w-full w-full  "
+              className="h-screen max-w-full w-full object-cover "
               placeholder="blur"
-              width={6240}
-              height={2528}
+              width={1920}
+              height={1080}
               alt="Explorem"
             />
 
             <div className="absolute inset-0 flex justify-center items-center">
-              <div className="bg-[#ffff]  w-full items-center flex flex-col gap-2 capitalize p-2 lg:p-9 text-[#0149A6]">
-                <div className="lg:text-4xl text-md font-bold">
+              <div className="bg-[#ffff]  w-full items-center flex flex-col gap-2 capitalize p-9 text-[#0149A6]">
+                <div className="text-4xl text-md font-bold text-center">
                   <h1>{t("titleCandidates")}</h1>
                 </div>
               </div>

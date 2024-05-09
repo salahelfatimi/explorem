@@ -74,16 +74,16 @@ export default   function Employers({ params: { locale } }) {
                   title={'explorem'}
                 quality={100}
                 src={saction1}
-                className="h-auto max-w-full w-full  "
-                width={6240}
-                height={2153}
+                className="h-screen max-w-full w-full object-cover "
+                width={1920}
+                height={1080}
                 placeholder = 'blur'
                 alt="Explorem"
               />
 
               <div className="absolute inset-0 flex justify-center items-center">
-                <div className="bg-[#ffff]  w-full items-center flex flex-col gap-2 capitalize p-2 lg:p-9 text-[#0149A6]">
-                  <div className="lg:text-4xl text-md font-bold">
+                <div className="bg-[#ffff]  w-full items-center flex flex-col gap-2 capitalize p-9 text-[#0149A6]">
+                  <div className="text-4xl text-center text-md font-bold">
                     <h1>{t("titleEmployers")}</h1>
                   </div>
                 </div>

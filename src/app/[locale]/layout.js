@@ -50,7 +50,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
         <main className="flex flex-col h-screen justify-between ">
               <Navbar locale={locale} />
               
-              <Suspense fallback={<Loading />}><div className=" pt-20 lg:pt-28 ">{children}</div></Suspense>
+              <Suspense fallback={<Loading />}><div className=" ">{children}</div></Suspense>
               <Footer locale={locale}/>
         </main>
       </NextIntlClientProvider>

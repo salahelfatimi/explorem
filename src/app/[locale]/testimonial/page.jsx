@@ -13,7 +13,7 @@ export default  function Testimonial({ params: { locale },searchParams  }) {
   const testimonialSlice = take ? testimonial.slice(0, take) : testimonial;
   const t =  useTranslations("Testimonial");
   return (
-    <div className="flex flex-col  container gap-6 py-12  ">
+    <div className="flex flex-col  container gap-6 py-12 pt-32  ">
       <div className="flex  flex-col gap-4 items-center">
         <span className=" py-1 px-4 rounded-full text-white font-bold shadow-xl bg-[#0149a6]">
           {t('clientStories')}

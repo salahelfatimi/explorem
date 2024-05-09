@@ -73,14 +73,14 @@ export default function Contactform() {
 
   return (
     <>
-      <div className="">
+      <div className=" pt-[6rem] ">
         <Toaster
           toastOptions={{
             className: " bg-white text-black",
           }}
         />
 
-        <div className="relative w-full h-96 ">
+        <div className="relative w-full h-[32rem] ">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1698.460433438157!2d-8.01355266142035!3d31.636016977168037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafef18e190e9a7%3A0xfe589957f732f57!2sExplorem%20SARL!5e0!3m2!1sen!2sma!4v1715278921548!5m2!1sen!2sma"
