@@ -45,5 +45,8 @@ module.exports = withUt({
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // ...
+    require('tailwind-scrollbar'),
+],
 });

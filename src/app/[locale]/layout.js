@@ -44,8 +44,8 @@ export async function generateMetadata() {
 export default async  function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages();
   return (
-    <html className="" lang={locale}>
-      <body className="bg-[#f5f5f5]" >
+    <html  lang={locale} className=" !scroll-smooth">
+      <body className="bg-[#f5f5f5] h-[400vh] scrollbar scrollbar-thumb-[#134ba1]  " >
       <NextIntlClientProvider locale={locale} messages={messages}>
         <main className="flex flex-col h-screen justify-between ">
               <Navbar locale={locale} />
