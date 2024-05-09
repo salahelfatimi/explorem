@@ -75,7 +75,7 @@ export default async function BlogDetail({ params: { title } }) {
   
   return (
     <>
-      <div className="container px-4 items-center   flex flex-col gap-16 py-10">
+      <div className="container px-4 items-center   flex flex-col gap-16 py-10 pt-32 ">
         <h1 className="font-bold italic   border-b-4 text-[#134ba1] border-[#134ba1]  text-wrap text-center text-2xl lg:text-4xl   ">
           {blog?.title}
         </h1>
