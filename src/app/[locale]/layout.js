@@ -13,7 +13,7 @@ export async function generateMetadata({params: {locale}}) {
   return {
     title: { default: "Explorem SARL", template: "%s - Explorem SARL" },
     description: "We Make A Difference, We Make It Happen.",
-    metadataBase: new URL(  `https://update-exolorem.vercel.app/${locale}`),
+    metadataBase: new URL(  `https://www.explorem.net/${locale}`),
     alternates: {
       canonical: "/en",
       languages: {
