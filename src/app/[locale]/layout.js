@@ -13,7 +13,7 @@ export async function generateMetadata({params: {locale}}) {
   return {
     title: { default: "Explorem SARL", template: "%s - Explorem SARL" },
     description: "We Make A Difference, We Make It Happen.",
-    metadataBase: new URL(  `https://www.explorem.net/${locale}`),
+    metadataBase: new URL(  `https://www.explorem.net/`),
     alternates: {
       canonical: "/en",
       languages: {
@@ -24,12 +24,12 @@ export async function generateMetadata({params: {locale}}) {
     },
     images: [
       {
-        url: `https://www.explorem.net/${locale}/opengraph-image.jpg`,
+        url: `https://www.explorem.net/opengraph-image.jpg`,
         width: 1200,
         height: 630,
       },
       {
-        url: `https://www.explorem.net/${locale}/opengraph-image.jpg`,
+        url: `https://www.explorem.net/opengraph-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Explorem SARL",
