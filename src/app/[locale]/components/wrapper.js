@@ -9,7 +9,7 @@ export const Wrapper = () => {
     useEffect(() => {
         setog_url(window.location.href)
     }, [])
-
+    
     return (
         <>
             <Head>
