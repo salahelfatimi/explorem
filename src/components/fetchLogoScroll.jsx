@@ -1,17 +1,6 @@
+import { images } from "@/app/data/logoScroll";
 import Image from "next/image";
-export default async function FetchLogoScroll() {
-  const images = [
-    { image: "Barmer.png", title: "Barmer" },
-    { image: "Brera.png", title: "Brera serviced apartments " },
-    { image: "Little.png", title: "Little giants care" },
-    { image: "MarburgConsulting.png", title: "Marburg Consulting " },
-    { image: "mfpd.png", title: "MitarbeiterfuerdiePflege de" },
-    { image: "Barmer.png", title: "Barmer " },
-    { image: "Brera.png", title: "Brera serviced apartments" },
-    { image: "Little.png", title: "Little giants care" },
-    { image: "MarburgConsulting.png", title: "Marburg Consulting" },
-    { image: "mfpd.png", title: "MitarbeiterfuerdiePflege de" },
-  ];
+export default  function FetchLogoScroll() {
   return (
     <>
       {images?.map((src, index) => (
