@@ -13,9 +13,8 @@ export async function generateMetadata({ params: { title } }) {
     description: post.description,
     metadataBase: new URL( `https://www.explorem.net`),
     alternates: {
-      canonical: "/",
+      canonical: "/en",
       languages: {
-        en: "/en",
         de: "/de",
         ar: "/ar",
       },
