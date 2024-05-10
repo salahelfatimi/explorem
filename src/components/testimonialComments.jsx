@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
-export default async function TestimonialComments({ testimonial }) {
+export default  function TestimonialComments({ testimonial }) {
   const {  image, author, fileUrl } =testimonial || {};
-  const t = await getTranslations("Testimonial");
+  const t =  useTranslations("Testimonial");
   const isImage = (url) => /\.(jpg|jpeg|png|gif)$/i.test(url);
   const istext = (url) => /\.(txt|pdf|doc|docx)$/i.test(url);
   const isVideo = (url) => /\.(mp4|avi|mov|wmv)$/i.test(url);

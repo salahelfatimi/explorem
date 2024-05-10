@@ -1,16 +1,16 @@
 import { images } from "@/app/data/slideImage";
 import Image from "next/image";
-export default async function FetchImageScroll() {
+export default function FetchImageScroll() {
   
   return (
     <>
-      {images?.map((src, index) => (
+      {images.map((src, index) => (
         <div className=" space-x-4 bg-white p-2" key={index}>
           <Image
             title="Explorem SARL"
             blurDataURL={`${src.base64}`}
             placeholder="blur"
-            quality={50}
+            quality={100}
             width={src.width}
             height={src.height}
             src={`/image/slide/${src.imageUrl}`}

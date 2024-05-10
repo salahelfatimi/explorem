@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import BlogAll from "./components/blogAll";
 import LatestBlog from "./components/latestBlog";
-import PaginationBlog from "./components/paginationBlog";
+
 
 export const metadata = {
   title: "Blog",

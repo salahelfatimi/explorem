@@ -3,7 +3,7 @@ import Image from "next/image";
 export default  function FetchLogoScroll() {
   return (
     <>
-      {images?.map((src, index) => (
+      {images.map((src, index) => (
         <div className=" space-x-4  p-2" key={index}>
           <Image
             title={src.title}

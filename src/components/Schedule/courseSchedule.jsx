@@ -1,8 +1,8 @@
-import { getTranslations } from "next-intl/server";
-import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-export default async function CourseSchedule() {
-  const t = await getTranslations("Index");
+
+export default  function CourseSchedule() {
+  const t =  useTranslations("Index");
   const dayNames = [
    
     "Monday",

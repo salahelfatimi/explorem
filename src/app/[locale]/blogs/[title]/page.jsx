@@ -2,7 +2,7 @@ import { Facebook, Instagram, Send } from "react-feather";
 import Image from "next/image";
 import { redirect } from "@/navigation";
 import { blogs } from "@/app/data/blog";
-export async function generateMetadata({ params: { title } }) {
+export  function generateMetadata({ params: { title } }) {
   const post = blogs.find((blog) => blog.title.trim().replace(/[/%\s]+/g, '-') === title);
   if (!post) {
     redirect('/')
@@ -39,7 +39,7 @@ export async function generateMetadata({ params: { title } }) {
 
 }
 
-export default async function BlogDetail({ params: { title } }) {
+export default  function BlogDetail({ params: { title } }) {
  
   const blog = blogs.find((blog) => blog.title.trim().replace(/[/%\s]+/g, '-') === title);
   if (!blog) {

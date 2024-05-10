@@ -1,12 +1,13 @@
 import { Clock, Link2 } from "react-feather";
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/navigation";
 import { blogs } from "@/app/data/blog";
 import PaginationBlog from "./paginationBlog";
+import { useTranslations } from "next-intl";
 
-export default async function BlogAll({ take }) {
-  const t = await getTranslations("Blog");
+
+export default  function BlogAll({ take }) {
+  const t =  useTranslations("Blog");
   const blog = take ? blogs.slice(0, take) : blogs;
   return (
     <div className=" flex flex-col gap-6">

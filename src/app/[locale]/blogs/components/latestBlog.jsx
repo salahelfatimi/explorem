@@ -1,13 +1,14 @@
 
 // import GetBase64Image from "@/app/base64/getBase64ImageSingle";
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Clock } from "react-feather";
 import { Link } from "@/navigation";
 import { latestBlog } from "@/app/data/blog";
+import { useTranslations } from "next-intl";
 
-export default async function LatestBlog() {
-  const t = await getTranslations("Blog");
+
+export default  function LatestBlog() {
+  const t = useTranslations("Blog");
   
   return (
     <>
