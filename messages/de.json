@@ -12,6 +12,7 @@
     "description": "Alle aktuellen Neuigkeiten von Explorem, direkt vom Team.",
     "LatestBlog": "Neuester Blog",
     "new": "Neu",
+    "seeMore": "Mehr anzeigen",
     "readMore": "Weiterlesen",
     "AllBlog": "Alle Blogs",
     "Attention": {
@@ -304,7 +305,9 @@
     "title": "Unsere Liebeswand",
     "description": "Lesen Sie, was unsere Kunden über Explorem sagen",
     "video": "Video",
+    "seeMore": "Mehr anzeigen",
     "file": "Datei",
+    "readMore": "Weiterlesen",
     "comment": "Kommentar",
     "image": "Bild",
     "fileClick": "Klicken Sie hier, um das Datei-Testimonial anzuzeigen"

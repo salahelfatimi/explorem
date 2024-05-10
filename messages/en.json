@@ -11,7 +11,7 @@
     "description": "All the latest Explorem news, straight from the team . ",
     "LatestBlog": "Latest blog",
     "new": "New",
-    "readMore": "Read More",
+    "seeMore": "See More",
     "AllBlog": "All Blog",
     "Attention": {
       "title": "Attention",
@@ -305,6 +305,7 @@
     "description": "Read what our client are saying about Explorem",
     "video": "Video",
     "file": "File",
+    "seeMore": "See More",
     "comment": "Comment",
     "image": "Image",
     "fileClick": "Click to show File Testimonial"

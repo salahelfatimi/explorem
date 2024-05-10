@@ -11,7 +11,7 @@
     "description": "جميع أخبار إكسبلورم الأحدث، مباشرة من الفريق",
     "LatestBlog": "أحدث مدونة",
     "new": "جديد",
-    "readMore": "اقرأ المزيد",
+    "seeMore": "المزيد",
     "AllBlog": "جميع المدونات",
     "Attention": {
       "title": "تنبيه",
@@ -49,6 +49,7 @@
     "testimonial": {
       "title": "شهادة",
       "description": "! ما يقوله عملاؤنا السعداء"
+      
     },
     "seeMore": "المزيد",
     "ourPartners": "شركاؤنا",
@@ -306,7 +307,7 @@
     "video": "فيديو",
     "file": "ملف",
     "comment": "تعليق",
-
+    "seeMore": "المزيد",
     "image": "صورة",
     "fileClick": "انقر لعرض شهادة الملف"
   }

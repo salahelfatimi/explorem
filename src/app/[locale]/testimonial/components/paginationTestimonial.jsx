@@ -1,10 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 
 export default  function PaginationTestimonial({ take }) {
   const router = useRouter();
-
+  const t =  useTranslations("Testimonial");
 
   const handleNextPage = () => {
     router.push(`?take=${take + 2}`, { scroll: false });
@@ -16,7 +17,7 @@ export default  function PaginationTestimonial({ take }) {
         onClick={handleNextPage}
       >
         {" "}
-        See More
+        {t('seeMore')}
       </button>
     </>
   );
