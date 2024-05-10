@@ -15,7 +15,7 @@ import saction1 from "/public/image/candidates/saction1.jpg";
 import { useTranslations } from "next-intl";
 export const metadata = {
   title: "Candidates",
-  
+  description: "Our Best Services For Candidates",
 };
 export default   function Candidates({ params: { locale } }) {
  

@@ -5,7 +5,7 @@ import TestimonialComments from "@/components/testimonialComments";
 import { useTranslations } from "next-intl";
 export const metadata = {
   title: "Testimonial",
-  
+ 
 };
 
 export default  function Testimonial({ params: { locale },searchParams  }) {
