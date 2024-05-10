@@ -5,6 +5,7 @@ import "./globals.css";
 import { getMessages} from "next-intl/server";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Head from "next/head";
 
 
 
@@ -44,6 +45,9 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages();
   return (
     <html  lang={locale} className=" !scroll-smooth">
+      <Head>
+            <meta property="og:url" content="https://www.explorem.net" />
+      </Head>
       <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >
       <NextIntlClientProvider locale={locale} messages={messages}>
         <main className="flex flex-col h-screen justify-between ">
