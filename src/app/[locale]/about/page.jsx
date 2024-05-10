@@ -31,9 +31,9 @@ export default  function About( { params: { locale } }) {
           />
 
           <div className="absolute inset-0 flex justify-center items-center">
-            <div className="bg-[#0149A6] w-full items-center flex flex-col gap-2 capitalize p-1 lg:p-4 text-white">
+            <div className="bg-[#0149A6] w-full items-center flex flex-col gap-4 capitalize pt-6 text-white">
               <h1 className=" text-3xl lg:text-4xl  font-bold text-center">{t("aboutUs")}</h1>
-              <span className=" text-2xl">{t("aboutUsSlogen")}</span>
+              <span className=" text-2xl bg-white text-[#0149A6] w-full text-center font-semibold p-2">{t("aboutUsSlogen")}</span>
             </div>
           </div>
         </div>

@@ -113,8 +113,8 @@ export default   function Employers({ params: { locale } }) {
           </div>
           <div>
             <div className="space-y-8">
-              <div className="flex flex-col items-center gap-4">
-                <span className="flex  items-center gap-4 justify-center">
+              <div className="flex flex-col container items-center gap-4">
+                <span className="flex  items-center gap-2 justify-center">
                   <Image
                     src="/image/aboutUS/logoHand.png"
                     className="w-14 lg:w-16"
@@ -122,7 +122,7 @@ export default   function Employers({ params: { locale } }) {
                     height={159}
                     alt="Explorem"
                   />
-                  <span className=" capitalize font-bold text-xl lg:text-3xl text-[#0149a6]">
+                  <span className=" capitalize font-bold text-center text-xl lg:text-3xl text-[#0149a6]">
                     {t("ourJourneyWithPartners")}
                   </span>
                 </span>
