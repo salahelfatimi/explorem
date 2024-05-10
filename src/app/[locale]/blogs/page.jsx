@@ -7,7 +7,7 @@ import LatestBlog from "./components/latestBlog";
 
 export const metadata = {
   title: "Blog",
-  
+  description: "All the latest Explorem news, straight from the team ."
 };
  function Blog({ searchParams }) {
   const take = ( searchParams.take) ? parseInt(searchParams.take) : 4;

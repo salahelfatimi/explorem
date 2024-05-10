@@ -10,7 +10,7 @@ import Abdessamad from "/public/image/aboutUS/team/Abdessamad.png";
 import { useTranslations } from "next-intl";
 export const metadata = {
   title: "Aboute",
-  
+  description: "A Few Reasons For Choosing Us  "
 };
 export default  function About( { params: { locale } }) {
  
