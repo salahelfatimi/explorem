@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/navigation";
 import { PanelLeftClose, PanelRightClose } from "lucide-react";
-import Head from "next/head";
 
 
 
@@ -27,9 +26,7 @@ export default function Navbar({ locale }) {
  
   return (
     <nav>
-       <Head>
-            <meta property="og:url" content={ `https://www.explorem.net/${locale+pathname}`} />
-      </Head>
+      
       {/* nav pc */}
       <div className=" bg-white py-4    fixed   right-0 left-0 lg:block z-50 ">
         <div className="   flex justify-between items-center container px-4">
