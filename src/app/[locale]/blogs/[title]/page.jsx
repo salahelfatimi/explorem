@@ -13,8 +13,6 @@ export async  function generateMetadata({ params: { title } }, parent) {
     title: post.title,
     description: post.description,
     openGraph: {
-      title: post.title,
-      description: post.description,
       images: [`/image/blogExplorem/${post.Org}`, ...previousImages],
     },
 
