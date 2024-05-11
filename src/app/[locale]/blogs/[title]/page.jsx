@@ -2,8 +2,9 @@ import { Facebook, Instagram, Send } from "react-feather";
 import Image from "next/image";
 import { redirect } from "@/navigation";
 import { blogs } from "@/app/data/blog";
-export  function generateMetadata({ params: { title } }) {
+export async  function generateMetadata({ params: { title } }, parent) {
   const post = blogs.find((blog) => blog.title.trim().replace(/[/%\s]+/g, '-') === title);
+  const previousImages = (await parent).openGraph?.images || []
   if (!post) {
     redirect('/')
   }
@@ -11,33 +12,11 @@ export  function generateMetadata({ params: { title } }) {
   return {
     title: post.title,
     description: post.description,
-    metadataBase: new URL( `https://www.explorem.net`),
-    alternates: {
-      canonical: "/en",
-      languages: {
-        de: "/de",
-        ar: "/ar",
-      },
-      
+    openGraph: {
+      images: [`/image/blogExplorem/${post.Org}`, ...previousImages],
     },
-    images: [
-      {
-        url: `https://www.explorem.net/opengraph-image.jpg`,
-        width: 1200,
-        height: 630,
-      },
-      {
-        url: `https://www.explorem.net/opengraph-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Explorem SARL",
-      },
-    ],
-    locale: "en",
-    type: "artical ",
-  };
 
-}
+}}
 
 export default  function BlogDetail({ params: { title } }) {
  
