@@ -10,7 +10,11 @@ import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import { testimonialHome } from "../data/testimonial";
 
-
+export const metadata = {
+  title: "Explorem SARL",
+  description: "We Make A Difference, We Make It Happen."
+  
+};
 
 export default  function Index({ params: { locale } }) {
   const t =  useTranslations("Index");

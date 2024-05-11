@@ -8,8 +8,7 @@ import Loading from "./loading";
 
 export async function generateMetadata() {
   return {
-    title: { default: "Explorem SARL", template: "%s - Explorem SARL" },
-    description: "We Make A Difference, We Make It Happen.",
+    title: {  template: "%s - Explorem SARL" },
     metadataBase: new URL(  `https://www.explorem.net`),
     alternates: {
       canonical: "/en",
