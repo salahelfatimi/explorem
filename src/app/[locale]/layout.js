@@ -5,7 +5,8 @@ import "./globals.css";
 import { getMessages} from "next-intl/server";
 import { Suspense } from "react";
 import Loading from "./loading";
-import { Wrapper } from "@/components/Wrapper";
+import { Wrapper } from "@/app/[locale]/components/wrapper";
+
 
 export async function generateMetadata() {
   return {
