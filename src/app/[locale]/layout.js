@@ -5,6 +5,7 @@ import "./globals.css";
 import { getMessages} from "next-intl/server";
 import { Suspense } from "react";
 import Loading from "./loading";
+import { Wrapper } from "@/components/Wrapper";
 
 export async function generateMetadata() {
   return {
@@ -43,7 +44,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
 
   return (
     <html  lang={locale} className=" !scroll-smooth">
- 
+      <Wrapper/>
       <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >
       <NextIntlClientProvider locale={locale} messages={messages}>
         <main className="flex flex-col h-screen justify-between ">
