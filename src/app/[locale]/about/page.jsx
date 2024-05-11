@@ -22,7 +22,7 @@ export default  function About( { params: { locale } }) {
           <Image
             title={"explorem"}
             src={saction1}
-            className=" h-screen max-w-full w-full object-cover  "
+            className=" h-screen max-w-full w-full object-cover   "
             width={1920}
             height={1080}
             quality={100}

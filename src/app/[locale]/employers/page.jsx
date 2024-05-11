@@ -75,7 +75,7 @@ export default   function Employers({ params: { locale } }) {
                   title={'explorem'}
                 quality={100}
                 src={saction1}
-                className="h-screen max-w-full w-full object-cover "
+                className="h-screen max-w-full w-full object-cover  "
                 width={1920}
                 height={1080}
                 placeholder = 'blur'

@@ -36,7 +36,7 @@ export default function Navbar({ locale }) {
               height={244}
               src={`/image/logo/Explorem_logo.png`}
               className=" w-28 "
-              alt="Explorem"
+              alt="Explorem SARL"
             />
           </h1>
           <div className="lg:block hidden">

@@ -31,7 +31,7 @@ export default   function Candidates({ params: { locale } }) {
               title={"explorem"}
               quality={100}
               src={saction1}
-              className="h-screen max-w-full w-full object-cover "
+              className="h-screen max-w-full w-full object-cover object-left lg:object-center"
               placeholder="blur"
               width={1920}
               height={1080}
