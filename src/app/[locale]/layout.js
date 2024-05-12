@@ -12,7 +12,7 @@ export async function generateMetadata() {
   return {
     title: { default: "Explorem SARL", template: "%s - Explorem SARL" },
     description: "We Make A Difference, We Make It Happen.",
-
+    metadataBase: new URL(`https://explorem-salaheddine-dev.vercel.app`),
     alternates: {
       canonical: "/en",
       languages: {
@@ -50,10 +50,9 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
       <Wrapper>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <main className="flex flex-col h-screen justify-between ">
-                <Navbar locale={locale} />
-                
-                <Suspense fallback={<Loading />}><div className=" ">{children}</div></Suspense>
-                <Footer locale={locale}/>
+            <Navbar locale={locale} />
+            <Suspense fallback={<Loading />}><div className=" ">{children}</div></Suspense>
+            <Footer locale={locale}/>
           </main>
         </NextIntlClientProvider>
       </Wrapper>
