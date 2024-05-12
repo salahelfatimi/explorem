@@ -7,11 +7,20 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import { Wrapper } from "./components/wrapper";
 
-export async function generateMetadata() {
+export const metadata = {
   
-  return {
-    title: { default: "Explorem SARL", template: "%s - Explorem SARL" },
+ 
+    title:"Explorem SARL" ,
     description: "We Make A Difference, We Make It Happen.",
+    metadataBase: new URL(`https://explorem.net`),
+    alternates: {
+      canonical: "/en",
+      languages: {
+        de: "/de",
+        ar: "/ar",
+      },
+      
+    },
     images: [
       {
         url: `https://explorem.net/opengraph-image.jpg`,
@@ -28,7 +37,7 @@ export async function generateMetadata() {
     locale: "en",
     type: "website ",
   };
-}
+
 
 export default async  function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages();
