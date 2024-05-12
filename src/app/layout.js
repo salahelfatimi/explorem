@@ -16,21 +16,7 @@ export async function generateMetadata() {
       },
       
     },
-    images: [
-      {
-        url: `https://explorem.net/opengraph-image.jpg`,
-        width: 1200,
-        height: 630,
-      },
-      {
-        url: `https://explorem.net/opengraph-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Explorem SARL",
-      },
-    ],
-    locale: "en",
-    type: "website ",
+  
   };
 }
 
