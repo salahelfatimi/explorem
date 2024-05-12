@@ -5,12 +5,14 @@ import "./globals.css";
 import { getMessages} from "next-intl/server";
 import { Suspense } from "react";
 import Loading from "./loading";
+import { Wrapper } from "./components/wrapper";
 
 export async function generateMetadata() {
+  
   return {
     title: { default: "Explorem SARL", template: "%s - Explorem SARL" },
     description: "We Make A Difference, We Make It Happen.",
-    metadataBase: new URL(`https://explorem.net`),
+
     alternates: {
       canonical: "/en",
       languages: {
@@ -45,14 +47,16 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
     <html  lang={locale} className=" !scroll-smooth">
  
       <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        <main className="flex flex-col h-screen justify-between ">
-              <Navbar locale={locale} />
-              
-              <Suspense fallback={<Loading />}><div className=" ">{children}</div></Suspense>
-              <Footer locale={locale}/>
-        </main>
-      </NextIntlClientProvider>
+      <Wrapper>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <main className="flex flex-col h-screen justify-between ">
+                <Navbar locale={locale} />
+                
+                <Suspense fallback={<Loading />}><div className=" ">{children}</div></Suspense>
+                <Footer locale={locale}/>
+          </main>
+        </NextIntlClientProvider>
+      </Wrapper>
       </body>
     </html>
   );
