@@ -9,10 +9,10 @@ export async function generateMetadata() {
     description: "We Make A Difference, We Make It Happen.",
     metadataBase: new URL('https://explorem.net'),
     alternates: {
-      canonical: "/en",
+      canonical: "/en/",
       languages: {
-        de: "/de",
-        ar: "/ar",
+        de: "/de/",
+        ar: "/ar/",
       },
       
     },
