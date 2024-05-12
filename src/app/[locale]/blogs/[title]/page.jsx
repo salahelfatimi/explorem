@@ -11,6 +11,7 @@ export  function generateMetadata({ params: { title } }) {
   return {
     title: post.title,
     description: post.description,
+    
 }
 }
 // export async  function generateMetadata({ params: { title } }, parent) {
