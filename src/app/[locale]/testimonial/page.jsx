@@ -4,32 +4,8 @@ import PaginationTestimonial from "./components/paginationTestimonial";
 import TestimonialComments from "@/components/testimonialComments";
 import { useTranslations } from "next-intl";
 export const metadata = {
-  title: "Testimonial - Explorem SARL",
-  description: "Read what our client are saying about Explorem ",
-  metadataBase: new URL(`https://explorem.net`),
-  alternates: {
-    canonical: "/en",
-    languages: {
-      de: "/de",
-      ar: "/ar",
-    },
-    
-  },
-  images: [
-    {
-      url: `https://explorem.net/opengraph-image.jpg`,
-      width: 1200,
-      height: 630,
-    },
-    {
-      url: `https://explorem.net/opengraph-image.jpg`,
-      width: 1200,
-      height: 630,
-      alt: "Explorem SARL",
-    },
-  ],
-  locale: "en",
-  type: "website ",
+  title: "Testimonial",
+  description: "Read what our client are saying about Explorem "
 };
 
 export default  function Testimonial({ params: { locale },searchParams  }) {

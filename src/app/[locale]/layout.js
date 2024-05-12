@@ -7,10 +7,10 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import { Wrapper } from "./components/wrapper";
 
-export const metadata = {
+export async function generateMetadata() {
   
- 
-    title:"Explorem SARL" ,
+  return {
+    title: { default: "Explorem SARL", template: "%s - Explorem SARL" },
     description: "We Make A Difference, We Make It Happen.",
     metadataBase: new URL(`https://explorem.net`),
     alternates: {
@@ -37,7 +37,7 @@ export const metadata = {
     locale: "en",
     type: "website ",
   };
-
+}
 
 export default async  function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages();
