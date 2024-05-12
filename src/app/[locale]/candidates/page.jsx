@@ -58,34 +58,34 @@ export default   function Candidates({ params: { locale } }) {
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">
-                  {t("services.Training/Formation.description.1")}
+                  <p>{t("services.Training/Formation.description.1")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.Training/Formation.description.1")}
+                  <p>{t("services.Training/Formation.description.1")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.Training/Formation.description.2")}
+                  <p>{t("services.Training/Formation.description.2")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.Training/Formation.description.3")}
+                  <p>{t("services.Training/Formation.description.3")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.Training/Formation.description.4")}
+                  <p>{t("services.Training/Formation.description.4")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.Training/Formation.description.5")}
+                  <p>{t("services.Training/Formation.description.5")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.Training/Formation.description.6")}
+                  <p>{t("services.Training/Formation.description.6")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.Training/Formation.description.7")}
+                  <p>{t("services.Training/Formation.description.7")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.Training/Formation.description.8")}
+                  <p>{t("services.Training/Formation.description.8")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.Training/Formation.description.9")}
+                  <p>{t("services.Training/Formation.description.9")}</p>
                 </li>
               </ul>
             </div>
@@ -96,25 +96,25 @@ export default   function Candidates({ params: { locale } }) {
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">
-                  {t("services.JobPlacement.description.0")}
+                  <p>{t("services.JobPlacement.description.0")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.JobPlacement.description.1")}
+                  <p>{t("services.JobPlacement.description.1")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.JobPlacement.description.2")}
+                  <p>{t("services.JobPlacement.description.2")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.JobPlacement.description.3")}
+                  <p>{t("services.JobPlacement.description.3")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.JobPlacement.description.4")}
+                  <p>{t("services.JobPlacement.description.4")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.JobPlacement.description.5")}
+                  <p>{t("services.JobPlacement.description.5")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.JobPlacement.description.6")}
+                  <p>{t("services.JobPlacement.description.6")}</p>
                 </li>
               </ul>
             </div>
@@ -125,22 +125,22 @@ export default   function Candidates({ params: { locale } }) {
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">
-                  {t("services.VocationalTrainingPlacement.description.0")}
+                  <p>{t("services.VocationalTrainingPlacement.description.0")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.VocationalTrainingPlacement.description.1")}
+                  <p>{t("services.VocationalTrainingPlacement.description.1")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.VocationalTrainingPlacement.description.2")}
+                  <p>{t("services.VocationalTrainingPlacement.description.2")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.VocationalTrainingPlacement.description.3")}
+                  <p>{t("services.VocationalTrainingPlacement.description.3")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.VocationalTrainingPlacement.description.4")}
+                  <p>{t("services.VocationalTrainingPlacement.description.4")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.VocationalTrainingPlacement.description.5")}
+                  <p>{t("services.VocationalTrainingPlacement.description.5")}</p>
                 </li>
               </ul>
             </div>
@@ -151,16 +151,16 @@ export default   function Candidates({ params: { locale } }) {
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">
-                  {t("services.DegreeRecognition.description.0")}
+                  <p>{t("services.DegreeRecognition.description.0")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.DegreeRecognition.description.1")}
+                  <p>{t("services.DegreeRecognition.description.1")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.DegreeRecognition.description.2")}
+                  <p>{t("services.DegreeRecognition.description.2")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.DegreeRecognition.description.3")}
+                  <p>{t("services.DegreeRecognition.description.3")}</p>
                 </li>
               </ul>
             </div>
@@ -171,10 +171,10 @@ export default   function Candidates({ params: { locale } }) {
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">
-                  {t("services.ProfessionalQualification.description.0")}
+                  <p>{t("services.ProfessionalQualification.description.0")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.ProfessionalQualification.description.1")}
+                  <p>{t("services.ProfessionalQualification.description.1")}</p>
                 </li>
               </ul>
             </div>
@@ -185,22 +185,22 @@ export default   function Candidates({ params: { locale } }) {
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">
-                  {t("services.On-boardingandIntegration.description.0")}
+                  <p>{t("services.On-boardingandIntegration.description.0")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.On-boardingandIntegration.description.1")}
+                  <p>{t("services.On-boardingandIntegration.description.1")}</p>
                 </li>
                 <li className=" text-xs   capitalize  ">
-                  {t("services.On-boardingandIntegration.description.2")}
+                  <p>{t("services.On-boardingandIntegration.description.2")}</p>
                 </li>{" "}
                 <li className=" text-xs   capitalize  ">
-                  {t("services.On-boardingandIntegration.description.3")}
+                  <p>{t("services.On-boardingandIntegration.description.3")}</p>
                 </li>{" "}
                 <li className=" text-xs   capitalize  ">
-                  {t("services.On-boardingandIntegration.description.4")}
+                  <p>{t("services.On-boardingandIntegration.description.4")}</p>
                 </li>{" "}
                 <li className=" text-xs   capitalize  ">
-                  {t("services.On-boardingandIntegration.description.5")}
+                  <p>{t("services.On-boardingandIntegration.description.5")}</p>
                 </li>
               </ul>
             </div>

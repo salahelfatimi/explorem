@@ -106,9 +106,9 @@ export default   function Employers({ params: { locale } }) {
                   {ele.svg}
                   {ele.title}
                 </div>
-                <span className=" absolute inset-0 w-full h-full flex justify-center    items-center p-5 text-center font-semibold    transition-all z-10 card-back   text-sm md:text-base opacity-0 duration-700 group-hover/item:opacity-100 ">
+                <p className=" absolute inset-0 w-full h-full flex justify-center    items-center p-5 text-center font-semibold    transition-all z-10 card-back   text-sm md:text-base opacity-0 duration-700 group-hover/item:opacity-100 ">
                   {ele.description}
-                </span>
+                </p>
               </div>
             ))}
           </div>

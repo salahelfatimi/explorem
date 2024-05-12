@@ -84,12 +84,13 @@ export default  function Index({ params: { locale } }) {
             </h2>
           </div>
           <ul className={` ${locale==='ar'?'*:border-r-4 text-right':'*:border-l-4 text-left'} *:border-[#0149a6] whitespace-pre-line  *:shadow *:bg-white *:p-2 *:pl-4 *:rounded-r-sm  px-2 lg:text-lg flex flex-col gap-4 font-normal list-outside leading-loose `}>
-            <li>{t("whatWeHaveAchieved.line1")}</li>
-            <li>{t("whatWeHaveAchieved.line2")}</li>
-            <li>{t("whatWeHaveAchieved.line3")}</li>
-            <li>{t("whatWeHaveAchieved.line4")}</li>
-            <li>
+            <li><p>{t("whatWeHaveAchieved.line1")}</p></li>
+            <li><p>{t("whatWeHaveAchieved.line2")}</p></li>
+            <li><p>{t("whatWeHaveAchieved.line3")}</p></li>
+            <li><p>{t("whatWeHaveAchieved.line4")}</p></li>
+            <li><p>
               {t("whatWeHaveAchieved.line5")}
+              </p>
               <div className="flex gap-4 items-center ">
                 <a
                   arget="_blank"
@@ -111,7 +112,7 @@ export default  function Index({ params: { locale } }) {
                 </a>
               </div>
             </li>
-            <li>{t("whatWeHaveAchieved.line6")}</li>
+            <li><p>{t("whatWeHaveAchieved.line6")}</p></li>
             <li className=" ">
               {t("whatWeHaveAchieved.line7")}
               <div className="flex gap-4 items-center ">
@@ -126,9 +127,9 @@ export default  function Index({ params: { locale } }) {
                 </a>
               </div>
             </li>
-            <li>{t("whatWeHaveAchieved.line8")}</li>
-            <li>{t("whatWeHaveAchieved.line9")}</li>
-            <li>{t("whatWeHaveAchieved.line10")}</li>
+            <li><p>{t("whatWeHaveAchieved.line8")}</p></li>
+            <li><p>{t("whatWeHaveAchieved.line9")}</p></li>
+            <li><p>{t("whatWeHaveAchieved.line10")}</p></li>
           </ul>
         </div>
 
