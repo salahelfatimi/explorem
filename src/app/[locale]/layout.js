@@ -12,7 +12,8 @@ export async function generateMetadata() {
   return {
     title: { default: "Explorem SARL", template: "%s - Explorem SARL" },
     description: "We Make A Difference, We Make It Happen.",
-    metadataBase: new URL('https://explorem.net'),
+    url: 'https://explorem.net/',
+    metadataBase: new URL('https://explorem.net/'),
     alternates: {
       canonical: "/en",
       languages: {
