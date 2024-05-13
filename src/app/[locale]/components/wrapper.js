@@ -8,6 +8,7 @@ export const Wrapper = (props) => {
     useEffect(() => {
         setog_url(window.location.href)
     }, [])
+    
     return (
         <>
             <head>
