@@ -10,11 +10,12 @@ export const Wrapper = (props) => {
     }, [])
     return (
         <>
-            <Head>
+            <head>
 
                 <meta property="og:url" content={og_url ? og_url : "https://www.explorem.net"} />
 
-            </Head>
+
+            </head>
             {props.children}
         </>
     )

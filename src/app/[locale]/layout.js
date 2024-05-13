@@ -14,10 +14,9 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
 
   return (
     <html  lang={locale} className=" !scroll-smooth">
-      <head>
-        <meta property="og:url" content="https://explorem.net"/>
-      </head>
+   <Wrapper>
       <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >
+    
         <NextIntlClientProvider locale={locale} messages={messages}>
           <main className="flex flex-col h-screen justify-between ">
             <Navbar locale={locale} />
@@ -26,6 +25,8 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
           </main>
         </NextIntlClientProvider>
       </body>
+      </Wrapper>
+
     </html>
   );
 }
