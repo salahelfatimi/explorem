@@ -5,9 +5,6 @@ import "./globals.css";
 import { getMessages} from "next-intl/server";
 import { Suspense } from "react";
 import Loading from "./loading";
-import { Wrapper } from "./components/wrapper";
-
-
 export default async  function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages();
   
@@ -15,14 +12,13 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
   return (
     <html  lang={locale} className=" !scroll-smooth">
       <head>
-          <meta property="og:url" content="https://explorem-sarl.vercel.app"/>
+          <meta property="og:url" content="https://explorem.net"/>
       </head>
       <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >
-    
         <NextIntlClientProvider locale={locale} messages={messages}>
           <main className="flex flex-col h-screen justify-between ">
             <Navbar locale={locale} />
-            <Suspense fallback={<Loading />}><div className=" ">{children}</div></Suspense>
+            <Suspense fallback={<Loading />}>{children}</Suspense>
             <Footer locale={locale}/>
           </main>
         </NextIntlClientProvider>

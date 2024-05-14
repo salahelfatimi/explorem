@@ -1,6 +1,4 @@
-import {Pathnames} from 'next-intl/navigation';
-
-export const port = process.env.PORT || 3000;
+export const port = 3000;
 export const host = process.env.NEXT_PUBLIC_BASE_URL
   ? `https://${process.env.NEXT_PUBLIC_BASE_URL}`
   : `http://localhost:${port}`;
