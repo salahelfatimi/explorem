@@ -12,7 +12,20 @@ import { useTranslations } from "next-intl";
 export async function generateMetadata() {
   return {
     title: "Aboute",
-    description: "A Few Reasons For Choosing Us  "
+    description: "A Few Reasons For Choosing Us  ",
+    images: [
+      {
+        url: `./opengraph-image.jpg`,
+        width: 1200,
+        height: 630,
+      },
+      {
+        url: `./opengraph-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Explorem SARL",
+      },
+    ],
   };
 };
 

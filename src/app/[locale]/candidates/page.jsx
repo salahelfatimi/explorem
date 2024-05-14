@@ -17,6 +17,19 @@ export async function generateMetadata() {
   return {
     title: "Candidates",
     description: "Our Best Services For Candidates",
+    images: [
+      {
+        url: `./opengraph-image.jpg`,
+        width: 1200,
+        height: 630,
+      },
+      {
+        url: `./opengraph-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Explorem SARL",
+      },
+    ],
   };
 };
 
