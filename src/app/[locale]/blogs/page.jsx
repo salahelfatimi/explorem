@@ -4,11 +4,13 @@ import { useTranslations } from "next-intl";
 import BlogAll from "./components/blogAll";
 import LatestBlog from "./components/latestBlog";
 
-
-export const metadata = {
-  title: "Blog",
-  description: "All the latest Explorem news, straight from the team ."
+export async function generateMetadata() {
+  return {
+    title: "Blog",
+    description: "All the latest Explorem news, straight from the team ."
+  };
 };
+
  function Blog({ searchParams }) {
   const take = ( searchParams.take) ? parseInt(searchParams.take) : 4;
   const t =  useTranslations("Blog");

@@ -5,8 +5,11 @@ export default createMiddleware({
   defaultLocale,
   locales,
   pathnames,
-  localePrefix
+  localePrefix,
+  
 });
+
+
 
 export const config = {
   matcher: [

@@ -3,11 +3,13 @@ import { testimonial } from "@/app/data/testimonial";
 import PaginationTestimonial from "./components/paginationTestimonial";
 import TestimonialComments from "@/components/testimonialComments";
 import { useTranslations } from "next-intl";
-export const metadata = {
+export async function generateMetadata() {
+  
+  return {
   title: "Testimonial",
   description: "Read what our client are saying about Explorem "
+  };
 };
-
 export default  function Testimonial({ params: { locale },searchParams  }) {
   const take = ( searchParams.take) ? parseInt(searchParams.take) : 4;
   const testimonialSlice = take ? testimonial.slice(0, take) : testimonial;

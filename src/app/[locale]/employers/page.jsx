@@ -5,11 +5,14 @@ import { Crosshair, EyeIcon, FileTextIcon, FolderCheck, GraduationCap, Handshake
 import saction1 from '/public/image/employers/saction1.jpg'
 import Contactform from "../contact/forma/contact";
 import { useTranslations } from "next-intl";
-export const metadata = {
-  title: "Employers",
-  description: "Our Best Services For Employers  "
-  
+
+export async function generateMetadata() {
+  return {
+    title: "Employers",
+    description: "Our Best Services For Employers  "
+  };
 };
+
 export default   function Employers({ params: { locale } }) {
 
   const t =  useTranslations("Employers");

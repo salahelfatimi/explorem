@@ -8,10 +8,15 @@ import Gracila from "/public/image/aboutUS/team/Gracila.jpg";
 import Abdessamad from "/public/image/aboutUS/team/Abdessamad.png";
 
 import { useTranslations } from "next-intl";
-export const metadata = {
-  title: "Aboute",
-  description: "A Few Reasons For Choosing Us  "
+
+export async function generateMetadata() {
+  return {
+    title: "Aboute",
+    description: "A Few Reasons For Choosing Us  "
+  };
 };
+
+
 export default  function About( { params: { locale } }) {
  
   const t = useTranslations("AboutUS");
