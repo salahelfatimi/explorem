@@ -2,7 +2,7 @@
 import Head from "next/head";
 import { useEffect, useState } from 'react'
 
-export const Wrapper = (props) => {
+export const Wrapper = () => {
     const [og_url, setog_url] = useState("")
 
     useEffect(() => {
@@ -12,12 +12,8 @@ export const Wrapper = (props) => {
     return (
         <>
             <head>
-
                 <meta property="og:url" content={og_url ? og_url : "https://www.explorem.net"} />
-
-
             </head>
-            {props.children}
         </>
     )
 }
