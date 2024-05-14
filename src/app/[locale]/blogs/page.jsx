@@ -8,19 +8,7 @@ export async function generateMetadata() {
   return {
     title: "Blog",
     description: "All the latest Explorem news, straight from the team .",
-    images: [
-      {
-        url: `./opengraph-image.jpg`,
-        width: 1200,
-        height: 630,
-      },
-      {
-        url: `./opengraph-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Explorem SARL",
-      },
-    ],
+    
   };
 };
 
