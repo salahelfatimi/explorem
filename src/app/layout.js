@@ -17,15 +17,15 @@ export async function generateMetadata() {
       },
       
     },
-    url: "https://explorem.net",
+
     images: [
       {
-        url: `https://explorem.net/opengraph-image.jpg`,
+        url: `./opengraph-image.jpg`,
         width: 1200,
         height: 630,
       },
       {
-        url: `https://explorem.net/opengraph-image.jpg`,
+        url: `./opengraph-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Explorem SARL",

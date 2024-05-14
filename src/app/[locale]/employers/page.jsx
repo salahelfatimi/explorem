@@ -9,7 +9,20 @@ import { useTranslations } from "next-intl";
 export async function generateMetadata() {
   return {
     title: "Employers",
-    description: "Our Best Services For Employers  "
+    description: "Our Best Services For Employers  ",
+    images: [
+      {
+        url: `./opengraph-image.jpg`,
+        width: 1200,
+        height: 630,
+      },
+      {
+        url: `./opengraph-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Explorem SARL",
+      },
+    ],
   };
 };
 
