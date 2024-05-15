@@ -12,7 +12,6 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
   return (
     <html  lang={locale} className=" !scroll-smooth">
       <head>
-      <meta name="facebook-domain-verification" content="6w57iitcp4m0vzracqxgte692xpdv4" />
         <meta property="og:url" content={`https://explorem.net`}/>
       </head>
       <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >

@@ -2,21 +2,8 @@ import { Facebook, Instagram, Send } from "react-feather";
 import Image from "next/image";
 import { redirect } from "@/navigation";
 import { blogs } from "@/app/data/blog";
-export  function generateMetadata({ params: { title } }) {
-  const post = blogs.find((blog) => blog.title.trim().replace(/[/%\s]+/g, '-') === title);
-  if (!post) {
-    redirect('/')
-  }
-  
-  return {
-    title: post.title,
-    description: post.description,
-    
-}
-}
-// export async  function generateMetadata({ params: { title } }, parent) {
+// export  function generateMetadata({ params: { title } }) {
 //   const post = blogs.find((blog) => blog.title.trim().replace(/[/%\s]+/g, '-') === title);
-//   const previousImages = (await parent).openGraph?.images || []
 //   if (!post) {
 //     redirect('/')
 //   }
@@ -24,13 +11,26 @@ export  function generateMetadata({ params: { title } }) {
 //   return {
 //     title: post.title,
 //     description: post.description,
-//     openGraph: {
-//       title: post.title,
-//       description: post.description,
-//       images: [`/image/blogExplorem/${post.Org}`, ...previousImages],
-//     },
+    
+// }
+// }
+export async  function generateMetadata({ params: { title } }, parent) {
+  const post = blogs.find((blog) => blog.title.trim().replace(/[/%\s]+/g, '-') === title);
+  const previousImages = (await parent).openGraph?.images || []
+  if (!post) {
+    redirect('/')
+  }
+  
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: [`/image/blogExplorem/${post.Org}`, ...previousImages],
+    },
 
-// }}
+}}
 export default  function BlogDetail({ params: { title } }) {
  
   const blog = blogs.find((blog) => blog.title.trim().replace(/[/%\s]+/g, '-') === title);
