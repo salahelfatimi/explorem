@@ -26,20 +26,6 @@ export async function generateMetadata() {
         alt: "Explorem SARL",
       },
     ],
-    twitter: {
-      card: "summary_large_image",
-      title: "Aboute",
-      description: "A Few Reasons For Choosing Us  ",
-      creator: 'Explorem',
-      images: [
-        {
-          url: "./opengraph-image.jpg",
-          width: 1200,
-          height: 630,
-          alt: "Aboute",
-        },
-      ],
-    }
   };
 };
 

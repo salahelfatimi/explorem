@@ -31,20 +31,6 @@ export async  function generateMetadata({ params: { title } }, parent) {
       type: "article",
      
     },
-    twitter: {
-      card: "summary_large_image",
-      title: post.title,
-      creator: post.author,
-      description:post.description,
-      images: [
-        {
-          url: [`/image/blogExplorem/${post.Org}`, ...previousImages],
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
-    }
 
 }}
 export default  function BlogDetail({ params: { title } }) {
