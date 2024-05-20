@@ -30,6 +30,20 @@ export async function generateMetadata() {
         alt: "Explorem SARL",
       },
     ],
+    twitter: {
+      card: "summary_large_image",
+      title: "Candidates",
+      description: "Our Best Services For Candidates",
+      creator: 'Explorem',
+      images: [
+        {
+          url: "./opengraph-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Candidates",
+        },
+      ],
+    }
   };
 };
 
@@ -71,7 +85,7 @@ export default   function Candidates({ params: { locale } }) {
             <div className=" relative    rounded h-[18rem]  sm:h-[16rem] lg:h-64 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
               <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <Book size={40} />
-                <span>{t("services.Training/Formation.title")}</span>
+                <h2>{t("services.Training/Formation.title")}</h2>
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">
@@ -109,7 +123,7 @@ export default   function Candidates({ params: { locale } }) {
             <div className=" relative    rounded h-[15rem]  sm:h-[12rem] lg:h-48 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
               <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <UserSearch size={40} />
-                <span>{t("services.JobPlacement.title")}</span>
+                <h2>{t("services.JobPlacement.title")}</h2>
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">
@@ -138,7 +152,7 @@ export default   function Candidates({ params: { locale } }) {
             <div className=" relative    rounded h-[14rem]  sm:h-[10rem] lg:h-40 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
               <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <FileSearch2 size={40} />
-                <span>{t("services.VocationalTrainingPlacement.title")}</span>
+                <h2>{t("services.VocationalTrainingPlacement.title")}</h2>
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">
@@ -164,7 +178,7 @@ export default   function Candidates({ params: { locale } }) {
             <div className=" relative    rounded h-[10rem]  sm:h-[8rem] lg:h-36 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
               <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <GraduationCap size={40} />
-                <span>{t("services.DegreeRecognition.title")}</span>
+                <h2>{t("services.DegreeRecognition.title")}</h2>
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">
@@ -184,7 +198,7 @@ export default   function Candidates({ params: { locale } }) {
             <div className=" relative    rounded h-[11rem]  sm:h-[8rem] lg:h-32 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
               <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <School size={40} />
-                <span>{t("services.ProfessionalQualification.title")}</span>
+                <h2>{t("services.ProfessionalQualification.title")}</h2>
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">
@@ -198,7 +212,7 @@ export default   function Candidates({ params: { locale } }) {
             <div className=" relative    rounded h-[11rem]  sm:h-[8rem] lg:h-40 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card    ">
               <div className="absolute flex-col gap-2 font-bold p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                 <Plane size={40} />
-                <span>{t("services.On-boardingandIntegration.title")}</span>
+                <h2>{t("services.On-boardingandIntegration.title")}</h2>
               </div>
               <ul className="p-3  flex list-disc flex-col gap-2  absolute inset-0 w-full h-full pl-8    list-outside  font-bold    transition-all z-10 card-back   text-sm  opacity-0 duration-700 group-hover/item:opacity-100   ">
                 <li className=" text-xs   capitalize  ">

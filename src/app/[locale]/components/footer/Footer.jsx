@@ -119,9 +119,9 @@ export default function Footer({locale}) {
           onSubmit={newsLetter}
           className="flex flex-col gap-4 w-full lg:w-auto"
         >
-          <span className=" font-bold text-xl text-center lg:text-left text-white">
+          <h3 className=" font-bold text-xl text-center lg:text-left text-white">
             {t("newsLetter")}
-          </span>
+          </h3>
           <label className=" space-y-2 flex flex-col ">
             <input
               type="email"

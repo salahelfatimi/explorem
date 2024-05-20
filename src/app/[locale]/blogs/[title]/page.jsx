@@ -31,6 +31,20 @@ export async  function generateMetadata({ params: { title } }, parent) {
       type: "article",
      
     },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      creator: post.author,
+      description:post.description,
+      images: [
+        {
+          url: [`/image/blogExplorem/${post.Org}`, ...previousImages],
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    }
 
 }}
 export default  function BlogDetail({ params: { title } }) {
@@ -68,7 +82,7 @@ export default  function BlogDetail({ params: { title } }) {
   
   return (
     <>
-      <div className="container px-4 items-center   flex flex-col gap-10 py-10 pt-32 ">
+      <article className="container px-4 items-center   flex flex-col gap-10 py-10 pt-32 ">
         <h1 className="font-bold    text-[#134ba1]  text-wrap text-center text-2xl lg:text-4xl   ">
           {blog?.title}
         </h1>
@@ -161,7 +175,7 @@ export default  function BlogDetail({ params: { title } }) {
             
           </div>
         )}
-      </div>
+      </article>
     </>
   );
 }

@@ -23,6 +23,21 @@ export async function generateMetadata() {
         alt: "Explorem SARL",
       },
     ],
+    
+    twitter: {
+      card: "summary_large_image",
+      title: "Employers",
+      description: "Our Best Services For Employers  ",
+      creator: 'Explorem',
+      images: [
+        {
+          url: "./opengraph-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Employers",
+        },
+      ],
+    }
   };
 };
 
@@ -118,10 +133,10 @@ export default   function Employers({ params: { locale } }) {
                 key={index}
                 className="relative  last:col-start-1 lg:last:col-start-2  rounded w-full  h-60 group/item even:bg-white even:text-[#0149A6] odd:bg-[#0149A6] odd:text-white overflow-hidden cursor-pointer transition-all duration-700 card     "
               >
-                <div className="absolute font-extrabold flex-col gap-4 p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
+                <h2 className="absolute font-extrabold flex-col gap-4 p-4 text-center inset-0 w-full h-full flex   justify-center items-center    transition-all   z-30 group-hover/item:opacity-0 opacity-100 duration-700  ">
                   {ele.svg}
                   {ele.title}
-                </div>
+                </h2>
                 <p className=" absolute inset-0 w-full h-full flex justify-center    items-center p-5 text-center font-semibold    transition-all z-10 card-back   text-sm md:text-base opacity-0 duration-700 group-hover/item:opacity-100 ">
                   {ele.description}
                 </p>
@@ -139,9 +154,9 @@ export default   function Employers({ params: { locale } }) {
                     height={159}
                     alt="Explorem"
                   />
-                  <span className=" capitalize font-bold text-center text-xl lg:text-3xl text-[#0149a6]">
+                  <h2 className=" capitalize font-bold text-center text-xl lg:text-3xl text-[#0149a6]">
                     {t("ourJourneyWithPartners")}
-                  </span>
+                  </h2>
                 </span>
               </div>
               <div className="bg-[#0149a6] py-6 ">
@@ -153,10 +168,10 @@ export default   function Employers({ params: { locale } }) {
               </div>
               <div className=" container">
                 <div className="bg-[#0149A6] rounded-md px-4 py-10  ">
-                  <span className="text-white   rounded-lg  font-mono font-bold lg:text-2xl md:text-xl text-lg text-center">
+                  <h3 className="text-white   rounded-lg  font-mono font-bold lg:text-2xl md:text-xl text-lg text-center">
                     <p>{t("slogen.line1")}</p>
                     <p>{t("slogen.line2")}</p>
-                  </span>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -171,9 +186,9 @@ export default   function Employers({ params: { locale } }) {
                   height={159}
                   alt="Explorem"
                 />
-                <span className=" capitalize text-center font-bold text-md lg:text-3xl text-[#0149a6]">
+                <h2 className=" capitalize text-center font-bold text-md lg:text-3xl text-[#0149a6]">
                   {t("getInTouch")}
-                </span>
+                </h2>
               </span>
             </div>
 

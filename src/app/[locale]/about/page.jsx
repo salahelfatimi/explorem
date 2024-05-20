@@ -26,6 +26,20 @@ export async function generateMetadata() {
         alt: "Explorem SARL",
       },
     ],
+    twitter: {
+      card: "summary_large_image",
+      title: "Aboute",
+      description: "A Few Reasons For Choosing Us  ",
+      creator: 'Explorem',
+      images: [
+        {
+          url: "./opengraph-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Aboute",
+        },
+      ],
+    }
   };
 };
 
@@ -200,9 +214,9 @@ export default  function About( { params: { locale } }) {
               />
             </div>
             <div className=" flex gap-4 flex-col lg:w-1/2  ">
-              <span className=" font-bold text-xl text-[#0149a6] text-center lg:text-left">
+              <h3 className=" font-bold text-xl text-[#0149a6] text-center lg:text-left">
                 {t("ourTeamManagement.team.Gracila.fullName")}
-              </span>
+              </h3>
               <span className=" font-semibold bg-[#0149a6] rounded-sm text-white text-center lg:w-fit p-2">
                 {t("ourTeamManagement.team.Gracila.job")}
               </span>
@@ -230,9 +244,9 @@ export default  function About( { params: { locale } }) {
               />
             </div>
             <div className=" flex gap-4 flex-col lg:w-1/2  ">
-              <span className=" font-bold text-xl text-[#0149a6] text-center lg:text-left">
+              <h3 className=" font-bold text-xl text-[#0149a6] text-center lg:text-left">
                 {t("ourTeamManagement.team.Abdessamad.fullName")}
-              </span>
+              </h3>
               <span className=" font-semibold bg-[#0149a6] rounded-sm text-white text-center lg:w-fit p-2">
                 {t("ourTeamManagement.team.Abdessamad.job")}
               </span>
