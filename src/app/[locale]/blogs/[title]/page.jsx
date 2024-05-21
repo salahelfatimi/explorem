@@ -29,7 +29,7 @@ export async  function generateMetadata({ params: { title } }, parent) {
       description: post.description,
       images: [
         {
-          url: [`/image/blogExplorem/${post.Org}`, ...previousImages],
+          url: `/image/blogExplorem/${post.Org}`,
           blurDataURL: post.base64,
           width: 1200,
           height: 630,
