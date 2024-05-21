@@ -27,10 +27,18 @@ export async  function generateMetadata({ params: { title } }, parent) {
     openGraph: {
       title: post.title,
       description: post.description,
-      images: [`/image/blogExplorem/${post.Org}`, ...previousImages],
+      images: [
+        {
+          url: [`/image/blogExplorem/${post.Org}`, ...previousImages],
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
       type: "article",
      
     },
+    
 
 }}
 export default  function BlogDetail({ params: { title } }) {
