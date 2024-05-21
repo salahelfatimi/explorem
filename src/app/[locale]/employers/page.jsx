@@ -23,7 +23,6 @@ export async function generateMetadata() {
         alt: "Explorem SARL",
       },
     ],
-    
   };
 };
 
