@@ -5,6 +5,7 @@ import "./globals.css";
 import { getMessages} from "next-intl/server";
 import { Suspense } from "react";
 import Loading from "./loading";
+import GoogleAnalytics from "./GoogleAnalytics";
 export default async  function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages();
   
@@ -14,6 +15,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
       <head>
         <meta property="og:url" content={`https://explorem.net`}/>
       </head>
+      <GoogleAnalytics />
       <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <main className="flex flex-col h-screen justify-between ">
