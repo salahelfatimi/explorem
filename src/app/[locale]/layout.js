@@ -2,10 +2,10 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { getMessages} from "next-intl/server";
 import { Suspense } from "react";
 import Loading from "./loading";
-import GoogleAnalytics from "./GoogleAnalytics";
 export default async  function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages();
   
@@ -15,7 +15,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
       <head>
         <meta property="og:url" content={`https://explorem.net`}/>
       </head>
-      <GoogleAnalytics />
+     
       <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <main className="flex flex-col h-screen justify-between ">
@@ -25,6 +25,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
           </main>
         </NextIntlClientProvider>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID} />
     </html>
   );
 }
