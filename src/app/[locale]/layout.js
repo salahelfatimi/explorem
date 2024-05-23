@@ -14,6 +14,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
     <html  lang={locale} className=" !scroll-smooth">
       <head>
         <meta property="og:url" content={`https://explorem.net`}/>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID} />
       </head>
      
       <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >
@@ -25,7 +26,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
           </main>
         </NextIntlClientProvider>
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID} />
+     
     </html>
   );
 }
