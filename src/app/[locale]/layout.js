@@ -6,6 +6,7 @@ import { getMessages} from "next-intl/server";
 import { Suspense } from "react";
 import Loading from "./loading";
 import Script from "next/script";
+import { GoogleAnalytics } from '@next/third-parties/google'
 export default async  function LocaleLayout({ children, params: { locale } }) {
   const messages = await getMessages();
   
@@ -15,20 +16,9 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
       
       <head>
         <meta property="og:url" content={`https://explorem.net`}/>
-        <Script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        />
-
-        <Script id='google-analytics' strategy='lazyOnload'>
-          {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
-          `}
-        </Script>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID}/>
       </head>
+      
      
       <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >
         <NextIntlClientProvider locale={locale} messages={messages}>
@@ -39,7 +29,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
           </main>
         </NextIntlClientProvider>
       </body>
-     
+      
      
     </html>
   );
