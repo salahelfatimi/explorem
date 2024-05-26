@@ -12,7 +12,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
   
 
   return (
-    <html  lang={locale} className=" !scroll-smooth">
+    <html  lang={locale} >
       
       <head>
         <meta property="og:url" content={`https://explorem.net`}/>

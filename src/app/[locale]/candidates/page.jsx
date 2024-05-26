@@ -47,7 +47,6 @@ export default   function Candidates({ params: { locale } }) {
           <div className="relative">
             <Image
               title={"explorem"}
-              quality={100}
               src={saction1}
               className="h-screen max-w-full w-full object-cover object-left lg:object-center"
               placeholder="blur"

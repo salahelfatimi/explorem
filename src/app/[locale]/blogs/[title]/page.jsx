@@ -79,7 +79,6 @@ export default  function BlogDetail({ params: { title } }) {
               title={blog.title}
               blurDataURL={blog.base64}
               placeholder="blur"
-              quality={100}
               width={blog.width}
               height={blog.height}
               src= {`/image/blogExplorem/${blog.Url}`}
@@ -152,7 +151,6 @@ export default  function BlogDetail({ params: { title } }) {
               title={blog?.title}
               blurDataURL={blog?.base641}
               placeholder="blur"
-              quality={100}
               width={blog?.width1}
               height={blog?.height1}
               src={`/image/blogExplorem/${blog?.Url1}`}

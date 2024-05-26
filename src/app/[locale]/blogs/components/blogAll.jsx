@@ -51,7 +51,6 @@ export default  function BlogAll({ take }) {
                   placeholder="blur"
                   width={blog.width}
                   height={blog.height}
-                  quality={100}
                   alt={blog.title}
                   title={blog.title}
                   className="object-cover  max-h-96  rounded-t      "

@@ -75,7 +75,6 @@ export default  function About( { params: { locale } }) {
         </h2>
         <Image
           title={"explorem"}
-          quality={40}
           src={slogen1}
           className="lg:w-1/3 rounded-xl"
           placeholder="blur"
@@ -190,7 +189,6 @@ export default  function About( { params: { locale } }) {
             <div className=" flex  justify-center">
               <Image
                  title={'Gracila'}
-                quality={100}
                 width={555}
                 height={388}
                 placeholder="blur"
@@ -221,7 +219,6 @@ export default  function About( { params: { locale } }) {
               <Image
                 title={'Abdessamad'}
                 placeholder="blur"
-                quality={100}
                 width={334}
                 height={264}
                 src={Abdessamad}

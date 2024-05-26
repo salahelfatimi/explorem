@@ -10,7 +10,6 @@ export default function FetchImageScroll() {
             title="Explorem SARL"
             blurDataURL={`${src.base64}`}
             placeholder="blur"
-            quality={100}
             width={src.width}
             height={src.height}
             src={`/image/slide/${src.imageUrl}`}

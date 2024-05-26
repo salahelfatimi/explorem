@@ -19,7 +19,6 @@ export default  function LatestBlog() {
               title={latestBlog.title}
               blurDataURL={latestBlog.base64}
               placeholder="blur"
-              quality={100}
               width={latestBlog.width}
               height={latestBlog.height}
               src= {`/image/blogExplorem/${latestBlog.Url}`}

@@ -88,8 +88,7 @@ export default   function Employers({ params: { locale } }) {
           <div>
             <div className="relative">
               <Image
-                  title={'explorem'}
-                quality={100}
+                title={'explorem'}
                 src={saction1}
                 className="h-screen max-w-full w-full object-cover  "
                 width={1920}
