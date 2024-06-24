@@ -10,10 +10,10 @@ export const metadata = {
     metadataBase: new URL('https://explorem.net'),
     
     alternates: {
-      canonical: "/en/",
+      canonical: "/en",
       languages: {
-        de: "/de/",
-        ar: "/ar/",
+        de: "/de",
+        ar: "/ar",
       },
       
     },
