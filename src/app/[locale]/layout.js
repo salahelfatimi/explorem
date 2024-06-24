@@ -50,6 +50,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
     <html  lang={locale} >
       
       <head>
+        <meta name="robots" content="all" />
         <meta property="og:url" content={`https://explorem.net`}/>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID}/>
       </head>
