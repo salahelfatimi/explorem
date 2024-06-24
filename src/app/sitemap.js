@@ -1,50 +1,43 @@
+import { defaultLocale } from "@/config";
 import { blogs } from "./data/blog";
 
 
 export default async function sitemap() {
  
   const blogEntries=blogs.map((blog)=>({
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/blogs/${blog.title.trim().replace(/[/%\s]+/g, '-')}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${defaultLocale}/blogs/${blog.title.trim().replace(/[/%\s]+/g, '-')}`,
       lastModified: new Date(blog.createAt),
-      changeFrequency: 'daily',
-      priority: 1,
+      
   }))
   return [
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/about`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${defaultLocale}/about`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/blog`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${defaultLocale}/blog`,
       lastModified: new Date(),
-      changeFrequency: 'daily', // Corrected spelling
-      priority: 1,
+     
+
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/employers`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${defaultLocale}/employers`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
+      
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/candidates`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${defaultLocale}/candidates`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
+      
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/en/contact`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${defaultLocale}/contact`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
+      
     },
     ...blogEntries
   ];
