@@ -13,7 +13,10 @@ export async function generateMetadata({params: {locale}}) {
     title: { default: "Explorem SARL", template: "%s - Explorem SARL" },
     description: "We Make A Difference, We Make It Happen.",
     metadataBase: new URL('https://explorem.net'),
-    
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical: "/en",
       languages: {
@@ -50,7 +53,6 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
     <html  lang={locale} >
       
       <head>
-        <meta name="robots" content="all" />
         <meta property="og:url" content={`https://explorem.net`}/>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID}/>
       </head>
