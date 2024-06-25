@@ -15,6 +15,14 @@ export async function generateMetadata({params: {locale}}) {
       index: true,
       follow: true,
     },
+    alternates: {
+      canonical: "/en",
+      languages: {
+        de: "/de",
+        ar: "/ar",
+      },
+      
+    },
 
     images: [
       {
@@ -43,6 +51,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
     <html  lang={locale} >
       
       <head>
+        <meta property="og:url" content={`https://www.explorem.net/en/`}/>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID}/>
       </head>
       <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >
