@@ -18,23 +18,20 @@ export default  function Index({ params: { locale } }) {
     <>
       <div className="bg-[#F5F5F5]  pt-32  space-y-8 py-12">
         <div className=" flex flex-col   items-center justify-center gap-4">
-          <h1 className="flex items-center gap-4 justify-center flex-col text-xl lg:text-2xl font-extrabold capitalize">
-            <span>
-              {t("title.line1")}
-              {"   "}
-
-              <span className="text-[#134BA1] px-2 py-1  bg-white ">
-                {t("title.line2")}
-              </span>
+        <h1 className="flex items-center gap-4 justify-center flex-col text-xl lg:text-2xl font-extrabold capitalize">
+          <span>
+            {t("title.line1")}{" "}
+            <span className="text-[#134BA1] px-2 py-1 bg-white">
+              {t("title.line2")}
             </span>
-            <span>
-              {t("title.line3")}
-              {"   "}
-              <span className="bg-[#134BA1] px-2 py-1 text-white  ">
-                {t("title.line4")}
-              </span>
+          </span>
+          <span>
+            {t("title.line3")}{" "}
+            <span className="bg-[#134BA1] px-2 py-1 text-white">
+              {t("title.line4")}
             </span>
-          </h1>
+          </span>
+        </h1>
           <div className=" flex lg:flex-row flex-col gap-4 items-center ">
             <Link
             title="page to Register For Candidates"
@@ -56,11 +53,12 @@ export default  function Index({ params: { locale } }) {
           <div className=" flex bg-white py-10 justify-center items-center gap-8 flex-col">
             <div className="flex gap- items-center">
               <Image
+                title="Explorem logo"
                 src="/image/aboutUS/logoHand.png"
                 className="w-14 lg:w-16"
                 width={195}
                 height={159}
-                alt="Explorem"
+                alt="Explorem logo"
               />
               <h2 className=" text-3xl font-bold text-[#0149a6] capitalize">
                 {t('latestUpdates')}
@@ -142,11 +140,12 @@ export default  function Index({ params: { locale } }) {
           <div className=" flex justify-center items-center gap-4 flex-col">
             <div className="flex gap-4 items-center">
               <Image
+                title="Explorem logo"
                 src="/image/aboutUS/logoHand.png"
                 className="w-14 lg:w-16"
                 width={195}
                 height={159}
-                alt="Explorem"
+                alt="Explorem logo"
               />
               <h2 className=" text-3xl font-bold text-[#0149a6] capitalize">
                 {t("testimonial.title")}

@@ -140,11 +140,12 @@ export default   function Employers({ params: { locale } }) {
               <div className="flex flex-col container items-center gap-4">
                 <span className="flex  items-center gap-2 justify-center">
                   <Image
+                    title="Explorem logo"
                     src="/image/aboutUS/logoHand.png"
                     className="w-14 lg:w-16"
                     width={195}
                     height={159}
-                    alt="Explorem"
+                    alt="Explorem logo"
                   />
                   <h2 className=" capitalize font-bold text-center text-xl lg:text-3xl text-[#0149a6]">
                     {t("ourJourneyWithPartners")}
@@ -172,11 +173,12 @@ export default   function Employers({ params: { locale } }) {
             <div className="flex flex-col items-center gap-4">
               <span className="flex  items-center gap-4 justify-center">
                 <Image
+                  title="Explorem logo"
                   src="/image/aboutUS/logoHand.png"
                   className="w-14 lg:w-16"
                   width={195}
                   height={159}
-                  alt="Explorem"
+                  alt="Explorem logo"
                 />
                 <h2 className=" capitalize text-center font-bold text-md lg:text-3xl text-[#0149a6]">
                   {t("getInTouch")}
