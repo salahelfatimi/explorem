@@ -37,6 +37,7 @@ export default  function Index({ params: { locale } }) {
           </h1>
           <div className=" flex lg:flex-row flex-col gap-4 items-center ">
             <Link
+            title="page to Register For Candidates"
               href="/candidates"
               className="bg-[#134BA1] lg:py-3 hover:text-[#0149a6] hover:bg-white hover:border-[#0149a6] py-2 transition duration-700 ease-in-out  border-4 border-[#134BA1]  px-6 text-white font-bold rounded-full  capitalize"
             >
@@ -68,6 +69,7 @@ export default  function Index({ params: { locale } }) {
             <LatestBlog />
             <div className=" text-center text-white">
               <Link
+               title='page blogs for explorem'
                 className="bg-[#0149a6] w-fit py-2 border-white px-4 font-semibold border-2 duration-500 hover:text-[#0149a6] hover:bg-white hover:border-[#0149a6]"
                 href="/blogs"
               >
@@ -93,7 +95,8 @@ export default  function Index({ params: { locale } }) {
               </p>
               <div className="flex gap-4 items-center ">
                 <a
-                  arget="_blank"
+                  title="interviewed with ZDF heute (German TV)"
+                  target="_blank"
                   href="https://www.instagram.com/reel/C3lKOTfAwz3/?igsh=MTRkejE5YWY1bDViMA=="
                 >
                   <Instagram
@@ -102,7 +105,8 @@ export default  function Index({ params: { locale } }) {
                   />
                 </a>
                 <a
-                  arget="_blank"
+                  title="interviewed with ZDF heute (German TV) in website zdf"
+                  target="_blank"
                   href="https://www.zdf.de/nachrichten/politik/ausland/fachkraeftemangel-pflegepersonal-marokko-100.html"
                 >
                   <Link2
@@ -117,6 +121,7 @@ export default  function Index({ params: { locale } }) {
               {t("whatWeHaveAchieved.line7")}
               <div className="flex gap-4 items-center ">
                 <a
+                  title="Explorem nurse candidates relocated in Germany were featured in WDR Lokalzeit aus Köln"
                   arget="_blank"
                   href="https://www1.wdr.de/lokalzeit/fernsehen/koeln/pflegeinternat-gegen-pflegekraeftemangel-im-bergischen--100.html"
                 >
@@ -167,6 +172,7 @@ export default  function Index({ params: { locale } }) {
             </div>
             <div className=" text-center text-white">
               <Link
+              title="page of testimonial for explorem"
                 className="bg-[#0149a6] w-fit py-2 border-white px-4 font-semibold border-2 duration-500 hover:text-[#0149a6] hover:bg-white hover:border-[#0149a6]"
                 href="/testimonial"
               >

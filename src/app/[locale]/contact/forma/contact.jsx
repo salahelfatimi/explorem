@@ -225,6 +225,7 @@ export default function Contactform() {
                   </p>
                 </label>
                 <button
+                  title="Contact Us - Texting Explorem"
                   disabled={isLoading}
                   type="submit"
                   className="px-12 py-1 w-full rounded font-bold border-4 duration-700 hover:bg-white hover:text-[#0149a6] border-[#0149a6] bg-[#0149a6] text-white"
@@ -247,6 +248,7 @@ export default function Contactform() {
                     <div className="gap-2 border-l-8 pl-2 border-white flex flex-col">
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 pl-4">
                         <a
+                        title="Location Explorem SARL"
                           href="https://maps.app.goo.gl/djcimpjqdNjy9pcZ6"
                           className="text-sm"
                         >
@@ -268,7 +270,7 @@ export default function Contactform() {
                         </span>
                         <div className="border-l-4 border-[#0149a6] p-1 ml-3 pl-2 flex flex-col gap-2">
                           <span className="flex gap-2 w-auto">
-                            <a href="tel:+212668-676518" className="text-sm">
+                            <a title="Mobile Numbers/ Whatsapp for Formation Center" href="tel:+212668-676518" className="text-sm">
                               (+212) 6 68 67 65 18{" "}
                               <span className="font-semibold">
                                 {t("Information.mobile.whatsappAvailable")}
@@ -276,7 +278,7 @@ export default function Contactform() {
                             </a>
                           </span>
                           <span className="flex gap-2 w-auto">
-                            <a href="tel:+212809-891297" className="text-sm">
+                            <a title="Mobile Numbers/ Whatsapp for Formation Center" href="tel:+212809-891297" className="text-sm">
                               (+212) 8 09 89 12 97{" "}
                               <span className="font-semibold">
                                 {t("Information.mobile.landline")}
@@ -291,7 +293,7 @@ export default function Contactform() {
                         </span>
                         <div className="border-l-4 border-[#0149a6] p-1 ml-3 pl-2 flex flex-col gap-2">
                           <span className="flex gap-2 w-auto">
-                            <a href="tel:+212650-656897" className="text-sm">
+                            <a title="Mobile Numbers/ Whatsapp for ABDESSAMAD" href="tel:+212650-656897" className="text-sm">
                               (+212) 6 50 65 68 97{" "}
                               <span className="font-semibold">
                                 (ABDESSAMAD)
@@ -299,7 +301,7 @@ export default function Contactform() {
                             </a>
                           </span>
                           <span className="flex gap-2 w-auto">
-                            <a href="tel:+212608-789360" className="text-sm">
+                            <a title="Mobile Numbers/ Whatsapp for GRACILA" href="tel:+212608-789360" className="text-sm">
                               (+212) 6 08 78 93 60{" "}
                               <span className="font-semibold">(GRACILA)</span>
                             </a>{" "}
@@ -317,6 +319,7 @@ export default function Contactform() {
                     <div className="gap-2 border-l-8 border-white flex flex-col pl-1 md:pl-4">
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
+                          title="Email Addresses Administration"
                           href="mailto:explorem21@explorem.net"
                           className="text-sm"
                         >
@@ -326,6 +329,7 @@ export default function Contactform() {
                       </span>
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
+                          title="Email Addresses Recruitment"
                           href="mailto:erecruit21@explorem.net"
                           className="text-sm"
                         >
@@ -335,6 +339,7 @@ export default function Contactform() {
                       </span>
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
+                          title="Email Addresses documents"
                           href="mailto:explorem.documents@explorem.net"
                           className="text-sm"
                         >
@@ -344,6 +349,7 @@ export default function Contactform() {
                       </span>
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
+                          title="Email Addresses nursing"
                           href="mailto:explorem.nursing@explorem.net"
                           className="text-sm"
                         >

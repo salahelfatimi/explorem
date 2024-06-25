@@ -52,6 +52,7 @@ export default function Footer({locale}) {
           <span className="flex flex-col lg:flex-row text-center items-center hover:underline decoration-4 underline-offset-4 hover:duration-700 transition  decoration-[#0149A6] gap-2">
             <MapPinIcon size={30} className=" stroke-[#0149A6]" />
             <a
+              title="Location of explorem Center"
               href="https://maps.app.goo.gl/djcimpjqdNjy9pcZ6"
               target="_blank"
               className=" font-bold text-white"
@@ -61,7 +62,7 @@ export default function Footer({locale}) {
           </span>
           <span className="flex flex-col lg:flex-row text-center items-center hover:underline decoration-4 underline-offset-4 hover:duration-700 transition  decoration-[#0149A6] gap-2">
             <PhoneCallIcon size={30} className=" stroke-[#0149A6]" />
-            <a href="tel:+212809-891297" className=" font-bold text-white">
+            <a title="Contact Phone Number for explorem Center" href="tel:+212809-891297" className=" font-bold text-white">
               (+212) 8 09 89 12 97
             </a>
           </span>
@@ -73,6 +74,7 @@ export default function Footer({locale}) {
           </span>
           <span className="flex gap-6 justify-between lg:justify-normal">
             <a
+            title=" Facebook Profile for explorem"
               href="https://web.facebook.com/ExploremSARL"
               target="_blank"
               className="bg-[#0149a6]   p-2 rounded-full"
@@ -80,6 +82,7 @@ export default function Footer({locale}) {
               <Facebook size={25} className=" stroke-white" />
             </a>
             <a
+              title="Explorem Official YouTube Channel"
               href="https://www.youtube.com/@Explorem-mw5rq"
               target="_blank"
               className="bg-red-500   p-2 rounded-full"
@@ -87,6 +90,7 @@ export default function Footer({locale}) {
               <Youtube size={25} className=" stroke-white" />
             </a>
             <a
+              title=" LinkedIn Profile for explorem"
               href="https://www.linkedin.com/in/gracila-vacaro-ucag-b14136127/"
               target="_blank"
               className="bg-[#0077b5]   p-2 rounded-full"
@@ -94,6 +98,7 @@ export default function Footer({locale}) {
               <Linkedin size={25} className=" stroke-white" />
             </a>
             <a
+              title=" tiktok Profile for explorem"
               href="https://www.tiktok.com/@explorem3?_t=8kje1qeF88j&_r=1"
               target="_blank"
               className="bg-black   p-2 rounded-full"
@@ -107,6 +112,7 @@ export default function Footer({locale}) {
               />
             </a>
             <a
+              title=" Instagram Profile for explorem"
               href="https://www.instagram.com/explorem21/"
               target="_blank"
               className="bg-[#f7543e]   p-2 rounded-full"
@@ -139,6 +145,7 @@ export default function Footer({locale}) {
             </p>
           </label>
           <button
+          title="SUBSCRIBE in Newsletter"
             disabled={isLoading}
             type="submit"
             className="px-12 py-1 w-full rounded-full font-bold border-4 duration-700 hover:bg-[#22242B] hover:text-[#fff] border-[#0149a6] bg-[#0149a6] text-white"

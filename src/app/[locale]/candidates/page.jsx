@@ -54,13 +54,13 @@ export default   function Candidates({ params: { locale } }) {
         <div className="flex flex-col gap-10">
           <div className="relative">
             <Image
-              title={"explorem"}
+              title={"image of book and file explorem"}
               src={saction1}
               className="h-screen max-w-full w-full object-cover object-left lg:object-center"
               placeholder="blur"
               width={1920}
               height={1080}
-              alt="Explorem"
+              alt="image of book and file explorem"
             />
 
             <div className="absolute inset-0 flex justify-center items-center">

@@ -37,6 +37,7 @@ export default function ChangeLungage({ setOpen, open, locale }) {
               {locales.map((language, index) => {
                 return (
                   <Link
+                    title={`change language to ${language} `}
                     href={pathname}
                     locale={language}
                     className={`${

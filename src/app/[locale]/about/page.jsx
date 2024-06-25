@@ -46,20 +46,20 @@ export default  function About( { params: { locale } }) {
       <div className="flex flex-col gap-10">
         <div className="relative">
           <Image
-            title={"explorem"}
+            title={"image of school explorem"}
             src={saction1}
             className=" h-screen max-w-full w-full object-cover   "
             width={1920}
             height={1080}
             quality={100}
             placeholder="blur"
-            alt="Explorem"
+            alt="image of school explorem"
           />
 
           <div className="absolute inset-0 flex justify-center items-center">
             <div className="bg-[#0149A6] w-full items-center flex flex-col gap-4 capitalize pt-6 text-white">
               <h1 className=" text-3xl lg:text-4xl  font-bold text-center">{t("aboutUs")}</h1>
-              <span className=" text-2xl bg-white text-[#0149A6] w-full text-center font-semibold p-2">{t("aboutUsSlogen")}</span>
+              <p className=" text-2xl bg-white text-[#0149A6] w-full text-center font-semibold p-2">{t("aboutUsSlogen")}</p>
             </div>
           </div>
         </div>
@@ -82,13 +82,13 @@ export default  function About( { params: { locale } }) {
           <p>{t("slogen1.line2")}</p>
         </h2>
         <Image
-          title={"explorem"}
+          title={"Happy Students explorem"}
           src={slogen1}
           className="lg:w-1/3 rounded-xl"
           placeholder="blur"
           width={6240}
           height={3512}
-          alt="Explorem"
+          alt="Happy Students explorem"
         />
       </div>
       <div className="container flex flex-col gap-4 lg:flex-row w-full items-center justify-between text-center">
@@ -99,11 +99,12 @@ export default  function About( { params: { locale } }) {
           <p className=" lg:text-lg font-medium">{t("grid.grid1.text")}</p>
         </span>
         <Image
+          title="logo of explorem"
           width={195}
           height={159}
           src="/image/aboutUS/logoHand.png"
           className="w-28"
-          alt="Explorem"
+          alt="logo Explorem"
         />
         <span className=" bg-white shadow lg:w-1/3 flex flex-col gap-3 p-4 rounded-xl">
           <h2 className=" font-bold text-xl uppercase lg:text-2xl text-[#0149a6]">
@@ -134,12 +135,12 @@ export default  function About( { params: { locale } }) {
       <div className=" flex flex-col gap-4">
         <span className="flex  items-center gap-4 justify-center">
           <Image
-             title={'explorem'}
+            title={'logo of explorem'}
             src="/image/aboutUS/logoHand.png"
             className="w-14 lg:w-16"
             width={195}
             height={159}
-            alt="Explorem"
+            alt="logo of explorem"
           />
           <h2 className=" capitalize font-bold text-xl lg:text-3xl text-[#0149a6]">
             {t("vedioTitle")}
@@ -155,7 +156,7 @@ export default  function About( { params: { locale } }) {
           width="320"
           height="240"
           preload="none"
-          title="Who is explorem"
+          title="Explorem Center: Inspiring Interviews with Managing Director and Students"
         >
           <source src="/video/Explorem.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -182,11 +183,12 @@ export default  function About( { params: { locale } }) {
       <div className=" space-y-12">
         <span className="flex gap-4  items-center justify-center">
           <Image
+            title="logo of explorem"
             src="/image/aboutUS/logoHand.png"
             className="w-14 lg:w-16"
             width={195}
             height={159}
-            alt="Explorem"
+            alt="logo of explorem"
           />
           <h2 className=" capitalize font-bold text-xl lg:text-3xl text-[#0149a6]">
             {t("ourTeamManagement.title")}
@@ -196,13 +198,13 @@ export default  function About( { params: { locale } }) {
           <div className="flex lg:flex-row flex-col items-center justify-center gap-4  container ">
             <div className=" flex  justify-center">
               <Image
-                 title={'Gracila'}
+                 title={'GRACILA V. UCAG, RN, MAN, PHD - Managing Director at explorem'}
                 width={555}
                 height={388}
                 placeholder="blur"
                 src={Gracila}
                 className="w-2/3 rounded-md "
-                alt="Gracila"
+                alt="GRACILA V. UCAG, RN, MAN, PHD - Managing Director at explorem"
               />
             </div>
             <div className=" flex gap-4 flex-col lg:w-1/2  ">
@@ -225,13 +227,13 @@ export default  function About( { params: { locale } }) {
           <div className="flex lg:flex-row-reverse flex-col items-center justify-center gap-4  container ">
             <div className=" flex  justify-center">
               <Image
-                title={'Abdessamad'}
+                title={'ABDESSAMAD ABOUL OSSOUD - Managing Director at explorem:'}
                 placeholder="blur"
                 width={334}
                 height={264}
                 src={Abdessamad}
                 className="w-2/3 rounded-md "
-                alt="Abdessamad"
+                alt="ABDESSAMAD ABOUL OSSOUD - Managing Director at explorem"
               />
             </div>
             <div className=" flex gap-4 flex-col lg:w-1/2  ">

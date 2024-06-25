@@ -17,22 +17,23 @@ export default  function TestimonialComments({ testimonial }) {
             src={`/image/testimonialExplorem/${fileUrl}`}
             height={1920}
             width={1080}
-            alt="avatar"
+            alt="pdf testimonial Explorem"
           />
         ) : isVideo(fileUrl) ? (
           <video
+          
             className=" bg-[#0149a6] h-[32rem] min-h-96 w-full  "
             height={100}
             width={100}
             title={author}
             controls
           >
-            <source src={`/image/testimonialExplorem/${fileUrl}`} type="video/mp4" />
+            <source title="video testimonial Explorem" src={`/image/testimonialExplorem/${fileUrl}`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         
         ) : istext(fileUrl) ? (
-          <a href={`/image/testimonialExplorem/${fileUrl}`} target="_blank" className=" font-bold text-center  hover:bg-red-600 bg-gray-500  duration-500 hover:text-white rounded text-white py-3 px-4">{t('fileClick')}</a>
+          <a title="pdf testimonial Explorem" href={`/image/testimonialExplorem/${fileUrl}`} target="_blank" className=" font-bold text-center  hover:bg-red-600 bg-gray-500  duration-500 hover:text-white rounded text-white py-3 px-4">{t('fileClick')}</a>
          
         ) : "text"}
         <div className="flex gap-4  items-center">

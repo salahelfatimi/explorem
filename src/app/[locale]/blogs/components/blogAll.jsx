@@ -30,7 +30,8 @@ export default  function BlogAll({ take }) {
                 </p>
 
                 <Link
-              href={`/blogs/${encodeURIComponent(blog.title.trim().replace(/[/%\s]+/g, '-'))}`}
+                  title={blog.title}
+                  href={`/blogs/${encodeURIComponent(blog.title.trim().replace(/[/%\s]+/g, '-'))}`}
                   className="bg-[#134ba0]  font-bold w-full  justify-center  text-white rounded-md  py-2 px-4  capitalize flex gap-2 items-center "
                 >
                   <span>{t("readMore")}</span> <Link2 size={25} />
@@ -40,9 +41,9 @@ export default  function BlogAll({ take }) {
                     {blog.createAt}
                     <Clock className="min-w-4" />{" "}
                   </span>
-                  <span className="font-bold">
+                  <p className="font-bold">
                     By <span className="text-[#134ba1]">{blog.author}</span>
-                  </span>
+                  </p>
                 </div>
               </div>
               <div className=" flex items-center  ">

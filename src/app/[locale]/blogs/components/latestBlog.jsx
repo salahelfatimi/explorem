@@ -50,7 +50,8 @@ export default  function LatestBlog() {
               </span>
             </div>
             <Link
-          href={`/blogs/${encodeURIComponent(latestBlog.title.trim().replace(/[/%\s]+/g, '-'))}`}
+            title={latestBlog.title}
+              href={`/blogs/${encodeURIComponent(latestBlog.title.trim().replace(/[/%\s]+/g, '-'))}`}
               className="border-2 border-[#134ba1] py-2 px-3 rounded font-bold text-[#134ba1] w-full text-center lg:w-fit"
             >
               {t("readMore")}

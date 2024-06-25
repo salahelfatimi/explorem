@@ -13,6 +13,7 @@ export default  function PaginationTestimonial({ take }) {
   return (
     <>
       <button
+      title="see more testimonial Explorem"
         className=" bg-[#0149a6] w-fit py-2 rounded-3xl px-6  font-bold text-white"
         onClick={handleNextPage}
       >
