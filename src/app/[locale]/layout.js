@@ -15,15 +15,6 @@ export async function generateMetadata({params: {locale}}) {
       index: true,
       follow: true,
     },
-    alternates: {
-      canonical: "/en",
-      languages: {
-        de: "/de",
-        ar: "/ar",
-      },
-      
-    },
-
     images: [
       {
         url: `./opengraph-image.jpg`,
