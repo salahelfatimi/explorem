@@ -13,6 +13,14 @@ export async function generateMetadata() {
   return {
     title: "Aboute",
     description: "A Few Reasons For Choosing Us  ",
+    alternates: {
+      canonical: `/en/about`,
+      languages: {
+        de: `/de/about`,
+        ar: `/ar/about`,
+      },
+      
+    },
     images: [
       {
         url: `./opengraph-image.jpg`,

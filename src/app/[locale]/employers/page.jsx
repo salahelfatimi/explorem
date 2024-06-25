@@ -10,6 +10,14 @@ export async function generateMetadata() {
   return {
     title: "Employers",
     description: "Our Best Services For Employers  ",
+    alternates: {
+      canonical: "/en/employers",
+      languages: {
+        de: "/de/employers",
+        ar: "/ar/employers",
+      },
+      
+    },
     images: [
       {
         url: `./opengraph-image.jpg`,

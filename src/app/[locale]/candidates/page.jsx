@@ -17,6 +17,14 @@ export async function generateMetadata() {
   return {
     title: "Candidates",
     description: "Our Best Services For Candidates",
+    alternates: {
+      canonical: "/en/candidates",
+      languages: {
+        de: "/de/candidates",
+        ar: "/ar/candidates",
+      },
+      
+    },
     images: [
       {
         url: `./opengraph-image.jpg`,

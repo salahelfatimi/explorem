@@ -7,7 +7,15 @@ export async function generateMetadata() {
   
   return {
   title: "Testimonial",
-  description: "Read what our client are saying about Explorem "
+  description: "Read what our client are saying about Explorem ",
+  alternates: {
+    canonical: "/en/testimonial",
+    languages: {
+      de: "/de/testimonial",
+      ar: "/ar/testimonial",
+    },
+    
+  },
   };
 };
 export default  function Testimonial({ params: { locale },searchParams  }) {

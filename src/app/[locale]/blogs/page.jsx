@@ -8,6 +8,14 @@ export async function generateMetadata() {
   return {
     title: "Blog",
     description: "All the latest Explorem news, straight from the team .",
+    alternates: {
+      canonical: "/en/blogs",
+      languages: {
+        de: "/de/blogs",
+        ar: "/ar/blogs",
+      },
+      
+    },
     
   };
 };
