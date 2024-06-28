@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/navigation";
 import { PanelLeftClose, PanelRightClose } from "lucide-react";
+import { Menu } from "react-feather";
 
 
 
@@ -53,7 +54,7 @@ export default function Navbar({ locale }) {
                     </ul>
                     
             </div>
-            <button className="block lg:hidden "  onClick={() => {setOpen(!open);}}>{open?<PanelLeftClose size={35} className=" text-[#0149A6]  " />: <PanelRightClose size={35} className=" text-red-500  "/>}</button>
+            <button className="block lg:hidden "  onClick={() => {setOpen(!open);}}><Menu size={35} className=" text-[#0149A6]  " /></button>
 
         </div>
       </div>
