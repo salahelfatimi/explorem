@@ -35,8 +35,18 @@ export async  function generateMetadata({ params: { title } }, parent) {
     openGraph: {
       title: post.title,
       description: post.description,
-      images: [`/image/blogExplorem/${post.Org}`, ...previousImages],
-      type: "article",
+      url: 'https://explorem.net/',
+      siteName: "explorem Blog",
+      images: [
+        {
+          url: `/image/blogExplorem/${post.Org}`,
+          secureUrl: `/image/blogExplorem/${post.Org}`,
+          width: 1200,
+          height: 630,
+          alt: `Preview image for ${post.title}`,
+        }
+      ],
+      type: "website",
      
     },
     
