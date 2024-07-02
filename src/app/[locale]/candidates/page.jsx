@@ -28,13 +28,13 @@ export async function generateMetadata() {
     images: [
       {
         url: `./opengraph-image.jpg`,
-        width: 1200,
-        height: 630,
+        width: 1500,
+        height: 607,
       },
       {
         url: `./opengraph-image.jpg`,
-        width: 1200,
-        height: 630,
+        width: 1500,
+        height: 607,
         alt: "Explorem SARL",
       },
     ],
