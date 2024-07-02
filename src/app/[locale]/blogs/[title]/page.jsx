@@ -41,8 +41,8 @@ export async  function generateMetadata({ params: { title } }, parent) {
         {
           url: `/image/blogExplorem/${post.Org}`,
           secureUrl: `/image/blogExplorem/${post.Org}`,
-          width: 1200,
-          height: 630,
+          width: post.width,
+          height: post.height,
           alt: `Preview image for ${post.title}`,
         }
       ],
