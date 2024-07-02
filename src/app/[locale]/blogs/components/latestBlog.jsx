@@ -5,6 +5,7 @@ import { Clock } from "react-feather";
 import { Link } from "@/navigation";
 import { latestBlog } from "@/app/data/blog";
 import { useTranslations } from "next-intl";
+import GetBase64Image from "@/app/base64/getBase64ImageSingle";
 
 
 export default  function LatestBlog() {
@@ -25,7 +26,7 @@ export default  function LatestBlog() {
               className="    rounded-t "
               alt={latestBlog.title}
             />
-             {/* <GetBase64Image imageUrl={Url} className={'object-cover  h-auto  rounded-t '} alt={title}/> */}
+             {/* <GetBase64Image imageUrl={latestBlog.Url} className={'object-cover  h-auto  rounded-t '} alt={latestBlog.title}/> */}
              
           </div>
 
