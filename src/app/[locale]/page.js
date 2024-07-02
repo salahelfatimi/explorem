@@ -10,7 +10,42 @@ import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import { testimonialHome } from "../data/testimonial";
 
+export async function generateMetadata({params: {locale}}) {
+  return {
+    title: "Explorem SARL",
+    description: "We Make A Difference, We Make It Happen.",
+    keywords: ['explore m','explorem','centre de formation','centre de formation marrakech	','center', 'center of learning', 'center of learning german','german','center','study','ausbildung in german','ausbildung','lungage german'],
+    alternates: {
+      canonical: "/en",
+      languages: {
+        de: "/de",
+        ar: "/ar",
+      },
+      
+    },
 
+    openGraph: {
+      title: 'Explorem SARL',
+      description: 'We Make A Difference, We Make It Happen. ',
+      url: 'https://explorem.net/',
+      siteName: " Home page explorem",
+      images: [
+        {
+          url: `/image/index/opengraph-image.jpg`,
+          secureUrl: `/image/index/blogExplorem/opengraph-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `We Make A Difference, We Make It Happen.  `,
+        }
+      ],
+      type: "website",
+     
+    },
+    
+   
+  };
+ 
+}
 
 export default  function Index({ params: { locale } }) {
   const t =  useTranslations("Index");

@@ -29,7 +29,7 @@ export async function generateMetadata() {
       images: [
         {
           url: `/image/aboutUS/opengraph-image.jpg`,
-          secureUrl: `/aboutUS/blogExplorem/opengraph-image.jpg`,
+          secureUrl: `/image/aboutUS/blogExplorem/opengraph-image.jpg`,
           width: 1280,
           height: 612,
           alt: `Preview image for about explorem`,

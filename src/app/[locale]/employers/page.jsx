@@ -26,7 +26,7 @@ export async function generateMetadata() {
       images: [
         {
           url: `/image/employers/opengraph-image.jpg`,
-          secureUrl: `/employers/blogExplorem/opengraph-image.jpg`,
+          secureUrl: `/image/employers/blogExplorem/opengraph-image.jpg`,
           width: 1500,
           height: 517,
           alt: `Preview image for Best Services For Employers `,
