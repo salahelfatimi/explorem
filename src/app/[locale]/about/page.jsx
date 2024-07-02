@@ -21,19 +21,23 @@ export async function generateMetadata() {
       },
       
     },
-    images: [
-      {
-        url: `./opengraph-image.jpg`,
-        width: 1280,
-        height: 612,
-      },
-      {
-        url: `./opengraph-image.jpg`,
-        width: 1280,
-        height: 612,
-        alt: "Explorem SARL",
-      },
-    ],
+    openGraph: {
+      title: 'Aboute Us',
+      description: 'A Few Reasons For Choosing Us ',
+      url: 'https://explorem.net/',
+      siteName: "about explorem ",
+      images: [
+        {
+          url: `/image/aboutUS/opengraph-image.jpg`,
+          secureUrl: `/aboutUS/blogExplorem/opengraph-image.jpg`,
+          width: 1280,
+          height: 612,
+          alt: `Preview image for about explorem`,
+        }
+      ],
+      type: "website",
+     
+    },
   };
 };
 

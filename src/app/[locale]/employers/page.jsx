@@ -18,19 +18,23 @@ export async function generateMetadata() {
       },
       
     },
-    images: [
-      {
-        url: `./opengraph-image.jpg`,
-        width: 1500,
-        height: 517,
-      },
-      {
-        url: `./opengraph-image.jpg`,
-        width: 1500,
-        height: 517,
-        alt: "Explorem SARL",
-      },
-    ],
+    openGraph: {
+      title: 'Employers',
+      description: 'Our Best Services For Employers  ',
+      url: 'https://explorem.net/',
+      siteName: " Best Services For Employers in explorem",
+      images: [
+        {
+          url: `/image/employers/opengraph-image.jpg`,
+          secureUrl: `/employers/blogExplorem/opengraph-image.jpg`,
+          width: 1500,
+          height: 517,
+          alt: `Preview image for Best Services For Employers `,
+        }
+      ],
+      type: "website",
+     
+    },
   };
 };
 

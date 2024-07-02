@@ -25,19 +25,23 @@ export async function generateMetadata() {
       },
       
     },
-    images: [
-      {
-        url: `./opengraph-image.jpg`,
-        width: 1500,
-        height: 607,
-      },
-      {
-        url: `./opengraph-image.jpg`,
-        width: 1500,
-        height: 607,
-        alt: "Explorem SARL",
-      },
-    ],
+    openGraph: {
+      title: 'Candidates',
+      description: 'Our Best Services For Candidates',
+      url: 'https://explorem.net/',
+      siteName: "Our Best Services For Candidates for Candidates",
+      images: [
+        {
+          url: `/image/candidates/opengraph-image.jpg`,
+          secureUrl: `/candidates/blogExplorem/opengraph-image.jpg`,
+          width: 1500,
+          height: 607,
+          alt: `Preview image for Our Best Services For Candidates`,
+        }
+      ],
+      type: "website",
+     
+    },
     
   };
 };
