@@ -22,7 +22,7 @@ export default  function LatestBlog() {
               width={latestBlog.width}
               height={latestBlog.height}
               src= {`/image/blogExplorem/${latestBlog.Url}`}
-              className="object-cover  h-96  rounded-t "
+              className="    rounded-t "
               alt={latestBlog.title}
             />
              {/* <GetBase64Image imageUrl={Url} className={'object-cover  h-auto  rounded-t '} alt={title}/> */}
