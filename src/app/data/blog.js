@@ -6,7 +6,7 @@ export const latestBlog =  {
   "Org": "blog10(1).png",
   "cover": "blog10(1).png",
   "Url": "blog10(1).png",
-  "title": "EXPLOREM at your SERVICE!",
+  "title": "EXPLOREM at your SERVICE",
   "description":"EXPLOREM has continuously providing services to all young Moroccan professionals who wants to be relocated to Germany.\r\n The formation center has continuous registration for German courses from Level A1 to B2, job agreements for general nurses\r\n (Pflegefachkraft) and other specialists or professionals (Andere Spezialisten oder Fachleute), training agreement (Ausbildung),\r\n and preparing students for the German labor market. With its expertise and high- quality educational resources, EXPLOREM \r\nis one of a kind and reliable partner to prepare German-speaking profiles in various fields of activity.\r\n\r\n\r\n EXPLOREM’s highly qualified and experienced teachers and trainers are distinguished by their ability to offer training that \r\n meets the requirements of the German labor market.\r\n They are able to effectively prepare students for training courses or integrate them directly into the German labor market.\r\n\r\n EXPLOREM has a wide range of well-trained and competent profiles ready to take on professional challenges in Germany. \r\nWhether in the field of healthcare, technology, finance, commerce, engineering or any other field of activity, EXPLOREM \r\n can provide candidates who meet selection criteria.\r\n\r\n\r\n The number of students EXPLOREM has at present, their achievements since year 2020 and the number of candidates they\r\n have been relocated to Germany speak the quality of the services they are providing for both German clients and Moroccan\r\n professionals.\r\n\r\n\r\n EXPLOREM team will always MAKE A DIFFERENCE in the lives of candidates in achieving their Germany dreams, and EXPLOREM\r\n will MAKE IT HAPPEN.\r\n\r\n\r\n For more information about all the programs Explorem is offering, you may call you may \r\ncall +212 668676518/ +212 650656897/ +212 608789360 (WhatsApp available) or +212 809891297 (Landline)\r\n EXPLOREM office/ formation center is located at Imm 6 Nr 7 Rue Vieux Marrakchis \r\nGueliz, Marrakech; open from Monday to Friday from 10h00 to 18h00.\r\n\r\n\r\n Webpage: https://explorem.net/de \r\n\r\n Instagram: https://www.instagram.com/explorem21/ \r\n\r\n Tiktok: https://www.tiktok.com/@explorem3?is_from_webapp=1&sender_device=pc\r\n\r\n FB: https://www.facebook.com/ExploremSARL/ https://www.facebook.com/Explorem.Academy/\r\n\r\n Linkedin: https://www.linkedin.com/in/gracila-vacaro-ucag-b14136127/",
   "author": "Explorem",
   "createAt":"2024-07-2"
@@ -27,7 +27,7 @@ export const blogs = [
     "width1": "3908",
     "height1": "1795",
     "Url1":"blog10(2).png",
-    "title": "EXPLOREM at your SERVICE!",
+    "title": "EXPLOREM at your SERVICE",
     "description":"EXPLOREM has continuously providing services to all young Moroccan professionals who wants to be relocated to Germany.\r\n The formation center has continuous registration for German courses from Level A1 to B2, job agreements for general nurses\r\n (Pflegefachkraft) and other specialists or professionals (Andere Spezialisten oder Fachleute), training agreement (Ausbildung),\r\n and preparing students for the German labor market. With its expertise and high- quality educational resources, EXPLOREM \r\nis one of a kind and reliable partner to prepare German-speaking profiles in various fields of activity.\r\n\r\n\r\n EXPLOREM’s highly qualified and experienced teachers and trainers are distinguished by their ability to offer training that \r\n meets the requirements of the German labor market.\r\n They are able to effectively prepare students for training courses or integrate them directly into the German labor market.\r\n\r\n EXPLOREM has a wide range of well-trained and competent profiles ready to take on professional challenges in Germany. \r\nWhether in the field of healthcare, technology, finance, commerce, engineering or any other field of activity, EXPLOREM \r\n can provide candidates who meet selection criteria.\r\n\r\n\r\n The number of students EXPLOREM has at present, their achievements since year 2020 and the number of candidates they\r\n have been relocated to Germany speak the quality of the services they are providing for both German clients and Moroccan\r\n professionals.\r\n\r\n\r\n EXPLOREM team will always MAKE A DIFFERENCE in the lives of candidates in achieving their Germany dreams, and EXPLOREM\r\n will MAKE IT HAPPEN.\r\n\r\n\r\n For more information about all the programs Explorem is offering, you may call you may \r\ncall +212 668676518/ +212 650656897/ +212 608789360 (WhatsApp available) or +212 809891297 (Landline)\r\n EXPLOREM office/ formation center is located at Imm 6 Nr 7 Rue Vieux Marrakchis \r\nGueliz, Marrakech; open from Monday to Friday from 10h00 to 18h00.\r\n\r\n\r\n Webpage: https://explorem.net/de \r\n\r\n Instagram: https://www.instagram.com/explorem21/ \r\n\r\n Tiktok: https://www.tiktok.com/@explorem3?is_from_webapp=1&sender_device=pc\r\n\r\n FB: https://www.facebook.com/ExploremSARL/ https://www.facebook.com/Explorem.Academy/\r\n\r\n Linkedin: https://www.linkedin.com/in/gracila-vacaro-ucag-b14136127/",
     "author": "Explorem",
     "createAt":"2024-07-2"
@@ -53,7 +53,7 @@ export const blogs = [
       "Org": "blog8.png",
       "cover": "blog8.png",
       "Url": "blog8.mp4",
-      "title":"Explorem founder/managing directors speech during the recognition ceremony.",
+      "title":"Explorem founder/managing directors speech during the recognition ceremony",
       "description":"Explorem founder/ managing directors speech during the recognition ceremony. \r\n\r\nOn April 19, 2024, the Excel Group of Institutes gave recognition to 20 of their nurse graduates who were successfully relocated to Cologne, Germany.\r\n\r\nThis project is part of the Explorem program in relocating qualified professionals to Germany, in collaboration with German employers/companies. With the initiatives of Explorem, these candidates were able to sign employment contracts and received FREE language courses until the B2 level, recognition and documentation, visa process, relocation, etc.. all paid by their employer.\r\n\r\nFor more information, you may visit the Explorem Center located at Imm 6, Rue Vieux des Marrakchis Nr 7 Gueliz Marrakech, or you may call us at 0668676518 (WhatsApp) or 0809891297 (landline).\r\nWe are open from Monday to Friday, from 10h00 to 18h00.\r\n\r\n#explorem\r\n#exploremrecruit\r\n#exploremacademy \r\n#wemakeadifference \r\n#wemakeithappen\r\n",
       "author": "Explorem",
       "createAt":"2024-04-25"
@@ -72,7 +72,7 @@ export const blogs = [
       "width1": "3908",
       "height1": "1795",
       "Url1":"blog7(2).png",
-      "title": "22 Candidates Successfully Relocated to Germany!",
+      "title": "22 Candidates Successfully Relocated to Germany",
       "description":"In April 20 and 21, the 22 of the EXPLOREM nurse-candidates were successfully\r\nrelocated to Cologne Germany. As to date, there are 32 out of 37 program recipients\r\nwere relocated. The 5 other candidates are waiting for their pre-approval documents\r\nfor visa process. These 37 candidates are graduates of Excel Group of Institutes\r\n(Marrakech), Galien Institute (Agadir), and Work Center (Oujda).\r\n\r\nThis is one of the successful recruitment projects managed by EXPLOREM, in\r\ncollaboration with DRK-Rettungsdienst Rhein-Berg GmbH and Marburg\r\nConsulting.\r\n\r\nThrough the efforts and initiatives of EXPLOREM managing directors, Mr.\r\nAbdessamad Aboul ossoud and Dr. Gracila Ucag, the recipients of the program\r\nreceived monthly stipend for one year and were provided with FREE services on\r\nlanguage formation until B2 level; services on documentation, recognition, visa\r\nprocess, relocation support such as flight tickets, insurance registration, etc. All\r\ncosts/ expenses are paid by DRK, the employer.\r\n\r\nEXPLOREM has more fruitful projects in the table in which students, skilled workers\r\nand professionals will benefit. With the new Skilled Immigrant Act of Germany,\r\nexisting mechanisms for skilled workers with a university degree, such as the EU Blue\r\nCard, will continue and in some cases be extended. In addition, a new opportunity\r\ncard will enable third-country nationals to seek employment.\r\n\r\nWith all the relocated candidates of Explorem since year 2020, the team is a reliable\r\ncompany to provide the best services in language and nursing formation, recruitment\r\nmanagement, documentation and recognition process, relocation support such as\r\nvisa assistance, insurance registration and apartment search, etc.\r\n\r\nEXPLOREM made a difference. EXPLOREM made it happen.",
       "author": "Explorem",
       "createAt":"2024-04-21"
@@ -87,7 +87,7 @@ export const blogs = [
       "cover": "blog6.png",
       "Url": "blog6.png",
 
-      "title": "23 Explorem nurse scholars received their Visa!",
+      "title": "23 Explorem nurse scholars received their Visa",
       "description":"Among the best services Explorem have provided to their candidates for almost 3 years are Visa process and Relocation candidate support, aside from language formation and qualification.\r\n\r\nExplorem is assisting qualified candidates in visa application, getting visa appointments, compiling necessary documents, giving an orientation or preparation regarding visa, organization, and implementation of the journey or flight to Germany.\r\n\r\nIn March 2024, Explorem received a great news that 23 of their nurse scholars received their Visa and soon to be relocated. ",
       "author": "Explorem",
       "createAt":"2024-04-11"
@@ -101,7 +101,7 @@ export const blogs = [
       "cover": "blog5.png",
       "Url": "blog5.png",
 
-      "title": "Nurses Successfully Relocated to Germany!",
+      "title": "Nurses Successfully Relocated to Germany",
       "description":"In year 2023 and the beginning of the present year, Explorem has been successfully relocating qualified nurses to Germany. Candidates were relocated to Dresden, Halle, Koln, Marburg, Glucksburg. ",
       "author": "Explorem",
       "createAt":"2024-04-11"
@@ -116,7 +116,7 @@ export const blogs = [
     "cover": "blog4.png",
     "Url": "blog4.png",
 
-    "title": "100% Passed the B1 external exam!",
+    "title": "100% Passed the B1 external exam",
     "description":"Explorem in partnership with DRK Rettungsdienst Rhein-Berg GmbH has 22 nurse-candidates scholars. Their language formation, recognition and relocation process are all paid by their employer. They are receiving a stipend while completing their language qualification in Morocco. \r\n\r\nIn May 2023, they took the TELC B1 test. All of them successfully passed the test and acquire their B1 certificate.\r\n\r\n100% success rate of the first group of the program is such a great achievement for Explorem. \r\nKudos to all candidates and Explorem teachers, Mr. Nizar Dhibi and Ms. Wencke Derb, for a job well done!",
     "author": "Explorem",
     "createAt":"2024-04-11"
@@ -144,7 +144,7 @@ export const blogs = [
       "cover": "blog2.png",
       "Url": "blog2.png",
 
-      "title": "Explorem candidates in WDR Lokalzeit aus Cologne!",
+      "title": "Explorem candidates in WDR Lokalzeit aus Cologne",
       "description":"Our first 8 relocated nurse-candidates in Cologne were covered and interviewed in Cologne local TV.\r\n\r\nhttps://www1.wdr.de/lokalzeit/fernsehen/koeln/pflegeinternat-gegen-pflegekraeftemangel-im-bergischen--100.html\r\n\r\nWe are PROUD of you... Keep up the good work!!!  \r\n",
       "author": "Explorem",
       "createAt":"2024-04-11"
@@ -158,7 +158,7 @@ export const blogs = [
       "cover": "blog1.png",
       "Url": "blog1.png",
 
-      "title": "New Milestone Unlocked!",
+      "title": "New Milestone Unlocked",
       "description":"In November 13, 2023, Explorem Formation Center was officially opened. Local partners, teacher, students and active candidates attended the event.\r\n\r\nWe are grateful to all who took their time celebrating this newly achieved project. \r\n\r\nThank you to all our partners – local partners, school partners and German partners - who worked with us since year 2020, and making this new milestone possible!\r\n",
       "author": "Explorem",
       "createAt":"2024-04-11"
