@@ -1,8 +1,8 @@
 export const latestBlog =  {
    
   "base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABAUlEQVR4nAH2AAn/AMLCxv+nsL3/uMDF//bup//n1NP/1dfW/9/c0v/t7uz/jY+g/7Spqf8AFhAZ/19VT/9KSED/TkY2/0QkJP/y9fP/ysvE/8bFvv+TjY3/d2Zl/wAdJzn/CAYL/3FpY/+mo63/TElS/19PSv9aTkj/HyQs/1lVUv8yMTf/APn+///EydH/hYiL/1RUVf92d4H/ur/H/6Onrv9zdo7/dXiV/3Z/mv8AdGxo/xcODv9rXlX/OC4l/y4sMf9ZS0r/ZV1X/0tHRv9dXWT/cWxu/wA2NT7/Rj9E/1VOVP9JSUv/FhUZ/zAqLP+Ba13/Y2Bh/6qlpP+wn4//ytSO46nSu9UAAAAASUVORK5CYII=",
-  "width": "2048",
-  "height": "1536",
+  "width": "1500",
+  "height": "843",
   "Org": "blog10(1).png",
   "cover": "blog10(1).png",
   "Url": "blog10(1).png",
@@ -17,15 +17,15 @@ export const blogs = [
   {
    
     "base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABAUlEQVR4nAH2AAn/AMLCxv+nsL3/uMDF//bup//n1NP/1dfW/9/c0v/t7uz/jY+g/7Spqf8AFhAZ/19VT/9KSED/TkY2/0QkJP/y9fP/ysvE/8bFvv+TjY3/d2Zl/wAdJzn/CAYL/3FpY/+mo63/TElS/19PSv9aTkj/HyQs/1lVUv8yMTf/APn+///EydH/hYiL/1RUVf92d4H/ur/H/6Onrv9zdo7/dXiV/3Z/mv8AdGxo/xcODv9rXlX/OC4l/y4sMf9ZS0r/ZV1X/0tHRv9dXWT/cWxu/wA2NT7/Rj9E/1VOVP9JSUv/FhUZ/zAqLP+Ba13/Y2Bh/6qlpP+wn4//ytSO46nSu9UAAAAASUVORK5CYII=",
-    "width": "2048",
-    "height": "1536",
+    "width": "1500",
+    "height": "843",
     "Org": "blog10(1).png",
     "cover": "blog10(1).png",
     "Url": "blog10(1).png",
 
     "base641":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABAUlEQVR4nAH2AAn/AMLCxv+nsL3/uMDF//bup//n1NP/1dfW/9/c0v/t7uz/jY+g/7Spqf8AFhAZ/19VT/9KSED/TkY2/0QkJP/y9fP/ysvE/8bFvv+TjY3/d2Zl/wAdJzn/CAYL/3FpY/+mo63/TElS/19PSv9aTkj/HyQs/1lVUv8yMTf/APn+///EydH/hYiL/1RUVf92d4H/ur/H/6Onrv9zdo7/dXiV/3Z/mv8AdGxo/xcODv9rXlX/OC4l/y4sMf9ZS0r/ZV1X/0tHRv9dXWT/cWxu/wA2NT7/Rj9E/1VOVP9JSUv/FhUZ/zAqLP+Ba13/Y2Bh/6qlpP+wn4//ytSO46nSu9UAAAAASUVORK5CYII=",
-    "width1": "3908",
-    "height1": "1795",
+    "width1": "1500",
+    "height1": "843",
     "Url1":"blog10(2).png",
     "title": "EXPLOREM at your SERVICE",
     "description":"EXPLOREM has continuously providing services to all young Moroccan professionals who wants to be relocated to Germany.\r\n The formation center has continuous registration for German courses from Level A1 to B2, job agreements for general nurses\r\n (Pflegefachkraft) and other specialists or professionals (Andere Spezialisten oder Fachleute), training agreement (Ausbildung),\r\n and preparing students for the German labor market. With its expertise and high- quality educational resources, EXPLOREM \r\nis one of a kind and reliable partner to prepare German-speaking profiles in various fields of activity.\r\n\r\n\r\n EXPLOREM’s highly qualified and experienced teachers and trainers are distinguished by their ability to offer training that \r\n meets the requirements of the German labor market.\r\n They are able to effectively prepare students for training courses or integrate them directly into the German labor market.\r\n\r\n EXPLOREM has a wide range of well-trained and competent profiles ready to take on professional challenges in Germany. \r\nWhether in the field of healthcare, technology, finance, commerce, engineering or any other field of activity, EXPLOREM \r\n can provide candidates who meet selection criteria.\r\n\r\n\r\n The number of students EXPLOREM has at present, their achievements since year 2020 and the number of candidates they\r\n have been relocated to Germany speak the quality of the services they are providing for both German clients and Moroccan\r\n professionals.\r\n\r\n\r\n EXPLOREM team will always MAKE A DIFFERENCE in the lives of candidates in achieving their Germany dreams, and EXPLOREM\r\n will MAKE IT HAPPEN.\r\n\r\n\r\n For more information about all the programs Explorem is offering, you may call you may \r\ncall +212 668676518/ +212 650656897/ +212 608789360 (WhatsApp available) or +212 809891297 (Landline)\r\n EXPLOREM office/ formation center is located at Imm 6 Nr 7 Rue Vieux Marrakchis \r\nGueliz, Marrakech; open from Monday to Friday from 10h00 to 18h00.\r\n\r\n\r\n Webpage: https://explorem.net/de \r\n\r\n Instagram: https://www.instagram.com/explorem21/ \r\n\r\n Tiktok: https://www.tiktok.com/@explorem3?is_from_webapp=1&sender_device=pc\r\n\r\n FB: https://www.facebook.com/ExploremSARL/ https://www.facebook.com/Explorem.Academy/\r\n\r\n Linkedin: https://www.linkedin.com/in/gracila-vacaro-ucag-b14136127/",
@@ -35,8 +35,8 @@ export const blogs = [
   },
   {
     "base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAIAAABPmPnhAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nAH4AAf/AH5tZHxtaJaRjMjIypyXmBoOFF9cWruvn5yBcHaAqgCGfHd4amaNh4THx8eQjI0YAAs1MDeAaldRY5Y/aLAAwtLSoZyhfXd5paenkZKTYVE7n0IXk05GEXDbcovCAOj+/crQ3IJ+hbHEwYSLjHhWQZk5GmE1MXBpeMqYcgDq//+1vcuKh43B3duarrBPOjdONSw0IiJ/VTuyf1wAnqeppKWpioqLh4eIhYCIY0Q3ZTggTTQuX1RVl3ZjAG9zcIeLiqOko6Cgo7q0upeUmYZ8eHFXSHZvbYZ0bQBicG11f3ycnZq7ube5wMKbqrRxfouNl5qrtLiam5mAI3sS3MyBLAAAAABJRU5ErkJggg==",
-    "width": "2448",
-    "height": "3264",
+    "width": "1500",
+    "height": "843",
     "Org": "blog9.png",
     "cover": "blog9.png",
     "Url": "blog9.png",
@@ -48,8 +48,8 @@ export const blogs = [
   },
   {
       "base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAACXBIWXMAABJ0AAASdAHeZh94AAAA+0lEQVR4nAXBO0gCARzA4T+0tjQElvQiugaXq8ggO7sjOoUaFDpC5IoWiSIsAx9gUEvekk1hOhlOeuDQEBIIjYE0lNADHKO1saHg1/dJwTLJxJeob0d4nwpxN2lwoemk1lY4DFk0X+DyCSQdVDgKB7kyVukps3yry/z6I5yJzsKgSf0V7gHZ8U2Qm45y4FnEln4cGeXBM8PjWIKklue8+0eu3EMK4STt7Bvd0hdt3ynzfUJGvLiBGLpi0/qEW3ULqeaveb75wT1uUTROsL0aaX+c5l6JilXjw4VOp4ak7BiNcoN9c5MRGWJ8YA51WGM3kKAaq+CsF4luOPwDlm2LWsfdvDgAAAAASUVORK5CYII= ",
-      "width": "1758",
-      "height": "988",
+      "width": "1500",
+      "height": "689",
       "Org": "blog8.png",
       "cover": "blog8.png",
       "Url": "blog8.mp4",
@@ -62,8 +62,8 @@ export const blogs = [
   {
    
       "base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAIAAABPmPnhAAAACXBIWXMAAAsTAAALEwEAmpwYAAABA0lEQVR4nAH4AAf/ACo0LhIaFCoyJ2tzaGBeR0pFJ1lTMYB0QJ2VZKKkgwBPYWErPjwrOTdodW5QWlFRWkxlc19QWkeCjYB9gnMAVWpwT3R9UHBvbXp2W1pNaWBNUVRBU0k2V1RBSls/ACo7PUphZSYhHBQNE0E9NCYjHicdFnpuW5OeiIuqkwBxeHaWmZVSQysRBQBOP0JBOjsOFh0+MyS1qYTo2rYAxL+4wreuvqB3cGAke19lkXl5SVRYQCgjspF18eS+AMe+tMi+ssq7qtTEstXEs82+rtvMurunmNnErf/v0gDj2szr39D15dHz49D46NT/8t7/9N//+uX//eb/+uDB3HQvKnXFjAAAAABJRU5ErkJggg==        ",
-      "width": "2048",
-      "height": "1536",
+      "width": "1500",
+      "height": "1125",
       "Org": "blog7(1).png",
       "cover": "blog7(1).png",
       "Url": "blog7(1).png",
@@ -81,8 +81,8 @@ export const blogs = [
   {
    
       "base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxUlEQVR4nAG6AEX/AJiYndXR0a2tthw2hFdWZpyQeB8gKjItK8iHXMp3QQCenZ3AurbFwMC6vtWjpKyNdXo4OEszOjpoZlF6VUAAp6OhzcrFzMjH//v3n5SQHRgkKSozbWpljXRoDzVfAKKioeXl58TFx56lxGJgchIUFAADG1djaZyPjFFKUACin5/Avr6joqdVYJk7P14uHhYtHiJeeoivzdxtf4cApp+dsaqoxsXF6ersrKOfZ0M/XTE4Vmx0tMvUdIWPGMRbIBgs2R4AAAAASUVORK5CYII=        ",
-      "width": "4624",
-      "height": "2604",
+      "width": "895",
+      "height": "1590",
       "Org": "blog6.png",
       "cover": "blog6.png",
       "Url": "blog6.png",
@@ -95,8 +95,8 @@ export const blogs = [
     },  
   {
       "base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAIAAAC+zks0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nAHZACb/AL7Q3r3O3MDQ2bTCyKetrgwgLQAFFzI3PFBVW2BkaQDA0uK9zt3C0dz7//+hrK4aLToeJy9haG5tdXl3en0AxdXjyNrpwNHc8/v+s7y6JCksGR8ma36SZHJ9aWttAHp6esHQ2snc6ubx9pSjnzhHU1ZaX3VqY2xoZV9gYgBgYF1yc3GxvMLr9/52gIQ/QExQXGtweoNqbnJYWFgAcXBtbm1ocnFssLe5V1xhSkBBaWxyUV9tTFRdTU5NAHFvaHFtZnl3cX58dlhcW2xhWYt4a3NmXDM4PkFCQtgZaFhlulAVAAAAAElFTkSuQmCC        ",
-      "width": "4624",
-      "height": "3468",
+      "width": "1192",
+      "height": "1590",
       "Org": "blog5.png",
       "cover": "blog5.png",
       "Url": "blog5.png",
@@ -124,8 +124,8 @@ export const blogs = [
   },{
     
       "base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAIAAAC+zks0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nAHZACb/AMjK3NrU39nb79jU6trh+tihochCKrdEMtmytP/u+gCtmp7f3vHd09/o4PLE0OfGoKPUd0e5X0Pft7X/9/8Aqo2Uh3ODuqTAlIKUlIuVx5ygsGBDjlBEn3p9x6KgAGNcbCMkQJCY1w0XPBAMCYYyM2g8RxoIE0srLDAXFQB5aHdMR2JtcZw1NFUMAgJKEB1gOD5QPEdKNkQkExQAlIqfGRIcExEaRUJRZGV+DxMqS0JPfm2MrpWxeU05AIWIpzMwOUtNW11bcJmctU9QaTcwQMKnts6yzM6Ufyg7ZTn0w6gKAAAAAElFTkSuQmCC        ",
-      "width": "6960",
-      "height": "4640",
+      "width": "1500",
+      "height": "1000",
       "Org": "blog3.png",
       "cover": "blog3.png",
       "Url": "blog3.png",
@@ -138,8 +138,8 @@ export const blogs = [
     }, {
    
       "base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAIAAAC+zks0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5ElEQVR4nAHZACb/AMjK3NrU39nb79jU6trh+tihochCKrdEMtmytP/u+gCtmp7f3vHd09/o4PLE0OfGoKPUd0e5X0Pft7X/9/8Aqo2Uh3ODuqTAlIKUlIuVx5ygsGBDjlBEn3p9x6KgAGNcbCMkQJCY1w0XPBAMCYYyM2g8RxoIE0srLDAXFQB5aHdMR2JtcZw1NFUMAgJKEB1gOD5QPEdKNkQkExQAlIqfGRIcExEaRUJRZGV+DxMqS0JPfm2MrpWxeU05AIWIpzMwOUtNW11bcJmctU9QaTcwQMKnts6yzM6Ufyg7ZTn0w6gKAAAAAElFTkSuQmCC        ",
-      "width": "6960",
-      "height": "4640",
+      "width": "1000",
+      "height": "563",
       "Org": "blog2.png",
       "cover": "blog2.png",
       "Url": "blog2.png",
@@ -152,8 +152,8 @@ export const blogs = [
     },{
     
       "base64":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAIAAAB1kpiRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxUlEQVR4nAG6AEX/AJSTmqGfqaensKmjr5+fqZybp6uqro6Y0xtW8WWP/wCqqrajqb6yr761tMGhl5+LhJKgm6einschYv5ojv8Avb7QopinjnyAhX+IaF9pf2Jd18jO+/7/QWjjao3/ALqzvVFITA8KDHl4gBAWI3FgWsCkmNXU4zNYzXiW/wC6oo5qWEkWHz1CQ0wDAQZ3bWV5dGyDgonW3O/r8f8Ao4BMQzs2AB9pNT1TJycsFRQVS0tNen6D1tro8vb/4NdgftmcUAsAAAAASUVORK5CYII=        ",
-      "width": "6240",
-      "height": "3512",
+      "width": "1500",
+      "height": "844",
       "Org": "blog1.png",
       "cover": "blog1.png",
       "Url": "blog1.png",
