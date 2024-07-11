@@ -11,7 +11,7 @@ import { useTranslations } from "next-intl";
 
 export async function generateMetadata() {
   return {
-    title: "Aboute",
+    title: "About",
     description: "A Few Reasons For Choosing Us  ",
     alternates: {
       canonical: `/en/about`,
@@ -22,7 +22,7 @@ export async function generateMetadata() {
       
     },
     openGraph: {
-      title: 'Aboute Us',
+      title: 'About Us',
       description: 'A Few Reasons For Choosing Us ',
       url: 'https://explorem.net/',
       siteName: "about explorem ",
