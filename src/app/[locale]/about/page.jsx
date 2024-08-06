@@ -11,7 +11,7 @@ import { useTranslations } from "next-intl";
 
 export async function generateMetadata() {
   return {
-    title: "About Us | Leading Recruitment and Training Services",
+    title: "About Us | Recruitment & Training",
     description: "Learn about Explorem SARL, a leader in recruitment and training. Discover our mission, vision, achievements, and expert team.",
     keywords: ['Explorem SARL, about us, recruitment services, training services, company mission, company vision, achievements, expert team, career development, HR solutions'],
 
@@ -24,7 +24,7 @@ export async function generateMetadata() {
       
     },
     openGraph: {
-      title: 'About Us | Leading Recruitment and Training Services',
+      title: 'About Us | Recruitment & Training',
       description: 'Learn about Explorem SARL, a leader in recruitment and training. Discover our mission, vision, achievements, and expert team.',
       url: 'https://explorem.net/',
       siteName: "about explorem ",
