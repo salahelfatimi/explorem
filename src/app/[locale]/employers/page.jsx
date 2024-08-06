@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
 export async function generateMetadata() {
   return {
     title: " Employer Services | Recruitment and Training Solutions",
-    description: "Explorem SARL provides tailored recruitment and training solutions for employers. Partner with us to find qualified professionals, streamline hiring processes, and enhance workforce capabilities.",
+    description: "Explorem SARL offers tailored recruitment and training solutions for employers. Partner with us to find qualified professionals and enhance workforce capabilities.",
     keywords: ['Explorem SARL, employer services, recruitment solutions, training solutions, workforce enhancement, hiring processes, qualified professionals, job placement, employee training, HR services'],
 
     alternates: {
@@ -22,7 +22,7 @@ export async function generateMetadata() {
     },
     openGraph: {
       title: 'Employer Services | Recruitment and Training Solutions',
-      description: 'Explorem SARL provides tailored recruitment and training solutions for employers. Partner with us to find qualified professionals, streamline hiring processes, and enhance workforce capabilities.',
+      description: 'Explorem SARL offers tailored recruitment and training solutions for employers. Partner with us to find qualified professionals and enhance workforce capabilities.',
       url: 'https://explorem.net/',
       siteName: " Best Services For Employers in explorem",
       images: [

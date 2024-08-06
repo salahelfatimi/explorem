@@ -7,7 +7,7 @@ export async function generateMetadata() {
   
   return {
   title: "Testimonials | Success Stories and Client Reviews",
-  description: "Read testimonials and success stories from clients and candidates who have benefited from Explorem SARL's recruitment, training, and career development services. Discover how we help achieve career goals.",
+  description: "Read testimonials and success stories from clients and candidates who benefited from Explorem SARL's recruitment, training, and career development services.",
   keywords: ['Explorem SARL, testimonials, client reviews, success stories, recruitment services, training services, career development, candidate experiences, professional success, HR solutions'],
 
   alternates: {

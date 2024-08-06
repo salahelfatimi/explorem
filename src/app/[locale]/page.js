@@ -12,8 +12,8 @@ import { testimonialHome } from "../data/testimonial";
 
 export async function generateMetadata({params: {locale}}) {
   return {
-    title: "Explorem SARL | Nurse Program in Morocco | Learn German | Recruitment and Training Services",
-    description: "Explorem SARL offers comprehensive nurse programs in Morocco, including German language courses, recruitment, and training services. Achieve your dream career with our expert guidance and support.",
+    title: "Explorem SARL | Nurse Program & German Courses",
+    description: "Explorem SARL offers nurse programs in Morocco, including German courses and recruitment services. Achieve your career goals with expert support.",
     keywords: ['Explorem SARL', 'nurse program Morocco', 'German language courses', 'recruitment services', 'training services', 'nursing education', 'career opportunities', 'job placement', 'degree recognition', 'vocational training', 'professional qualification', 'onboarding support'],
     alternates: {
       canonical: "/en",

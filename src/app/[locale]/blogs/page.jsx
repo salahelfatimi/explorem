@@ -6,8 +6,8 @@ import LatestBlog from "./components/latestBlog";
 
 export async function generateMetadata() {
   return {
-    title: "Blogs | Insights on Recruitment, Training, and Career Development",
-    description: "Stay updated with the latest insights and trends in recruitment, training, and career development through Explorem SARL's blogs. Read expert articles and tips to advance your professional journey.",
+    title: "Blogs | Recruitment & Career Insights",
+    description: "Get the latest insights and trends in recruitment and career development from Explorem SARL's blogs. Read expert tips to advance your career.",
     keywords: ['Explorem SARL, blogs, recruitment insights, training trends, career development, expert articles, professional tips, career advice, HR solutions, industry news, job market trends'],
 
     alternates: {
