@@ -8,7 +8,7 @@ import Loading from "./loading";
 import { GoogleAnalytics } from '@next/third-parties/google'
 export async function generateMetadata({params: {locale}}) {
   return {
-    title: {  template: "%s - Explorem SARL" },
+    title: {  template: "Explorem SARL | %s " },
     description: "We Make A Difference, We Make It Happen.",
     keywords: ['explore m','explorem','centre de formation','centre de formation marrakech	','center', 'center of learning', 'center of learning german','german','center','study','ausbildung in german','ausbildung','lungage german'],
     robots: {

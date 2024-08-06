@@ -12,9 +12,9 @@ import { testimonialHome } from "../data/testimonial";
 
 export async function generateMetadata({params: {locale}}) {
   return {
-    title: "Explorem SARL",
-    description: "We Make A Difference, We Make It Happen.",
-    keywords: ['explore m','explorem','centre de formation','centre de formation marrakech	','center', 'center of learning', 'center of learning german','german','center','study','ausbildung in german','ausbildung','lungage german'],
+    title: "Explorem SARL | Nurse Program in Morocco | Learn German | Recruitment and Training Services",
+    description: "Explorem SARL offers comprehensive nurse programs in Morocco, including German language courses, recruitment, and training services. Achieve your dream career with our expert guidance and support.",
+    keywords: ['Explorem SARL', 'nurse program Morocco', 'German language courses', 'recruitment services', 'training services', 'nursing education', 'career opportunities', 'job placement', 'degree recognition', 'vocational training', 'professional qualification', 'onboarding support'],
     alternates: {
       canonical: "/en",
       languages: {

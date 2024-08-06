@@ -8,8 +8,10 @@ import { useTranslations } from "next-intl";
 
 export async function generateMetadata() {
   return {
-    title: "Employers",
-    description: "Our Best Services For Employers  ",
+    title: " Employer Services | Recruitment and Training Solutions",
+    description: "Explorem SARL provides tailored recruitment and training solutions for employers. Partner with us to find qualified professionals, streamline hiring processes, and enhance workforce capabilities.",
+    keywords: ['Explorem SARL, employer services, recruitment solutions, training solutions, workforce enhancement, hiring processes, qualified professionals, job placement, employee training, HR services'],
+
     alternates: {
       canonical: "/en/employers",
       languages: {
@@ -19,8 +21,8 @@ export async function generateMetadata() {
       
     },
     openGraph: {
-      title: 'Employers',
-      description: 'Our Best Services For Employers  ',
+      title: 'Employer Services | Recruitment and Training Solutions',
+      description: 'Explorem SARL provides tailored recruitment and training solutions for employers. Partner with us to find qualified professionals, streamline hiring processes, and enhance workforce capabilities.',
       url: 'https://explorem.net/',
       siteName: " Best Services For Employers in explorem",
       images: [

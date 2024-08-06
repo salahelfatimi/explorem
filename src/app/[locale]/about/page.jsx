@@ -11,8 +11,10 @@ import { useTranslations } from "next-intl";
 
 export async function generateMetadata() {
   return {
-    title: "About",
-    description: "A Few Reasons For Choosing Us  ",
+    title: "About Us | Leading Recruitment and Training Services",
+    description: "Learn about Explorem SARL, a leader in recruitment and training services. Discover our mission, vision, achievements, and the expert team dedicated to helping you achieve your career goals.",
+    keywords: ['Explorem SARL, about us, recruitment services, training services, company mission, company vision, achievements, expert team, career development, HR solutions'],
+
     alternates: {
       canonical: `/en/about`,
       languages: {
@@ -22,8 +24,8 @@ export async function generateMetadata() {
       
     },
     openGraph: {
-      title: 'About Us',
-      description: 'A Few Reasons For Choosing Us ',
+      title: 'About Us | Leading Recruitment and Training Services',
+      description: 'Learn about Explorem SARL, a leader in recruitment and training services. Discover our mission, vision, achievements, and the expert team dedicated to helping you achieve your career goals.',
       url: 'https://explorem.net/',
       siteName: "about explorem ",
       images: [

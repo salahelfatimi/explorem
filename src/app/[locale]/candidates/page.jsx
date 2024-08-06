@@ -15,8 +15,8 @@ import { useTranslations } from "next-intl";
 
 export async function generateMetadata() {
   return {
-    title: "Candidates",
-    description: "Our Best Services For Candidates",
+    title: "Candidate Services | Career Development and Job Placement",
+    description: "Explore career development and job placement services for candidates with Explorem SARL. We provide training, job matching, and support to help you achieve your professional goals.",
     alternates: {
       canonical: "/en/candidates",
       languages: {
@@ -26,8 +26,8 @@ export async function generateMetadata() {
       
     },
     openGraph: {
-      title: 'Candidates',
-      description: 'Our Best Services For Candidates',
+      title: 'Candidate Services | Career Development and Job Placement',
+      description: 'Explore career development and job placement services for candidates with Explorem SARL. We provide training, job matching, and support to help you achieve your professional goals.',
       url: 'https://explorem.net/',
       siteName: "Our Best Services For Candidates for Candidates",
       images: [
