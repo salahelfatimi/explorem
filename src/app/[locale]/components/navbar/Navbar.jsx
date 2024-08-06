@@ -31,7 +31,7 @@ export default function Navbar({ locale }) {
       {/* nav pc */}
       <div className=" bg-white py-4    fixed   right-0 left-0 lg:block z-50 ">
         <div className="   flex justify-between items-center container px-4">
-          <h1>
+          <div>
             <Image
               width={388}
               height={244}
@@ -39,7 +39,7 @@ export default function Navbar({ locale }) {
               className=" w-28 "
               alt="Explorem SARL"
             />
-          </h1>
+          </div>
           <div className="lg:block hidden">
                     <ul className=" flex items-center   gap-4">
                         {
