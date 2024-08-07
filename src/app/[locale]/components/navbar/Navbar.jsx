@@ -4,7 +4,7 @@ import { useState } from "react";
 import ChangeLungage from "./changeLungage/changeLungage";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link, usePathname } from "@/navigation";
+import {  Link, usePathname } from "@/navigation";
 import { PanelLeftClose, PanelRightClose } from "lucide-react";
 import { Menu } from "react-feather";
 
@@ -31,7 +31,7 @@ export default function Navbar({ locale }) {
       {/* nav pc */}
       <div className=" bg-white py-4    fixed   right-0 left-0 lg:block z-50 ">
         <div className="   flex justify-between items-center container px-4">
-          <div>
+          <Link href={'/'}>
             <Image
               width={388}
               height={244}
@@ -39,7 +39,7 @@ export default function Navbar({ locale }) {
               className=" w-28 "
               alt="Explorem SARL"
             />
-          </div>
+          </Link>
           <div className="lg:block hidden">
                     <ul className=" flex items-center   gap-4">
                         {
@@ -62,11 +62,11 @@ export default function Navbar({ locale }) {
       <div className=" block fixed bg-white right-0 left-0  lg:hidden z-40">
             <div className="  container  p-4 flex flex-col    ">
             <div
-                className={`fixed pt-20 lg:pt-28  inset-0 flex flex-col gap-10 items-center justify-center bg-white  duration-700 transition  ${
+                className={`fixed pt-28   inset-0 flex flex-col gap-10 items-center  bg-white  duration-700 transition  ${
                 open == false ? "translate-x-0" : "translate-x-full"
                 }`}
             >
-                <ul className=" flex flex-col items-center gap-10">
+                <ul className=" flex flex-col items-center gap-9">
                         {
                             Nav.map((ele,index)=>(
                               <button onClick={() => {setOpen(!open);}}key={index}>

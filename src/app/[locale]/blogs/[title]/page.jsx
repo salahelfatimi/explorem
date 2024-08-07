@@ -1,7 +1,9 @@
-import { Facebook, Instagram, Send } from "react-feather";
+import { ArrowLeft, Facebook, Instagram, Send } from "react-feather";
 import Image from "next/image";
-import { redirect } from "@/navigation";
+import { Link, redirect } from "@/navigation";
 import { blogs } from "@/app/data/blog";
+import { StepBack } from "lucide-react";
+
 // export  function generateMetadata({ params: { title } }) {
 //   const post = blogs.find((blog) => blog.title.trim().replace(/[/%\s]+/g, '-') === title);
 //   if (!post) {
@@ -87,7 +89,12 @@ export default  function BlogDetail({ params: { title } }) {
   
   return (
     <>
+      
+      
       <article className="container px-4 items-center   flex flex-col gap-10 py-10 pt-32 ">
+      <Link href={'/blogs'} className="fixed border-white border-4  bottom-10 left-10 bg-[#134ba1] p-2 rounded-full items-center justify-center ">
+        <ArrowLeft size={40} className=" stroke-white    " />
+      </Link>
         <h1 className="font-bold    text-[#134ba1]  text-wrap text-center text-2xl lg:text-4xl   ">
           {blog?.title}
         </h1>
