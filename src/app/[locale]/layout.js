@@ -29,7 +29,7 @@ export default async  function LocaleLayout({ children, params: { locale } }) {
         <meta property="og:url" content={`https://explorem.net`}/>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_MEASUREMENT_ID}/>
       </head>
-      <body className="bg-[#f5f5f5]  scrollbar scrollbar-thumb-[#134ba1]  " >
+      <body className="bg-[#f5f5f5] select-none  scrollbar scrollbar-thumb-[#134ba1]  " >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <main className="flex flex-col h-screen justify-between ">
             <Navbar locale={locale} />
