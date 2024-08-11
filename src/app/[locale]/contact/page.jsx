@@ -18,7 +18,7 @@ export async function generateMetadata() {
 
 export default function Contact({ params: { locale } }) {
 
-  return <>
+  return <div className="pt-[6rem]">
   <Contactform locale={locale}/>
-  </>;
+  </div>;
 }

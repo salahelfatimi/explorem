@@ -186,7 +186,7 @@ export default   function Employers({ params: { locale } }) {
                   height={159}
                   alt="Explorem logo"
                 />
-                <h2 className=" capitalize text-center font-bold text-md lg:text-3xl text-[#0149a6]">
+                <h2 className=" capitalize text-center font-bold lg:text-2xl md:text-xl text-lg text-[#0149a6]">
                   {t("getInTouch")}
                 </h2>
               </span>

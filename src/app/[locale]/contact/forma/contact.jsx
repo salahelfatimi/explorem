@@ -73,7 +73,7 @@ export default function Contactform() {
 
   return (
     <>
-      <div className=" pt-[6rem] ">
+      <div className="  ">
         <Toaster
           toastOptions={{
             className: " bg-white text-black",
