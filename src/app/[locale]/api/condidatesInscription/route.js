@@ -18,7 +18,7 @@ export const POST = async (req, res) => {
     
     await resend.emails.send({
       from: `${lastName}<brett@explorem.net>`,
-      to: "explorem21@explorem.net",
+      to: "explorem21@gmail.com",
       subject: "Registration Of Candidates",
       attachments: [
         {

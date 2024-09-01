@@ -320,41 +320,41 @@ export default function Contactform() {
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
                           title="Email Addresses Administration"
-                          href="mailto:explorem21@explorem.net"
+                          href="mailto:explorem21@gmail.com"
                           className="text-sm"
                         >
                           {t("Information.email.administration")} :
-                          explorem21@explorem.net
+                          explorem21@gmail.com
                         </a>
                       </span>
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
                           title="Email Addresses Recruitment"
-                          href="mailto:erecruit21@explorem.net"
+                          href="mailto:erecruit21@gmail.com"
                           className="text-sm"
                         >
                           {t("Information.email.recruitment")} :
-                          erecruit21@explorem.net
+                          erecruit21@gmail.com
                         </a>
                       </span>
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
                           title="Email Addresses documents"
-                          href="mailto:explorem.documents@explorem.net"
+                          href="mailto:explorem.documents@gmail.com"
                           className="text-sm"
                         >
                           {t("Information.email.documents")} :
-                          explorem.documents@explorem.net
+                          explorem.documents@gmail.com
                         </a>
                       </span>
                       <span className="flex gap-2 border-l-4 border-[#0149a6] w-auto rounded-r p-1 md:pl-4 pl-2">
                         <a
                           title="Email Addresses nursing"
-                          href="mailto:explorem.nursing@explorem.net"
+                          href="mailto:explorem.nursing@gmail.com"
                           className="text-sm"
                         >
                           {t("Information.email.nursing")} :
-                          explorem.nursing@explorem.net
+                          explorem.nursing@gmail.com
                         </a>
                       </span>
                     </div>
