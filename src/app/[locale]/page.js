@@ -216,7 +216,7 @@ export default  function Index({ params: { locale } }) {
           </div>
         </div>
       </div>
-      <div>
+      {/*<div>
         <div className="flex justify-center py-6 gap-4 items-center">
           <h2 className=" text-3xl border-b-4  border-[#0149a6] font-bold text-[#0149a6] capitalize">
           {t("ourPartners")}
@@ -229,7 +229,7 @@ export default  function Index({ params: { locale } }) {
             </InfiniteHorizontalScroll>
           </div>
         </div>
-      </div>
+      </div>*/}
       <div className=" py-8 ">
         <CourseSchedule />
       </div>
