@@ -21,6 +21,7 @@ export async function generateMetadata({params: {locale}}) {
         de: "/de",
         ar: "/ar",
       },
+      selfCanonical: true, 
       
     },
 
