@@ -16,7 +16,7 @@ export async function generateMetadata({params: {locale}}) {
     description: "Explorem SARL offers nurse programs in Morocco, including German courses and recruitment services. Achieve your career goals with expert support.",
     keywords: ['Explorem SARL', 'nurse program Morocco', 'German language courses', 'recruitment services', 'training services', 'nursing education', 'career opportunities', 'job placement', 'degree recognition', 'vocational training', 'professional qualification', 'onboarding support'],
     alternates: {
-      canonical: "/en,/de,/ar",
+      canonical: "/en",
       languages: {
         de: "/de",
         ar: "/ar",
