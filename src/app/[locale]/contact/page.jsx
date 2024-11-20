@@ -6,7 +6,7 @@ export async function generateMetadata() {
     description: "Contact Explorem SARL for recruitment, training, and career development services. We're here to assist you in achieving your career goals.",
     keywords: ['Explorem SARL, contact us, recruitment services, training services, career development, get in touch, inquiries, assistance, HR solutions, career support'],
     alternates: {
-      canonical: "/en/contact",
+      canonical: ["/en/contact","/de/contact","/ar/contact"],
       languages: {
         de: "/de/contact",
         ar: "/ar/contact",
@@ -16,7 +16,7 @@ export async function generateMetadata() {
     openGraph: {
       title: 'Blogs | Recruitment & Career Insights"',
       description: 'Explorem SARL offers tailored recruitment and training solutions for employers. Partner with us to find qualified professionals and enhance workforce capabilities.',
-      url: 'https://explorem.net/en/contact"',
+      url: ['https://explorem.net/en/contact','https://explorem.net/ar/contact','https://explorem.net/de/contact'],
       siteName: "Explorem SARL",
       images: [
         {

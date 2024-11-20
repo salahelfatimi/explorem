@@ -13,7 +13,7 @@ export async function generateMetadata() {
     keywords: ['Explorem SARL, employer services, recruitment solutions, training solutions, workforce enhancement, hiring processes, qualified professionals, job placement, employee training, HR services'],
 
     alternates: {
-      canonical: "/en/employers",
+      canonical: ["/en/employers","/de/employers","/ar/employers"],
       languages: {
         de: "/de/employers",
         ar: "/ar/employers",
@@ -23,7 +23,7 @@ export async function generateMetadata() {
     openGraph: {
       title: 'Recruitment & Training Solutions',
       description: 'Explorem SARL offers tailored recruitment and training solutions for employers. Partner with us to find qualified professionals and enhance workforce capabilities.',
-      url: 'https://explorem.net/en/employers',
+      url:["https://explorem.net/en/employers","https://explorem.net/de/employers","https://explorem.net/ar/employers"],
       siteName: " Best Services For Employers in explorem",
       images: [
         {

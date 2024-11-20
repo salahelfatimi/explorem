@@ -27,7 +27,7 @@ export async  function generateMetadata({ params: { title } }, parent) {
     title: post.title,
     description: post.description,
     alternates: {
-      canonical: `/en/blogs/${title}`,
+      canonical: [`/en/blogs/${title}`,`/de/blogs/${title}`,`/ar/blogs/${title}`],
       languages: {
         de: `/de/blogs/${title}`,
         ar: `/ar/blogs/${title}`,
@@ -37,7 +37,7 @@ export async  function generateMetadata({ params: { title } }, parent) {
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://explorem.net/en/blogs/${title}`,
+      url: [`https://explorem.net/en/blogs/${title}`,`https://explorem.net/ar/blogs/${title}`,`https://explorem.net/de/blogs/${title}`],
       siteName: "explorem Blog",
       images: [
         {
