@@ -20,7 +20,7 @@ export async function generateMetadata() {
     keywords: ['Explorem SARL, candidate services, career development, job placement, training services, professional goals, job matching, career support, HR solutions, employment opportunities'],
 
     alternates: {
-      canonical: ["/en/candidates","/de/candidates","/ar/candidates"],
+      canonical: "/en/candidates",
       languages: {
         de: "/de/candidates",
         ar: "/ar/candidates",
@@ -30,7 +30,7 @@ export async function generateMetadata() {
     openGraph: {
       title: 'Candidate Services | Career Development',
       description: 'Explore career development and job placement services with Explorem SARL. We provide training and support to help you reach your professional goals.',
-      url: ["https://explorem.net/en/candidates","https://explorem.net/de/candidates","https://explorem.net/ar/candidates"],
+      url: 'https://explorem.net/en/candidates',
       siteName: "Our Best Services For Candidates for Candidates",
       images: [
         {

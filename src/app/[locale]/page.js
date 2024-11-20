@@ -16,7 +16,7 @@ export async function generateMetadata({params: {locale}}) {
     description: "Explorem SARL offers nurse programs in Morocco, including German courses and recruitment services. Achieve your career goals with expert support.",
     keywords: ['Explorem SARL', 'nurse program Morocco', 'German language courses', 'recruitment services', 'training services', 'nursing education', 'career opportunities', 'job placement', 'degree recognition', 'vocational training', 'professional qualification', 'onboarding support'],
     alternates: {
-      canonical: [`/en`,`/de`,`/ar`],
+      canonical: "/en",
       languages: {
         de: "/de",
         ar: "/ar",
@@ -27,7 +27,7 @@ export async function generateMetadata({params: {locale}}) {
     openGraph: {
       title: 'Explorem SARL',
       description: 'We Make A Difference, We Make It Happen. ',
-      url: ['https://explorem.net/en','https://explorem.net/de','https://explorem.net/ar'],
+      url: 'https://explorem.net/en',
       siteName: " Home page explorem",
       images: [
         {

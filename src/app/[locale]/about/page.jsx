@@ -16,7 +16,7 @@ export async function generateMetadata() {
     keywords: ['Explorem SARL, about us, recruitment services, training services, company mission, company vision, achievements, expert team, career development, HR solutions'],
 
     alternates: {
-      canonical: [`/en/about`,`/de/about`,`/ar/about`],
+      canonical: `/en/about`,
       languages: {
         de: `/de/about`,
         ar: `/ar/about`,
@@ -24,10 +24,9 @@ export async function generateMetadata() {
       
     },
     openGraph: {
-      
       title: 'About Us | Recruitment & Training',
       description: 'Learn about Explorem SARL, a leader in recruitment and training. Discover our mission, vision, achievements, and expert team.',
-      url: ['https://explorem.net/en/about','https://explorem.net/de/about','https://explorem.net/ar/about'],
+      url: 'https://explorem.net/en/about',
       siteName: "about explorem ",
       images: [
         {
