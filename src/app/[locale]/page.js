@@ -17,9 +17,10 @@ export async function generateMetadata({params: {locale}}) {
     keywords: ['Explorem SARL', 'nurse program Morocco', 'German language courses', 'recruitment services', 'training services', 'nursing education', 'career opportunities', 'job placement', 'degree recognition', 'vocational training', 'professional qualification', 'onboarding support'],
     alternates: {
       canonical: "/en",
-      canonical: "/ar",
-      canonical: "/de",
-      
+      languages: {
+        de: "/de",
+        ar: "/ar",
+      },
       selfCanonical: true, 
       
     },
