@@ -16,7 +16,7 @@ export async function generateMetadata() {
     keywords: ['Explorem SARL, about us, recruitment services, training services, company mission, company vision, achievements, expert team, career development, HR solutions'],
 
     alternates: {
-      canonical: `/en/about`,
+      canonical: [`/en/about`,`/de/about`,`/ar/about`],
       languages: {
         de: `/de/about`,
         ar: `/ar/about`,
