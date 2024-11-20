@@ -27,7 +27,7 @@ export async function generateMetadata({params: {locale}}) {
     openGraph: {
       title: 'Explorem SARL',
       description: 'We Make A Difference, We Make It Happen. ',
-      url: 'https://explorem.net/en',
+      url: ['https://explorem.net/en','https://explorem.net/ar','https://explorem.net/de'],
       siteName: " Home page explorem",
       images: [
         {
