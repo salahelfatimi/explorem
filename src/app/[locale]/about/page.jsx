@@ -157,6 +157,7 @@ export default  function About( { params: { locale } }) {
           className="w-full h-full object-cover"
           controls
           autoPlay
+          playsInline 
           loop
           muted
           width="320"
