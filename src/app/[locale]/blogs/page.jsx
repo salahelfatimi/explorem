@@ -21,7 +21,7 @@ export async function generateMetadata() {
     openGraph: {
       title: 'Blogs | Recruitment & Career Insights"',
       description: 'Explorem SARL offers tailored recruitment and training solutions for employers. Partner with us to find qualified professionals and enhance workforce capabilities.',
-      url: 'https://explorem.net/en/blogs',
+      url: ['https://explorem.net/en/blogs','https://explorem.net/ar/blogs','https://explorem.net/de/blogs'],
       siteName: "Explorem SARL",
       images: [
         {

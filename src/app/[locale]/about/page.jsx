@@ -26,7 +26,7 @@ export async function generateMetadata() {
     openGraph: {
       title: 'About Us | Recruitment & Training',
       description: 'Learn about Explorem SARL, a leader in recruitment and training. Discover our mission, vision, achievements, and expert team.',
-      url: 'https://explorem.net/en/about',
+      url: ['https://explorem.net/en/about','https://explorem.net/ar/about','https://explorem.net/de/about'],
       siteName: "about explorem ",
       images: [
         {
