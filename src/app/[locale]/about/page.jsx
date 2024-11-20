@@ -27,11 +27,11 @@ export async function generateMetadata() {
       title: 'About Us | Recruitment & Training',
       description: 'Learn about Explorem SARL, a leader in recruitment and training. Discover our mission, vision, achievements, and expert team.',
       url: ['https://explorem.net/en/about','https://explorem.net/ar/about','https://explorem.net/de/about'],
-      siteName: "about explorem ",
+      siteName: "explorem sarl ",
       images: [
         {
           url: `/image/aboutUS/opengraph-image.jpg`,
-          secureUrl: `/image/aboutUS/blogExplorem/opengraph-image.jpg`,
+          secureUrl: `/image/aboutUS/opengraph-image.jpg`,
           width: 1280,
           height: 612,
           alt: `Preview image for about explorem`,

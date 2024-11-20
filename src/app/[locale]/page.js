@@ -26,14 +26,14 @@ export async function generateMetadata({params: {locale}}) {
     },
 
     openGraph: {
-      title: 'Explorem SARL',
+      title: 'Explorem SARL | Nurse Program & German Courses',
       description: 'We Make A Difference, We Make It Happen. ',
       url: ['https://explorem.net/en','https://explorem.net/ar','https://explorem.net/de'],
-      siteName: " Home page explorem",
+      siteName: " Explorem SARL",
       images: [
         {
           url: `/image/index/opengraph-image.jpg`,
-          secureUrl: `/image/index/blogExplorem/opengraph-image.jpg`,
+          secureUrl: `/image/index/opengraph-image.jpg`,
           width: 1200,
           height: 630,
           alt: `We Make A Difference, We Make It Happen.  `,

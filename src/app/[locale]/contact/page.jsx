@@ -14,8 +14,8 @@ export async function generateMetadata() {
       
     },
     openGraph: {
-      title: 'Blogs | Recruitment & Career Insights"',
-      description: 'Explorem SARL offers tailored recruitment and training solutions for employers. Partner with us to find qualified professionals and enhance workforce capabilities.',
+      title: 'Contact Us for Recruitment & Training',
+      description: "Contact Explorem SARL for recruitment, training, and career development services. We're here to assist you in achieving your career goals.",
       url: ['https://explorem.net/en/contact','https://explorem.net/ar/contact','https://explorem.net/de/contact'],
       siteName: "Explorem SARL",
       images: [

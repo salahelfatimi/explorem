@@ -17,14 +17,14 @@ export async function generateMetadata() {
       ar: "/ar/testimonial",
     },
     openGraph: {
-      title: 'Explorem SARL',
-      description: 'We Make A Difference, We Make It Happen. ',
+      title: "Testimonials | Success Stories",
+      description: "Read testimonials and success stories from clients and candidates who benefited from Explorem SARL's recruitment, training, and career development services.",
       url: ['https://explorem.net/en/testimonial','https://explorem.net/ar/testimonial','https://explorem.net/de/testimonial'],
-      siteName: " Home page explorem",
+      siteName: "Explorem SARL",
       images: [
         {
           url: `/image/index/opengraph-image.jpg`,
-          secureUrl: `/image/index/blogExplorem/opengraph-image.jpg`,
+          secureUrl: `/image/index/opengraph-image.jpg`,
           width: 1200,
           height: 630,
           alt: `We Make A Difference, We Make It Happen.  `,

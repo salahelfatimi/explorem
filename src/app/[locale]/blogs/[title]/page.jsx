@@ -38,7 +38,7 @@ export async  function generateMetadata({ params: { title } }, parent) {
       title: post.title,
       description: post.description,
       url: [`https://explorem.net/en/blogs/${title}`,`https://explorem.net/ar/blogs/${title}`,`https://explorem.net/de/blogs/${title}`],
-      siteName: "explorem Blog",
+      siteName: "Explorem SARL",
       images: [
         {
           url: `/image/blogExplorem/${post.Org}`,
