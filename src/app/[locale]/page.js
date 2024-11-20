@@ -9,6 +9,7 @@ import CourseSchedule from "@/components/Schedule/courseSchedule";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import { testimonialHome } from "../data/testimonial";
+import Head from "next/head";
 
 export async function generateMetadata({params: {locale}}) {
   return {
@@ -21,7 +22,7 @@ export async function generateMetadata({params: {locale}}) {
         de: "/de",
         ar: "/ar",
       },
-      selfCanonical: true, 
+      
       
     },
 
@@ -52,6 +53,18 @@ export default  function Index({ params: { locale } }) {
   const t =  useTranslations("Index");
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href="https://explorem.net/ar"
+          key="canonical"
+        />
+         <link
+          rel="canonical"
+          href="https://explorem.net/de"
+          key="canonical"
+        />
+      </Head>
       <div className="bg-[#F5F5F5]  pt-32  space-y-8 py-12">
         <div className=" flex flex-col   items-center justify-center gap-4">
         <h1 className="flex items-center gap-4 justify-center flex-col text-xl lg:text-2xl font-extrabold capitalize">
