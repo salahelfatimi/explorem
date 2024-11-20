@@ -18,6 +18,23 @@ export async function generateMetadata() {
       },
       
     },
+    openGraph: {
+      title: 'Blogs | Recruitment & Career Insights"',
+      description: 'Explorem SARL offers tailored recruitment and training solutions for employers. Partner with us to find qualified professionals and enhance workforce capabilities.',
+      url: 'https://explorem.net/en/blogs"',
+      siteName: "Explorem SARL",
+      images: [
+        {
+          url: `/image/index/opengraph-image.jpg`,
+          secureUrl: `/image/index/opengraph-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `Recruitment & Career Insights `,
+        }
+      ],
+      type: "website",
+     
+    },
     
   };
 };

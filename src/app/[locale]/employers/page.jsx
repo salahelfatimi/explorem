@@ -23,7 +23,7 @@ export async function generateMetadata() {
     openGraph: {
       title: 'Recruitment & Training Solutions',
       description: 'Explorem SARL offers tailored recruitment and training solutions for employers. Partner with us to find qualified professionals and enhance workforce capabilities.',
-      url: 'https://explorem.net/',
+      url: 'https://explorem.net/en/employers',
       siteName: " Best Services For Employers in explorem",
       images: [
         {

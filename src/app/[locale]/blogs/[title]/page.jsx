@@ -37,7 +37,7 @@ export async  function generateMetadata({ params: { title } }, parent) {
     openGraph: {
       title: post.title,
       description: post.description,
-      url: 'https://explorem.net/',
+      url: `https://explorem.net/en/blogs/${title}`,
       siteName: "explorem Blog",
       images: [
         {
