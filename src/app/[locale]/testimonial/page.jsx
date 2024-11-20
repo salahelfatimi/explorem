@@ -11,7 +11,7 @@ export async function generateMetadata() {
   keywords: ['Explorem SARL, testimonials, client reviews, success stories, recruitment services, training services, career development, candidate experiences, professional success, HR solutions'],
 
   alternates: {
-    canonical: ["/en/testimonial","/de/testimonial","/ar/testimonial"],
+    canonical: "/en/testimonial",
     languages: {
       de: "/de/testimonial",
       ar: "/ar/testimonial",
@@ -19,7 +19,7 @@ export async function generateMetadata() {
     openGraph: {
       title: 'Explorem SARL',
       description: 'We Make A Difference, We Make It Happen. ',
-      url: ['https://explorem.net/en/testimonial','https://explorem.net/ar/testimonial','https://explorem.net/de/testimonial'],
+      url: 'https://explorem.net/en/testimonial',
       siteName: " Home page explorem",
       images: [
         {
