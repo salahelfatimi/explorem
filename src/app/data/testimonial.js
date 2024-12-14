@@ -2,7 +2,7 @@ export const testimonialHome = [
   {
             
     "image": "women",
-    "author": "Khadija B., Agadir Morocco",
+    "author": "Hayat Beihe",
     "fileUrl":"HayatBeihe.png"
   
   },
@@ -21,11 +21,11 @@ export const testimonialHome = [
       
   },
   {
-      
-    "image": "explorem",
-    "author": "Explorem",
-    "fileUrl":"Explorem.mp4"
     
+      "image": "explorem",
+      "author": "Explorem",
+      "fileUrl":"Explorem.mp4"
+      
   }
 ];
 
