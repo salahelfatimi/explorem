@@ -1,49 +1,31 @@
 export const testimonialHome = [
-  {
-            
-    "image": "women",
-    "author": "Hayat Beihe",
-    "fileUrl":"HayatBeihe.png"
-  
-  },
-  {
+ 
+    {
+          
+        "image": "women",
+        "author": "HayatBeihe",
+        "fileUrl":"HayatBeihe.MP4"
         
-    "image": "women",
-    "author": "Khadija B., Agadir Morocco",
-    "fileUrl":"KhadijaB.png"
-  
-  },
-  {
-        
-      "image": "women",
-      "author": "HayatBeihe",
-      "fileUrl":"HayatBeihe.MP4"
+    },
+    {
       
-  },
-  {
+        "image": "explorem",
+        "author": "Explorem",
+        "fileUrl":"Explorem.mp4"
+        
+    },
+
+    {
     
-      "image": "explorem",
-      "author": "Explorem",
-      "fileUrl":"Explorem.mp4"
-      
-  }
+      "image": "man",
+      "author": "Glucksburg",
+      "fileUrl":"Glucksburg.png"
+    
+    }
 ];
 
 export const testimonial = [
-    {
-            
-      "image": "women",
-      "author": "Hayat Beihe",
-      "fileUrl":"HayatBeihe.png"
     
-    },
-    {
-          
-      "image": "women",
-      "author": "Khadija B., Agadir Morocco",
-      "fileUrl":"KhadijaB.png"
-    
-    },
     {
           
         "image": "women",
