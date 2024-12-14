@@ -1,32 +1,58 @@
 export const testimonialHome = [
- 
-    {
-          
+      {
+                                
         "image": "women",
-        "author": "HayatBeihe",
-        "fileUrl":"HayatBeihe.MP4"
+        "author": "Hajar T",
+        "fileUrl":"Hajar.png"
         
-    },
-    {
-      
-        "image": "explorem",
-        "author": "Explorem",
-        "fileUrl":"Explorem.mp4"
+    },{
+                    
+        "image": "women",
+        "author": "nada F",
+        "fileUrl":"nada.png"
         
-    },
-
-    {
-    
-      "image": "man",
-      "author": "Glucksburg",
-      "fileUrl":"Glucksburg.png"
-    
+    },{
+                    
+        "image": "women",
+        "author": "Hayat B",
+        "fileUrl":"Hayat.png"
+        
     }
 ];
 
 export const testimonial = [
     
-    {
+        {
+                            
+          "image": "women",
+          "author": "Hajar T",
+          "fileUrl":"Hajar.png"
+          
+      },{
+                      
+          "image": "women",
+          "author": "nada F",
+          "fileUrl":"nada.png"
+          
+      },{
+                      
+          "image": "women",
+          "author": "Hayat B",
+          "fileUrl":"Hayat.png"
+          
+      },{
+                      
+          "image": "women",
+          "author": "assiya A",
+          "fileUrl":"assiya.png"
+          
+      },{
+                
+          "image": "women",
+          "author": "explorem",
+          "fileUrl":"khadija.png"
+          
+      },{
           
         "image": "women",
         "author": "HayatBeihe",
